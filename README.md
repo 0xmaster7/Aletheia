@@ -1,4 +1,4 @@
-This repository provides an extended implementation of the architecture introduced in the 2026 arXiv preprint: !("Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution")[https://arxiv.org/pdf/2606.01435].
+This repository provides an extended implementation of the architecture introduced in the 2026 arXiv preprint: ["Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution"](https://arxiv.org/pdf/2606.01435)
 
 This repository extends the baseline project by implementing an Embedding-Based Semantic Router and an Adaptive Operator Layer to resolve major logic limitations found in the original implementation.
 
