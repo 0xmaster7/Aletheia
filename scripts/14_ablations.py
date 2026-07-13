@@ -7,6 +7,9 @@ Usage:
   # FC-MH with CAR pipeline (multi-hop conflict resolution)
   python scripts/14_ablations.py --source factconsolidation_mh_262k --task mh
 
+  # Adaptive semantic router pipeline
+  python scripts/14_ablations.py --source factconsolidation_sh_262k --task adaptive
+
   # gpt-4o backbone ablation
   PIPELINE_MODEL=gpt-4o python scripts/14_ablations.py --source factconsolidation_sh_262k
 
@@ -29,7 +32,7 @@ from _lf import OpenAI, observe, get_client, ROOT
 from _pipeline import (
     tokenize, bm25_retrieve, evaluate_answer,
     _extract_candidates, _freshness_pick,
-    run_bm25_baseline, run_car_v2,
+    run_bm25_baseline, run_car_v2, run_adaptive_router_pipeline,
     MODEL, TOP_K,
 )
 
@@ -105,8 +108,8 @@ def run_sh_conflict_ablated(question: str, question_index: int, ground_truth: li
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--source", required=True)
-    p.add_argument("--task", default="sh", choices=["sh", "mh"],
-                   help="sh = single-hop pipeline, mh = CAR multi-hop pipeline")
+    p.add_argument("--task", default="sh", choices=["sh", "mh", "adaptive"],
+                   help="sh = single-hop pipeline, mh = CAR multi-hop pipeline, adaptive = semantic router pipeline")
     p.add_argument("--chunk-strategy", default="fact",
                    choices=["fact", "chunk4096"],
                    help="fact = parse numbered facts, chunk4096 = 4096-char windows")
@@ -158,7 +161,7 @@ def main():
                     bm25=bm25, fact_indices=fact_indices, fact_texts=fact_texts,
                     client=client, source=source, experiment_tag=experiment_tag,
                 )
-            else:  # mh — CAR pipeline
+            elif task == "mh":  # mh — CAR pipeline
                 r = run_car_v2(
                     question=question, question_index=q_idx, ground_truth=gt_list,
                     bm25=bm25, fact_indices=fact_indices, fact_texts=fact_texts,
@@ -167,6 +170,12 @@ def main():
                 # Normalize MH return key to match SH "is_correct"
                 r["is_correct"] = r.get("is_correct", False)
                 r["answer"] = r.get("final_answer", "(no answer)")
+            else:  # adaptive — semantic router + operator layer
+                r = run_adaptive_router_pipeline(
+                    question=question, question_index=q_idx, ground_truth=gt_list,
+                    bm25=bm25, fact_indices=fact_indices, fact_texts=fact_texts,
+                    client=client, dataset_name=source, competency=competency,
+                )
             answer = r["answer"]; ok = bool(r["is_correct"])
         except Exception as e:
             answer = f"<error: {str(e)[:60]}>"; ok = False; r = {}
@@ -179,6 +188,7 @@ def main():
             "chosen_serial": r.get("chosen_serial"),
             "n_hops_planned": r.get("n_hops_planned"),
             "n_hops_executed": r.get("n_hops_executed"),
+            "route": r.get("route"),
         })
 
         if (q_idx + 1) % 20 == 0:

@@ -7,7 +7,9 @@ Every operation gets its own span:
                   extract_candidates_llm → parse_candidates_json → freshness_pick ]
 """
 from __future__ import annotations
+from functools import lru_cache
 import json
+import math
 import re
 import time
 from typing import Any
@@ -17,14 +19,87 @@ from rank_bm25 import BM25Okapi
 
 from _lf import OpenAI, observe, get_client
 
+try:
+    from sentence_transformers import SentenceTransformer
+except Exception:  # pragma: no cover - optional dependency
+    SentenceTransformer = None
+
 # ────────────────────────────────────────────────────────────────────────────
 # Shared constants — matching MemoryAgentBench's RAG/FactConsolidation config
 # ────────────────────────────────────────────────────────────────────────────
 import os as _os
 MODEL = _os.environ.get("PIPELINE_MODEL", "gpt-4o-mini")
+ROUTER_MODEL = _os.environ.get("ROUTER_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 SYSTEM_MESSAGE = "You are a helpful assistant that can read the context and memorize it for future retrieval."
 TOP_K = 10
 KNOWN_RELEVANT_Q1 = {6954, 10906, 3070, 7164, 7774}  # ground-truth chain facts for Q1
+
+ROUTE_UTTERANCES = {
+    "freshness": [
+        "What is the current value?",
+        "Who is the current person?",
+        "What is the latest state?",
+        "Which answer is true now?",
+        "What is the newest recorded fact?",
+    ],
+    "temporal": [
+        "What was the previous value before the current one?",
+        "Who held the role before now?",
+        "What was the earlier state?",
+        "What was the original recorded value?",
+        "Show the state before the latest update.",
+    ],
+    "boolean": [
+        "Is the current state still true?",
+        "Does the latest record match this statement?",
+        "Was this property true in the newest fact?",
+        "Can you verify this yes or no?",
+        "Is this claim correct right now?",
+    ],
+    "aggregation": [
+        "How many unique values have appeared?",
+        "List all historical values.",
+        "Count the distinct entries in memory.",
+        "Show every previous state.",
+        "What are all recorded versions?",
+    ],
+}
+ROUTE_TOP_K = {"freshness": TOP_K, "temporal": 25, "boolean": TOP_K, "aggregation": 40}
+ROUTE_HINT_PATTERNS = {
+    "freshness": [
+        r"\bcurrent\b", r"\blatest\b", r"\bnewest\b", r"\bnow\b",
+        r"\bcurrently\b", r"\bpresent\b", r"\bstill\b",
+    ],
+    "temporal": [
+        r"\bprevious\b", r"\bbefore\b", r"\bearlier\b", r"\bprior\b",
+        r"\bformer\b", r"\bused to\b", r"\boriginal\b", r"\binitial(?:ly)?\b",
+        r"\bfirst\b", r"\bold(?:est)?\b",
+    ],
+    "boolean": [
+        r"^(?:is|are|was|were|am|do|does|did|has|have|had|can|could|will|would|should)\b",
+    ],
+    "aggregation": [
+        r"^(?:how many|count|list|show all|name all)\b",
+        r"\bnumber of\b", r"\btotal\b", r"\ball previous\b",
+        r"\bhistory of\b", r"\ball recorded\b",
+    ],
+}
+TEMPORAL_OLDEST_PATTERNS = [
+    r"\boriginal\b", r"\binitial(?:ly)?\b", r"\bfirst\b", r"\bearliest\b", r"\boldest\b",
+]
+ORDINAL_WORD_TO_OFFSET = {
+    "first": 0,
+    "second": 1,
+    "third": 2,
+    "fourth": 3,
+    "fifth": 4,
+    "1st": 0,
+    "2nd": 1,
+    "3rd": 2,
+    "4th": 3,
+    "5th": 4,
+}
+NEGATION_HINTS = (" not ", " never ", " no longer ")
 
 QUERY_TEMPLATE_BM25 = (
     "Pretend you are a knowledge management system. Each fact in the knowledge pool is "
@@ -42,6 +117,137 @@ QUERY_TEMPLATE_BM25 = (
 
 def tokenize(s: str) -> list[str]:
     return re.findall(r"[A-Za-z0-9]+", s.lower())
+
+
+def _normalize_text(s: str) -> str:
+    return " ".join(tokenize(s))
+
+
+def _cosine_similarity(left: np.ndarray, right: np.ndarray) -> float:
+    left_norm = float(np.linalg.norm(left))
+    right_norm = float(np.linalg.norm(right))
+    if left_norm == 0.0 or right_norm == 0.0:
+        return 0.0
+    return float(np.dot(left, right) / (left_norm * right_norm))
+
+
+def _lexical_similarity(query: str, utterance: str) -> float:
+    q_tokens = tokenize(query)
+    u_tokens = tokenize(utterance)
+    if not q_tokens or not u_tokens:
+        return 0.0
+    q_set = set(q_tokens)
+    u_set = set(u_tokens)
+    overlap = len(q_set & u_set)
+    if overlap == 0:
+        return 0.0
+    return overlap / math.sqrt(len(q_set) * len(u_set))
+
+
+@lru_cache(maxsize=1)
+def _get_sentence_encoder() -> Any | None:
+    if SentenceTransformer is None:
+        return None
+    try:
+        return SentenceTransformer(ROUTER_MODEL)
+    except Exception:
+        return None
+
+
+@lru_cache(maxsize=1)
+def _get_route_embeddings() -> dict[str, np.ndarray] | None:
+    encoder = _get_sentence_encoder()
+    if encoder is None:
+        return None
+
+    flattened: list[str] = []
+    route_slices: dict[str, tuple[int, int]] = {}
+    start = 0
+    for route_name, utterances in ROUTE_UTTERANCES.items():
+        flattened.extend(utterances)
+        route_slices[route_name] = (start, start + len(utterances))
+        start += len(utterances)
+
+    try:
+        embeddings = np.asarray(
+            encoder.encode(flattened, normalize_embeddings=True),
+            dtype=float,
+        )
+    except Exception:
+        return None
+
+    return {
+        route_name: embeddings[s:e]
+        for route_name, (s, e) in route_slices.items()
+    }
+
+
+def _route_bonus(question: str, route_name: str) -> tuple[float, list[str]]:
+    lowered = _normalize_text(question)
+    matched = [
+        pattern for pattern in ROUTE_HINT_PATTERNS[route_name]
+        if re.search(pattern, lowered, flags=re.IGNORECASE)
+    ]
+    if route_name == "aggregation":
+        return 0.9 * len(matched), matched
+    if route_name == "boolean":
+        return 0.8 * len(matched), matched
+    if route_name == "temporal":
+        return 0.75 * len(matched), matched
+    if matched:
+        return 0.35 * len(matched), matched
+    return 0.1, []
+
+
+@observe(name="route_query", as_type=None)
+def route_query(question: str) -> dict[str, Any]:
+    route_embeddings = _get_route_embeddings()
+    embedding_mode = route_embeddings is not None
+    query_embedding = None
+    if embedding_mode:
+        encoder = _get_sentence_encoder()
+        try:
+            query_embedding = np.asarray(
+                encoder.encode([question], normalize_embeddings=True)[0],
+                dtype=float,
+            )
+        except Exception:
+            embedding_mode = False
+            query_embedding = None
+
+    scores: dict[str, float] = {}
+    components: dict[str, dict[str, Any]] = {}
+    for route_name, utterances in ROUTE_UTTERANCES.items():
+        lexical_score = max(_lexical_similarity(question, utterance) for utterance in utterances)
+        embedding_score = 0.0
+        if embedding_mode and query_embedding is not None and route_embeddings is not None:
+            embedding_score = max(
+                _cosine_similarity(query_embedding, utterance_embedding)
+                for utterance_embedding in route_embeddings[route_name]
+            )
+        bonus, matched_patterns = _route_bonus(question, route_name)
+        score = bonus + (0.55 * lexical_score) + (0.45 * embedding_score)
+        scores[route_name] = round(score, 6)
+        components[route_name] = {
+            "lexical": round(lexical_score, 6),
+            "embedding": round(embedding_score, 6),
+            "bonus": round(bonus, 6),
+            "matched_patterns": matched_patterns,
+        }
+
+    selected_route = max(scores, key=scores.get)
+    result = {
+        "route": selected_route,
+        "scores": scores,
+        "components": components,
+        "method": "embeddings+heuristics" if embedding_mode else "heuristics-only",
+        "router_model": ROUTER_MODEL if embedding_mode else None,
+    }
+    get_client().update_current_span(
+        input={"question": question},
+        output=result,
+    )
+    return result
 
 
 # ────────────────────────────────────────────────────────────────────────────
@@ -370,6 +576,197 @@ def _freshness_pick(candidates: list[dict[str, Any]]) -> dict[str, Any] | None:
         },
     )
     return chosen
+
+
+def _collapse_state_timeline(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Collapse repeated consecutive values so "previous state" means a state change."""
+    timeline: list[dict[str, Any]] = []
+    last_value = None
+    for candidate in sorted(candidates, key=lambda c: c["serial"], reverse=True):
+        value = _normalize_text(candidate.get("answer_entity", ""))
+        if value and value != last_value:
+            timeline.append(candidate)
+            last_value = value
+    return timeline
+
+
+def _temporal_offset(question: str) -> int | None:
+    lowered = _normalize_text(question)
+    if any(re.search(pattern, lowered, flags=re.IGNORECASE) for pattern in TEMPORAL_OLDEST_PATTERNS):
+        return None
+    for ordinal_word, offset in ORDINAL_WORD_TO_OFFSET.items():
+        if re.search(rf"\b{re.escape(ordinal_word)}\b", lowered) and re.search(
+            r"\b(previous|before|earlier|prior|former|latest|newest|recent)\b", lowered
+        ):
+            return offset
+    if re.search(r"\b(previous|before|earlier|prior|former|last)\b", lowered):
+        return 1
+    return 0
+
+
+@observe(name="historical_pick", as_type=None)
+def _historical_pick(candidates: list[dict[str, Any]], question: str) -> dict[str, Any] | None:
+    timeline = _collapse_state_timeline(candidates)
+    if not timeline:
+        get_client().update_current_span(
+            input={"question": question, "n_candidates": 0},
+            output={"chosen": None, "timeline_length": 0},
+        )
+        return None
+
+    offset = _temporal_offset(question)
+    if offset is None:
+        chosen = min(timeline, key=lambda c: c["serial"])
+        selection_reason = "oldest-state"
+    else:
+        chosen = timeline[min(offset, len(timeline) - 1)]
+        selection_reason = f"state_offset={min(offset, len(timeline) - 1)}"
+    get_client().update_current_span(
+        input={"question": question, "n_candidates": len(candidates)},
+        output={
+            "chosen": chosen,
+            "timeline_length": len(timeline),
+            "selection_reason": selection_reason,
+            "timeline_serials": [candidate["serial"] for candidate in timeline],
+        },
+    )
+    return chosen
+
+
+def _question_mentions_phrase(question: str, phrase: str) -> bool:
+    norm_question = f" {_normalize_text(question)} "
+    norm_phrase = _normalize_text(phrase)
+    if not norm_phrase:
+        return False
+    if f" {norm_phrase} " in norm_question:
+        return True
+    phrase_tokens = set(norm_phrase.split())
+    question_tokens = set(norm_question.split())
+    return bool(phrase_tokens) and phrase_tokens.issubset(question_tokens)
+
+
+@observe(name="boolean_gate", as_type=None)
+def _boolean_gate(question: str, chosen: dict[str, Any] | None) -> bool:
+    if not chosen:
+        get_client().update_current_span(
+            input={"question": question, "chosen": None},
+            output={"result": False, "reason": "no-latest-state"},
+        )
+        return False
+
+    target_matches = _question_mentions_phrase(question, chosen.get("answer_entity", ""))
+    if not target_matches:
+        target_matches = _question_mentions_phrase(question, chosen.get("fact_text", ""))
+    lowered = f" {_normalize_text(question)} "
+    negated = any(hint in lowered for hint in NEGATION_HINTS)
+    result = (not target_matches) if negated else target_matches
+    get_client().update_current_span(
+        input={"question": question, "chosen": chosen},
+        output={
+            "result": result,
+            "target_matches_latest_state": target_matches,
+            "negated_question": negated,
+        },
+    )
+    return result
+
+
+@observe(name="aggregate_answers", as_type=None)
+def _aggregate_answers(candidates: list[dict[str, Any]], question: str) -> dict[str, Any]:
+    ordered_unique: list[str] = []
+    seen: set[str] = set()
+    for candidate in sorted(candidates, key=lambda c: c["serial"]):
+        answer = candidate.get("answer_entity", "").strip()
+        normalized = _normalize_text(answer)
+        if answer and normalized and normalized not in seen:
+            seen.add(normalized)
+            ordered_unique.append(answer)
+
+    lowered = _normalize_text(question)
+    is_count_query = bool(re.search(r"\b(how many|count|number of|total)\b", lowered))
+    answer = str(len(ordered_unique)) if is_count_query else json.dumps(ordered_unique)
+    result = {
+        "answer": answer,
+        "unique_answers": ordered_unique,
+        "unique_count": len(ordered_unique),
+        "mode": "count" if is_count_query else "list",
+    }
+    get_client().update_current_span(
+        input={"question": question, "n_candidates": len(candidates)},
+        output=result,
+    )
+    return result
+
+
+@observe(name="adaptive_router_pipeline")
+def run_adaptive_router_pipeline(question: str, question_index: int, ground_truth: list[str],
+                                 bm25: BM25Okapi, fact_indices: list[int], fact_texts: list[str],
+                                 client: OpenAI,
+                                 dataset_name: str = "factconsolidation_mh_262k",
+                                 competency: str = "Conflict_Resolution") -> dict[str, Any]:
+    routed = route_query(question)
+    route_name = routed["route"]
+    top_k = min(ROUTE_TOP_K.get(route_name, TOP_K), len(fact_texts))
+
+    get_client().update_current_span(
+        name=f"adaptive_router_{dataset_name}_q{question_index + 1}",
+        metadata={
+            "system": "Semantic routing + adaptive operator layer",
+            "model": MODEL,
+            "question_index": question_index,
+            "ground_truth": ground_truth,
+            "experiment": "adaptive_router_pipeline",
+            "dataset": dataset_name,
+            "competency": competency,
+            "route": route_name,
+            "route_method": routed["method"],
+            "route_top_k": top_k,
+        },
+        input={"question": question},
+    )
+
+    retrieved = bm25_retrieve(bm25, question, fact_indices, fact_texts, top_k)
+    candidates = _extract_candidates(client, question, retrieved)
+
+    chosen = None
+    aggregate = None
+    if route_name == "temporal":
+        chosen = _historical_pick(candidates, question)
+        answer = chosen["answer_entity"] if chosen else "(no answer)"
+    elif route_name == "boolean":
+        chosen = _freshness_pick(candidates)
+        answer = str(_boolean_gate(question, chosen))
+    elif route_name == "aggregation":
+        aggregate = _aggregate_answers(candidates, question)
+        answer = aggregate["answer"]
+    else:
+        chosen = _freshness_pick(candidates)
+        answer = chosen["answer_entity"] if chosen else "(no answer)"
+
+    eval_result = evaluate_answer(answer, ground_truth)
+    get_client().update_current_span(
+        output={
+            "answer": answer,
+            "is_correct": eval_result["is_correct_subem"],
+            "route": route_name,
+            "route_scores": routed["scores"],
+            "n_candidates": len(candidates),
+            "chosen_serial": chosen.get("serial") if chosen else None,
+            "aggregate_unique_count": aggregate["unique_count"] if aggregate else None,
+        },
+    )
+    return {
+        "answer": answer,
+        "is_correct": eval_result["is_correct_subem"],
+        "route": route_name,
+        "route_scores": routed["scores"],
+        "route_components": routed["components"],
+        "route_method": routed["method"],
+        "retrieved": retrieved,
+        "candidates": candidates,
+        "chosen": chosen,
+        "aggregate": aggregate,
+    }
 
 
 @observe(name="hop")
