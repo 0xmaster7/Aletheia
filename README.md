@@ -2,6 +2,8 @@ This repository provides an extended implementation of the architecture introduc
 
 This repository extends the baseline project by implementing an Embedding-Based Semantic Router and an Adaptive Operator Layer to resolve major logic limitations found in the original implementation.
 
+The draft of the paper can be found [here](https://docs.google.com/document/d/1ZpxQevBxHqhUzbEm7xpUOoYoArBUVXZboZwb9HqpBaA/edit?tab=t.0)
+
 ## Getting Stared
 
 1. **Clone the Repository**
