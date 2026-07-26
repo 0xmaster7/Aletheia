@@ -146,6 +146,12 @@ def main():
             sh_answer = sh["answer"]; sh_ok = bool(sh["is_correct"])
         except Exception as e:
             sh_answer = f"<error: {str(e)[:60]}>"; sh_ok = False; sh = {}
+            
+        print("\n=== FINAL SH RESULTS ===")
+        print(f"sh_n_candidates: {sh.get('n_candidates') if sh else None}")
+        print(f"sh_chosen_serial: {sh.get('chosen_serial') if sh else None}")
+        print(f"sh_answer: {sh_answer}")
+        print("========================\n")
 
         if bm_ok: bm_correct += 1
         if sh_ok: sh_correct += 1

@@ -587,16 +587,31 @@ def _parse_candidates(raw_response: str) -> list[dict[str, Any]]:
 def _extract_candidates(client: OpenAI, hop_query: str, retrieved: list[dict[str, Any]]) -> list[dict[str, Any]]:
     pool_str = _format_pool(retrieved)
     # No system prompt — response_format={"type":"json_object"} enforces JSON
+    prompt_content = CANDIDATE_PROMPT.replace("{hop_query}", hop_query).replace("{pool}", pool_str)
+    if "The Unit" in hop_query:
+        print("\n========== DEBUG EXTRACT CANDIDATES ==========")
+        print("=== PROMPT ===")
+        print(prompt_content)
+
     resp = client.chat.completions.create(
         model=MODEL, temperature=0.0,
         response_format={"type": "json_object"},
         messages=[
-            {"role": "user", "content": CANDIDATE_PROMPT.replace("{hop_query}", hop_query).replace("{pool}", pool_str)},
+            {"role": "user", "content": prompt_content},
         ],
         name="extract_candidates_llm",
     )
     raw = resp.choices[0].message.content or "{}"
+    if "The Unit" in hop_query:
+        print("\n=== RAW LLM RESPONSE ===")
+        print(repr(raw))
+
     candidates = _parse_candidates(raw)
+    if "The Unit" in hop_query:
+        print("\n=== PARSED CANDIDATES ===")
+        print(candidates)
+        print("==============================================\n")
+        
     get_client().update_current_span(
         input={"hop_query": hop_query, "n_retrieved": len(retrieved)},
         output={"n_candidates": len(candidates), "candidates": candidates},
@@ -799,16 +814,8 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
         aggregate = _aggregate_answers(candidates, question)
         answer = aggregate["answer"]
     else:
-        user_msg = _format_bm25_prompt(question, retrieved)
-        resp = client.chat.completions.create(
-            model=MODEL, temperature=0.7,
-            messages=[
-                {"role": "system", "content": SYSTEM_MESSAGE},
-                {"role": "user", "content": user_msg},
-            ],
-            name="fallback_llm_answer",
-        )
-        answer = resp.choices[0].message.content or ""
+        chosen = _freshness_pick(candidates)
+        answer = chosen["answer_entity"] if chosen else "(no answer)"
 
     eval_result = evaluate_answer(answer, ground_truth)
     get_client().update_current_span(
@@ -832,6 +839,8 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
         "candidates": candidates,
         "chosen": chosen,
         "aggregate": aggregate,
+        "n_candidates": len(candidates) if candidates is not None else 0,
+        "chosen_serial": chosen.get("serial") if chosen else None,
     }
 
 
