@@ -24,6 +24,58 @@ try:
 except Exception:  # pragma: no cover - optional dependency
     SentenceTransformer = None
 
+from semantic_router import Route, SemanticRouter
+from semantic_router.encoders import HuggingFaceEncoder
+
+encoder = HuggingFaceEncoder(name="sentence-transformers/all-MiniLM-L6-v2")
+
+route_current_value = Route(
+    name="current_value",
+    utterances=[
+        "What is the current value?",
+        "Who is the current person?",
+        "What is the latest state?",
+        "Which answer is true now?",
+        "What is the newest recorded fact?"
+    ]
+)
+
+route_historical = Route(
+    name="historical",
+    utterances=[
+        "What was the previous value before the current one?",
+        "Who held the role before now?",
+        "What was the earlier state?",
+        "What was the original recorded value?",
+        "Show the state before the latest update."
+    ]
+)
+
+route_boolean = Route(
+    name="boolean",
+    utterances=[
+        "Is the current state still true?",
+        "Does the latest record match this statement?",
+        "Was this property true in the newest fact?",
+        "Can you verify this yes or no?",
+        "Is this claim correct right now?"
+    ]
+)
+
+route_aggregation = Route(
+    name="aggregation",
+    utterances=[
+        "How many unique values have appeared?",
+        "List all historical values.",
+        "Count the distinct entries in memory.",
+        "Show every previous state.",
+        "What are all recorded versions?"
+    ]
+)
+
+routes = [route_current_value, route_historical, route_boolean, route_aggregation]
+rl = SemanticRouter(encoder=encoder, routes=routes, auto_sync="local")
+
 # ────────────────────────────────────────────────────────────────────────────
 # Shared constants — matching MemoryAgentBench's RAG/FactConsolidation config
 # ────────────────────────────────────────────────────────────────────────────
@@ -704,9 +756,13 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
                                  client: OpenAI,
                                  dataset_name: str = "factconsolidation_mh_262k",
                                  competency: str = "Conflict_Resolution") -> dict[str, Any]:
-    routed = route_query(question)
-    route_name = routed["route"]
-    top_k = min(ROUTE_TOP_K.get(route_name, TOP_K), len(fact_texts))
+    route = rl(question).name
+
+    top_k = min(TOP_K, len(fact_texts))
+    if route == "historical":
+        top_k = min(25, len(fact_texts))
+    elif route == "aggregation":
+        top_k = min(40, len(fact_texts))
 
     get_client().update_current_span(
         name=f"adaptive_router_{dataset_name}_q{question_index + 1}",
@@ -718,8 +774,8 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
             "experiment": "adaptive_router_pipeline",
             "dataset": dataset_name,
             "competency": competency,
-            "route": route_name,
-            "route_method": routed["method"],
+            "route": str(route),
+            "route_method": "semantic_router",
             "route_top_k": top_k,
         },
         input={"question": question},
@@ -730,26 +786,36 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
 
     chosen = None
     aggregate = None
-    if route_name == "temporal":
+    if route == "current_value":
+        chosen = _freshness_pick(candidates)
+        answer = chosen["answer_entity"] if chosen else "(no answer)"
+    elif route == "historical":
         chosen = _historical_pick(candidates, question)
         answer = chosen["answer_entity"] if chosen else "(no answer)"
-    elif route_name == "boolean":
+    elif route == "boolean":
         chosen = _freshness_pick(candidates)
         answer = str(_boolean_gate(question, chosen))
-    elif route_name == "aggregation":
+    elif route == "aggregation":
         aggregate = _aggregate_answers(candidates, question)
         answer = aggregate["answer"]
     else:
-        chosen = _freshness_pick(candidates)
-        answer = chosen["answer_entity"] if chosen else "(no answer)"
+        user_msg = _format_bm25_prompt(question, retrieved)
+        resp = client.chat.completions.create(
+            model=MODEL, temperature=0.7,
+            messages=[
+                {"role": "system", "content": SYSTEM_MESSAGE},
+                {"role": "user", "content": user_msg},
+            ],
+            name="fallback_llm_answer",
+        )
+        answer = resp.choices[0].message.content or ""
 
     eval_result = evaluate_answer(answer, ground_truth)
     get_client().update_current_span(
         output={
             "answer": answer,
             "is_correct": eval_result["is_correct_subem"],
-            "route": route_name,
-            "route_scores": routed["scores"],
+            "route": str(route),
             "n_candidates": len(candidates),
             "chosen_serial": chosen.get("serial") if chosen else None,
             "aggregate_unique_count": aggregate["unique_count"] if aggregate else None,
@@ -758,10 +824,10 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
     return {
         "answer": answer,
         "is_correct": eval_result["is_correct_subem"],
-        "route": route_name,
-        "route_scores": routed["scores"],
-        "route_components": routed["components"],
-        "route_method": routed["method"],
+        "route": str(route),
+        "route_scores": None,
+        "route_components": None,
+        "route_method": "semantic_router",
         "retrieved": retrieved,
         "candidates": candidates,
         "chosen": chosen,

@@ -18,6 +18,9 @@ historical = Route(
         "What was used before this?",
         "What was the previous configuration?",
         "Which operating system was used prior to switching?",
+        "What did he use before Fedora?",
+        "What was used prior to X?",
+        "What was the old version?",
     ],
 )
 
@@ -44,7 +47,8 @@ print("Loading local embedding model...")
 encoder = HuggingFaceEncoder(name="sentence-transformers/all-MiniLM-L6-v2")
 
 # 3. Initialize the Router (Updated class name)
-rl = SemanticRouter(encoder=encoder, routes=[current_val, historical, boolean, aggregation])
+# 3. Initialize the Router (Added auto_sync)
+rl = SemanticRouter(encoder=encoder, routes=[current_val, historical, boolean, aggregation], auto_sync="local")
 
 # 4. Test Routing Precision
 test_queries = [

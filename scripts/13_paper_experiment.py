@@ -28,6 +28,7 @@ from _pipeline import (
     tokenize, bm25_retrieve, evaluate_answer,
     _extract_candidates, _freshness_pick,
     run_bm25_baseline, MODEL, TOP_K,
+    run_adaptive_router_pipeline,
 )
 
 
@@ -137,7 +138,11 @@ def main():
             bm_answer = f"<error: {str(e)[:60]}>"; bm_ok = False
 
         try:
-            sh = run_sh_conflict(question, q_idx, gt_list, bm25, fact_indices, fact_texts, client, source)
+            sh = run_adaptive_router_pipeline(
+                question=question, question_index=q_idx, ground_truth=gt_list,
+                bm25=bm25, fact_indices=fact_indices, fact_texts=fact_texts,
+                client=client, dataset_name=source, competency="Conflict_Resolution"
+            )
             sh_answer = sh["answer"]; sh_ok = bool(sh["is_correct"])
         except Exception as e:
             sh_answer = f"<error: {str(e)[:60]}>"; sh_ok = False; sh = {}

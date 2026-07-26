@@ -2,11 +2,11 @@
   "source": "factconsolidation_sh_262k",
   "context_length": "262k",
   "n_questions": 100,
-  "bm25_correct": 61,
-  "bm25_accuracy": 0.61,
-  "sh_correct": 82,
-  "sh_accuracy": 0.82,
-  "elapsed_seconds": 475.46713280677795,
+  "bm25_correct": 58,
+  "bm25_accuracy": 0.58,
+  "sh_correct": 57,
+  "sh_accuracy": 0.57,
+  "elapsed_seconds": 754.299497127533,
   "results": [
     {
       "q_idx": 0,
@@ -18,8 +18,8 @@
       "bm25_correct": true,
       "sh_answer": "Federal University of Rio de Janeiro",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14907
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 1,
@@ -31,8 +31,8 @@
       "bm25_correct": true,
       "sh_answer": "salsa",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 15099
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 2,
@@ -40,12 +40,12 @@
       "ground_truth": [
         "Israel"
       ],
-      "bm25_answer": "Iceland.",
+      "bm25_answer": "Iceland",
       "bm25_correct": false,
-      "sh_answer": "Israel",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 2697
+      "sh_answer": "Iceland",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 3,
@@ -57,8 +57,8 @@
       "bm25_correct": true,
       "sh_answer": "Boeing",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 16767
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 4,
@@ -66,12 +66,12 @@
       "ground_truth": [
         "Kannada"
       ],
-      "bm25_answer": "Kannada",
-      "bm25_correct": true,
-      "sh_answer": "Kannada",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 7636
+      "bm25_answer": "English",
+      "bm25_correct": false,
+      "sh_answer": "English",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 5,
@@ -81,10 +81,10 @@
       ],
       "bm25_answer": "Catholic Church",
       "bm25_correct": false,
-      "sh_answer": "Methodism",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14063
+      "sh_answer": "Catholic Church",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 6,
@@ -96,8 +96,8 @@
       "bm25_correct": true,
       "sh_answer": "English",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 17004
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 7,
@@ -109,8 +109,8 @@
       "bm25_correct": false,
       "sh_answer": "first baseman",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 16252
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 8,
@@ -118,12 +118,12 @@
       "ground_truth": [
         "K\u016bkai"
       ],
-      "bm25_answer": "K\u016bkai",
-      "bm25_correct": true,
-      "sh_answer": "K\u016bkai",
-      "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 8530
+      "bm25_answer": "William Waynflete",
+      "bm25_correct": false,
+      "sh_answer": "William Waynflete",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 9,
@@ -131,12 +131,12 @@
       "ground_truth": [
         "Sega AM2"
       ],
-      "bm25_answer": "World Wide Web Consortium.",
+      "bm25_answer": "World Wide Web Consortium",
       "bm25_correct": false,
-      "sh_answer": "World Wide Web Consortium",
+      "sh_answer": "World Wide Web Consortium.",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 12325
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 10,
@@ -146,10 +146,10 @@
       ],
       "bm25_answer": "United States of America",
       "bm25_correct": false,
-      "sh_answer": "Russia",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14463
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 11,
@@ -159,10 +159,10 @@
       ],
       "bm25_answer": "United Kingdom",
       "bm25_correct": false,
-      "sh_answer": "Kingdom of the Netherlands",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 15445
+      "sh_answer": "United Kingdom",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 12,
@@ -172,10 +172,10 @@
       ],
       "bm25_answer": "United States of America",
       "bm25_correct": false,
-      "sh_answer": "United Kingdom",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 4787
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 13,
@@ -183,12 +183,12 @@
       "ground_truth": [
         "Marc Benioff"
       ],
-      "bm25_answer": "Marc Benioff",
-      "bm25_correct": true,
-      "sh_answer": "Marc Benioff",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14608
+      "bm25_answer": "Brendan Iribe",
+      "bm25_correct": false,
+      "sh_answer": "Brendan Iribe",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 14,
@@ -196,12 +196,12 @@
       "ground_truth": [
         "Ray Bradbury"
       ],
-      "bm25_answer": "Matt Groening",
+      "bm25_answer": "Matt Groening.",
       "bm25_correct": false,
-      "sh_answer": "Ray Bradbury",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17816
+      "sh_answer": "Matt Groening.",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 15,
@@ -213,8 +213,8 @@
       "bm25_correct": true,
       "sh_answer": "The Church of Jesus Christ of Latter-day Saints",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 12773
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 16,
@@ -226,8 +226,8 @@
       "bm25_correct": true,
       "sh_answer": "Graham Linehan",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 8521
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 17,
@@ -235,12 +235,12 @@
       "ground_truth": [
         "Dutch"
       ],
-      "bm25_answer": "Dutch",
-      "bm25_correct": true,
-      "sh_answer": "Dutch",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 12988
+      "bm25_answer": "English",
+      "bm25_correct": false,
+      "sh_answer": "English",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 18,
@@ -252,8 +252,8 @@
       "bm25_correct": false,
       "sh_answer": "Microsoft",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 2469
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 19,
@@ -265,8 +265,8 @@
       "bm25_correct": false,
       "sh_answer": "basketball",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 1260
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 20,
@@ -278,8 +278,8 @@
       "bm25_correct": true,
       "sh_answer": "United States of America",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 4409
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 21,
@@ -291,8 +291,8 @@
       "bm25_correct": true,
       "sh_answer": "Yale University",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 3131
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 22,
@@ -304,8 +304,8 @@
       "bm25_correct": true,
       "sh_answer": "United Kingdom",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 5371
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 23,
@@ -317,8 +317,8 @@
       "bm25_correct": true,
       "sh_answer": "United States of America",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 9654
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 24,
@@ -326,12 +326,12 @@
       "ground_truth": [
         "auto racing"
       ],
-      "bm25_answer": "Auto racing",
-      "bm25_correct": true,
-      "sh_answer": "auto racing",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 16918
+      "bm25_answer": "Association football.",
+      "bm25_correct": false,
+      "sh_answer": "association football",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 25,
@@ -343,8 +343,8 @@
       "bm25_correct": true,
       "sh_answer": "United States of America",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 13391
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 26,
@@ -352,12 +352,12 @@
       "ground_truth": [
         "United States of America"
       ],
-      "bm25_answer": "French Third Republic",
-      "bm25_correct": false,
+      "bm25_answer": "United States of America",
+      "bm25_correct": true,
       "sh_answer": "United States of America",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 17038
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 27,
@@ -369,8 +369,8 @@
       "bm25_correct": true,
       "sh_answer": "Edi Rama",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 6038
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 28,
@@ -380,10 +380,10 @@
       ],
       "bm25_answer": "United Kingdom",
       "bm25_correct": false,
-      "sh_answer": "Singapore",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 16928
+      "sh_answer": "United Kingdom",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 29,
@@ -395,8 +395,8 @@
       "bm25_correct": true,
       "sh_answer": "baseball",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 577
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 30,
@@ -408,8 +408,8 @@
       "bm25_correct": true,
       "sh_answer": "Madonna",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 7017
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 31,
@@ -419,10 +419,10 @@
       ],
       "bm25_answer": "Eric Garcetti",
       "bm25_correct": true,
-      "sh_answer": "Pebbles Flintstone",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 4855
+      "sh_answer": "Eric Garcetti",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 32,
@@ -430,12 +430,12 @@
       "ground_truth": [
         "Berlin"
       ],
-      "bm25_answer": "Antwerp",
-      "bm25_correct": false,
+      "bm25_answer": "Berlin",
+      "bm25_correct": true,
       "sh_answer": "Berlin",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14005
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 33,
@@ -447,8 +447,8 @@
       "bm25_correct": true,
       "sh_answer": "P\u00e1l Teleki",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 10196
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 34,
@@ -460,8 +460,8 @@
       "bm25_correct": true,
       "sh_answer": "midfielder",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 16655
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 35,
@@ -471,10 +471,10 @@
       ],
       "bm25_answer": "American Broadcasting Company.",
       "bm25_correct": false,
-      "sh_answer": "British Broadcasting Corporation",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14567
+      "sh_answer": "American Broadcasting Company.",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 36,
@@ -484,10 +484,10 @@
       ],
       "bm25_answer": "Ford Motor Company",
       "bm25_correct": true,
-      "sh_answer": "Colt's Manufacturing Company",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 6652
+      "sh_answer": "Ford Motor Company",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 37,
@@ -499,8 +499,8 @@
       "bm25_correct": true,
       "sh_answer": "Catholic Church",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 11616
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 38,
@@ -512,8 +512,8 @@
       "bm25_correct": true,
       "sh_answer": "MSNBC",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 9972
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 39,
@@ -523,10 +523,10 @@
       ],
       "bm25_answer": "Francis Russell, 4th Earl of Bedford.",
       "bm25_correct": true,
-      "sh_answer": "Francis Russell, 4th Earl of Bedford",
+      "sh_answer": "Francis Russell, 4th Earl of Bedford.",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 18074
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 40,
@@ -538,8 +538,8 @@
       "bm25_correct": false,
       "sh_answer": "Christopher Nolan",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 2588
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 41,
@@ -549,10 +549,10 @@
       ],
       "bm25_answer": "France",
       "bm25_correct": false,
-      "sh_answer": "Israel",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14389
+      "sh_answer": "France",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 42,
@@ -560,12 +560,12 @@
       "ground_truth": [
         "Ecuador"
       ],
-      "bm25_answer": "Ecuador",
-      "bm25_correct": true,
-      "sh_answer": "Ecuador",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 8975
+      "bm25_answer": "Denmark",
+      "bm25_correct": false,
+      "sh_answer": "Denmark",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 43,
@@ -575,10 +575,10 @@
       ],
       "bm25_answer": "Post-punk.",
       "bm25_correct": true,
-      "sh_answer": "post-punk",
+      "sh_answer": "Post-punk",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 13904
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 44,
@@ -590,8 +590,8 @@
       "bm25_correct": true,
       "sh_answer": "Helsinki",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 18069
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 45,
@@ -603,8 +603,8 @@
       "bm25_correct": true,
       "sh_answer": "French",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17955
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 46,
@@ -616,8 +616,8 @@
       "bm25_correct": true,
       "sh_answer": "The Church of Jesus Christ of Latter-day Saints",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 15827
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 47,
@@ -629,8 +629,8 @@
       "bm25_correct": true,
       "sh_answer": "basketball",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 13765
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 48,
@@ -640,10 +640,10 @@
       ],
       "bm25_answer": "United Kingdom",
       "bm25_correct": false,
-      "sh_answer": "France",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 7691
+      "sh_answer": "United Kingdom",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 49,
@@ -655,8 +655,8 @@
       "bm25_correct": false,
       "sh_answer": "Ottawa",
       "sh_correct": false,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14004
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 50,
@@ -668,8 +668,8 @@
       "bm25_correct": true,
       "sh_answer": "association football",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 4098
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 51,
@@ -679,10 +679,10 @@
       ],
       "bm25_answer": "Catholic Church",
       "bm25_correct": false,
-      "sh_answer": "Jainism",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 5298
+      "sh_answer": "Catholic Church",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 52,
@@ -692,10 +692,10 @@
       ],
       "bm25_answer": "University of California, Berkeley.",
       "bm25_correct": false,
-      "sh_answer": "University of Mississippi",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 12342
+      "sh_answer": "University of California, Berkeley.",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 53,
@@ -707,8 +707,8 @@
       "bm25_correct": true,
       "sh_answer": "French",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 15307
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 54,
@@ -716,12 +716,12 @@
       "ground_truth": [
         "Walloon"
       ],
-      "bm25_answer": "Spanish",
-      "bm25_correct": false,
-      "sh_answer": "Spanish",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 8047
+      "bm25_answer": "Walloon",
+      "bm25_correct": true,
+      "sh_answer": "Walloon",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 55,
@@ -729,12 +729,12 @@
       "ground_truth": [
         "Denmark"
       ],
-      "bm25_answer": "United States of America",
+      "bm25_answer": "United States of America.",
       "bm25_correct": false,
-      "sh_answer": "Denmark",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 8814
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 56,
@@ -746,8 +746,8 @@
       "bm25_correct": true,
       "sh_answer": "Asia",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 5282
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 57,
@@ -755,12 +755,12 @@
       "ground_truth": [
         "basketball"
       ],
-      "bm25_answer": "Basketball",
+      "bm25_answer": "basketball",
       "bm25_correct": true,
       "sh_answer": "basketball",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 10866
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 58,
@@ -772,8 +772,8 @@
       "bm25_correct": true,
       "sh_answer": "association football",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 8565
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 59,
@@ -785,8 +785,8 @@
       "bm25_correct": true,
       "sh_answer": "Hindi",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 12996
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 60,
@@ -798,8 +798,8 @@
       "bm25_correct": true,
       "sh_answer": "Bridget Jones's Diary",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 9733
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 61,
@@ -811,8 +811,8 @@
       "bm25_correct": true,
       "sh_answer": "WWE",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 4612
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 62,
@@ -824,8 +824,8 @@
       "bm25_correct": true,
       "sh_answer": "North America",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 3969
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 63,
@@ -837,8 +837,8 @@
       "bm25_correct": true,
       "sh_answer": "Spanish",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 8194
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 64,
@@ -846,12 +846,12 @@
       "ground_truth": [
         "Denmark"
       ],
-      "bm25_answer": "Italy",
-      "bm25_correct": false,
+      "bm25_answer": "Denmark",
+      "bm25_correct": true,
       "sh_answer": "Denmark",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 5509
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 65,
@@ -861,10 +861,10 @@
       ],
       "bm25_answer": "Khalifa bin Zayed Al Nahyan",
       "bm25_correct": true,
-      "sh_answer": "Stephen McNeil",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 3418
+      "sh_answer": "Khalifa bin Zayed Al Nahyan",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 66,
@@ -874,10 +874,10 @@
       ],
       "bm25_answer": "Rome",
       "bm25_correct": false,
-      "sh_answer": "Lancaster",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17372
+      "sh_answer": "Rome",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 67,
@@ -885,12 +885,12 @@
       "ground_truth": [
         "Netscape Comunications Corporation"
       ],
-      "bm25_answer": "Netscape Communications Corporation",
+      "bm25_answer": "Microsoft",
       "bm25_correct": false,
-      "sh_answer": "Netscape Comunications Corporation",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 11062
+      "sh_answer": "Microsoft",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 68,
@@ -900,10 +900,10 @@
       ],
       "bm25_answer": "Central Intelligence Agency.",
       "bm25_correct": false,
-      "sh_answer": "British Broadcasting Corporation",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 15936
+      "sh_answer": "Central Intelligence Agency.",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 69,
@@ -913,10 +913,10 @@
       ],
       "bm25_answer": "Nepal",
       "bm25_correct": true,
-      "sh_answer": "Nepal",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 13995
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 70,
@@ -924,12 +924,12 @@
       "ground_truth": [
         "Ireland"
       ],
-      "bm25_answer": "Ireland",
-      "bm25_correct": true,
-      "sh_answer": "Ireland",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 10493
+      "bm25_answer": "United States of America",
+      "bm25_correct": false,
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 71,
@@ -941,8 +941,8 @@
       "bm25_correct": true,
       "sh_answer": "Finnish",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 17023
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 72,
@@ -950,12 +950,12 @@
       "ground_truth": [
         "British Broadcasting Corporation"
       ],
-      "bm25_answer": "American Broadcasting Company.",
+      "bm25_answer": "American Broadcasting Company",
       "bm25_correct": false,
-      "sh_answer": "British Broadcasting Corporation",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 8413
+      "sh_answer": "American Broadcasting Company",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 73,
@@ -965,10 +965,10 @@
       ],
       "bm25_answer": "Politician",
       "bm25_correct": false,
-      "sh_answer": "politician",
+      "sh_answer": "Politician",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 18
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 74,
@@ -978,10 +978,10 @@
       ],
       "bm25_answer": "United States of America",
       "bm25_correct": false,
-      "sh_answer": "United Kingdom",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 16895
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 75,
@@ -989,12 +989,12 @@
       "ground_truth": [
         "quarterback"
       ],
-      "bm25_answer": "goalkeeper",
+      "bm25_answer": "Goalkeeper.",
       "bm25_correct": false,
       "sh_answer": "goalkeeper",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 10519
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 76,
@@ -1004,10 +1004,10 @@
       ],
       "bm25_answer": "United States of America",
       "bm25_correct": false,
-      "sh_answer": "United Kingdom",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 15540
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 77,
@@ -1017,10 +1017,10 @@
       ],
       "bm25_answer": "association football",
       "bm25_correct": false,
-      "sh_answer": "Muay Thai",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 16897
+      "sh_answer": "association football",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 78,
@@ -1030,10 +1030,10 @@
       ],
       "bm25_answer": "Nuapada",
       "bm25_correct": true,
-      "sh_answer": "Seattle",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 3531
+      "sh_answer": "Nuapada",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 79,
@@ -1043,10 +1043,10 @@
       ],
       "bm25_answer": "Goalkeeper",
       "bm25_correct": false,
-      "sh_answer": "defenceman",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17090
+      "sh_answer": "Goalkeeper",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 80,
@@ -1054,12 +1054,12 @@
       "ground_truth": [
         "Riyadh Region"
       ],
-      "bm25_answer": "London",
-      "bm25_correct": false,
-      "sh_answer": "London",
-      "sh_correct": false,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17757
+      "bm25_answer": "Riyadh Region",
+      "bm25_correct": true,
+      "sh_answer": "Riyadh Region",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 81,
@@ -1071,8 +1071,8 @@
       "bm25_correct": true,
       "sh_answer": "United States of America",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 7441
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 82,
@@ -1084,8 +1084,8 @@
       "bm25_correct": true,
       "sh_answer": "Russian",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14923
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 83,
@@ -1093,12 +1093,12 @@
       "ground_truth": [
         "association football"
       ],
-      "bm25_answer": "association football",
+      "bm25_answer": "Association football.",
       "bm25_correct": true,
-      "sh_answer": "basketball",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 10732
+      "sh_answer": "association football",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 84,
@@ -1110,8 +1110,8 @@
       "bm25_correct": true,
       "sh_answer": "Krysten Ritter",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 12612
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 85,
@@ -1121,10 +1121,10 @@
       ],
       "bm25_answer": "London",
       "bm25_correct": false,
-      "sh_answer": "Flensburg",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 14587
+      "sh_answer": "London",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 86,
@@ -1136,8 +1136,8 @@
       "bm25_correct": false,
       "sh_answer": "Federalist Papers",
       "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 15100
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 87,
@@ -1149,8 +1149,8 @@
       "bm25_correct": true,
       "sh_answer": "The Wharton School",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 11318
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 88,
@@ -1158,12 +1158,12 @@
       "ground_truth": [
         "Danny Danon"
       ],
-      "bm25_answer": "Danny Danon",
-      "bm25_correct": true,
-      "sh_answer": "Danny Danon",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 9903
+      "bm25_answer": "Peter Dutton",
+      "bm25_correct": false,
+      "sh_answer": "Peter Dutton",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 89,
@@ -1175,8 +1175,8 @@
       "bm25_correct": true,
       "sh_answer": "L. Ron Hubbard",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 17566
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 90,
@@ -1188,8 +1188,8 @@
       "bm25_correct": true,
       "sh_answer": "Universal City",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 13584
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 91,
@@ -1199,10 +1199,10 @@
       ],
       "bm25_answer": "Christopher Monck, 2nd Duke of Albemarle.",
       "bm25_correct": true,
-      "sh_answer": "Christopher Monck, 2nd Duke of Albemarle",
+      "sh_answer": "Christopher Monck, 2nd Duke of Albemarle.",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 6465
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 92,
@@ -1214,8 +1214,8 @@
       "bm25_correct": true,
       "sh_answer": "McDonald's",
       "sh_correct": true,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 1143
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 93,
@@ -1225,10 +1225,10 @@
       ],
       "bm25_answer": "Robert Hooke",
       "bm25_correct": false,
-      "sh_answer": "Brothers Grimm",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 9497
+      "sh_answer": "Robert Hooke",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 94,
@@ -1240,8 +1240,8 @@
       "bm25_correct": true,
       "sh_answer": "Thiago Motta",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 11755
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 95,
@@ -1251,10 +1251,10 @@
       ],
       "bm25_answer": "United States of America",
       "bm25_correct": false,
-      "sh_answer": "United Kingdom",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 17798
+      "sh_answer": "United States of America",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 96,
@@ -1264,10 +1264,10 @@
       ],
       "bm25_answer": "A Wrinkle in Time",
       "bm25_correct": true,
-      "sh_answer": "Charaka Samhita",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 459
+      "sh_answer": "A Wrinkle in Time.",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 97,
@@ -1279,8 +1279,8 @@
       "bm25_correct": true,
       "sh_answer": "Church of Scotland",
       "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 11444
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 98,
@@ -1288,12 +1288,12 @@
       "ground_truth": [
         "shooting guard"
       ],
-      "bm25_answer": "point guard",
+      "bm25_answer": "Point guard.",
       "bm25_correct": false,
-      "sh_answer": "shooting guard",
-      "sh_correct": true,
-      "sh_n_candidates": 2,
-      "sh_chosen_serial": 13365
+      "sh_answer": "point guard",
+      "sh_correct": false,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     },
     {
       "q_idx": 99,
@@ -1303,10 +1303,10 @@
       ],
       "bm25_answer": "Esperanto",
       "bm25_correct": true,
-      "sh_answer": "Finnish",
-      "sh_correct": false,
-      "sh_n_candidates": 1,
-      "sh_chosen_serial": 6523
+      "sh_answer": "Esperanto",
+      "sh_correct": true,
+      "sh_n_candidates": null,
+      "sh_chosen_serial": null
     }
   ]
 }
