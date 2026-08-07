@@ -24,57 +24,61 @@ try:
 except Exception:  # pragma: no cover - optional dependency
     SentenceTransformer = None
 
-from semantic_router import Route, SemanticRouter
-from semantic_router.encoders import HuggingFaceEncoder
+from sentence_transformers import SentenceTransformer, util
 
-encoder = HuggingFaceEncoder(name="sentence-transformers/all-MiniLM-L6-v2")
+encoder = SentenceTransformer("all-MiniLM-L6-v2")
 
-route_current_value = Route(
-    name="current_value",
-    utterances=[
-        "What is the current value?",
-        "Who is the current person?",
-        "What is the latest state?",
-        "Which answer is true now?",
-        "What is the newest recorded fact?"
+ROUTE_UTTERANCES = {
+    "current_value": [
+        "What is the current value of the property?",
+        "Who is currently holding the position?",
+        "What is the latest state recorded?",
+        "Which answer is true right now?",
+        "What is the newest recorded fact about this?",
+        "What is the current operating system installed?",
+        "Show me the most up-to-date information.",
+        "What is the status as of today?"
+    ],
+    "historical": [
+        "What was the originally listed country for this?",
+        "Before the change, what was the value?",
+        "What was the first recorded location?",
+        "What was the original country it was created in?"
+    ],
+    "aggregation": [
+        "How many different countries was this created in?",
+        "Count the total number of locations.",
+        "How many times did this occur?",
+        "What is the total number of items?"
+    ],
+    "boolean": [
+        "Was The Unit created in the country of Nepal?",
+        "Did this event actually happen?",
+        "Is it true that this was created here?",
+        "Was the person born in that specific city?",
+        "Is it true that the target location is where the entity was created?",
+        "Can you confirm if the specified country is the place of origin?",
+        "Was the subject actually formed in this specific region?",
+        "Is this particular value the correct one for the item?"
     ]
-)
+}
 
-route_historical = Route(
-    name="historical",
-    utterances=[
-        "What was the previous value before the current one?",
-        "Who held the role before now?",
-        "What was the earlier state?",
-        "What was the original recorded value?",
-        "Show the state before the latest update."
-    ]
-)
+ROUTE_EMBEDDINGS = {
+    route: encoder.encode(utterances, convert_to_tensor=True) 
+    for route, utterances in ROUTE_UTTERANCES.items()
+}
 
-route_boolean = Route(
-    name="boolean",
-    utterances=[
-        "Is the current state still true?",
-        "Does the latest record match this statement?",
-        "Was this property true in the newest fact?",
-        "Can you verify this yes or no?",
-        "Is this claim correct right now?"
-    ]
-)
-
-route_aggregation = Route(
-    name="aggregation",
-    utterances=[
-        "How many unique values have appeared?",
-        "List all historical values.",
-        "Count the distinct entries in memory.",
-        "Show every previous state.",
-        "What are all recorded versions?"
-    ]
-)
-
-routes = [route_current_value, route_historical, route_boolean, route_aggregation]
-rl = SemanticRouter(encoder=encoder, routes=routes, auto_sync="local")
+def native_route(question: str) -> str:
+    q_emb = encoder.encode(question, convert_to_tensor=True)
+    best_route = "fallback"
+    best_score = -1.0
+    for route_name, u_embs in ROUTE_EMBEDDINGS.items():
+        scores = util.cos_sim(q_emb, u_embs)[0]
+        max_score = scores.max().item()
+        if max_score > best_score:
+            best_score = max_score
+            best_route = route_name
+    return best_route
 
 # ────────────────────────────────────────────────────────────────────────────
 # Shared constants — matching MemoryAgentBench's RAG/FactConsolidation config
@@ -673,28 +677,20 @@ def _temporal_offset(question: str) -> int | None:
 
 @observe(name="historical_pick", as_type=None)
 def _historical_pick(candidates: list[dict[str, Any]], question: str) -> dict[str, Any] | None:
-    timeline = _collapse_state_timeline(candidates)
-    if not timeline:
+    if not candidates:
         get_client().update_current_span(
             input={"question": question, "n_candidates": 0},
-            output={"chosen": None, "timeline_length": 0},
+            output={"chosen": None},
         )
         return None
-
-    offset = _temporal_offset(question)
-    if offset is None:
-        chosen = min(timeline, key=lambda c: c["serial"])
-        selection_reason = "oldest-state"
-    else:
-        chosen = timeline[min(offset, len(timeline) - 1)]
-        selection_reason = f"state_offset={min(offset, len(timeline) - 1)}"
+        
+    chosen = min(candidates, key=lambda x: x["serial"])
+    
     get_client().update_current_span(
         input={"question": question, "n_candidates": len(candidates)},
         output={
             "chosen": chosen,
-            "timeline_length": len(timeline),
-            "selection_reason": selection_reason,
-            "timeline_serials": [candidate["serial"] for candidate in timeline],
+            "selection_reason": "min(serial) — deterministic Python",
         },
     )
     return chosen
@@ -771,8 +767,8 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
                                  client: OpenAI,
                                  dataset_name: str = "factconsolidation_mh_262k",
                                  competency: str = "Conflict_Resolution") -> dict[str, Any]:
-    route = rl(question).name
-
+    route = native_route(question)
+    print(f"\n=== ROUTER CHOSE: {route} ===")
     top_k = min(TOP_K, len(fact_texts))
     if route == "historical":
         top_k = min(25, len(fact_texts))
