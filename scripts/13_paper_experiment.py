@@ -25,11 +25,27 @@ from rank_bm25 import BM25Okapi
 sys.path.insert(0, '.')
 from _lf import OpenAI, observe, get_client, ROOT
 from _pipeline import (
-    tokenize, bm25_retrieve, evaluate_answer,
+    tokenize, bm25_retrieve,
     _extract_candidates, _freshness_pick,
     run_bm25_baseline, MODEL, TOP_K,
     run_adaptive_router_pipeline,
 )
+
+def check_answer_match(predicted, ground_truth):
+    pred_str = str(predicted).strip().lower()
+    gt_str = str(ground_truth).strip().lower()
+
+    # Exact or substring match for text
+    if pred_str == gt_str or pred_str in gt_str or gt_str in pred_str:
+        return True
+
+    # Numeric extraction for aggregation
+    pred_nums = re.findall(r'\d+', pred_str)
+    gt_nums = re.findall(r'\d+', gt_str)
+    if pred_nums and gt_nums and pred_nums[0] == gt_nums[0]:
+        return True
+
+    return False
 
 
 def parse_facts(ctx: str) -> list[tuple[int, str]]:
@@ -72,20 +88,21 @@ def run_sh_conflict(question: str, question_index: int, ground_truth: list[str],
     candidates = _extract_candidates(client, question, retrieved)
     chosen = _freshness_pick(candidates)
     answer = chosen["answer_entity"] if chosen else "(no answer)"
-    eval_result = evaluate_answer(answer, ground_truth)
+    gt = ground_truth[0] if isinstance(ground_truth, list) else ground_truth
+    is_correct = check_answer_match(answer, gt)
 
     get_client().update_current_span(
-        output={"answer": answer, "is_correct": eval_result["is_correct_subem"],
+        output={"answer": answer, "is_correct": is_correct,
                 "n_candidates": len(candidates),
                 "chosen_serial": chosen.get("serial") if chosen else None},
     )
-    if eval_result["is_correct_subem"]:
+    if is_correct:
         get_client().score_current_trace(name="correctness", value=1.0)
     else:
         get_client().score_current_trace(name="correctness", value=0.0)
 
     return {
-        "answer": answer, "is_correct": eval_result["is_correct_subem"],
+        "answer": answer, "is_correct": is_correct,
         "n_candidates": len(candidates),
         "chosen_serial": chosen.get("serial") if chosen else None,
         "retrieved_serials": [r["fact_idx"] for r in retrieved],

@@ -29,38 +29,43 @@ from sentence_transformers import SentenceTransformer, util
 encoder = SentenceTransformer("all-MiniLM-L6-v2")
 
 ROUTE_UTTERANCES = {
-    "current_value": [
-        "What is the current value of the property?",
-        "Who is currently holding the position?",
-        "What is the latest state recorded?",
-        "Which answer is true right now?",
-        "What is the newest recorded fact about this?",
-        "What is the current operating system installed?",
-        "Show me the most up-to-date information.",
-        "What is the status as of today?"
-    ],
     "historical": [
-        "What was the originally listed country for this?",
-        "Before the change, what was the value?",
-        "What was the first recorded location?",
-        "What was the original country it was created in?"
+        "What was the initial recorded value?",
+        "What was the original or earliest status?",
+        "Which value was assigned first historically?",
+        "What was the foundational or primary entry?",
+        "Which value constituted the earliest known fact?",
+        "What was the first documented record?",
+        "Looking at the earliest records, what was the value?",
+        "In the baseline or initial documentation, which value was recorded?",
     ],
     "aggregation": [
-        "How many different countries was this created in?",
-        "Count the total number of locations.",
-        "How many times did this occur?",
-        "What is the total number of items?"
+        "How many different values exist?",
+        "What is the total count of distinct entries?",
+        "Provide a count of all unique values.",
+        "How many non-redundant values have been recorded?",
+        "What quantity of distinct values exist in the record?",
+        "Quantify the total number of unique assignments.",
+        "What is the sum total of varied values recorded?",
     ],
     "boolean": [
-        "Was The Unit created in the country of Nepal?",
-        "Did this event actually happen?",
-        "Is it true that this was created here?",
-        "Was the person born in that specific city?",
-        "Is it true that the target location is where the entity was created?",
-        "Can you confirm if the specified country is the place of origin?",
-        "Was the subject actually formed in this specific region?",
-        "Is this particular value the correct one for the item?"
-    ]
+        "Is it true that this condition holds?",
+        "Was this specific value ever recorded for the entity?",
+        "Is it verifiable that this value was attributed?",
+        "Did this specific entity ever have this value logged?",
+        "Does the evidence support that this value served as the fact?",
+        "Was this value ever a documented fact at any juncture?",
+        "Has this entity been attributed with this specific value?",
+        "Verify whether this statement is true or false.",
+        "Can you confirm whether or not this value was recorded?",
+        "At any juncture in the records, was this specific value attributed?",
+    ],
+    "current_value": [
+        "What is the current value?",
+        "What is the present or latest status?",
+        "What is the active recorded state right now?",
+        "Which value is currently assigned?",
+    ],
 }
 
 ROUTE_EMBEDDINGS = {
