@@ -1,0 +1,602 @@
+[
+  {
+    "entity": "H. P. Lovecraft",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What was the initial value recorded for H. P. Lovecraft?",
+    "ground_truth": "the city of Providence",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "H. P. Lovecraft",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Give me the total count of distinct values that have been associated with H. P. Lovecraft.",
+    "ground_truth": "6",
+    "answer": "4",
+    "qa_correct": false
+  },
+  {
+    "entity": "H. P. Lovecraft",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Is it accurate that H. P. Lovecraft was at some point recorded under the value of Canada?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "Elizabeth II",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Prior to any updates, what religion was associated with Elizabeth II?",
+    "ground_truth": "Church of England",
+    "answer": "Church of England",
+    "qa_correct": true
+  },
+  {
+    "entity": "Elizabeth II",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Across all records, how many unique religions does Elizabeth II have?",
+    "ground_truth": "6",
+    "answer": "2",
+    "qa_correct": false
+  },
+  {
+    "entity": "Elizabeth II",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was the religion Hyperion Corp ever a documented fact about Elizabeth II?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Sacha Baron Cohen",
+    "intent": "historical",
+    "route": "boolean",
+    "route_correct": false,
+    "question": "Looking at the earliest entry, which value did Sacha Baron Cohen have?",
+    "ground_truth": "Isla Fisher",
+    "answer": "False",
+    "qa_correct": false
+  },
+  {
+    "entity": "Sacha Baron Cohen",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "What is the cumulative number of different values recorded for Sacha Baron Cohen?",
+    "ground_truth": "6",
+    "answer": "6",
+    "qa_correct": true
+  },
+  {
+    "entity": "Sacha Baron Cohen",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "In the knowledge base, does Sacha Baron Cohen have any association with Baptists as a value?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "60 Minutes",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Regarding 60 Minutes, what was the foundational creator first documented?",
+    "ground_truth": "Don Hewitt",
+    "answer": "Don Hewitt",
+    "qa_correct": true
+  },
+  {
+    "entity": "60 Minutes",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Tallying every distinct creator, how many are linked to 60 Minutes?",
+    "ground_truth": "6",
+    "answer": "2",
+    "qa_correct": false
+  },
+  {
+    "entity": "60 Minutes",
+    "intent": "boolean",
+    "route": "historical",
+    "route_correct": false,
+    "question": "Can you confirm that Vortex Solutions appeared as a creator entry for 60 Minutes?",
+    "ground_truth": "False",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Benjamin Franklin",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "In the original records, which value was attributed to Benjamin Franklin?",
+    "ground_truth": "University of Pennsylvania",
+    "answer": "Deborah Read Franklin",
+    "qa_correct": false
+  },
+  {
+    "entity": "Benjamin Franklin",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Calculate the total sum of unique value entries for Benjamin Franklin.",
+    "ground_truth": "6",
+    "answer": "0",
+    "qa_correct": false
+  },
+  {
+    "entity": "Benjamin Franklin",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was New Zealand ever registered as a valid value for Benjamin Franklin at any point?",
+    "ground_truth": "True",
+    "answer": "False",
+    "qa_correct": false
+  },
+  {
+    "entity": "Robert Louis Stevenson",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What value was Robert Louis Stevenson first catalogued under?",
+    "ground_truth": "the city of Edinburgh",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Robert Louis Stevenson",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "How many separate value designations exist in the records for Robert Louis Stevenson?",
+    "ground_truth": "6",
+    "answer": "4",
+    "qa_correct": false
+  },
+  {
+    "entity": "Robert Louis Stevenson",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was Prism Analytics at any point logged as the value for Robert Louis Stevenson?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Bella Swan",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Tracing back to the earliest data point, what value applied to Bella Swan?",
+    "ground_truth": "Edward Cullen",
+    "answer": "Edward Cullen",
+    "qa_correct": true
+  },
+  {
+    "entity": "Bella Swan",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Enumerate the number of non-duplicate values that pertain to Bella Swan.",
+    "ground_truth": "6",
+    "answer": "2",
+    "qa_correct": false
+  },
+  {
+    "entity": "Bella Swan",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Does the evidence support that Edward Cullen served as the value for Bella Swan?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "Winston Churchill",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What was the primordial value designation for Winston Churchill?",
+    "ground_truth": "University of Edinburgh",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Winston Churchill",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "What quantity of distinct values has Winston Churchill been catalogued under?",
+    "ground_truth": "6",
+    "answer": "[]",
+    "qa_correct": false
+  },
+  {
+    "entity": "Winston Churchill",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Has Hyperion Corp been attributed as the value for Winston Churchill in any record?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "The Simpsons",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Which language was the genesis entry for The Simpsons?",
+    "ground_truth": "the language of English",
+    "answer": "English",
+    "qa_correct": false
+  },
+  {
+    "entity": "The Simpsons",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Counting only unique values, how many languages are on file for The Simpsons?",
+    "ground_truth": "6",
+    "answer": "2",
+    "qa_correct": false
+  },
+  {
+    "entity": "The Simpsons",
+    "intent": "boolean",
+    "route": "historical",
+    "route_correct": false,
+    "question": "At any juncture in the records, was United States of America the documented language for The Simpsons?",
+    "ground_truth": "True",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "William Shakespeare",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Before any modifications, what value corresponded to William Shakespeare?",
+    "ground_truth": "the city of Stratford-upon-Avon",
+    "answer": "Anne Hathaway",
+    "qa_correct": false
+  },
+  {
+    "entity": "William Shakespeare",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "How many discrete value classifications apply to William Shakespeare?",
+    "ground_truth": "6",
+    "answer": "0",
+    "qa_correct": false
+  },
+  {
+    "entity": "William Shakespeare",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Is it verifiable that Meridian Corp was the value for William Shakespeare at any time?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Edward Cullen",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What archival value was initially assigned to Edward Cullen?",
+    "ground_truth": "Robert Pattinson",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Edward Cullen",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Provide the cardinality of the set of values associated with Edward Cullen.",
+    "ground_truth": "6",
+    "answer": "[\"Bella Swan\", \"Stanley Kowalski\"]",
+    "qa_correct": false
+  },
+  {
+    "entity": "Edward Cullen",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Is it accurate that Edward Cullen was at some point recorded under the value of Bella Swan?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "Ford Motor Company",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What value did the founding record of Ford Motor Company specify?",
+    "ground_truth": "Henry Ford",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Ford Motor Company",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "What is the total tally of disparate values for Ford Motor Company?",
+    "ground_truth": "6",
+    "answer": "0",
+    "qa_correct": false
+  },
+  {
+    "entity": "Ford Motor Company",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was the value Atlas Collective ever a documented fact about Ford Motor Company?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Tom Clancy",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "According to the inaugural entry, what value did Tom Clancy possess?",
+    "ground_truth": "United States of America",
+    "answer": "Catholic Church",
+    "qa_correct": false
+  },
+  {
+    "entity": "Tom Clancy",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "How many non-redundant values have been attributed to Tom Clancy?",
+    "ground_truth": "5",
+    "answer": "2",
+    "qa_correct": false
+  },
+  {
+    "entity": "Tom Clancy",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "In the knowledge base, does Tom Clancy have any association with the city of Baltimore as a value?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "Queen Victoria I",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What was the ancestral value linked to Queen Victoria I?",
+    "ground_truth": "United Kingdom of Great Britain and Ireland",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Queen Victoria I",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Determine the aggregate count of differing values for Queen Victoria I.",
+    "ground_truth": "5",
+    "answer": "5",
+    "qa_correct": true
+  },
+  {
+    "entity": "Queen Victoria I",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Can you confirm that Narwhal Inc. appeared as a value entry for Queen Victoria I?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Barbra Streisand",
+    "intent": "historical",
+    "route": "boolean",
+    "route_correct": false,
+    "question": "In the baseline documentation, what value was tied to Barbra Streisand?",
+    "ground_truth": "United States of America",
+    "answer": "False",
+    "qa_correct": false
+  },
+  {
+    "entity": "Barbra Streisand",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "What is the census of unique value entries under Barbra Streisand?",
+    "ground_truth": "5",
+    "answer": "[]",
+    "qa_correct": false
+  },
+  {
+    "entity": "Barbra Streisand",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was Denmark ever registered as a valid value for Barbra Streisand at any point?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "David Bowie",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What value marked the debut record of David Bowie?",
+    "ground_truth": "Iman",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "David Bowie",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "How many individual values appear across the dataset for David Bowie?",
+    "ground_truth": "5",
+    "answer": "7",
+    "qa_correct": false
+  },
+  {
+    "entity": "David Bowie",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Was Quantum Dynamics at any point logged as the value for David Bowie?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "Jean Giraudoux",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What preliminary value was first recorded for Jean Giraudoux?",
+    "ground_truth": "Chaillot",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Jean Giraudoux",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "What is the sum total of varied values recorded against Jean Giraudoux?",
+    "ground_truth": "5",
+    "answer": "0",
+    "qa_correct": false
+  },
+  {
+    "entity": "Jean Giraudoux",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Does the evidence support that Fiji served as the value for Jean Giraudoux?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "C. S. Lewis",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "Which value constituted the earliest known fact about C. S. Lewis?",
+    "ground_truth": "United Kingdom",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "C. S. Lewis",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Quantify the distinct value assignments for C. S. Lewis.",
+    "ground_truth": "5",
+    "answer": "[\"United Kingdom\", \"Joy Davidman\", \"Papal States\", \"Lucille Ball\"]",
+    "qa_correct": false
+  },
+  {
+    "entity": "C. S. Lewis",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Has Prism Analytics been attributed as the value for C. S. Lewis in any record?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  },
+  {
+    "entity": "George W. Bush",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What was the embryonic value information for George W. Bush?",
+    "ground_truth": "United States of America",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "George W. Bush",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "How many heterogeneous values has George W. Bush accumulated?",
+    "ground_truth": "5",
+    "answer": "0",
+    "qa_correct": false
+  },
+  {
+    "entity": "George W. Bush",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "At any juncture in the records, was United States of America the documented value for George W. Bush?",
+    "ground_truth": "True",
+    "answer": "True",
+    "qa_correct": true
+  },
+  {
+    "entity": "Alfred, Lord Tennyson",
+    "intent": "historical",
+    "route": "historical",
+    "route_correct": true,
+    "question": "What value did the seminal record of Alfred, Lord Tennyson contain?",
+    "ground_truth": "Emily Tennyson, Lady Tennyson",
+    "answer": "(no answer)",
+    "qa_correct": false
+  },
+  {
+    "entity": "Alfred, Lord Tennyson",
+    "intent": "aggregation",
+    "route": "aggregation",
+    "route_correct": true,
+    "question": "Provide a count of all unique values that reference Alfred, Lord Tennyson.",
+    "ground_truth": "5",
+    "answer": "4",
+    "qa_correct": false
+  },
+  {
+    "entity": "Alfred, Lord Tennyson",
+    "intent": "boolean",
+    "route": "boolean",
+    "route_correct": true,
+    "question": "Is it verifiable that Spectra Holdings was the value for Alfred, Lord Tennyson at any time?",
+    "ground_truth": "False",
+    "answer": "False",
+    "qa_correct": true
+  }
+]
