@@ -3,3 +3,4 @@ notes.md
 report_extract/
 __pycache__/
 *.pyc
+.vscode/
