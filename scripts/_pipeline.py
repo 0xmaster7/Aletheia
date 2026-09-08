@@ -552,9 +552,10 @@ Do NOT compare freshness markers. Do NOT pick a "best" one. Include ALL items th
 Rules:
 1. An item directly answers the question only if BOTH its subject AND its predicate exactly match what the question asks about. The predicate noun used in the question (e.g., "spouse", "sport", "profession", "religion") must be the same noun used in the item. Related-but-different predicates do NOT match.
 2. The subject named in the question must appear verbatim in the matching item. A different entity with a similar name does NOT match.
-3. If a subject has multiple conflicting values (e.g., the same person with two different values at different freshness markers), INCLUDE BOTH as separate candidates. Do not pick.
-4. If no item answers the question, return an empty list.
-5. Copy the item's text verbatim into `fact_text`.
+3. Ignore temporal constraints (e.g., "first", "previous", "current") or aggregation/boolean constraints (e.g., "how many", "total", "is it true") in the question. Your job is ONLY to extract ALL valid candidate values for the requested entity and property across ALL time. We will filter/count/verify them later.
+4. If a subject has multiple conflicting values (e.g., the same person with two different values at different freshness markers), INCLUDE ALL OF THEM as separate candidates. Do not pick.
+5. If no item answers the question, return an empty list.
+6. Copy the item's text verbatim into `fact_text`.
 
 Question: {hop_query}
 
@@ -677,7 +678,7 @@ def _temporal_offset(question: str) -> int | None:
             return offset
     if re.search(r"\b(previous|before|earlier|prior|former|last)\b", lowered):
         return 1
-    return 0
+    return None
 
 
 @observe(name="historical_pick", as_type=None)
@@ -689,13 +690,23 @@ def _historical_pick(candidates: list[dict[str, Any]], question: str) -> dict[st
         )
         return None
         
-    chosen = min(candidates, key=lambda x: x["serial"])
+    offset = _temporal_offset(question)
+    if offset is None:
+        chosen = min(candidates, key=lambda x: x["serial"])
+        reason = "min(serial) — oldest requested"
+    else:
+        timeline = _collapse_state_timeline(candidates)
+        if offset < len(timeline):
+            chosen = timeline[offset]
+        else:
+            chosen = timeline[-1]
+        reason = f"timeline offset {offset}"
     
     get_client().update_current_span(
         input={"question": question, "n_candidates": len(candidates)},
         output={
             "chosen": chosen,
-            "selection_reason": "min(serial) — deterministic Python",
+            "selection_reason": reason,
         },
     )
     return chosen
@@ -797,7 +808,15 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
         input={"question": question},
     )
 
-    retrieved = bm25_retrieve(bm25, question, fact_indices, fact_texts, top_k)
+    # Clean noise words for BM25 retrieval for certain routes
+    search_query = question
+    if route in ("aggregation", "historical"):
+        noise_pattern = r'\b(how many|count|number of|total|unique|distinct|different|list all|sum|what|was|is|the|initial|earliest|first|previous|original|value|values|recorded|associated|with|for|give|me)\b'
+        search_query = re.sub(noise_pattern, '', search_query, flags=re.IGNORECASE).strip()
+        if not search_query:
+            search_query = question
+
+    retrieved = bm25_retrieve(bm25, search_query, fact_indices, fact_texts, top_k)
     candidates = _extract_candidates(client, question, retrieved)
 
     chosen = None
@@ -809,8 +828,12 @@ def run_adaptive_router_pipeline(question: str, question_index: int, ground_trut
         chosen = _historical_pick(candidates, question)
         answer = chosen["answer_entity"] if chosen else "(no answer)"
     elif route == "boolean":
-        chosen = _freshness_pick(candidates)
-        answer = str(_boolean_gate(question, chosen))
+        lowered_q = question.lower()
+        if any(h in lowered_q for h in ["ever", "at any point", "at some point", "at any time", "any juncture", "any record"]):
+            answer = str(any(_boolean_gate(question, c) for c in candidates))
+        else:
+            chosen = _freshness_pick(candidates)
+            answer = str(_boolean_gate(question, chosen))
     elif route == "aggregation":
         aggregate = _aggregate_answers(candidates, question)
         answer = aggregate["answer"]
