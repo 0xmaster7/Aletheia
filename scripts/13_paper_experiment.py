@@ -122,17 +122,8 @@ def main():
     ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
     row = next(s for s in ds if s["metadata"]["source"] == source)
     ctx = row["context"]
-    # Forcefully inject the three mock questions for route testing
-    questions = [
-        "What was the initial country of origin recorded for The Easybeats?",
-        "Give me the total count of different countries where The Easybeats was formed.",
-        "Is it true that the country of Japan is where The Easybeats was created?"
-    ]
-    answers = [
-        "Australia",
-        "2",
-        "False"
-    ]
+    questions = row["questions"][:100]
+    answers = row["answers"][:100]
 
     facts = parse_facts(ctx)
     fact_indices = [f[0] for f in facts]
