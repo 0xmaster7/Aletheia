@@ -65,6 +65,12 @@ ROUTE_UTTERANCES = {
         "What is the present or latest status?",
         "What is the active recorded state right now?",
         "Which value is currently assigned?",
+        "What is the value?",
+        "Who is this person?",
+        "Where was this created?",
+        "What is the property of this entity?",
+        "Which answer is true?",
+        "What is the fact?",
     ],
 }
 

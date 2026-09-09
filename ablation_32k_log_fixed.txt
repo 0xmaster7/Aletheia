@@ -1,0 +1,211 @@
+[32k] experiment=ablation_adaptive_fact_gpt4omini model=gpt-4o-mini chunking=fact task=adaptive
+[32k] Loading dataset…
+[32k] 100 questions × 2310 chunks (strategy=fact)
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[32k] Q20/100 | correct 14/20=70.0% | 74s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[32k] Q40/100 | correct 31/40=77.5% | 137s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: boolean ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[32k] Q60/100 | correct 47/60=78.3% | 199s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+[32k] Q80/100 | correct 63/80=78.8% | 272s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[32k] Q100/100 | correct 77/100=77.0% | 344s elapsed
+
+[32k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_adaptive_fact_gpt4omini_factconsolidation_sh_32k.json
+[32k] ablation_adaptive_fact_gpt4omini: 77/100 = 77.0%   (344s)

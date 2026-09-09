@@ -1,0 +1,251 @@
+[262k] experiment=ablation_adaptive_fact_gpt4omini model=gpt-4o-mini chunking=fact task=adaptive
+[262k] Loading dataset…
+[262k] 100 questions × 18332 chunks (strategy=fact)
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+[262k] Q20/100 | correct 15/20=75.0% | 108s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[262k] Q40/100 | correct 34/40=85.0% | 191s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+[262k] Q60/100 | correct 49/60=81.7% | 271s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+========== DEBUG EXTRACT CANDIDATES ==========
+=== PROMPT ===
+You are given retrieved items from a knowledge pool. Each item has a FRESHNESS marker (the prefix integer) — higher marker = newer version.
+
+Your job: identify EVERY item that DIRECTLY answers the question, and extract the answer entity from each.
+
+Do NOT compare freshness markers. Do NOT pick a "best" one. Include ALL items that match.
+
+Rules:
+1. An item directly answers the question only if BOTH its subject AND its predicate exactly match what the question asks about. The predicate noun used in the question (e.g., "spouse", "sport", "profession", "religion") must be the same noun used in the item. Related-but-different predicates do NOT match.
+2. The subject named in the question must appear verbatim in the matching item. A different entity with a similar name does NOT match.
+3. Ignore temporal constraints (e.g., "first", "previous", "current") or aggregation/boolean constraints (e.g., "how many", "total", "is it true") in the question. Your job is ONLY to extract ALL valid candidate values for the requested entity and property across ALL time. We will filter/count/verify them later.
+4. If a subject has multiple conflicting values (e.g., the same person with two different values at different freshness markers), INCLUDE ALL OF THEM as separate candidates. Do not pick.
+5. If no item answers the question, return an empty list.
+6. Copy the item's text verbatim into `fact_text`.
+
+Question: Which country was The Unit created in?
+
+Items:
+13995. The Unit was created in the country of Nepal
+12338. The Unit was created in the country of United States of America
+15421. country rock was created in the country of Italy
+8050. alternative country was created in the country of Spain
+4521. The origianl broadcaster of The Unit is CBS
+16263. The Greenhornes was created in the country of Turkey
+9120. The Easybeats was created in the country of Belgium
+8228. The Sword was created in the country of France
+10631. The Leftovers was created in the country of Finland
+17958. The Simpsons was created in the country of Italy
+
+Return ONLY valid JSON: {"candidates": [{"serial": <int>, "fact_text": "<verbatim>", "answer_entity": "<extracted>"}, ...]}
+
+=== RAW LLM RESPONSE ===
+'{"candidates":[{"serial":13995,"fact_text":"The Unit was created in the country of Nepal","answer_entity":"Nepal"},{"serial":12338,"fact_text":"The Unit was created in the country of United States of America","answer_entity":"United States of America"}]}'
+
+=== PARSED CANDIDATES ===
+[{'serial': 13995, 'fact_text': 'The Unit was created in the country of Nepal', 'answer_entity': 'Nepal'}, {'serial': 12338, 'fact_text': 'The Unit was created in the country of United States of America', 'answer_entity': 'United States of America'}]
+==============================================
+
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: historical ===
+
+=== ROUTER CHOSE: current_value ===
+[262k] Q80/100 | correct 66/80=82.5% | 352s elapsed
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: boolean ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: boolean ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+
+=== ROUTER CHOSE: current_value ===
+[262k] Q100/100 | correct 81/100=81.0% | 437s elapsed
+
+[262k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_adaptive_fact_gpt4omini_factconsolidation_sh_262k.json
+[262k] ablation_adaptive_fact_gpt4omini: 81/100 = 81.0%   (437s)

@@ -27,7 +27,7 @@ _lf = Langfuse(
 )
 
 # Warm up the OTEL exporter so the FIRST batch doesn't race the first @observe call
-_lf.auth_check()
+# _lf.auth_check()
 
 # ────────────────────────────────────────────────────────────────────────────
 # 3. Auto-instrumented OpenAI client (drop-in replacement)
