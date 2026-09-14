@@ -1,0 +1,8 @@
+%% Diagram 2: Accuracy Under Extreme Memory Conflicts
+%% Note: Rendering this requires a Mermaid viewer that supports xychart-beta
+xychart-beta
+    title "Accuracy vs. Context Window Noise (Aletheia vs Baseline)"
+    x-axis ["32k Tokens (Medium)", "64k Tokens (High)", "262k Tokens (Extreme)"]
+    y-axis "Accuracy (%)" 0 --> 100
+    bar [77, 81, 81]
+    line [70, 75, 56]
