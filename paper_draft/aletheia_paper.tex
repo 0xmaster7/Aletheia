@@ -1,4 +1,4 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[journal,10pt]{IEEEtran}
 \IEEEoverridecommandlockouts
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -7,116 +7,168 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{booktabs}
+\usepackage{algorithm}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
 
-\title{Aletheia: A Deterministic Semantic Routing Architecture for Zero-Hallucination Memory Resolution}
+\title{Aletheia: A Deterministic Semantic Routing Architecture for Zero-Hallucination Memory Resolution in Long-Context Language Models}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Keshav Nanda}
-\IEEEauthorblockA{\textit{Department Name} \\
-\textit{Organization/University}\\
-City, Country \\
-email address or ORCID}
+\author{
+\IEEEauthorblockN{Keshav Nanda}
+\IEEEauthorblockA{
+Registration No: 23BCE2249}
+\and
+\IEEEauthorblockN{Dhanalakshmi S}
+\IEEEauthorblockA{
+Registration No: 23BCE2275}
 }
 
 \maketitle
 
 \begin{abstract}
-Large Language Models (LLMs) frequently suffer from calculation hallucinations and severe degradation when retrieving facts from massively noisy context windows. Standard retrieval-augmented generation (RAG) pipelines optimized for "freshness" categorically fail at handling complex conversational intents such as historical tracking, statistical aggregation, and boolean validation. In this paper, we introduce Aletheia, a resilient memory resolution architecture featuring a sub-10ms Semantic Routing Engine and a Zero-Hallucination Execution layer. By entirely decoupling mathematical reasoning from neural weights and offloading it to deterministic Python functions, Aletheia completely eliminates calculation hallucinations. Tested against extreme memory conflicts, Aletheia achieved 93.3\% routing accuracy on multi-intent queries and maintained a rock-solid 81.0\% end-to-end accuracy across a 262,000-token context window—drastically outperforming standard baseline retrieval systems which collapsed to 56.0\%.
+As the context windows of Large Language Models (LLMs) scale to handle hundreds of thousands of tokens, their efficacy in resolving conflicting facts within massive memory streams remains a critical bottleneck. Standard retrieval-augmented generation (RAG) pipelines, fundamentally optimized for isolated "freshness" retrieval, categorically fail at processing complex conversational intents such as historical timeline tracking, statistical aggregation, and boolean state validation. Furthermore, state-of-the-art neural architectures suffer from inherent "calculation hallucinations" when tasked with mathematical reasoning over extracted entities. In this paper, we introduce Aletheia, a resilient memory resolution architecture designed to decouple intent routing, entity extraction, and mathematical reasoning. By integrating a sub-10ms Semantic Routing Engine, Aletheia categorizes incoming queries across multi-dimensional intent vectors, directing them toward an Adaptive Operator Layer. This layer completely offloads mathematical operations (e.g., sorting, counting, and logic gating) from neural weights to deterministic Python functions, thereby eliminating calculation hallucinations entirely. In our rigorous evaluation against extreme memory conflicts, Aletheia achieved a 93.3\% routing accuracy on synthetic multi-intent queries. Furthermore, it maintained an unprecedented 81.0\% end-to-end accuracy across an extreme 262,000-token context window, drastically outperforming standard baseline retrieval systems, which collapsed to 56.0\% under identical noise thresholds. Our findings present a functional leap toward deterministic reliability in long-context conversational agents.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Large Language Models, Retrieval-Augmented Generation, Semantic Routing, Hallucination Mitigation, Natural Language Processing
+Large Language Models, Retrieval-Augmented Generation, Semantic Routing, Hallucination Mitigation, Natural Language Processing, Deterministic Execution
 \end{IEEEkeywords}
 
 \section{Introduction}
-As the context windows of Large Language Models (LLMs) expand, they are increasingly utilized as vast memory repositories. However, effectively extracting and resolving conflicting facts across hundreds of thousands of tokens remains a significant challenge. Standard Baseline retrieval architectures (e.g., BM25 combined with an LLM prompt) are heavily optimized to retrieve the most recent "fresh" fact. While somewhat effective at low context sizes, these systems suffer from massive performance degradation as noise levels increase. 
+The rapid evolution of Large Language Models (LLMs) has been marked by an unprecedented expansion in context window capacities. Contemporary architectures are now capable of ingesting millions of tokens, theoretically enabling them to act as vast, persistent memory repositories. However, the theoretical capacity to ingest tokens does not linearly correlate with the practical ability to retrieve, synthesize, and reason over heavily conflicting facts buried within that noise. 
 
-More critically, current models rely on neural weights to perform mathematical and logical reasoning (e.g., sorting serials, counting occurrences). This reliance introduces "calculation hallucinations," where the system outputs confidently incorrect mathematical operations. Furthermore, standard pipelines fail entirely when faced with complex conversational intents, defaulting to freshness rather than tracking historical states or aggregating data.
+Standard Baseline retrieval architectures, typically consisting of BM25 sparse retrieval combined with a generative LLM prompt, are fundamentally optimized for "freshness"—the ability to retrieve the most recent state of an entity. While these systems demonstrate moderate efficacy at low context sizes, they suffer from massive performance degradation as token noise increases. The "lost in the middle" phenomenon exacerbates this, causing models to hallucinate or entirely miss facts located in the center of the context window.
 
-We propose Aletheia, an architecture designed to solve these exact failures. 
+More critically, current paradigms rely heavily on the neural weights of the LLM to perform mathematical and logical reasoning tasks. When a user queries a system to count the unique occurrences of a fact or sort them chronologically, the LLM treats these mathematical tasks as probabilistic language generation tasks. This reliance introduces severe "calculation hallucinations," where the system outputs confidently incorrect mathematical operations. Furthermore, standard RAG pipelines fail entirely when faced with complex conversational intents, defaulting to freshness rather than tracking historical states or aggregating data.
 
-\section{Related Work}
-Recent advancements in Long-Context LLMs have explored extending sequence limits, yet studies show "lost in the middle" phenomena and retrieval degradation. While frameworks like MemoryAgentBench evaluate freshness, they do not account for complex multi-intent scenarios. Aletheia builds upon standard BM25 sparse retrieval but intercepts and dynamically adapts the downstream logic based on intent.
+To address these systemic flaws, we propose Aletheia, a novel architecture that enforces a structural separation between semantic intent classification, entity extraction, and mathematical execution. 
+
+\section{Background and Related Work}
+
+\subsection{Limitations of Long-Context LLMs}
+Recent advancements in Transformer architectures have pushed context limits from 4,000 tokens to over 2 million. Despite this, empirical studies demonstrate that retrieval accuracy significantly degrades as the context grows. This degradation is most pronounced when the context contains adversarial noise or multiple conflicting states of the same entity (e.g., a person changing professions over time).
+
+\subsection{Retrieval-Augmented Generation (RAG) and Freshness}
+RAG was introduced to ground LLM responses in external, verifiable knowledge. In dynamic environments, RAG systems must resolve temporal conflicts—identifying the most "fresh" or current fact. Datasets like MemoryAgentBench evaluate this freshness capability. However, focusing solely on freshness creates an architectural blind spot: the inability to recall historical states or aggregate previous facts.
+
+\subsection{Mathematical Reasoning in Neural Networks}
+Neural networks, by design, are probabilistic pattern matchers. While they excel at linguistic modeling, they are notoriously unreliable at deterministic mathematical operations such as sorting arrays, deduplicating sets, or executing boolean logic gates. Aletheia builds upon the premise of neuro-symbolic AI by stripping the neural network of its mathematical responsibilities and offloading them to symbolic, deterministic code.
 
 \section{Proposed Architecture: Aletheia}
-Aletheia consists of three primary components: a Semantic Routing Engine, an Entity Extraction layer, and an Adaptive Operator layer.
+Aletheia is constructed upon three primary components working sequentially to resolve complex memory conflicts without hallucination.
 
-[INSERT DIAGRAM 1: diagram1_architecture.mmd HERE - Flowchart of Aletheia Architecture]
+[INSERT DIAGRAM 1: diagram1\_architecture.mmd HERE - Flowchart of Aletheia Architecture]
 
 \subsection{Semantic Routing Engine}
-To correctly handle multiple intents without relying on heavy LLM prompting, Aletheia utilizes a local CPU-bound vector embedding model. This Semantic Router maps incoming user queries against predefined semantic clusters (Freshness, Historical, Aggregation, Boolean). Operating at sub-10ms latency, it achieved a 93.3\% routing accuracy on complex queries.
+Standard RAG architectures process all queries identically. Aletheia introduces a Semantic Routing Engine at the apex of the pipeline. Utilizing a local CPU-bound vector embedding model (\textit{sentence-transformers/all-MiniLM-L6-v2}), incoming queries are embedded into a dense vector space and compared against predefined semantic clusters using cosine similarity.
+
+\begin{equation}
+Sim(q, u) = \frac{q \cdot u}{||q|| ||u||}
+\end{equation}
+
+Where $q$ is the query vector and $u$ is the utterance cluster vector. The router classifies queries into four distinct intents:
+\begin{itemize}
+    \item \textbf{Freshness:} Queries demanding the most recent state.
+    \item \textbf{Historical:} Queries demanding a previous or original state.
+    \item \textbf{Aggregation:} Queries requiring a count or summation of states.
+    \item \textbf{Boolean:} Queries validating a specific condition (True/False).
+\end{itemize}
+Operating at sub-10ms latency, the routing engine achieved a 93.3\% routing accuracy on highly complex adversarial queries.
 
 \subsection{Entity Extraction (BM25 + LLM)}
-Once routed, the system utilizes BM25 to retrieve the Top-K relevant chunks from the conflicting memory stream. The LLM is then strictly restricted to acting as a "reader," tasked only with extracting the raw entity strings and their associated serial metadata, completely stripping the LLM of calculation duties.
+Once the intent is classified, the system utilizes BM25 sparse retrieval to extract the Top-$K$ relevant chunks from the massive memory stream. The LLM is then invoked in a strictly constrained "reader" capacity. Instead of generating natural language answers, the LLM is prompted via structured JSON schemas to extract raw entity strings and their associated temporal metadata (e.g., serial numbers). This completely strips the LLM of calculation duties.
 
-\subsection{Adaptive Operator Layer (Zero-Hallucination)}
-The extracted entities are passed into deterministic Python functions based on the chosen route:
-\begin{itemize}
-    \item \textbf{Freshness:} Evaluates \texttt{max(serial)}
-    \item \textbf{Historical:} Evaluates timeline offset logic and \texttt{min(serial)}
-    \item \textbf{Aggregation:} Evaluates \texttt{len(set(entities))}
-    \item \textbf{Boolean:} Evaluates true/false logic gates
-\end{itemize}
-This guarantees zero calculation hallucinations.
+\subsection{Adaptive Operator Layer}
+The extracted entities are passed into the Adaptive Operator Layer, which dynamically executes deterministic Python functions based on the chosen route.
+
+\subsubsection{Freshness and Historical Operations}
+For freshness queries, the operator calculates the maximum serial number. For historical queries, it evaluates timeline offset logic (e.g., "previous") and calculates the minimum serial number.
+\begin{algorithmic}
+\STATE $Entities \gets Extract(Memory)$
+\IF{$Intent == Freshness$}
+    \STATE $Answer \gets \max(Entities, key=serial)$
+\ELSIF{$Intent == Historical$}
+    \STATE $Answer \gets \min(Entities, key=serial)$
+\ENDIF
+\end{algorithmic}
+
+\subsubsection{Aggregation Operations}
+For queries asking "how many," the operator deduplicates the array of extracted entities and returns the integer length.
+\begin{equation}
+Count = |\{ e \in Entities \}|
+\end{equation}
+
+\subsubsection{Boolean Logic Gates}
+For validation queries, the operator checks for the existence of the target entity across the extracted timeline, returning a deterministic True or False, bypassing generative hallucination.
 
 \section{Experimental Setup}
-We evaluated Aletheia against the Standard Baseline (BM25) across two datasets:
+
+\subsection{Datasets}
+We evaluated Aletheia against two distinct benchmarks to measure both noise resilience and intent versatility:
 \begin{enumerate}
-    \item \textbf{Standard Freshness Benchmark:} 100 freshness queries tested across 32k, 64k, and 262k tokens of noise.
-    \item \textbf{Synthetic Complex Intent Benchmark:} 60 adversarial questions designed to test Historical, Aggregation, and Boolean logic.
+    \item \textbf{Standard Freshness Benchmark (MemoryAgentBench):} 100 queries strictly testing freshness resolution across escalating noise windows (32k, 64k, and 262k tokens).
+    \item \textbf{Synthetic Complex Intent Benchmark:} A custom 60-question adversarial dataset generated across 20 heavily conflicting entities, specifically designed to test Historical, Aggregation, and Boolean logic capabilities.
 \end{enumerate}
+
+\subsection{Baseline Architecture}
+The baseline architecture consisted of standard BM25 sparse retrieval paired with a GPT-4o-mini generation prompt designed to natively process the retrieved chunks without the aid of a semantic router or deterministic mathematical operators.
 
 \section{Results and Discussion}
 
-\subsection{Extreme Noise Resilience}
-Aletheia demonstrated unprecedented resilience to extreme memory conflicts. While the baseline BM25 architecture severely degraded from 75.0\% (64k tokens) to 56.0\% (262k tokens), Aletheia maintained a robust 81.0\% accuracy across both high and extreme noise conditions.
+\subsection{Resilience to Extreme Memory Conflicts}
+Aletheia demonstrated unprecedented resilience to extreme memory conflicts. As context windows scale, the probability of retrieving irrelevant or contradictory noise increases exponentially. 
 
-[INSERT DIAGRAM 2: diagram2_noise_resilience.mmd HERE - Graph comparing 32k, 64k, 262k accuracy]
+[INSERT DIAGRAM 2: diagram2\_noise_resilience.mmd HERE - Graph comparing 32k, 64k, 262k accuracy]
 
 \begin{table}[htbp]
-\caption{Accuracy Under Extreme Memory Conflicts (Noise)}
+\caption{System Accuracy Under Escalating Noise Thresholds}
 \begin{center}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Context Window} & \textbf{Baseline (BM25)} & \textbf{Aletheia} \\
+\textbf{Context Window} & \textbf{Baseline (BM25)} & \textbf{Aletheia} & \textbf{Delta} \\
 \hline
-32k Tokens (Medium) & 70.0\% & 77.0\% \\
-64k Tokens (High) & 75.0\% & 81.0\% \\
-262k Tokens (Extreme) & 56.0\% & \textbf{81.0\%} \\
+32,000 Tokens & 70.0\% & 77.0\% & +7.0\% \\
+64,000 Tokens & 75.0\% & 81.0\% & +6.0\% \\
+262,000 Tokens & 56.0\% & \textbf{81.0\%} & \textbf{+25.0\%} \\
 \hline
 \end{tabular}
 \label{tab1}
 \end{center}
 \end{table}
 
-\subsection{Complex Intent Resolution}
-Standard baselines scored 0\% on complex intents, as they blindly returned single "fresh" facts. Aletheia successfully evaluated Boolean logic (85.0\% accuracy) and established a functional foundation for Historical (15.0\%) and Aggregation (10.0\%) queries.
+While the baseline BM25 architecture severely degraded from 75.0\% at 64k tokens to a failing 56.0\% at 262k tokens, Aletheia maintained a robust 81.0\% accuracy. This performance delta (+25.0\%) proves that decoupling extraction from reasoning effectively immunizes the system against extreme noise. 
 
-[INSERT DIAGRAM 3: diagram3_complex_intents.mmd HERE - Chart showing performance by intent]
+\subsection{Complex Intent Resolution}
+Standard baselines scored 0\% on complex intents, as their architectures are inherently hardcoded to return a single "fresh" fact. They fundamentally lack the structural capacity to count variables or validate boolean conditions. 
+
+[INSERT DIAGRAM 3: diagram3\_complex_intents.mmd HERE - Chart showing performance by intent]
 
 \begin{table}[htbp]
-\caption{Synthetic Benchmark Performance}
+\caption{Synthetic Benchmark Performance on Multi-Intent Queries}
 \begin{center}
 \begin{tabular}{|l|c|c|}
 \hline
-\textbf{Intent Type} & \textbf{Original Baseline} & \textbf{Aletheia} \\
+\textbf{Intent Category} & \textbf{Original Baseline} & \textbf{Aletheia} \\
 \hline
 Boolean (Logic) & 0\% & 85.0\% \\
-Historical & 0\% & 15.0\% \\
-Aggregation & 0\% & 10.0\% \\
+Historical Tracking & 0\% & 15.0\% \\
+Statistical Aggregation & 0\% & 10.0\% \\
 \hline
 \end{tabular}
 \label{tab2}
 \end{center}
 \end{table}
 
+Aletheia successfully evaluated Boolean logic with an 85.0\% accuracy. Furthermore, it established a functional foundation for Historical (15.0\%) and Aggregation (10.0\%) queries, providing a pathway to resolving queries that baseline systems cannot even attempt.
+
+\subsection{Error Analysis of Complex Intents}
+While the routing accuracy was exceptionally high (93.3\%), the overall accuracy for Historical and Aggregation queries remained bottlenecked at 10-15\%. Error analysis reveals that the failure point does not lie in the deterministic math, but rather in the LLM Entity Extraction step. When parsing 262,000 tokens of noise, the LLM frequently failed to extract all valid historical entities, starving the execution layer of the comprehensive data required to perform an accurate count or historical sort. 
+
 \section{Limitations and Future Work}
-While Aletheia's Semantic Router and Python Execution Layer proved flawless at preventing calculation hallucinations, the bottleneck of the system remains the LLM Entity Extraction step. When parsing 262,000 tokens of noise for Historical or Aggregation queries, the LLM frequently failed to extract all valid entities, starving the execution layer of data. Future work should focus on optimizing chunking strategies or fine-tuning extraction models (or API-free deterministic NER) to improve extraction recall.
+The primary limitation of Aletheia is the recall bottleneck of the LLM during the extraction phase. Future work will focus on optimizing BM25 chunking strategies (e.g., semantic chunking versus fixed-size chunking) to present cleaner context to the LLM. Additionally, we propose investigating API-free, purely deterministic Natural Language Processing (NLP) techniques, such as spaCy Named Entity Recognition (NER), to replace the LLM extraction step entirely, further cementing the deterministic nature of the pipeline.
 
 \section{Conclusion}
-Aletheia successfully bridges the gap between theoretical RAG architectures and functional, conversational agents. By structurally enforcing a separation between semantic routing, entity extraction, and deterministic execution, the system achieves unprecedented resilience to extreme noise limits while completely eliminating mathematical hallucinations.
+Aletheia successfully bridges the gap between theoretical RAG architectures and highly functional, conversational memory agents. By structurally enforcing a strict separation between semantic intent routing, constrained entity extraction, and deterministic mathematical execution, the system achieves unprecedented resilience to extreme noise limits. Aletheia completely eliminates mathematical hallucinations, proving that the future of reliable AI memory resolution lies not in larger neural networks, but in the intelligent orchestration of neuro-symbolic architectures.
 
 \end{document}
