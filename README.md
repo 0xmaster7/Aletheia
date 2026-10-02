@@ -10,8 +10,8 @@ The draft of the paper can be found [here](https://docs.google.com/document/d/1Z
 
    Clone this repository and navigate into the project root:
    ```
-   git clone https://github.com//memory-conflict-resolution.git
-   cd memory-conflict-resolution
+   git clone https://github.com/0xmaster7/Aletheia.git
+   cd Aletheia
    ```
 
 2. **Environment Setup**
@@ -60,7 +60,7 @@ Below are the 3 distinct query tasks handled by this architecture:
 
 2. **Boolean (Yes/No) Queries**
    - **The Problem:** The deterministic primitive outputs raw text/values rather than evaluating a logical statement, making it incapable of answering binary verification checks.
-   - **The Adaptive Solution:** When a true/false query is routed, the system runs the standard max(serial) search to find the latest valid truth state. It then passes both the query target and the current state into a hard-coded Python logic gate. If they match, it outputs True; if they mismatch, it outputs False.
+   - **The Adaptive Solution:** When a true/false query is routed, the system runs the standard max(serial) search to find the latest valid truth state. It then checks if the question itself mentions the latest chosen state (with negation handling).
 
 3. **Aggregation & Counting Queries**
    - **The Problem:** A single max() tracking operation isolates only one record, dropping the rest of the historical timeline and causing the model to fail when asked to count or list historical actions.

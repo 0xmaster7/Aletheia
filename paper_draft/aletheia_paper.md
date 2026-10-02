@@ -1,4 +1,4 @@
-# Aletheia: A Deterministic Semantic Routing Architecture for Zero-Hallucination Memory Resolution in Long-Context Language Models
+# Aletheia: A Deterministic Semantic Routing Architecture for Deterministic Memory Resolution in Long-Context Language Models
 
 **Authors:** 
 Keshav Nanda (Registration No: 23BCE2249)
@@ -115,7 +115,7 @@ Standard baselines scored 0% on complex intents, as their architectures are inhe
 > **[INSERT DIAGRAM 3: `diagrams/diagram3_complex_intents.mmd` HERE - Chart showing performance by intent]**
 
 **Table 2: Synthetic Benchmark Performance on Multi-Intent Queries**
-| Intent Category | Original Baseline | Aletheia | Improvement |
+| Intent Category | Original Baseline (Projected) | Aletheia | Improvement |
 | :--- | :--- | :--- | :--- |
 | Boolean (Logic) | 0% | 85.0% | +85.0% |
 | Historical Tracking | 0% | 15.0% | +15.0% |
@@ -129,7 +129,7 @@ While the routing accuracy was exceptionally high (93.3%), the overall accuracy 
 Instead, the bottleneck is entirely localized within the LLM Entity Extraction step. When parsing 262,000 tokens of noise to find a complete historical timeline of an entity, the LLM frequently failed to extract all valid historical entities, suffering from recall degradation. By starving the execution layer of the comprehensive data required to perform an accurate count or historical sort, the final output was incorrect. This confirms that while we have solved calculation hallucinations, extraction recall in long-context models remains an open research problem.
 
 
-## 7. Complexity Analysis and Qualitative Traces
+## 7. Complexity Analysis and Qualitative Traces (Illustrative Example)
 
 ### 7.1 Algorithmic Complexity and Computational Efficiency
 A fundamental advantage of Aletheia lies in its computational efficiency, particularly when contrasted against the quadratic scaling of standard Transformer self-attention. For a standard LLM to reason over a context window of $N$ tokens, the time complexity of the self-attention mechanism is bounded by $O(N^2 \cdot d)$, where $d$ is the representation dimension. When $N = 262,000$, this operation becomes prohibitively expensive, both in terms of FLOPs and KV-cache memory requirements.
@@ -138,7 +138,7 @@ Aletheia circumvents this by enforcing a strictly linear and sub-linear processi
 
 Once the Top-K chunks are retrieved (where $K \ll N$), the LLM extraction step operates only on a drastically reduced context window $N'$, where $N' \approx K \times \text{ChunkSize}$. The attention complexity thus falls to $O((N')^2 \cdot d)$.
 
-Finally, the deterministic mathematical execution in the Adaptive Operator Layer scales based on the number of extracted entities $E$. For sorting a historical timeline, the Python Timsort algorithm operates in $O(E \log E)$. Because $E$ is typically a small integer (e.g., $E < 50$), this symbolic operation computes in sub-millisecond time, bypassing the $N^2$ generative penalty entirely while guaranteeing 100% mathematical accuracy.
+Finally, the deterministic mathematical execution in the Adaptive Operator Layer scales based on the number of extracted entities $E$. For sorting a historical timeline, the Python Timsort algorithm operates in $O(E \log E)$. Because $E$ is typically a small integer (e.g., $E < 50$), this symbolic operation computes in sub-millisecond time, bypassing the $N^2$ generative penalty entirely while guaranteeing deterministic mathematical execution.
 
 ### 7.2 Qualitative Case Study: Aggregation Intent
 To illustrate the complete pipeline in practice, we present a qualitative trace of an Aggregation query that standard baselines consistently fail due to probabilistic counting.
@@ -182,11 +182,11 @@ Standard generative models struggle heavily with binary logic validation over la
 
 The Semantic Router intercepts the auxiliary verb "Did" and the binary validation structure, classifying the intent as Boolean with a cosine similarity of 0.91. After BM25 retrieves the employment history, the LLM extracts the array of valid employers: `["Google", "Amazon", "OpenAI"]`. 
 
-The Python Boolean operator executes a simple containment check:
+The Python Boolean operator isolates the single newest fact and runs a containment check against the original question:
 ```python
 target = "Microsoft"
 extracted = ["Google", "Amazon", "OpenAI"]
-answer = target in extracted # Returns False
+answer = mentions(question, latest_fact) # Evaluates if the question text mentions the most recent extracted fact
 ```
 This guarantees a neuro-symbolic absolute truth value. It is entirely immune to the generative LLM's tendency to hallucinate plausible but incorrect employment histories when processing adversarial context.
 
@@ -212,3 +212,5 @@ Aletheia successfully bridges the gap between theoretical RAG architectures and 
 3. N. F. Liu et al., "Lost in the Middle: How Language Models Use Long Contexts," *arXiv preprint arXiv:2307.03172*, 2023.
 4. N. Reimers and I. Gurevych, "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks," in *EMNLP*, 2019.
 5. S. Robertson et al., "Simple BM25 Extension to Multiple Weighted Fields," in *CIKM*, 2004.
+
+8. [Author Name], "Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution," arXiv preprint arXiv:2606.01435, 2026.
