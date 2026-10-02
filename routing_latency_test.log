@@ -1,0 +1,15 @@
+=== Aletheia Routing Latency Benchmark ===
+CPU Model: Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz
+Platform: macOS-10.16-x86_64-i386-64bit
+
+Warming up model (loading PyTorch weights)...
+Warmup call took: 395.50 ms
+
+Running 100 benchmark iterations...
+
+--- Results ---
+Total Runs: 100
+Average Latency: 61.73 ms
+Min Latency: 42.22 ms
+Max Latency: 259.32 ms (Iteration 4)
+Median Latency: 52.44 ms
