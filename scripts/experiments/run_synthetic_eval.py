@@ -14,6 +14,7 @@ from rank_bm25 import BM25Okapi
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT_DIR)
+from scripts.lib.config import DATASET_REVISION
 from scripts.lib._lf import OpenAI
 from scripts.lib._pipeline import tokenize, run_car_v2, run_adaptive_router_pipeline
 
@@ -40,7 +41,7 @@ def main():
 
     # 1. Load context from original dataset
     print("Loading MemoryAgentBench context...")
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
     facts = parse_facts(row["context"])
     fact_indices = [f[0] for f in facts]

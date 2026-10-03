@@ -8,6 +8,12 @@ Usage:
     python scripts/data_generation/generate_synthetic_benchmark.py
 """
 from __future__ import annotations
+
+from pathlib import Path
+import sys
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
+from scripts.lib.config import DATASET_REVISION
 import json
 import re
 import sys
@@ -16,7 +22,7 @@ from datasets import load_dataset
 
 # ── Load dataset ──────────────────────────────────────────────────────────
 print("Loading MemoryAgentBench dataset...")
-ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
 ctx = row["context"]
 

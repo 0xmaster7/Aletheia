@@ -25,6 +25,7 @@ from rank_bm25 import BM25Okapi
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT_DIR)
+from scripts.lib.config import DATASET_REVISION
 from scripts.lib._lf import OpenAI, observe, get_client, ROOT
 from scripts.lib._pipeline import (
     tokenize, bm25_retrieve,
@@ -121,7 +122,7 @@ def main():
     length_label = source.split("_")[-1]
 
     print(f"[{length_label}] Loading dataset…")
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = next(s for s in ds if s["metadata"]["source"] == source)
     ctx = row["context"]
     questions = row["questions"][:100]

@@ -71,12 +71,12 @@ for serial, text in facts:
 # Filter for conflicts (>= 2 distinct values)
 conflicting = {}
 for entity, flist in entity_facts.items():
-    distinct = set(f["value"] for f in flist)
+    distinct = sorted({f["value"] for f in flist})
     if len(distinct) >= 2:
         sorted_facts = sorted(flist, key=lambda x: x["serial"])
         conflicting[entity] = {
             "facts": sorted_facts,
-            "distinct_values": list(distinct),
+            "distinct_values": distinct,
             "n_distinct": len(distinct),
         }
 

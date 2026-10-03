@@ -8,9 +8,10 @@ from datasets import load_dataset
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT_DIR)
+from scripts.lib.config import DATASET_REVISION
 from scripts.lib._pipeline import native_route
 
-ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
 questions = row["questions"][:100]
 

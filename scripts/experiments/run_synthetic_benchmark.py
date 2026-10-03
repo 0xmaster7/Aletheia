@@ -58,6 +58,7 @@ def main():
     print(f"WARNING: n={requested_n}; output={output_path}; this run makes OpenAI API calls.")
 
     # These imports initialize local models and tracing, so keep them after --help parsing.
+    from scripts.lib.config import DATASET_REVISION
     from datasets import load_dataset
     from rank_bm25 import BM25Okapi
     from scripts.lib._lf import OpenAI
@@ -65,7 +66,7 @@ def main():
 
     # ── Load facts context ────────────────────────────────────────────────
     print("Loading MemoryAgentBench dataset for context...")
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
     ctx = row["context"]
 

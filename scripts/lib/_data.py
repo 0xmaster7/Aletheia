@@ -17,6 +17,8 @@ import numpy as np
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
+from scripts.lib.config import DATASET_REVISION
+
 from scripts.lib._lf import observe, get_client
 
 
@@ -31,7 +33,7 @@ def tokenize(s: str) -> list[str]:
 def _load_fc_mh_262k_row() -> dict[str, Any]:
     """Load the HF dataset and pick the FC-MH 262K row."""
     t0 = time.time()
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = [s for s in ds if s["metadata"]["source"] == "factconsolidation_mh_262k"][0]
     elapsed_ms = int((time.time() - t0) * 1000)
     ctx_chars = len(row["context"])
@@ -41,7 +43,7 @@ def _load_fc_mh_262k_row() -> dict[str, Any]:
         input={
             "dataset": "ai-hyz/MemoryAgentBench",
             "split": "Conflict_Resolution",
-            "revision": "main",
+            "revision": DATASET_REVISION,
             "source_filter": "factconsolidation_mh_262k",
         },
         output={

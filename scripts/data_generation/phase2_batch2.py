@@ -11,6 +11,12 @@ Usage:
     /usr/local/bin/python3.11 scripts/data_generation/phase2_batch2.py
 """
 from __future__ import annotations
+
+from pathlib import Path
+import sys
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
+from scripts.lib.config import DATASET_REVISION
 import json
 import re
 import os
@@ -138,7 +144,7 @@ print(f"Already processed {len(already_done)} entities.\n")
 
 # ── Load dataset ──────────────────────────────────────────────────────────
 print("Loading MemoryAgentBench dataset...")
-ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
 ctx = row["context"]
 print(f"Loaded context of length {len(ctx):,} chars.")
@@ -200,7 +206,7 @@ for serial, text in facts:
 # ── Find conflicting entities ─────────────────────────────────────────────
 conflicting_entities: dict = {}
 for entity, fact_list in entity_facts.items():
-    distinct_values = set(f["value"] for f in fact_list)
+    distinct_values = sorted({f["value"] for f in fact_list})
     if len(distinct_values) >= 2 and len(fact_list) >= 2:
         sorted_facts = sorted(fact_list, key=lambda x: x["serial"])
         conflicting_entities[entity] = {
@@ -308,7 +314,7 @@ for batch_idx, (entity, info) in enumerate(batch):
     oldest_fact = info["facts"][0]
     predicate   = infer_predicate(oldest_fact["text"].lower())
     pred_plural = pluralize(predicate)
-    all_values  = list(info["distinct_values"])
+    all_values  = sorted(info["distinct_values"])
 
     # Values that genuinely match this predicate type (for True boolean).
     same_pred_values = [
