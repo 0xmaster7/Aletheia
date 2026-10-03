@@ -71,3 +71,9 @@ python scripts/experiments/13_paper_experiment.py --source factconsolidation_sh_
 python scripts/experiments/14_ablations.py --source factconsolidation_sh_262k --task adaptive
 python scripts/experiments/run_synthetic_benchmark.py
 ```
+
+## Generator compatibility note
+
+The committed `data/synthetic_benchmark.json` was not regenerated. Sorting the initial generator's set-derived `all_values` changed four boolean questions in its 60-question output, so that one conversion intentionally retains its prior set iteration to preserve the committed questions. The batch generators and entity extraction sort their set-derived values; isolated sorted and unsorted batch output matched for the tested 40-entity batch under a fixed hash seed.
+
+A full offline replay through the current incremental scripts produced 13,425 rows but differed from the committed file in 2,803 rows. The original batch execution and random-seed sequence are not recoverable from the committed history, so this replay does not establish that those differences are caused by sorting. Keep the released data file as the source of the reported run; do not replace it with generated output.
