@@ -17,7 +17,7 @@ from typing import Any
 import numpy as np
 from rank_bm25 import BM25Okapi
 
-from _lf import OpenAI, observe, get_client
+from scripts.lib._lf import OpenAI, observe, get_client
 
 try:
     from sentence_transformers import SentenceTransformer

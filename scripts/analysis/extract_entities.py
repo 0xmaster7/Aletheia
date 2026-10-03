@@ -6,7 +6,7 @@ import sys
 from collections import defaultdict
 import pyarrow.parquet as pq
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PARQUET = "/Users/keshavnanda/.cache/huggingface/hub/datasets--ai-hyz--MemoryAgentBench/snapshots/7ea066982b140a19337e17e60d45d4076e042faf/data/Conflict_Resolution-00000-of-00001.parquet"
 
 print("Loading parquet...")
@@ -71,12 +71,12 @@ for serial, text in facts:
 # Filter for conflicts (>= 2 distinct values)
 conflicting = {}
 for entity, flist in entity_facts.items():
-    distinct = set(f["value"] for f in flist)
+    distinct = sorted({f["value"] for f in flist})
     if len(distinct) >= 2:
         sorted_facts = sorted(flist, key=lambda x: x["serial"])
         conflicting[entity] = {
             "facts": sorted_facts,
-            "distinct_values": list(distinct),
+            "distinct_values": distinct,
             "n_distinct": len(distinct),
         }
 

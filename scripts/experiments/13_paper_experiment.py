@@ -1,7 +1,7 @@
 """Paper experiment: BM25 baseline vs SH-conflict pipeline on n=100 of factconsolidation_sh.
 
 Usage:
-  python scripts/13_paper_experiment.py --source factconsolidation_sh_262k
+  python scripts/experiments/13_paper_experiment.py --source factconsolidation_sh_262k
 
 Runs one context length. Use the bash launcher to run all 4 in parallel.
 
@@ -9,10 +9,11 @@ Each question's BM25 baseline AND SH conflict pipeline run get their own Langfus
 trace, tagged with: experiment, competency, dataset (source), question_index,
 context_length, ground_truth.
 
-Output: poc_results/paper_sh_conflict_<source>.json
+Output: results/poc_results/paper_sh_conflict_<source>.json
 """
 from __future__ import annotations
 import argparse
+import os
 import json
 import re
 import sys
@@ -22,9 +23,11 @@ from typing import Any
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
-sys.path.insert(0, '.')
-from _lf import OpenAI, observe, get_client, ROOT
-from _pipeline import (
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+from scripts.lib.config import DATASET_REVISION
+from scripts.lib._lf import OpenAI, observe, get_client, ROOT
+from scripts.lib._pipeline import (
     tokenize, bm25_retrieve,
     _extract_candidates, _freshness_pick,
     run_bm25_baseline, MODEL, TOP_K,
@@ -119,7 +122,7 @@ def main():
     length_label = source.split("_")[-1]
 
     print(f"[{length_label}] Loading dataset…")
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = next(s for s in ds if s["metadata"]["source"] == source)
     ctx = row["context"]
     questions = row["questions"][:100]
@@ -196,7 +199,7 @@ def main():
         "elapsed_seconds": elapsed, "results": results,
     }
 
-    out_path = ROOT / "poc_results" / f"paper_sh_conflict_{source}.json"
+    out_path = ROOT / "results" / "poc_results" / f"paper_sh_conflict_{source}.json"
     out_path.write_text(json.dumps(summary, indent=2))
     print(f"\n[{length_label}] DONE. Saved → {out_path}")
     print(f"[{length_label}] BM25: {bm_correct}/{n_q} = {100*bm_correct/n_q:.1f}%   "

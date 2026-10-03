@@ -3,7 +3,7 @@ import json
 import re
 import os
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 path = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 
 with open(path, encoding="utf-8") as f:

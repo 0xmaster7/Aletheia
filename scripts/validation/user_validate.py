@@ -1,7 +1,8 @@
 import json
+from pathlib import Path
 from collections import defaultdict
 
-file_path = "data/synthetic_benchmark.json"
+file_path = Path(__file__).resolve().parents[2] / "data" / "synthetic_benchmark.json"
 
 try:
     with open(file_path, "r") as f:

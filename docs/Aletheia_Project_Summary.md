@@ -10,7 +10,7 @@ Standard retrieval-augmented generation (RAG) pipelines and LLMs treat mathemati
 ---
 
 ## 2. The Aletheia Architecture
-Aletheia replaces the monolithic LLM reasoning approach with a modular, three-stage pipeline (implemented in `scripts/_pipeline.py`):
+Aletheia replaces the monolithic LLM reasoning approach with a modular, three-stage pipeline (implemented in `scripts/lib/_pipeline.py`):
 
 ### A. Semantic Routing Engine
 At the entry point, user queries are intercepted by an offline, CPU-bound Semantic Router (using the `semantic-router` library and local embeddings like `all-MiniLM-L6-v2`). The router calculates cosine similarity against predefined anchor utterances to classify the query into one of four intents in sub-10ms:
@@ -40,20 +40,20 @@ Tested the system's ability to retrieve the newest fact under escalating noise w
 * **Results:** Aletheia achieved **77.0% at 32k tokens**, **81.0% at 64k tokens**, and maintained a highly resilient **81.0% accuracy at 262k tokens** (compared to the baseline which dropped to 56.0%). 
 
 ### B. Synthetic Benchmark (Complex Intents)
-A custom 60-question adversarial dataset across 20 heavily conflicting entities was built to test non-freshness queries (`scripts/generate_synthetic_benchmark.py`).
+A custom 60-question adversarial dataset across 20 heavily conflicting entities was built to test non-freshness queries (`scripts/data_generation/generate_synthetic_benchmark.py`).
 * **Baseline Performance:** Standard architectures scored **0%** across all complex intents because they are hardcoded to return a single "fresh" fact.
 * **Aletheia Performance:** 
   * **Boolean (Logic):** 85.0% accuracy.
   * **Historical:** 15.0% accuracy.
   * **Aggregation:** 10.0% accuracy.
-* **Bottleneck Identification:** Error analysis (`scripts/diagnose_routes.py`) proved that the deterministic Python layer is flawless. The 10-15% bottleneck on historical/aggregation queries is entirely due to the LLM dropping entities during the Top-K extraction phase (recall degradation).
+* **Bottleneck Identification:** Error analysis (`scripts/analysis/diagnose_routes.py`) proved that the deterministic Python layer is flawless. The 10-15% bottleneck on historical/aggregation queries is entirely due to the LLM dropping entities during the Top-K extraction phase (recall degradation).
 
 ---
 
 ## 4. Ablation Studies
-An extensive ablation suite (`scripts/14_ablations.py`) was built to isolate variables and prove the architecture's efficacy. The ablation driver supports:
+An extensive ablation suite (`scripts/experiments/14_ablations.py`) was built to isolate variables and prove the architecture's efficacy. The ablation driver supports:
 1. **Chunk-Size Ablation:** Comparing fact-level chunking against 4096-character sliding windows to test context concentration.
 2. **Pipeline Strategy Ablation:** Comparing Single-Hop (`sh`), Multi-Hop CAR pipelines (`mh`), and Aletheia's Adaptive Semantic Router (`adaptive`).
 3. **Model Backbone Ablation:** Swapping `gpt-4o-mini` with `gpt-4o` to measure how much of the performance gap is strictly due to the architectural routing vs. raw model parameters.
 
-Results from these ablations (stored in `poc_results/`) confirm that routing and deterministic execution yield higher reliability for memory conflicts than simply scaling up the neural network's parameters.
+Results from these ablations (stored in `results/poc_results/`) confirm that routing and deterministic execution yield higher reliability for memory conflicts than simply scaling up the neural network's parameters.

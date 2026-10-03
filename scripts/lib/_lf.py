@@ -6,9 +6,9 @@ from pathlib import Path
 # ────────────────────────────────────────────────────────────────────────────
 # 1. Load .env (manual loader — no python-dotenv dep)
 # ────────────────────────────────────────────────────────────────────────────
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 env_path = ROOT / ".env"
-for line in env_path.read_text().splitlines():
+for line in (env_path.read_text().splitlines() if env_path.exists() else []):
     if line.strip() and not line.startswith("#") and "=" in line:
         k, v = line.split("=", 1)
         os.environ.setdefault(k.strip(), v.strip())

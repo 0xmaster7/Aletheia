@@ -1,9 +1,14 @@
 """Count total conflicting entities in factconsolidation_sh_262k and compute batch math."""
 import json, re, math, os
 from collections import defaultdict
+from pathlib import Path
+import sys
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
+from scripts.lib.config import DATASET_REVISION
 from datasets import load_dataset
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 BATCH_SIZE = 40
 
@@ -15,7 +20,7 @@ print(f"Entities already in benchmark : {len(already_done)}")
 
 # Load dataset
 print("Loading dataset (cached)...")
-ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
 ctx = row["context"]
 

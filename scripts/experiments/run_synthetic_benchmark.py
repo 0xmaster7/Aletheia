@@ -1,31 +1,25 @@
 """Run the synthetic benchmark against the adaptive router pipeline.
 
-Loads 60 adversarial questions from data/synthetic_benchmark.json,
-runs each through run_adaptive_router_pipeline, and reports:
-  1. Routing accuracy (% routed to correct intent)
-  2. QA accuracy (% matching ground_truth_answer)
-  3. Summary table of misrouted queries
+By default, evaluates the first 60 questions (20 historical, 20 aggregation,
+and 20 boolean), matching the paper. Use --n 13425 or --all for the full
+released dataset. Output defaults to a separate rerun file so the committed
+paper results are preserved.
 
 Usage:
-    python scripts/run_synthetic_benchmark.py
+    python scripts/experiments/run_synthetic_benchmark.py
+    python scripts/experiments/run_synthetic_benchmark.py --n 13425
+    python scripts/experiments/run_synthetic_benchmark.py --all
 """
 from __future__ import annotations
+import argparse
 import json
 import os
 import re
 import sys
-import time
-from typing import Any
+from pathlib import Path
 
-from datasets import load_dataset
-from rank_bm25 import BM25Okapi
-
-sys.path.insert(0, '.')
-from _lf import OpenAI, observe, get_client
-from _pipeline import (
-    tokenize, run_adaptive_router_pipeline, native_route,
-)
-
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
 
 def parse_facts(ctx: str) -> list[tuple[int, str]]:
     pat = re.compile(r"(\d+)\.\s")
@@ -46,9 +40,33 @@ def normalize(s: str) -> str:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Evaluate the adaptive router on the synthetic benchmark.")
+    parser.add_argument("--n", type=int, default=60,
+                        help="Number of leading questions to evaluate (default: 60; 0 means all).")
+    parser.add_argument("--all", action="store_true",
+                        help="Evaluate the full released benchmark (same as --n 0).")
+    parser.add_argument("--output", default=None,
+                        help="Results path (default: results/poc_results/synthetic_benchmark_results_rerun.json).")
+    args = parser.parse_args()
+    if args.n < 0:
+        parser.error("--n must be zero or a positive integer")
+
+    output_path = Path(args.output) if args.output else ROOT_DIR / "results" / "poc_results" / "synthetic_benchmark_results_rerun.json"
+    if not output_path.is_absolute():
+        output_path = Path.cwd() / output_path
+    requested_n = "all" if args.all or args.n == 0 else str(args.n)
+    print(f"WARNING: n={requested_n}; output={output_path}; this run makes OpenAI API calls.")
+
+    # These imports initialize local models and tracing, so keep them after --help parsing.
+    from scripts.lib.config import DATASET_REVISION
+    from datasets import load_dataset
+    from rank_bm25 import BM25Okapi
+    from scripts.lib._lf import OpenAI
+    from scripts.lib._pipeline import tokenize, run_adaptive_router_pipeline, native_route
+
     # ── Load facts context ────────────────────────────────────────────────
     print("Loading MemoryAgentBench dataset for context...")
-    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+    ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
     row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
     ctx = row["context"]
 
@@ -58,11 +76,12 @@ def main():
     bm25 = BM25Okapi([tokenize(t) for t in fact_texts])
     print(f"  → {len(facts)} facts indexed.\n")
 
-    # ── Load synthetic benchmark ──────────────────────────────────────────
-    benchmark_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                                  "data", "synthetic_benchmark.json")
-    with open(benchmark_path, "r", encoding="utf-8") as f:
+    # ── Load and limit the synthetic benchmark ────────────────────────────
+    benchmark_path = ROOT_DIR / "data" / "synthetic_benchmark.json"
+    with benchmark_path.open("r", encoding="utf-8") as f:
         benchmark = json.load(f)
+    if not (args.all or args.n == 0):
+        benchmark = benchmark[:args.n]
     print(f"Loaded {len(benchmark)} synthetic questions from {benchmark_path}\n")
 
     # ── Run pipeline ──────────────────────────────────────────────────────
@@ -178,10 +197,8 @@ def main():
         print("\n  ✅ No misrouted queries! Perfect routing accuracy.")
 
     # Save full results
-    output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                                "poc_results", "synthetic_benchmark_results.json")
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"\n  Full results saved to: {output_path}")
 

@@ -4,3 +4,7 @@ report_extract/
 __pycache__/
 *.pyc
 .vscode/
+.venv/
+.DS_Store
+*.egg-info/
+.ipynb_checkpoints/

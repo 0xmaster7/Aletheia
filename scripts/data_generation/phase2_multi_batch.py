@@ -8,15 +8,21 @@ Runs N_BATCHES sequential batches of BATCH_SIZE entities. For each batch:
   5. Print per-batch report.
 
 Usage:
-    /usr/local/bin/python3.11 scripts/phase2_multi_batch.py
+    /usr/local/bin/python3.11 scripts/data_generation/phase2_multi_batch.py
 """
 from __future__ import annotations
+
+from pathlib import Path
+import sys
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
+from scripts.lib.config import DATASET_REVISION
 import json, re, os, random, math
 from collections import defaultdict
 from datasets import load_dataset
 
 # ── Config ────────────────────────────────────────────────────────────────
-REPO_ROOT     = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT     = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 BATCH_SIZE    = 40
 N_BATCHES     = 1
@@ -278,7 +284,7 @@ print("=" * 60)
 
 # Load dataset once
 print("\nLoading MemoryAgentBench (cached)...")
-ds  = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
+ds  = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision=DATASET_REVISION)
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
 ctx = row["context"]
 
@@ -333,7 +339,7 @@ for serial, text in facts:
 # Build conflicting entity list (sorted deterministically, same key as always)
 conflicting_entities: dict = {}
 for entity, fact_list in entity_facts.items():
-    distinct_values = set(f["value"] for f in fact_list)
+    distinct_values = sorted({f["value"] for f in fact_list})
     if len(distinct_values) >= 2 and len(fact_list) >= 2:
         sorted_facts = sorted(fact_list, key=lambda x: x["serial"])
         conflicting_entities[entity] = {
@@ -380,7 +386,7 @@ for batch_num in range(1, N_BATCHES + 1):
         oldest_fact     = info["facts"][0]
         predicate       = infer_predicate(oldest_fact["text"].lower())
         pred_plural     = pluralize(predicate)
-        all_values      = list(info["distinct_values"])
+        all_values      = sorted(info["distinct_values"])
         same_pred_vals  = [
             f["value"] for f in info["facts"]
             if f.get("predicate_type") == predicate

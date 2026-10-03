@@ -14,10 +14,11 @@ Checks:
  11. Distribution report (boolean balance, top ground-truth values, predicate spread)
 """
 import json
+from pathlib import Path
 import re
 from collections import defaultdict
 
-FILE_PATH       = "data/synthetic_benchmark.json"
+FILE_PATH       = Path(__file__).resolve().parents[2] / "data" / "synthetic_benchmark.json"
 EXPECTED_TOTAL  = 13425
 EXPECTED_ENT    = 4475
 VALID_INTENTS   = {"historical", "aggregation", "boolean"}
