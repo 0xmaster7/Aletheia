@@ -8,7 +8,7 @@ Fixes applied vs. previous run:
   3. Boolean False: distractor pool is strictly keyed to the inferred predicate type.
 
 Usage:
-    /usr/local/bin/python3.11 scripts/phase2_batch2.py
+    /usr/local/bin/python3.11 scripts/data_generation/phase2_batch2.py
 """
 from __future__ import annotations
 import json
@@ -19,7 +19,7 @@ from collections import defaultdict
 from datasets import load_dataset
 
 # ── Config ────────────────────────────────────────────────────────────────
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 BATCH_SIZE = 40
 random.seed(42)

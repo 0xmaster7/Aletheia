@@ -17,7 +17,7 @@ import numpy as np
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
-from _lf import observe, get_client
+from scripts.lib._lf import observe, get_client
 
 
 def tokenize(s: str) -> list[str]:

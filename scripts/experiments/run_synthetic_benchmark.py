@@ -7,7 +7,7 @@ runs each through run_adaptive_router_pipeline, and reports:
   3. Summary table of misrouted queries
 
 Usage:
-    python scripts/run_synthetic_benchmark.py
+    python scripts/experiments/run_synthetic_benchmark.py
 """
 from __future__ import annotations
 import json
@@ -20,9 +20,10 @@ from typing import Any
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
-sys.path.insert(0, '.')
-from _lf import OpenAI, observe, get_client
-from _pipeline import (
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+from scripts.lib._lf import OpenAI, observe, get_client
+from scripts.lib._pipeline import (
     tokenize, run_adaptive_router_pipeline, native_route,
 )
 
@@ -179,7 +180,7 @@ def main():
 
     # Save full results
     output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                                "poc_results", "synthetic_benchmark_results.json")
+                                "results", "poc_results", "synthetic_benchmark_results.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)

@@ -5,7 +5,7 @@ conflicting facts, and generates adversarial historical/aggregation/boolean
 questions for each.
 
 Usage:
-    python scripts/generate_synthetic_benchmark.py
+    python scripts/data_generation/generate_synthetic_benchmark.py
 """
 from __future__ import annotations
 import json
@@ -278,7 +278,7 @@ for i, (entity, info) in enumerate(sorted_entities):
 
 # ── Write to disk ──────────────────────────────────────────────────────────
 import os
-output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
 os.makedirs(output_dir, exist_ok=True)
 output_path = os.path.join(output_dir, "synthetic_benchmark.json")
 

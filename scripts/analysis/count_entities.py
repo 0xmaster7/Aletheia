@@ -3,7 +3,7 @@ import json, re, math, os
 from collections import defaultdict
 from datasets import load_dataset
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 BATCH_SIZE = 40
 

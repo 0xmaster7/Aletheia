@@ -8,7 +8,7 @@ Runs N_BATCHES sequential batches of BATCH_SIZE entities. For each batch:
   5. Print per-batch report.
 
 Usage:
-    /usr/local/bin/python3.11 scripts/phase2_multi_batch.py
+    /usr/local/bin/python3.11 scripts/data_generation/phase2_multi_batch.py
 """
 from __future__ import annotations
 import json, re, os, random, math
@@ -16,7 +16,7 @@ from collections import defaultdict
 from datasets import load_dataset
 
 # ── Config ────────────────────────────────────────────────────────────────
-REPO_ROOT     = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT     = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "synthetic_benchmark.json")
 BATCH_SIZE    = 40
 N_BATCHES     = 1

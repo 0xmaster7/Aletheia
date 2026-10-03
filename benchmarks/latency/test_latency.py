@@ -3,8 +3,10 @@ import sys
 import platform
 import subprocess
 
-sys.path.insert(0, './scripts')
-from _pipeline import native_route
+from pathlib import Path
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR))
+from scripts.lib._pipeline import native_route
 
 def get_cpu_info():
     try:
@@ -13,7 +15,7 @@ def get_cpu_info():
         return platform.processor()
 
 # Prepare log file
-log_file = open("routing_latency_test.log", "w")
+log_file = open(ROOT_DIR / "logs" / "latency" / "routing_latency_test_rerun.log", "w")
 
 def log(msg):
     print(msg)

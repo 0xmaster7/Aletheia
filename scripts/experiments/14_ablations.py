@@ -2,18 +2,18 @@
 
 Usage:
   # Chunk-size ablation (4096 instead of fact-level)
-  python scripts/14_ablations.py --source factconsolidation_sh_262k --chunk-strategy chunk4096
+  python scripts/experiments/14_ablations.py --source factconsolidation_sh_262k --chunk-strategy chunk4096
 
   # FC-MH with CAR pipeline (multi-hop conflict resolution)
-  python scripts/14_ablations.py --source factconsolidation_mh_262k --task mh
+  python scripts/experiments/14_ablations.py --source factconsolidation_mh_262k --task mh
 
   # Adaptive semantic router pipeline
-  python scripts/14_ablations.py --source factconsolidation_sh_262k --task adaptive
+  python scripts/experiments/14_ablations.py --source factconsolidation_sh_262k --task adaptive
 
   # gpt-4o backbone ablation
-  PIPELINE_MODEL=gpt-4o python scripts/14_ablations.py --source factconsolidation_sh_262k
+  PIPELINE_MODEL=gpt-4o python scripts/experiments/14_ablations.py --source factconsolidation_sh_262k
 
-Output: poc_results/ablation_<task>_<chunk>_<model>_<source>.json
+Output: results/poc_results/ablation_<task>_<chunk>_<model>_<source>.json
 """
 from __future__ import annotations
 import argparse
@@ -27,9 +27,10 @@ from typing import Any
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
-sys.path.insert(0, '.')
-from _lf import OpenAI, observe, get_client, ROOT
-from _pipeline import (
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+from scripts.lib._lf import OpenAI, observe, get_client, ROOT
+from scripts.lib._pipeline import (
     tokenize, bm25_retrieve, evaluate_answer,
     _extract_candidates, _freshness_pick,
     run_bm25_baseline, run_car_v2, run_adaptive_router_pipeline,
@@ -205,7 +206,7 @@ def main():
         "elapsed_seconds": elapsed, "results": results,
     }
 
-    out_path = ROOT / "poc_results" / f"{experiment_tag}_{source}.json"
+    out_path = ROOT / "results" / "poc_results" / f"{experiment_tag}_{source}.json"
     out_path.write_text(json.dumps(summary, indent=2))
     print(f"\n[{length_label}] DONE. Saved → {out_path}")
     print(f"[{length_label}] {experiment_tag}: {correct}/{n_q} = {100*correct/n_q:.1f}%   ({elapsed:.0f}s)")

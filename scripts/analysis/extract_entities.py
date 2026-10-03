@@ -6,7 +6,7 @@ import sys
 from collections import defaultdict
 import pyarrow.parquet as pq
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PARQUET = "/Users/keshavnanda/.cache/huggingface/hub/datasets--ai-hyz--MemoryAgentBench/snapshots/7ea066982b140a19337e17e60d45d4076e042faf/data/Conflict_Resolution-00000-of-00001.parquet"
 
 print("Loading parquet...")

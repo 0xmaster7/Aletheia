@@ -1,8 +1,8 @@
-"""Run n=100 evaluation of the synthetic benchmark for the paper.
+"""Run the separate 100-query synthetic evaluation (the paper reports 60 questions).
 
 Usage:
-  python scripts/run_synthetic_eval.py --pipeline author
-  python scripts/run_synthetic_eval.py --pipeline custom
+  python scripts/experiments/run_synthetic_eval.py --pipeline author
+  python scripts/experiments/run_synthetic_eval.py --pipeline custom
 """
 import argparse
 import json
@@ -12,9 +12,10 @@ import time
 from datasets import load_dataset
 from rank_bm25 import BM25Okapi
 
-sys.path.insert(0, '.')
-from _lf import OpenAI
-from _pipeline import tokenize, run_car_v2, run_adaptive_router_pipeline
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+from scripts.lib._lf import OpenAI
+from scripts.lib._pipeline import tokenize, run_car_v2, run_adaptive_router_pipeline
 
 def parse_facts(ctx: str) -> list[tuple[int, str]]:
     import re
@@ -47,7 +48,7 @@ def main():
     bm25 = BM25Okapi([tokenize(t) for t in fact_texts])
 
     # 2. Load synthetic benchmark (n=100)
-    bench_path = "data/synthetic_benchmark.json"
+    bench_path = os.path.join(ROOT_DIR, "data", "synthetic_benchmark.json")
     with open(bench_path, "r") as f:
         benchmark = json.load(f)[:100]
 
@@ -98,8 +99,8 @@ def main():
         "pipeline": args.pipeline, "n": len(benchmark), "accuracy": acc,
         "elapsed_s": elapsed, "results": results
     }
-    os.makedirs("poc_results", exist_ok=True)
-    out_path = f"poc_results/synthetic_{args.pipeline}_n100.json"
+    os.makedirs(os.path.join(ROOT_DIR, "results", "poc_results"), exist_ok=True)
+    out_path = os.path.join(ROOT_DIR, "results", "poc_results", f"synthetic_{args.pipeline}_n100.json")
     with open(out_path, "w") as f:
         json.dump(out, f, indent=2)
 

@@ -1,12 +1,14 @@
 """Quick diagnostic: check how the router classifies the original dataset's questions.
 No LLM calls — just local embedding similarity. Zero cost.
 """
+import os
 import json, sys, re
 from collections import Counter
 from datasets import load_dataset
 
-sys.path.insert(0, '.')
-from _pipeline import native_route
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+from scripts.lib._pipeline import native_route
 
 ds = load_dataset("ai-hyz/MemoryAgentBench", split="Conflict_Resolution", revision="main")
 row = next(s for s in ds if s["metadata"]["source"] == "factconsolidation_sh_262k")
