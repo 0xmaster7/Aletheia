@@ -1,14 +1,14 @@
 {
-  "experiment": "ablation_sh_chunk4096_gpt4omini",
-  "model": "gpt-4o-mini",
+  "experiment": "ablation_sh_fact_gpt4o",
+  "model": "gpt-4o",
   "task": "sh",
-  "chunk_strategy": "chunk4096",
+  "chunk_strategy": "fact",
   "source": "factconsolidation_sh_32k",
   "context_length": "32k",
   "n_questions": 100,
-  "correct": 82,
-  "accuracy": 0.82,
-  "elapsed_seconds": 355.5932960510254,
+  "correct": 92,
+  "accuracy": 0.92,
+  "elapsed_seconds": 134.0849506855011,
   "results": [
     {
       "q_idx": 0,
@@ -21,8 +21,7 @@
       "n_candidates": 2,
       "chosen_serial": 1722,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 1,
@@ -35,8 +34,7 @@
       "n_candidates": 2,
       "chosen_serial": 2153,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 2,
@@ -49,8 +47,7 @@
       "n_candidates": 2,
       "chosen_serial": 1805,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 3,
@@ -58,13 +55,12 @@
       "ground_truth": [
         "Methodism"
       ],
-      "answer": "Catholic Church",
-      "correct": false,
+      "answer": "Methodism",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 999,
+      "chosen_serial": 2113,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 4,
@@ -77,8 +73,7 @@
       "n_candidates": 1,
       "chosen_serial": 1646,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 5,
@@ -86,13 +81,12 @@
       "ground_truth": [
         "Rupnagar"
       ],
-      "answer": "London",
-      "correct": false,
-      "n_candidates": 4,
-      "chosen_serial": 1971,
+      "answer": "Rupnagar",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 819,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 6,
@@ -105,8 +99,7 @@
       "n_candidates": 1,
       "chosen_serial": 1743,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 7,
@@ -114,13 +107,12 @@
       "ground_truth": [
         "Montanus of Phrygia"
       ],
-      "answer": "Pedro Men\u00e9ndez de Avil\u00e9s",
-      "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 2044,
+      "answer": "Montanus of Phrygia",
+      "correct": true,
+      "n_candidates": 1,
+      "chosen_serial": 202,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 8,
@@ -128,13 +120,12 @@
       "ground_truth": [
         "London"
       ],
-      "answer": "Washington, D.C.",
+      "answer": "Washington, D.C",
       "correct": false,
       "n_candidates": 2,
       "chosen_serial": 1929,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 9,
@@ -147,8 +138,7 @@
       "n_candidates": 2,
       "chosen_serial": 2016,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 10,
@@ -161,8 +151,7 @@
       "n_candidates": 1,
       "chosen_serial": 709,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 11,
@@ -175,8 +164,7 @@
       "n_candidates": 2,
       "chosen_serial": 2101,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 12,
@@ -184,13 +172,12 @@
       "ground_truth": [
         "Apple Inc."
       ],
-      "answer": "Apple Inc.",
-      "correct": true,
-      "n_candidates": 6,
-      "chosen_serial": 1522,
+      "answer": "(no answer)",
+      "correct": false,
+      "n_candidates": 0,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 13,
@@ -200,11 +187,10 @@
       ],
       "answer": "baseball",
       "correct": true,
-      "n_candidates": 6,
-      "chosen_serial": 2129,
+      "n_candidates": 1,
+      "chosen_serial": 796,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 14,
@@ -217,8 +203,7 @@
       "n_candidates": 1,
       "chosen_serial": 1658,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 15,
@@ -231,8 +216,7 @@
       "n_candidates": 2,
       "chosen_serial": 1177,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 16,
@@ -245,8 +229,7 @@
       "n_candidates": 2,
       "chosen_serial": 2132,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 17,
@@ -259,8 +242,7 @@
       "n_candidates": 2,
       "chosen_serial": 1896,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 18,
@@ -273,8 +255,7 @@
       "n_candidates": 2,
       "chosen_serial": 2203,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 19,
@@ -282,13 +263,12 @@
       "ground_truth": [
         "Church of Greece"
       ],
-      "answer": "Catholic Church",
-      "correct": false,
+      "answer": "Church of Greece",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1662,
+      "chosen_serial": 2115,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 20,
@@ -301,8 +281,7 @@
       "n_candidates": 2,
       "chosen_serial": 1797,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 21,
@@ -315,8 +294,7 @@
       "n_candidates": 2,
       "chosen_serial": 1887,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 22,
@@ -329,8 +307,7 @@
       "n_candidates": 1,
       "chosen_serial": 1895,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 23,
@@ -341,10 +318,9 @@
       "answer": "Charlie Hebdo",
       "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1055,
+      "chosen_serial": 1005,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 24,
@@ -357,8 +333,7 @@
       "n_candidates": 1,
       "chosen_serial": 1670,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 25,
@@ -371,8 +346,7 @@
       "n_candidates": 1,
       "chosen_serial": 218,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 26,
@@ -385,8 +359,7 @@
       "n_candidates": 2,
       "chosen_serial": 1699,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 27,
@@ -394,13 +367,12 @@
       "ground_truth": [
         "sumo"
       ],
-      "answer": "midfielder",
-      "correct": false,
-      "n_candidates": 6,
-      "chosen_serial": 2155,
+      "answer": "sumo",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 1999,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 28,
@@ -413,8 +385,7 @@
       "n_candidates": 1,
       "chosen_serial": 1070,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 29,
@@ -427,8 +398,7 @@
       "n_candidates": 1,
       "chosen_serial": 1728,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 30,
@@ -436,13 +406,12 @@
       "ground_truth": [
         "Apple Inc."
       ],
-      "answer": "Apple Inc.",
-      "correct": true,
+      "answer": "Apple Inc",
+      "correct": false,
       "n_candidates": 1,
       "chosen_serial": 858,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 31,
@@ -455,8 +424,7 @@
       "n_candidates": 2,
       "chosen_serial": 656,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 32,
@@ -464,13 +432,12 @@
       "ground_truth": [
         "Catholicism"
       ],
-      "answer": "Catholic Church",
-      "correct": false,
-      "n_candidates": 551,
-      "chosen_serial": 2020,
+      "answer": "Catholicism",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 1919,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 33,
@@ -478,13 +445,12 @@
       "ground_truth": [
         "Washington, D.C."
       ],
-      "answer": "Washington, D.C.",
-      "correct": true,
+      "answer": "Washington, D.C",
+      "correct": false,
       "n_candidates": 2,
       "chosen_serial": 1757,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 34,
@@ -497,8 +463,7 @@
       "n_candidates": 1,
       "chosen_serial": 943,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 35,
@@ -511,8 +476,7 @@
       "n_candidates": 1,
       "chosen_serial": 1788,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 36,
@@ -525,8 +489,7 @@
       "n_candidates": 1,
       "chosen_serial": 1373,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 37,
@@ -534,13 +497,12 @@
       "ground_truth": [
         "NBC"
       ],
-      "answer": "NBC",
-      "correct": true,
-      "n_candidates": 1,
-      "chosen_serial": 838,
+      "answer": "(no answer)",
+      "correct": false,
+      "n_candidates": 0,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 38,
@@ -550,11 +512,10 @@
       ],
       "answer": "goaltender",
       "correct": true,
-      "n_candidates": 6,
-      "chosen_serial": 1808,
+      "n_candidates": 2,
+      "chosen_serial": 1269,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 39,
@@ -567,8 +528,7 @@
       "n_candidates": 1,
       "chosen_serial": 900,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 40,
@@ -581,8 +541,7 @@
       "n_candidates": 1,
       "chosen_serial": 1872,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 41,
@@ -595,8 +554,7 @@
       "n_candidates": 2,
       "chosen_serial": 1088,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 42,
@@ -609,8 +567,7 @@
       "n_candidates": 2,
       "chosen_serial": 1568,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 43,
@@ -623,8 +580,7 @@
       "n_candidates": 2,
       "chosen_serial": 1019,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 44,
@@ -637,8 +593,7 @@
       "n_candidates": 1,
       "chosen_serial": 1598,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 45,
@@ -651,8 +606,7 @@
       "n_candidates": 1,
       "chosen_serial": 278,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 46,
@@ -665,8 +619,7 @@
       "n_candidates": 2,
       "chosen_serial": 2120,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 47,
@@ -679,8 +632,7 @@
       "n_candidates": 2,
       "chosen_serial": 1659,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 48,
@@ -693,8 +645,7 @@
       "n_candidates": 1,
       "chosen_serial": 888,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 49,
@@ -707,8 +658,7 @@
       "n_candidates": 2,
       "chosen_serial": 1386,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 50,
@@ -721,8 +671,7 @@
       "n_candidates": 2,
       "chosen_serial": 2266,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 51,
@@ -735,8 +684,7 @@
       "n_candidates": 2,
       "chosen_serial": 2084,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 52,
@@ -746,11 +694,10 @@
       ],
       "answer": "The Beatles",
       "correct": false,
-      "n_candidates": 2,
+      "n_candidates": 1,
       "chosen_serial": 1444,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 53,
@@ -763,8 +710,7 @@
       "n_candidates": 2,
       "chosen_serial": 1236,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 54,
@@ -777,8 +723,7 @@
       "n_candidates": 2,
       "chosen_serial": 641,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 55,
@@ -791,8 +736,7 @@
       "n_candidates": 1,
       "chosen_serial": 2227,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 56,
@@ -805,8 +749,7 @@
       "n_candidates": 2,
       "chosen_serial": 1042,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 57,
@@ -814,13 +757,12 @@
       "ground_truth": [
         "Connachta"
       ],
-      "answer": "Donald Trump",
-      "correct": false,
+      "answer": "Connachta",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1164,
+      "chosen_serial": 1630,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 58,
@@ -828,13 +770,12 @@
       "ground_truth": [
         "Apple Inc."
       ],
-      "answer": "Apple Inc.",
-      "correct": true,
+      "answer": "Apple Inc",
+      "correct": false,
       "n_candidates": 1,
       "chosen_serial": 1434,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 59,
@@ -845,10 +786,9 @@
       "answer": "Asia",
       "correct": true,
       "n_candidates": 1,
-      "chosen_serial": 130,
+      "chosen_serial": 2130,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 60,
@@ -861,8 +801,7 @@
       "n_candidates": 2,
       "chosen_serial": 1618,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 61,
@@ -870,13 +809,12 @@
       "ground_truth": [
         "Yale University"
       ],
-      "answer": "University of Chicago",
-      "correct": false,
+      "answer": "Yale University",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 330,
+      "chosen_serial": 1319,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 62,
@@ -889,8 +827,7 @@
       "n_candidates": 2,
       "chosen_serial": 368,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 63,
@@ -900,11 +837,10 @@
       ],
       "answer": "Dax Shepard",
       "correct": true,
-      "n_candidates": 2,
+      "n_candidates": 1,
       "chosen_serial": 1820,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 64,
@@ -912,13 +848,12 @@
       "ground_truth": [
         "Neuromancer"
       ],
-      "answer": "Pattern Recognition",
-      "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 839,
+      "answer": "Neuromancer",
+      "correct": true,
+      "n_candidates": 1,
+      "chosen_serial": 286,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 65,
@@ -931,8 +866,7 @@
       "n_candidates": 2,
       "chosen_serial": 2237,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 66,
@@ -945,8 +879,7 @@
       "n_candidates": 2,
       "chosen_serial": 508,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 67,
@@ -959,8 +892,7 @@
       "n_candidates": 2,
       "chosen_serial": 717,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 68,
@@ -973,8 +905,7 @@
       "n_candidates": 2,
       "chosen_serial": 2180,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 69,
@@ -987,8 +918,7 @@
       "n_candidates": 2,
       "chosen_serial": 2174,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 70,
@@ -1001,8 +931,7 @@
       "n_candidates": 2,
       "chosen_serial": 2197,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 71,
@@ -1015,8 +944,7 @@
       "n_candidates": 2,
       "chosen_serial": 2079,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 72,
@@ -1029,8 +957,7 @@
       "n_candidates": 2,
       "chosen_serial": 1305,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 73,
@@ -1043,8 +970,7 @@
       "n_candidates": 1,
       "chosen_serial": 140,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 74,
@@ -1057,8 +983,7 @@
       "n_candidates": 2,
       "chosen_serial": 595,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 75,
@@ -1071,8 +996,7 @@
       "n_candidates": 1,
       "chosen_serial": 1577,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 76,
@@ -1085,8 +1009,7 @@
       "n_candidates": 2,
       "chosen_serial": 2112,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 77,
@@ -1099,8 +1022,7 @@
       "n_candidates": 2,
       "chosen_serial": 746,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 78,
@@ -1113,8 +1035,7 @@
       "n_candidates": 2,
       "chosen_serial": 2225,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 79,
@@ -1122,13 +1043,12 @@
       "ground_truth": [
         "basketball"
       ],
-      "answer": "association football",
-      "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 1772,
+      "answer": "basketball",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 1445,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 80,
@@ -1141,8 +1061,7 @@
       "n_candidates": 2,
       "chosen_serial": 1613,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 81,
@@ -1150,13 +1069,12 @@
       "ground_truth": [
         "Philippines"
       ],
-      "answer": "Finland",
-      "correct": false,
+      "answer": "Philippines",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 270,
+      "chosen_serial": 1600,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 82,
@@ -1169,8 +1087,7 @@
       "n_candidates": 1,
       "chosen_serial": 2308,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 83,
@@ -1178,13 +1095,12 @@
       "ground_truth": [
         "Great Britain"
       ],
-      "answer": "Great Britain.",
+      "answer": "Great Britain",
       "correct": true,
       "n_candidates": 2,
       "chosen_serial": 2017,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 84,
@@ -1197,8 +1113,7 @@
       "n_candidates": 2,
       "chosen_serial": 713,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 85,
@@ -1211,8 +1126,7 @@
       "n_candidates": 1,
       "chosen_serial": 955,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 86,
@@ -1223,10 +1137,9 @@
       "answer": "Aston Martin Lagonda",
       "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1655,
+      "chosen_serial": 1765,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 87,
@@ -1239,8 +1152,7 @@
       "n_candidates": 2,
       "chosen_serial": 1583,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 88,
@@ -1253,8 +1165,7 @@
       "n_candidates": 2,
       "chosen_serial": 329,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 89,
@@ -1262,13 +1173,12 @@
       "ground_truth": [
         "midfielder"
       ],
-      "answer": "goalkeeper",
-      "correct": false,
+      "answer": "midfielder",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1173,
+      "chosen_serial": 2052,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 90,
@@ -1281,8 +1191,7 @@
       "n_candidates": 1,
       "chosen_serial": 964,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 91,
@@ -1290,13 +1199,12 @@
       "ground_truth": [
         "Goldust"
       ],
-      "answer": "Rabri Devi",
-      "correct": false,
+      "answer": "Goldust",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 127,
+      "chosen_serial": 2125,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 92,
@@ -1304,13 +1212,12 @@
       "ground_truth": [
         "Blue Origin"
       ],
-      "answer": "Ford Motor Company",
-      "correct": false,
-      "n_candidates": 6,
-      "chosen_serial": 1980,
+      "answer": "Blue Origin",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 1856,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 93,
@@ -1323,8 +1230,7 @@
       "n_candidates": 1,
       "chosen_serial": 294,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 94,
@@ -1332,13 +1238,12 @@
       "ground_truth": [
         "rugby"
       ],
-      "answer": "shooting guard",
-      "correct": false,
-      "n_candidates": 4,
-      "chosen_serial": 2163,
+      "answer": "rugby",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 844,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 95,
@@ -1351,8 +1256,7 @@
       "n_candidates": 2,
       "chosen_serial": 1454,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 96,
@@ -1365,8 +1269,7 @@
       "n_candidates": 1,
       "chosen_serial": 781,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 97,
@@ -1379,8 +1282,7 @@
       "n_candidates": 1,
       "chosen_serial": 100,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 98,
@@ -1393,8 +1295,7 @@
       "n_candidates": 2,
       "chosen_serial": 324,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 99,
@@ -1407,8 +1308,7 @@
       "n_candidates": 2,
       "chosen_serial": 1878,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     }
   ]
 }

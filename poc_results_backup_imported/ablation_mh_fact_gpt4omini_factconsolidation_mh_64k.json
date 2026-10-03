@@ -6,9 +6,9 @@
   "source": "factconsolidation_mh_64k",
   "context_length": "64k",
   "n_questions": 100,
-  "correct": 45,
-  "accuracy": 0.45,
-  "elapsed_seconds": 597.6913850307465,
+  "correct": 33,
+  "accuracy": 0.33,
+  "elapsed_seconds": 566.8104763031006,
   "results": [
     {
       "q_idx": 0,
@@ -21,8 +21,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 1,
@@ -35,8 +34,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 2,
@@ -44,13 +42,12 @@
       "ground_truth": [
         "South America"
       ],
-      "answer": "Madonna",
+      "answer": "Oceania",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 3,
@@ -63,8 +60,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 4,
@@ -77,8 +73,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 5,
@@ -86,13 +81,12 @@
       "ground_truth": [
         "London"
       ],
-      "answer": "Taipei",
+      "answer": "(no answer)",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 6,
@@ -105,8 +99,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 7,
@@ -114,13 +107,12 @@
       "ground_truth": [
         "pes\u00e4pallo"
       ],
-      "answer": "pes\u00e4pallo",
-      "correct": true,
+      "answer": "midfielder",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 8,
@@ -133,8 +125,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 9,
@@ -147,8 +138,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 10,
@@ -161,8 +151,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 11,
@@ -175,8 +164,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 12,
@@ -184,13 +172,12 @@
       "ground_truth": [
         "Japan"
       ],
-      "answer": "Japan",
-      "correct": true,
+      "answer": "Italy",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 13,
@@ -198,13 +185,12 @@
       "ground_truth": [
         "Asia"
       ],
-      "answer": "Canada",
+      "answer": "North America",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 14,
@@ -217,8 +203,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 15,
@@ -231,8 +216,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 16,
@@ -245,8 +229,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 17,
@@ -254,13 +237,12 @@
       "ground_truth": [
         "Oderzo"
       ],
-      "answer": "Canberra",
+      "answer": "Narendra Modi",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 18,
@@ -268,13 +250,12 @@
       "ground_truth": [
         "field hockey"
       ],
-      "answer": "field hockey",
-      "correct": true,
+      "answer": "(no answer)",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_planned": 3,
+      "n_hops_executed": 1
     },
     {
       "q_idx": 19,
@@ -282,13 +263,12 @@
       "ground_truth": [
         "Ole Johan Vierdal"
       ],
-      "answer": "Leo Varadkar",
+      "answer": "(no answer)",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 20,
@@ -301,8 +281,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 21,
@@ -315,8 +294,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 22,
@@ -324,13 +302,12 @@
       "ground_truth": [
         "Harrisville"
       ],
-      "answer": "United States of America",
+      "answer": "(no answer)",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_planned": 3,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 23,
@@ -343,8 +320,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 24,
@@ -357,8 +333,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 25,
@@ -371,8 +346,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 26,
@@ -385,8 +359,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 27,
@@ -399,8 +372,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 28,
@@ -412,9 +384,8 @@
       "correct": true,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 29,
@@ -427,8 +398,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 30,
@@ -441,8 +411,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 31,
@@ -450,13 +419,12 @@
       "ground_truth": [
         "sumo"
       ],
-      "answer": "(no answer)",
+      "answer": "American football",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 32,
@@ -464,13 +432,12 @@
       "ground_truth": [
         "Oderzo"
       ],
-      "answer": "(no answer)",
+      "answer": "goalkeeper",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 5,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 33,
@@ -478,13 +445,12 @@
       "ground_truth": [
         "Africa"
       ],
-      "answer": "Africa",
-      "correct": true,
+      "answer": "Asia",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 34,
@@ -497,8 +463,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 35,
@@ -506,13 +471,12 @@
       "ground_truth": [
         "New York City"
       ],
-      "answer": "New York City",
-      "correct": true,
+      "answer": "Moscow",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 36,
@@ -525,8 +489,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 37,
@@ -539,8 +502,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 38,
@@ -553,8 +515,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 39,
@@ -567,8 +528,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 40,
@@ -581,8 +541,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 41,
@@ -590,13 +549,12 @@
       "ground_truth": [
         "English"
       ],
-      "answer": "Portuguese",
-      "correct": false,
+      "answer": "English",
+      "correct": true,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 42,
@@ -609,8 +567,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 43,
@@ -618,13 +575,12 @@
       "ground_truth": [
         "North America"
       ],
-      "answer": "Eurasia",
+      "answer": "Asia",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 44,
@@ -637,8 +593,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 45,
@@ -651,8 +606,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 46,
@@ -664,9 +618,8 @@
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 1
     },
     {
       "q_idx": 47,
@@ -674,13 +627,12 @@
       "ground_truth": [
         "Mekere Morauta"
       ],
-      "answer": "Mekere Morauta",
-      "correct": true,
+      "answer": "Gautama Buddha",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 48,
@@ -693,8 +645,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 49,
@@ -702,13 +653,12 @@
       "ground_truth": [
         "Rome"
       ],
-      "answer": "Joachim L\u00f6w",
+      "answer": "Berlin",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_planned": 4,
+      "n_hops_executed": 4
     },
     {
       "q_idx": 50,
@@ -721,8 +671,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 51,
@@ -730,13 +679,12 @@
       "ground_truth": [
         "Krong Kep"
       ],
-      "answer": "Porsche",
+      "answer": "Colt's Manufacturing Company",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 52,
@@ -749,8 +697,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 53,
@@ -763,8 +710,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 1,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 54,
@@ -777,8 +723,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 55,
@@ -786,13 +731,12 @@
       "ground_truth": [
         "Italian"
       ],
-      "answer": "Chen Kaige",
+      "answer": "Marvin Barnes",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 56,
@@ -800,13 +744,12 @@
       "ground_truth": [
         "Rupnagar"
       ],
-      "answer": "country music",
+      "answer": "London",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 57,
@@ -814,13 +757,12 @@
       "ground_truth": [
         "roller derby"
       ],
-      "answer": "roller derby",
-      "correct": true,
+      "answer": "cricket",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 58,
@@ -828,13 +770,12 @@
       "ground_truth": [
         "Philippines"
       ],
-      "answer": "Soviet Union",
+      "answer": "(no answer)",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 59,
@@ -846,9 +787,8 @@
       "correct": true,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 60,
@@ -856,13 +796,12 @@
       "ground_truth": [
         "San Jose"
       ],
-      "answer": "San Jose",
-      "correct": true,
+      "answer": "Frankfurt",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 61,
@@ -870,13 +809,12 @@
       "ground_truth": [
         "L. L. Zamenhof"
       ],
-      "answer": "Frank Miller",
+      "answer": "Finnish",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 62,
@@ -884,13 +822,12 @@
       "ground_truth": [
         "Beacon"
       ],
-      "answer": "Beacon",
-      "correct": true,
+      "answer": "(no answer)",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 1
     },
     {
       "q_idx": 63,
@@ -902,9 +839,8 @@
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 2,
+      "n_hops_executed": 2
     },
     {
       "q_idx": 64,
@@ -917,8 +853,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 65,
@@ -926,13 +861,12 @@
       "ground_truth": [
         "Connachta"
       ],
-      "answer": "Connachta",
-      "correct": true,
+      "answer": "Donald Trump",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 66,
@@ -940,13 +874,12 @@
       "ground_truth": [
         "Asia"
       ],
-      "answer": "North America",
+      "answer": "Kingdom of England",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 67,
@@ -959,8 +892,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 68,
@@ -968,13 +900,12 @@
       "ground_truth": [
         "French"
       ],
-      "answer": "French",
-      "correct": true,
+      "answer": "Polish",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 69,
@@ -987,8 +918,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 70,
@@ -1001,8 +931,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 71,
@@ -1010,13 +939,12 @@
       "ground_truth": [
         "Sipirok"
       ],
-      "answer": "Harrisville",
+      "answer": "Washington, D.C",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 72,
@@ -1029,8 +957,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 73,
@@ -1043,8 +970,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 74,
@@ -1057,8 +983,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 75,
@@ -1071,8 +996,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 76,
@@ -1085,8 +1009,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 77,
@@ -1094,13 +1017,12 @@
       "ground_truth": [
         "University of South Carolina"
       ],
-      "answer": "University of South Carolina",
-      "correct": true,
+      "answer": "University of Madras",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 78,
@@ -1108,13 +1030,12 @@
       "ground_truth": [
         "German"
       ],
-      "answer": "Nick Cannon",
-      "correct": false,
+      "answer": "German",
+      "correct": true,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 4,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_planned": 5,
+      "n_hops_executed": 5
     },
     {
       "q_idx": 79,
@@ -1122,13 +1043,12 @@
       "ground_truth": [
         "Antarctica"
       ],
-      "answer": "Antarctica",
-      "correct": true,
+      "answer": "Europe",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 80,
@@ -1141,8 +1061,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 81,
@@ -1150,13 +1069,12 @@
       "ground_truth": [
         "Japan"
       ],
-      "answer": "Japan",
-      "correct": true,
+      "answer": "Italy",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 82,
@@ -1164,13 +1082,12 @@
       "ground_truth": [
         "Swedish"
       ],
-      "answer": "George Bernard Shaw",
+      "answer": "German",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 83,
@@ -1183,8 +1100,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 84,
@@ -1197,8 +1113,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 85,
@@ -1211,8 +1126,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 86,
@@ -1225,8 +1139,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 87,
@@ -1239,8 +1152,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 88,
@@ -1248,13 +1160,12 @@
       "ground_truth": [
         "German"
       ],
-      "answer": "United States of America",
+      "answer": "American English",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
-      "n_hops_planned": 4,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_planned": 3,
+      "n_hops_executed": 3
     },
     {
       "q_idx": 89,
@@ -1267,8 +1178,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 3
     },
     {
       "q_idx": 90,
@@ -1276,13 +1186,12 @@
       "ground_truth": [
         "Asia"
       ],
-      "answer": "South America",
+      "answer": "Argentina",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 3,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 91,
@@ -1295,8 +1204,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 92,
@@ -1309,8 +1217,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 93,
@@ -1318,13 +1225,12 @@
       "ground_truth": [
         "Louisville"
       ],
-      "answer": "Baltimore",
-      "correct": false,
+      "answer": "Louisville",
+      "correct": true,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 94,
@@ -1332,13 +1238,12 @@
       "ground_truth": [
         "alternative country"
       ],
-      "answer": "alternative country",
-      "correct": true,
+      "answer": "Naoki Urasawa",
+      "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 95,
@@ -1351,8 +1256,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 3,
-      "n_hops_executed": 1,
-      "route": null
+      "n_hops_executed": 1
     },
     {
       "q_idx": 96,
@@ -1365,8 +1269,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 97,
@@ -1374,13 +1277,12 @@
       "ground_truth": [
         "Wil"
       ],
-      "answer": "Edinburgh",
+      "answer": "Mountain View",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 4,
-      "route": null
+      "n_hops_executed": 4
     },
     {
       "q_idx": 98,
@@ -1393,8 +1295,7 @@
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 2,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 2
     },
     {
       "q_idx": 99,
@@ -1402,13 +1303,12 @@
       "ground_truth": [
         "Grosseto"
       ],
-      "answer": "(no answer)",
+      "answer": "basketball",
       "correct": false,
       "n_candidates": null,
       "chosen_serial": null,
       "n_hops_planned": 4,
-      "n_hops_executed": 2,
-      "route": null
+      "n_hops_executed": 3
     }
   ]
 }

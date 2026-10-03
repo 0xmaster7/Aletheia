@@ -6,9 +6,9 @@
   "source": "factconsolidation_sh_262k",
   "context_length": "262k",
   "n_questions": 100,
-  "correct": 73,
-  "accuracy": 0.73,
-  "elapsed_seconds": 473.10749220848083,
+  "correct": 81,
+  "accuracy": 0.81,
+  "elapsed_seconds": 1779.5310020446777,
   "results": [
     {
       "q_idx": 0,
@@ -18,10 +18,11 @@
       ],
       "answer": "Federal University of Rio de Janeiro",
       "correct": true,
-      "n_candidates": 2,
+      "n_candidates": 3,
       "chosen_serial": 14907,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 1,
@@ -34,7 +35,8 @@
       "n_candidates": 1,
       "chosen_serial": 15099,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 2,
@@ -47,7 +49,8 @@
       "n_candidates": 2,
       "chosen_serial": 2697,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 3,
@@ -55,12 +58,13 @@
       "ground_truth": [
         "Boeing"
       ],
-      "answer": "Apple Inc.",
-      "correct": false,
+      "answer": "Boeing",
+      "correct": true,
       "n_candidates": 4,
-      "chosen_serial": 12918,
+      "chosen_serial": 16767,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 4,
@@ -73,7 +77,8 @@
       "n_candidates": 2,
       "chosen_serial": 7636,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 5,
@@ -81,12 +86,13 @@
       "ground_truth": [
         "Methodism"
       ],
-      "answer": "John William Polidori",
-      "correct": false,
-      "n_candidates": 46,
-      "chosen_serial": 15000,
+      "answer": "Methodism",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 14063,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 6,
@@ -99,7 +105,8 @@
       "n_candidates": 1,
       "chosen_serial": 17004,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 7,
@@ -107,12 +114,13 @@
       "ground_truth": [
         "placekicker"
       ],
-      "answer": "goalkeeper",
-      "correct": false,
-      "n_candidates": 16,
-      "chosen_serial": 16711,
+      "answer": "placekicker",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 16712,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 8,
@@ -125,7 +133,8 @@
       "n_candidates": 2,
       "chosen_serial": 8530,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 9,
@@ -133,12 +142,13 @@
       "ground_truth": [
         "Sega AM2"
       ],
-      "answer": "World Wide Web Consortium",
+      "answer": "Macromedia",
       "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 12325,
+      "n_candidates": 5,
+      "chosen_serial": 16478,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 10,
@@ -151,7 +161,8 @@
       "n_candidates": 2,
       "chosen_serial": 63,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 11,
@@ -159,12 +170,13 @@
       "ground_truth": [
         "Kingdom of the Netherlands"
       ],
-      "answer": "United Kingdom of Great Britain and Ireland",
+      "answer": "(no answer)",
       "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 15420,
+      "n_candidates": 0,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 12,
@@ -177,7 +189,8 @@
       "n_candidates": 2,
       "chosen_serial": 4787,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 13,
@@ -190,7 +203,8 @@
       "n_candidates": 2,
       "chosen_serial": 14608,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 14,
@@ -203,7 +217,8 @@
       "n_candidates": 2,
       "chosen_serial": 17816,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 15,
@@ -213,10 +228,11 @@
       ],
       "answer": "Catholic Church",
       "correct": false,
-      "n_candidates": 10,
-      "chosen_serial": 13901,
+      "n_candidates": 8,
+      "chosen_serial": 12701,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 16,
@@ -229,7 +245,8 @@
       "n_candidates": 1,
       "chosen_serial": 5211,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 17,
@@ -242,7 +259,8 @@
       "n_candidates": 1,
       "chosen_serial": 3446,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 18,
@@ -250,12 +268,13 @@
       "ground_truth": [
         "Raytheon"
       ],
-      "answer": "Microsoft",
+      "answer": "(no answer)",
       "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 11001,
+      "n_candidates": 0,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 19,
@@ -268,7 +287,8 @@
       "n_candidates": 2,
       "chosen_serial": 10111,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 20,
@@ -278,10 +298,11 @@
       ],
       "answer": "United States of America",
       "correct": true,
-      "n_candidates": 1,
-      "chosen_serial": 4409,
+      "n_candidates": 4,
+      "chosen_serial": 6611,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 21,
@@ -294,7 +315,8 @@
       "n_candidates": 2,
       "chosen_serial": 3131,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 22,
@@ -307,7 +329,8 @@
       "n_candidates": 1,
       "chosen_serial": 5371,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 23,
@@ -320,7 +343,8 @@
       "n_candidates": 2,
       "chosen_serial": 9654,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 24,
@@ -331,9 +355,10 @@
       "answer": "association football",
       "correct": false,
       "n_candidates": 3,
-      "chosen_serial": 8178,
+      "chosen_serial": 16437,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 25,
@@ -343,10 +368,11 @@
       ],
       "answer": "United States of America",
       "correct": true,
-      "n_candidates": 1,
-      "chosen_serial": 891,
+      "n_candidates": 3,
+      "chosen_serial": 13888,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 26,
@@ -359,7 +385,8 @@
       "n_candidates": 1,
       "chosen_serial": 17038,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 27,
@@ -372,7 +399,8 @@
       "n_candidates": 1,
       "chosen_serial": 6038,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 28,
@@ -385,7 +413,8 @@
       "n_candidates": 2,
       "chosen_serial": 6288,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 29,
@@ -395,10 +424,11 @@
       ],
       "answer": "baseball",
       "correct": true,
-      "n_candidates": 6,
+      "n_candidates": 7,
       "chosen_serial": 8105,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 30,
@@ -409,9 +439,10 @@
       "answer": "Madonna",
       "correct": true,
       "n_candidates": 1,
-      "chosen_serial": 7017,
+      "chosen_serial": 717,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 31,
@@ -424,7 +455,8 @@
       "n_candidates": 2,
       "chosen_serial": 15185,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 32,
@@ -437,7 +469,8 @@
       "n_candidates": 2,
       "chosen_serial": 14005,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 33,
@@ -445,12 +478,13 @@
       "ground_truth": [
         "P\u00e1l Teleki"
       ],
-      "answer": "Giorgio Armani",
-      "correct": false,
-      "n_candidates": 1,
-      "chosen_serial": 105,
+      "answer": "P\u00e1l Teleki",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 10196,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 34,
@@ -463,7 +497,8 @@
       "n_candidates": 1,
       "chosen_serial": 16655,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 35,
@@ -476,7 +511,8 @@
       "n_candidates": 2,
       "chosen_serial": 14567,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 36,
@@ -484,12 +520,13 @@
       "ground_truth": [
         "Ford Motor Company"
       ],
-      "answer": "Colt's Manufacturing Company",
-      "correct": false,
-      "n_candidates": 1,
-      "chosen_serial": 6652,
+      "answer": "Ford Motor Company",
+      "correct": true,
+      "n_candidates": 3,
+      "chosen_serial": 13113,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 37,
@@ -497,12 +534,13 @@
       "ground_truth": [
         "Catholic Church"
       ],
-      "answer": "Methodism",
-      "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 13432,
+      "answer": "Catholic Church",
+      "correct": true,
+      "n_candidates": 38,
+      "chosen_serial": 11616,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 38,
@@ -515,7 +553,8 @@
       "n_candidates": 1,
       "chosen_serial": 9972,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 39,
@@ -528,7 +567,8 @@
       "n_candidates": 2,
       "chosen_serial": 18074,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 40,
@@ -538,10 +578,11 @@
       ],
       "answer": "Stephen Hillenburg",
       "correct": true,
-      "n_candidates": 3,
+      "n_candidates": 2,
       "chosen_serial": 4629,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 41,
@@ -549,12 +590,13 @@
       "ground_truth": [
         "Israel"
       ],
-      "answer": "France",
-      "correct": false,
+      "answer": "Israel",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 4036,
+      "chosen_serial": 14389,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 42,
@@ -567,7 +609,8 @@
       "n_candidates": 2,
       "chosen_serial": 8975,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 43,
@@ -580,7 +623,8 @@
       "n_candidates": 2,
       "chosen_serial": 13904,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 44,
@@ -593,7 +637,8 @@
       "n_candidates": 2,
       "chosen_serial": 18069,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 45,
@@ -603,10 +648,11 @@
       ],
       "answer": "William Shakespeare",
       "correct": false,
-      "n_candidates": 5,
+      "n_candidates": 6,
       "chosen_serial": 16788,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 46,
@@ -616,10 +662,11 @@
       ],
       "answer": "The Church of Jesus Christ of Latter-day Saints",
       "correct": true,
-      "n_candidates": 2,
+      "n_candidates": 3,
       "chosen_serial": 15827,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 47,
@@ -632,7 +679,8 @@
       "n_candidates": 1,
       "chosen_serial": 13765,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 48,
@@ -645,7 +693,8 @@
       "n_candidates": 2,
       "chosen_serial": 6862,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 49,
@@ -658,7 +707,8 @@
       "n_candidates": 2,
       "chosen_serial": 2728,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 50,
@@ -671,7 +721,8 @@
       "n_candidates": 1,
       "chosen_serial": 4098,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 51,
@@ -684,7 +735,8 @@
       "n_candidates": 2,
       "chosen_serial": 5298,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 52,
@@ -692,12 +744,13 @@
       "ground_truth": [
         "University of Mississippi"
       ],
-      "answer": "Frank Herbert.",
+      "answer": "University of Notre Dame.",
       "correct": false,
       "n_candidates": 2,
-      "chosen_serial": 3751,
+      "chosen_serial": 13139,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 53,
@@ -707,10 +760,11 @@
       ],
       "answer": "French",
       "correct": true,
-      "n_candidates": 6,
+      "n_candidates": 2,
       "chosen_serial": 15307,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 54,
@@ -718,12 +772,13 @@
       "ground_truth": [
         "Walloon"
       ],
-      "answer": "Spanish",
+      "answer": "German",
       "correct": false,
-      "n_candidates": 4,
-      "chosen_serial": 17051,
+      "n_candidates": 16,
+      "chosen_serial": 17795,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 55,
@@ -736,7 +791,8 @@
       "n_candidates": 2,
       "chosen_serial": 8814,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 56,
@@ -744,12 +800,13 @@
       "ground_truth": [
         "Asia"
       ],
-      "answer": "Europe",
-      "correct": false,
-      "n_candidates": 1,
-      "chosen_serial": 2877,
+      "answer": "Asia",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 5282,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 57,
@@ -757,12 +814,13 @@
       "ground_truth": [
         "basketball"
       ],
-      "answer": "basketball",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 10866,
+      "answer": "(no answer)",
+      "correct": false,
+      "n_candidates": 0,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 58,
@@ -775,7 +833,8 @@
       "n_candidates": 1,
       "chosen_serial": 8565,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 59,
@@ -788,7 +847,8 @@
       "n_candidates": 2,
       "chosen_serial": 12996,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 60,
@@ -801,7 +861,8 @@
       "n_candidates": 1,
       "chosen_serial": 9733,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 61,
@@ -814,7 +875,8 @@
       "n_candidates": 2,
       "chosen_serial": 4612,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 62,
@@ -827,7 +889,8 @@
       "n_candidates": 1,
       "chosen_serial": 3969,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 63,
@@ -840,7 +903,8 @@
       "n_candidates": 2,
       "chosen_serial": 8194,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 64,
@@ -853,7 +917,8 @@
       "n_candidates": 2,
       "chosen_serial": 2509,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 65,
@@ -866,7 +931,8 @@
       "n_candidates": 2,
       "chosen_serial": 5617,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 66,
@@ -874,12 +940,13 @@
       "ground_truth": [
         "Lancaster"
       ],
-      "answer": "Rome",
-      "correct": false,
+      "answer": "Lancaster",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 15930,
+      "chosen_serial": 17272,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 67,
@@ -887,12 +954,13 @@
       "ground_truth": [
         "Netscape Comunications Corporation"
       ],
-      "answer": "Microsoft",
-      "correct": false,
+      "answer": "Netscape Comunications Corporation",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 9082,
+      "chosen_serial": 162,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 68,
@@ -905,7 +973,8 @@
       "n_candidates": 2,
       "chosen_serial": 1373,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 69,
@@ -915,10 +984,11 @@
       ],
       "answer": "United States of America",
       "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 12338,
+      "n_candidates": 19,
+      "chosen_serial": 13955,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 70,
@@ -931,7 +1001,8 @@
       "n_candidates": 2,
       "chosen_serial": 10493,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 71,
@@ -944,7 +1015,8 @@
       "n_candidates": 1,
       "chosen_serial": 17023,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 72,
@@ -957,7 +1029,8 @@
       "n_candidates": 2,
       "chosen_serial": 8413,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 73,
@@ -965,12 +1038,13 @@
       "ground_truth": [
         "basketball player"
       ],
-      "answer": "basketball player",
-      "correct": true,
-      "n_candidates": 5,
+      "answer": "Hinduism",
+      "correct": false,
+      "n_candidates": 6,
       "chosen_serial": 10680,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 74,
@@ -978,12 +1052,13 @@
       "ground_truth": [
         "United Kingdom"
       ],
-      "answer": "<error: 'answer_entity'>",
+      "answer": "(no answer)",
       "correct": false,
-      "n_candidates": null,
+      "n_candidates": 0,
       "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 75,
@@ -996,7 +1071,8 @@
       "n_candidates": 2,
       "chosen_serial": 14773,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 76,
@@ -1006,10 +1082,11 @@
       ],
       "answer": "United Kingdom",
       "correct": true,
-      "n_candidates": 2,
+      "n_candidates": 3,
       "chosen_serial": 15540,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 77,
@@ -1022,7 +1099,8 @@
       "n_candidates": 2,
       "chosen_serial": 16897,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 78,
@@ -1035,7 +1113,8 @@
       "n_candidates": 1,
       "chosen_serial": 3531,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 79,
@@ -1043,12 +1122,13 @@
       "ground_truth": [
         "defenceman"
       ],
-      "answer": "defenceman",
-      "correct": true,
+      "answer": "goalkeeper",
+      "correct": false,
       "n_candidates": 2,
-      "chosen_serial": 17090,
+      "chosen_serial": 7108,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 80,
@@ -1061,7 +1141,8 @@
       "n_candidates": 2,
       "chosen_serial": 5988,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 81,
@@ -1074,7 +1155,8 @@
       "n_candidates": 1,
       "chosen_serial": 7441,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 82,
@@ -1085,9 +1167,10 @@
       "answer": "Russian",
       "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 14923,
+      "chosen_serial": 9803,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 83,
@@ -1100,7 +1183,8 @@
       "n_candidates": 2,
       "chosen_serial": 12512,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 84,
@@ -1113,7 +1197,8 @@
       "n_candidates": 1,
       "chosen_serial": 12612,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 85,
@@ -1126,7 +1211,8 @@
       "n_candidates": 2,
       "chosen_serial": 14587,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 86,
@@ -1139,7 +1225,8 @@
       "n_candidates": 2,
       "chosen_serial": 16075,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 87,
@@ -1147,12 +1234,13 @@
       "ground_truth": [
         "The Wharton School"
       ],
-      "answer": "Harvard University",
+      "answer": "Univer",
       "correct": false,
       "n_candidates": 2,
-      "chosen_serial": 14822,
+      "chosen_serial": 14807,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 88,
@@ -1165,7 +1253,8 @@
       "n_candidates": 2,
       "chosen_serial": 9903,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 89,
@@ -1176,9 +1265,10 @@
       "answer": "L. Ron Hubbard",
       "correct": true,
       "n_candidates": 1,
-      "chosen_serial": 1666,
+      "chosen_serial": 1656,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 90,
@@ -1186,12 +1276,13 @@
       "ground_truth": [
         "Universal City"
       ],
-      "answer": "Ottawa",
-      "correct": false,
+      "answer": "Universal City",
+      "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 1070,
+      "chosen_serial": 1084,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 91,
@@ -1204,7 +1295,8 @@
       "n_candidates": 2,
       "chosen_serial": 6465,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 92,
@@ -1217,7 +1309,8 @@
       "n_candidates": 1,
       "chosen_serial": 1143,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 93,
@@ -1228,9 +1321,10 @@
       "answer": "Brothers Grimm",
       "correct": true,
       "n_candidates": 2,
-      "chosen_serial": 9477,
+      "chosen_serial": 9497,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 94,
@@ -1240,10 +1334,11 @@
       ],
       "answer": "Thiago Motta",
       "correct": true,
-      "n_candidates": 3,
+      "n_candidates": 2,
       "chosen_serial": 11755,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 95,
@@ -1256,7 +1351,8 @@
       "n_candidates": 2,
       "chosen_serial": 17898,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 96,
@@ -1264,12 +1360,13 @@
       "ground_truth": [
         "A Wrinkle in Time"
       ],
-      "answer": "AK-47",
-      "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 18303,
+      "answer": "A Wrinkle in Time",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 5291,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 97,
@@ -1282,7 +1379,8 @@
       "n_candidates": 2,
       "chosen_serial": 11444,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 98,
@@ -1292,10 +1390,11 @@
       ],
       "answer": "shooting guard",
       "correct": true,
-      "n_candidates": 3,
+      "n_candidates": 2,
       "chosen_serial": 13365,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     },
     {
       "q_idx": 99,
@@ -1303,12 +1402,13 @@
       "ground_truth": [
         "Esperanto"
       ],
-      "answer": "Esperanto",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 11818,
+      "answer": "<error: 'answer_entity'>",
+      "correct": false,
+      "n_candidates": null,
+      "chosen_serial": null,
       "n_hops_planned": null,
-      "n_hops_executed": null
+      "n_hops_executed": null,
+      "route": null
     }
   ]
 }

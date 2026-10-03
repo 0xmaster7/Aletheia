@@ -6,9 +6,9 @@
   "source": "factconsolidation_sh_6k",
   "context_length": "6k",
   "n_questions": 100,
-  "correct": 90,
-  "accuracy": 0.9,
-  "elapsed_seconds": 180.57117319107056,
+  "correct": 87,
+  "accuracy": 0.87,
+  "elapsed_seconds": 231.71053981781006,
   "results": [
     {
       "q_idx": 0,
@@ -21,8 +21,7 @@
       "n_candidates": 2,
       "chosen_serial": 310,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 1,
@@ -30,13 +29,12 @@
       "ground_truth": [
         "The Fairly OddParents"
       ],
-      "answer": "Vito Corleone",
-      "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 390,
+      "answer": "The Fairly OddParents",
+      "correct": true,
+      "n_candidates": 2,
+      "chosen_serial": 259,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 2,
@@ -49,8 +47,7 @@
       "n_candidates": 2,
       "chosen_serial": 186,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 3,
@@ -63,8 +60,7 @@
       "n_candidates": 1,
       "chosen_serial": 86,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 4,
@@ -77,8 +73,7 @@
       "n_candidates": 1,
       "chosen_serial": 63,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 5,
@@ -91,8 +86,7 @@
       "n_candidates": 2,
       "chosen_serial": 398,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 6,
@@ -105,8 +99,7 @@
       "n_candidates": 2,
       "chosen_serial": 418,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 7,
@@ -119,8 +112,7 @@
       "n_candidates": 2,
       "chosen_serial": 50,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 8,
@@ -133,8 +125,7 @@
       "n_candidates": 1,
       "chosen_serial": 240,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 9,
@@ -147,8 +138,7 @@
       "n_candidates": 1,
       "chosen_serial": 454,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 10,
@@ -161,8 +151,7 @@
       "n_candidates": 1,
       "chosen_serial": 375,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 11,
@@ -170,13 +159,12 @@
       "ground_truth": [
         "Ellen Pompeo"
       ],
-      "answer": "Kylie Minogue",
+      "answer": "Emma Watson",
       "correct": false,
-      "n_candidates": 3,
-      "chosen_serial": 425,
+      "n_candidates": 2,
+      "chosen_serial": 413,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 12,
@@ -189,8 +177,7 @@
       "n_candidates": 2,
       "chosen_serial": 334,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 13,
@@ -203,8 +190,7 @@
       "n_candidates": 2,
       "chosen_serial": 239,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 14,
@@ -217,8 +203,7 @@
       "n_candidates": 2,
       "chosen_serial": 401,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 15,
@@ -231,8 +216,7 @@
       "n_candidates": 2,
       "chosen_serial": 435,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 16,
@@ -245,8 +229,7 @@
       "n_candidates": 2,
       "chosen_serial": 260,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 17,
@@ -259,8 +242,7 @@
       "n_candidates": 2,
       "chosen_serial": 389,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 18,
@@ -273,8 +255,7 @@
       "n_candidates": 1,
       "chosen_serial": 221,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 19,
@@ -287,8 +268,7 @@
       "n_candidates": 2,
       "chosen_serial": 188,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 20,
@@ -301,8 +281,7 @@
       "n_candidates": 2,
       "chosen_serial": 222,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 21,
@@ -315,8 +294,7 @@
       "n_candidates": 1,
       "chosen_serial": 17,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 22,
@@ -329,8 +307,7 @@
       "n_candidates": 1,
       "chosen_serial": 23,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 23,
@@ -343,8 +320,7 @@
       "n_candidates": 2,
       "chosen_serial": 392,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 24,
@@ -357,8 +333,7 @@
       "n_candidates": 2,
       "chosen_serial": 451,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 25,
@@ -371,8 +346,7 @@
       "n_candidates": 2,
       "chosen_serial": 177,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 26,
@@ -385,8 +359,7 @@
       "n_candidates": 2,
       "chosen_serial": 7,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 27,
@@ -399,8 +372,7 @@
       "n_candidates": 1,
       "chosen_serial": 313,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 28,
@@ -413,8 +385,7 @@
       "n_candidates": 2,
       "chosen_serial": 298,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 29,
@@ -427,8 +398,7 @@
       "n_candidates": 2,
       "chosen_serial": 270,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 30,
@@ -441,8 +411,7 @@
       "n_candidates": 2,
       "chosen_serial": 382,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 31,
@@ -455,8 +424,7 @@
       "n_candidates": 2,
       "chosen_serial": 203,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 32,
@@ -469,8 +437,7 @@
       "n_candidates": 1,
       "chosen_serial": 387,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 33,
@@ -483,8 +450,7 @@
       "n_candidates": 2,
       "chosen_serial": 403,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 34,
@@ -492,13 +458,12 @@
       "ground_truth": [
         "Taipei"
       ],
-      "answer": "Taipei",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 43,
+      "answer": "Jesus Christ",
+      "correct": false,
+      "n_candidates": 3,
+      "chosen_serial": 193,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 35,
@@ -506,13 +471,12 @@
       "ground_truth": [
         "German"
       ],
-      "answer": "German",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 295,
+      "answer": "American English",
+      "correct": false,
+      "n_candidates": 1,
+      "chosen_serial": 242,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 36,
@@ -525,8 +489,7 @@
       "n_candidates": 2,
       "chosen_serial": 364,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 37,
@@ -539,8 +502,7 @@
       "n_candidates": 1,
       "chosen_serial": 103,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 38,
@@ -553,8 +515,7 @@
       "n_candidates": 1,
       "chosen_serial": 163,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 39,
@@ -567,8 +528,7 @@
       "n_candidates": 2,
       "chosen_serial": 277,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 40,
@@ -581,8 +541,7 @@
       "n_candidates": 2,
       "chosen_serial": 409,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 41,
@@ -595,8 +554,7 @@
       "n_candidates": 2,
       "chosen_serial": 252,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 42,
@@ -609,8 +567,7 @@
       "n_candidates": 2,
       "chosen_serial": 36,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 43,
@@ -623,8 +580,7 @@
       "n_candidates": 2,
       "chosen_serial": 388,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 44,
@@ -637,8 +593,7 @@
       "n_candidates": 2,
       "chosen_serial": 442,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 45,
@@ -651,8 +606,7 @@
       "n_candidates": 2,
       "chosen_serial": 301,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 46,
@@ -662,11 +616,10 @@
       ],
       "answer": "The Beatles",
       "correct": true,
-      "n_candidates": 2,
+      "n_candidates": 1,
       "chosen_serial": 350,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 47,
@@ -679,8 +632,7 @@
       "n_candidates": 2,
       "chosen_serial": 146,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 48,
@@ -693,8 +645,7 @@
       "n_candidates": 2,
       "chosen_serial": 348,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 49,
@@ -704,11 +655,10 @@
       ],
       "answer": "United States of America",
       "correct": true,
-      "n_candidates": 1,
-      "chosen_serial": 1,
+      "n_candidates": 5,
+      "chosen_serial": 338,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 50,
@@ -721,8 +671,7 @@
       "n_candidates": 2,
       "chosen_serial": 234,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 51,
@@ -730,13 +679,12 @@
       "ground_truth": [
         "cricket"
       ],
-      "answer": "cricket",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 279,
+      "answer": "association football",
+      "correct": false,
+      "n_candidates": 1,
+      "chosen_serial": 18,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 52,
@@ -749,8 +697,7 @@
       "n_candidates": 3,
       "chosen_serial": 432,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 53,
@@ -763,8 +710,7 @@
       "n_candidates": 2,
       "chosen_serial": 374,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 54,
@@ -777,8 +723,7 @@
       "n_candidates": 2,
       "chosen_serial": 281,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 55,
@@ -791,8 +736,7 @@
       "n_candidates": 2,
       "chosen_serial": 299,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 56,
@@ -802,11 +746,10 @@
       ],
       "answer": "France",
       "correct": false,
-      "n_candidates": 2,
-      "chosen_serial": 258,
+      "n_candidates": 1,
+      "chosen_serial": 155,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 57,
@@ -819,8 +762,7 @@
       "n_candidates": 2,
       "chosen_serial": 139,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 58,
@@ -833,8 +775,7 @@
       "n_candidates": 2,
       "chosen_serial": 425,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 59,
@@ -847,8 +788,7 @@
       "n_candidates": 2,
       "chosen_serial": 346,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 60,
@@ -861,8 +801,7 @@
       "n_candidates": 2,
       "chosen_serial": 415,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 61,
@@ -875,8 +814,7 @@
       "n_candidates": 2,
       "chosen_serial": 434,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 62,
@@ -889,8 +827,7 @@
       "n_candidates": 2,
       "chosen_serial": 275,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 63,
@@ -903,8 +840,7 @@
       "n_candidates": 2,
       "chosen_serial": 157,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 64,
@@ -914,11 +850,10 @@
       ],
       "answer": "baseball",
       "correct": true,
-      "n_candidates": 3,
+      "n_candidates": 5,
       "chosen_serial": 376,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 65,
@@ -931,8 +866,7 @@
       "n_candidates": 2,
       "chosen_serial": 321,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 66,
@@ -945,8 +879,7 @@
       "n_candidates": 2,
       "chosen_serial": 320,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 67,
@@ -959,8 +892,7 @@
       "n_candidates": 2,
       "chosen_serial": 226,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 68,
@@ -973,8 +905,7 @@
       "n_candidates": 1,
       "chosen_serial": 397,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 69,
@@ -987,8 +918,7 @@
       "n_candidates": 2,
       "chosen_serial": 265,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 70,
@@ -1001,8 +931,7 @@
       "n_candidates": 2,
       "chosen_serial": 356,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 71,
@@ -1015,8 +944,7 @@
       "n_candidates": 1,
       "chosen_serial": 293,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 72,
@@ -1029,8 +957,7 @@
       "n_candidates": 1,
       "chosen_serial": 419,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 73,
@@ -1043,8 +970,7 @@
       "n_candidates": 2,
       "chosen_serial": 424,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 74,
@@ -1057,8 +983,7 @@
       "n_candidates": 1,
       "chosen_serial": 180,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 75,
@@ -1071,8 +996,7 @@
       "n_candidates": 1,
       "chosen_serial": 147,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 76,
@@ -1085,8 +1009,7 @@
       "n_candidates": 1,
       "chosen_serial": 202,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 77,
@@ -1099,8 +1022,7 @@
       "n_candidates": 2,
       "chosen_serial": 454,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 78,
@@ -1113,8 +1035,7 @@
       "n_candidates": 1,
       "chosen_serial": 258,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 79,
@@ -1127,8 +1048,7 @@
       "n_candidates": 1,
       "chosen_serial": 190,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 80,
@@ -1141,8 +1061,7 @@
       "n_candidates": 2,
       "chosen_serial": 169,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 81,
@@ -1155,8 +1074,7 @@
       "n_candidates": 1,
       "chosen_serial": 159,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 82,
@@ -1169,8 +1087,7 @@
       "n_candidates": 2,
       "chosen_serial": 386,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 83,
@@ -1183,8 +1100,7 @@
       "n_candidates": 2,
       "chosen_serial": 412,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 84,
@@ -1197,8 +1113,7 @@
       "n_candidates": 2,
       "chosen_serial": 390,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 85,
@@ -1206,13 +1121,12 @@
       "ground_truth": [
         "Rajanpur"
       ],
-      "answer": "Rajanpur",
-      "correct": true,
-      "n_candidates": 2,
-      "chosen_serial": 449,
+      "answer": "Bucharest",
+      "correct": false,
+      "n_candidates": 1,
+      "chosen_serial": 185,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 86,
@@ -1225,8 +1139,7 @@
       "n_candidates": 2,
       "chosen_serial": 280,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 87,
@@ -1239,8 +1152,7 @@
       "n_candidates": 2,
       "chosen_serial": 450,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 88,
@@ -1253,8 +1165,7 @@
       "n_candidates": 2,
       "chosen_serial": 264,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 89,
@@ -1267,8 +1178,7 @@
       "n_candidates": 1,
       "chosen_serial": 5,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 90,
@@ -1281,8 +1191,7 @@
       "n_candidates": 2,
       "chosen_serial": 315,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 91,
@@ -1295,8 +1204,7 @@
       "n_candidates": 1,
       "chosen_serial": 176,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 92,
@@ -1309,8 +1217,7 @@
       "n_candidates": 1,
       "chosen_serial": 8,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 93,
@@ -1323,8 +1230,7 @@
       "n_candidates": 2,
       "chosen_serial": 343,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 94,
@@ -1337,8 +1243,7 @@
       "n_candidates": 2,
       "chosen_serial": 326,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 95,
@@ -1351,8 +1256,7 @@
       "n_candidates": 1,
       "chosen_serial": 110,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 96,
@@ -1365,8 +1269,7 @@
       "n_candidates": 2,
       "chosen_serial": 441,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 97,
@@ -1379,8 +1282,7 @@
       "n_candidates": 2,
       "chosen_serial": 231,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 98,
@@ -1393,8 +1295,7 @@
       "n_candidates": 2,
       "chosen_serial": 335,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     },
     {
       "q_idx": 99,
@@ -1407,8 +1308,7 @@
       "n_candidates": 1,
       "chosen_serial": 227,
       "n_hops_planned": null,
-      "n_hops_executed": null,
-      "route": null
+      "n_hops_executed": null
     }
   ]
 }

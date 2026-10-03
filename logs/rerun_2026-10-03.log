@@ -1,0 +1,1004 @@
+Sat Oct  3 05:04:22 IST 2026
+== 6k gpt-4o SH
+[6k] experiment=ablation_sh_fact_gpt4o model=gpt-4o chunking=fact task=sh
+[6k] Loading dataset…
+Generating Accurate_Retrieval split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating Accurate_Retrieval split: 100%|██████████| 22/22 [00:01<00:00, 21.45 examples/s]Generating Accurate_Retrieval split: 100%|██████████| 22/22 [00:01<00:00, 20.94 examples/s]
+Generating Test_Time_Learning split:   0%|          | 0/6 [00:00<?, ? examples/s]Generating Test_Time_Learning split: 100%|██████████| 6/6 [00:00<00:00, 82.97 examples/s]
+Generating Long_Range_Understanding split:   0%|          | 0/110 [00:00<?, ? examples/s]Generating Long_Range_Understanding split: 100%|██████████| 110/110 [00:00<00:00, 143.35 examples/s]Generating Long_Range_Understanding split: 100%|██████████| 110/110 [00:00<00:00, 139.91 examples/s]
+Generating Conflict_Resolution split:   0%|          | 0/8 [00:00<?, ? examples/s]Generating Conflict_Resolution split: 100%|██████████| 8/8 [00:00<00:00, 253.26 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[6k] 100 questions × 455 chunks (strategy=fact)
+[6k] Q20/100 | correct 20/20=100.0% | 38s elapsed
+[6k] Q40/100 | correct 40/40=100.0% | 63s elapsed
+[6k] Q60/100 | correct 59/60=98.3% | 90s elapsed
+[6k] Q80/100 | correct 79/80=98.8% | 114s elapsed
+[6k] Q100/100 | correct 98/100=98.0% | 142s elapsed
+
+[6k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_fact_gpt4o_factconsolidation_sh_6k.json
+[6k] ablation_sh_fact_gpt4o: 98/100 = 98.0%   (142s)
+== 6k chunk4096
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[6k] experiment=ablation_sh_chunk4096_gpt4omini model=gpt-4o-mini chunking=chunk4096 task=sh
+[6k] Loading dataset…
+[6k] 100 questions × 7 chunks (strategy=chunk4096)
+[6k] Q20/100 | correct 17/20=85.0% | 38s elapsed
+[6k] Q40/100 | correct 35/40=87.5% | 72s elapsed
+[6k] Q60/100 | correct 53/60=88.3% | 111s elapsed
+[6k] Q80/100 | correct 72/80=90.0% | 147s elapsed
+[6k] Q100/100 | correct 90/100=90.0% | 181s elapsed
+
+[6k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_chunk4096_gpt4omini_factconsolidation_sh_6k.json
+[6k] ablation_sh_chunk4096_gpt4omini: 90/100 = 90.0%   (181s)
+== 6k CAR
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[6k] experiment=ablation_mh_fact_gpt4omini model=gpt-4o-mini chunking=fact task=mh
+[6k] Loading dataset…
+[6k] 100 questions × 455 chunks (strategy=fact)
+[6k] Q20/100 | correct 10/20=50.0% | 84s elapsed
+[6k] Q40/100 | correct 19/40=47.5% | 171s elapsed
+[6k] Q60/100 | correct 25/60=41.7% | 255s elapsed
+[6k] Q80/100 | correct 38/80=47.5% | 336s elapsed
+[6k] Q100/100 | correct 47/100=47.0% | 420s elapsed
+
+[6k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_mh_fact_gpt4omini_factconsolidation_mh_6k.json
+[6k] ablation_mh_fact_gpt4omini: 47/100 = 47.0%   (420s)
+Sat Oct  3 05:18:45 IST 2026
+== 32k gpt-4o SH
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[32k] experiment=ablation_sh_fact_gpt4o model=gpt-4o chunking=fact task=sh
+[32k] Loading dataset…
+[32k] 100 questions × 2310 chunks (strategy=fact)
+[32k] Q20/100 | correct 17/20=85.0% | 34s elapsed
+[32k] Q40/100 | correct 34/40=85.0% | 66s elapsed
+[32k] Q60/100 | correct 53/60=88.3% | 98s elapsed
+[32k] Q80/100 | correct 73/80=91.2% | 131s elapsed
+[32k] Q100/100 | correct 93/100=93.0% | 164s elapsed
+
+[32k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_fact_gpt4o_factconsolidation_sh_32k.json
+[32k] ablation_sh_fact_gpt4o: 93/100 = 93.0%   (164s)
+== 32k chunk4096
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[32k] experiment=ablation_sh_chunk4096_gpt4omini model=gpt-4o-mini chunking=chunk4096 task=sh
+[32k] Loading dataset…
+[32k] 100 questions × 34 chunks (strategy=chunk4096)
+[32k] Q20/100 | correct 14/20=70.0% | 44s elapsed
+[32k] Q40/100 | correct 32/40=80.0% | 221s elapsed
+[32k] Q60/100 | correct 50/60=83.3% | 259s elapsed
+[32k] Q80/100 | correct 67/80=83.8% | 298s elapsed
+[32k] Q100/100 | correct 82/100=82.0% | 356s elapsed
+
+[32k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_chunk4096_gpt4omini_factconsolidation_sh_32k.json
+[32k] ablation_sh_chunk4096_gpt4omini: 82/100 = 82.0%   (356s)
+== 32k CAR
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[32k] experiment=ablation_mh_fact_gpt4omini model=gpt-4o-mini chunking=fact task=mh
+[32k] Loading dataset…
+[32k] 100 questions × 2310 chunks (strategy=fact)
+[32k] Q20/100 | correct 8/20=40.0% | 97s elapsed
+[32k] Q40/100 | correct 14/40=35.0% | 192s elapsed
+[32k] Q60/100 | correct 22/60=36.7% | 293s elapsed
+[32k] Q80/100 | correct 28/80=35.0% | 395s elapsed
+[32k] Q100/100 | correct 39/100=39.0% | 485s elapsed
+
+[32k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_mh_fact_gpt4omini_factconsolidation_mh_32k.json
+[32k] ablation_mh_fact_gpt4omini: 39/100 = 39.0%   (485s)
+Sat Oct  3 05:36:54 IST 2026
+== 64k gpt-4o SH
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[64k] experiment=ablation_sh_fact_gpt4o model=gpt-4o chunking=fact task=sh
+[64k] Loading dataset…
+[64k] 100 questions × 4580 chunks (strategy=fact)
+[64k] Q20/100 | correct 18/20=90.0% | 49s elapsed
+[64k] Q40/100 | correct 37/40=92.5% | 94s elapsed
+[64k] Q60/100 | correct 57/60=95.0% | 139s elapsed
+[64k] Q80/100 | correct 75/80=93.8% | 187s elapsed
+[64k] Q100/100 | correct 95/100=95.0% | 228s elapsed
+
+[64k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_fact_gpt4o_factconsolidation_sh_64k.json
+[64k] ablation_sh_fact_gpt4o: 95/100 = 95.0%   (228s)
+== 64k chunk4096
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[64k] experiment=ablation_sh_chunk4096_gpt4omini model=gpt-4o-mini chunking=chunk4096 task=sh
+[64k] Loading dataset…
+[64k] 100 questions × 67 chunks (strategy=chunk4096)
+[64k] Q20/100 | correct 18/20=90.0% | 54s elapsed
+[64k] Q40/100 | correct 31/40=77.5% | 264s elapsed
+[64k] Q60/100 | correct 46/60=76.7% | 327s elapsed
+[64k] Q80/100 | correct 64/80=80.0% | 381s elapsed
+[64k] Q100/100 | correct 81/100=81.0% | 595s elapsed
+
+[64k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_chunk4096_gpt4omini_factconsolidation_sh_64k.json
+[64k] ablation_sh_chunk4096_gpt4omini: 81/100 = 81.0%   (595s)
+== 64k CAR
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[64k] experiment=ablation_mh_fact_gpt4omini model=gpt-4o-mini chunking=fact task=mh
+[64k] Loading dataset…
+[64k] 100 questions × 4580 chunks (strategy=fact)
+[64k] Q20/100 | correct 9/20=45.0% | 119s elapsed
+[64k] Q40/100 | correct 18/40=45.0% | 221s elapsed
+[64k] Q60/100 | correct 23/60=38.3% | 330s elapsed
+[64k] Q80/100 | correct 36/80=45.0% | 467s elapsed
+[64k] Q100/100 | correct 45/100=45.0% | 598s elapsed
+
+[64k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_mh_fact_gpt4omini_factconsolidation_mh_64k.json
+[64k] ablation_mh_fact_gpt4omini: 45/100 = 45.0%   (598s)
+Sat Oct  3 06:02:04 IST 2026
+== 262k gpt-4o SH
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[262k] experiment=ablation_sh_fact_gpt4o model=gpt-4o chunking=fact task=sh
+[262k] Loading dataset…
+[262k] 100 questions × 18332 chunks (strategy=fact)
+[262k] Q20/100 | correct 18/20=90.0% | 94s elapsed
+[262k] Q40/100 | correct 37/40=92.5% | 181s elapsed
+[262k] Q60/100 | correct 56/60=93.3% | 272s elapsed
+
+========== DEBUG EXTRACT CANDIDATES ==========
+=== PROMPT ===
+You are given retrieved items from a knowledge pool. Each item has a FRESHNESS marker (the prefix integer) — higher marker = newer version.
+
+Your job: identify EVERY item that DIRECTLY answers the question, and extract the answer entity from each.
+
+Do NOT compare freshness markers. Do NOT pick a "best" one. Include ALL items that match.
+
+Rules:
+1. An item directly answers the question only if BOTH its subject AND its predicate exactly match what the question asks about. The predicate noun used in the question (e.g., "spouse", "sport", "profession", "religion") must be the same noun used in the item. Related-but-different predicates do NOT match.
+2. The subject named in the question must appear verbatim in the matching item. A different entity with a similar name does NOT match.
+3. Ignore temporal constraints (e.g., "first", "previous", "current") or aggregation/boolean constraints (e.g., "how many", "total", "is it true") in the question. Your job is ONLY to extract ALL valid candidate values for the requested entity and property across ALL time. We will filter/count/verify them later.
+4. If a subject has multiple conflicting values (e.g., the same person with two different values at different freshness markers), INCLUDE ALL OF THEM as separate candidates. Do not pick.
+5. If no item answers the question, return an empty list.
+6. Copy the item's text verbatim into `fact_text`.
+
+Question: Which country was The Unit created in?
+
+Items:
+13995. The Unit was created in the country of Nepal
+12338. The Unit was created in the country of United States of America
+15421. country rock was created in the country of Italy
+8050. alternative country was created in the country of Spain
+4521. The origianl broadcaster of The Unit is CBS
+16263. The Greenhornes was created in the country of Turkey
+9120. The Easybeats was created in the country of Belgium
+8228. The Sword was created in the country of France
+10631. The Leftovers was created in the country of Finland
+17958. The Simpsons was created in the country of Italy
+
+Return ONLY valid JSON: {"candidates": [{"serial": <int>, "fact_text": "<verbatim>", "answer_entity": "<extracted>"}, ...]}
+
+=== RAW LLM RESPONSE ===
+'{"candidates": [{"serial": 13995, "fact_text": "The Unit was created in the country of Nepal", "answer_entity": "Nepal"}, {"serial": 12338, "fact_text": "The Unit was created in the country of United States of America", "answer_entity": "United States of America"}]}'
+
+=== PARSED CANDIDATES ===
+[{'serial': 13995, 'fact_text': 'The Unit was created in the country of Nepal', 'answer_entity': 'Nepal'}, {'serial': 12338, 'fact_text': 'The Unit was created in the country of United States of America', 'answer_entity': 'United States of America'}]
+==============================================
+
+[262k] Q80/100 | correct 75/80=93.8% | 359s elapsed
+[262k] Q100/100 | correct 94/100=94.0% | 471s elapsed
+
+[262k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_fact_gpt4o_factconsolidation_sh_262k.json
+[262k] ablation_sh_fact_gpt4o: 94/100 = 94.0%   (471s)
+== 262k chunk4096
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Failed to export span batch code: None, reason: HTTPSConnectionPool(host='cloud.langfuse.com', port=443): Read timed out. (read timeout=4.999985933303833)
+[262k] experiment=ablation_sh_chunk4096_gpt4omini model=gpt-4o-mini chunking=chunk4096 task=sh
+[262k] Loading dataset…
+[262k] 100 questions × 273 chunks (strategy=chunk4096)
+[262k] Q20/100 | correct 15/20=75.0% | 416s elapsed
+[262k] Q40/100 | correct 34/40=85.0% | 1132s elapsed
+[262k] Q60/100 | correct 49/60=81.7% | 1397s elapsed
+
+========== DEBUG EXTRACT CANDIDATES ==========
+=== PROMPT ===
+You are given retrieved items from a knowledge pool. Each item has a FRESHNESS marker (the prefix integer) — higher marker = newer version.
+
+Your job: identify EVERY item that DIRECTLY answers the question, and extract the answer entity from each.
+
+Do NOT compare freshness markers. Do NOT pick a "best" one. Include ALL items that match.
+
+Rules:
+1. An item directly answers the question only if BOTH its subject AND its predicate exactly match what the question asks about. The predicate noun used in the question (e.g., "spouse", "sport", "profession", "religion") must be the same noun used in the item. Related-but-different predicates do NOT match.
+2. The subject named in the question must appear verbatim in the matching item. A different entity with a similar name does NOT match.
+3. Ignore temporal constraints (e.g., "first", "previous", "current") or aggregation/boolean constraints (e.g., "how many", "total", "is it true") in the question. Your job is ONLY to extract ALL valid candidate values for the requested entity and property across ALL time. We will filter/count/verify them later.
+4. If a subject has multiple conflicting values (e.g., the same person with two different values at different freshness markers), INCLUDE ALL OF THEM as separate candidates. Do not pick.
+5. If no item answers the question, return an empty list.
+6. Copy the item's text verbatim into `fact_text`.
+
+Question: Which country was The Unit created in?
+
+Items:
+68. ted with the religion of African Methodist Episcopal Church.
+4612. Milan Stojadinović is employed by WWE.
+4613. Carlos Queiroz is associated with the sport of association football.
+4614. Brian Epstein is a citizen of United Kingdom.
+4615. The head coach of Brisbane Roar FC is John Aloisi.
+4616. The origianl broadcaster of Superstore is NBC.
+4617. The chairperson of Ontario New Democratic Party is Andrea Horwath.
+4618. 2016 African Nations Championship is associated with the sport of association football.
+4619. The author of Flatland is Edwin Abbott Abbott.
+4620. Henry Thomas Colebrooke died in the city of London.
+4621. Kelis is a citizen of Ireland.
+4622. Catelyn Stark was created by George R. R. Martin.
+4623. Wellington Phoenix FC is associated with the sport of association football.
+4624. Norman Rockwell is a citizen of United States of America.
+4625. The name of the current head of the Second Gillard Ministry government is Julia Gillard.
+4626. The capital of Russian Empire is Saint Petersburg.
+4627. Han Solo was created by George Lucas.
+4628. Diego Velázquez speaks the language of Spanish.
+4629. The Dark Knight was created by Stephen Hillenburg.
+4630. Chris Cole is a citizen of United States of America.
+4631. The origianl broadcaster of The Carol Burnett Show is Tokyo Broadcasting System Holdings.
+4632. Anthology 2 was performed by The Beatles.
+4633. Reinhold Niebuhr is a citizen of United Kingdom of Great Britain and Ireland.
+4634. Lydia was created in the country of United Kingdom.
+4635. The official language of Tehran is Persian.
+4636. Deepti Naval is a citizen of India.
+4637. Jahlil Okafor plays the position of center.
+4638. Morris Iemma is affiliated with the religion of Catholic Church.
+4639. Qualcomm Inc. was founded in the city of Seattle.
+4640. J. R. R. Tolkien is married to Edith Tolkien.
+4641. Lucrețiu Pătrășcanu is employed by George Mason University.
+4642. Halloween was created in the country of United States of America.
+4643. Dallas was created by David Jacobs.
+4644. Newton was developed by Apple Inc..
+4645. Hillary Clinton is married to Irving Kristol.
+4646. Andrzej Duda is married to Agata Kornhauser-Duda.
+4647. The capital of Bangladesh is Kokstad.
+4648. Robert Louis Stevenson was born in the city of Mumbai.
+4649. Thomas Mann is affiliated with the religion of Lutheranism.
+4650. Caught stealing is associated with the sport of rugby.
+4651. David Dixon Porter is a citizen of United States of America.
+4652. Honorius IV is affiliated with the religion of Catholic Church.
+4653. Mayawati works in the field of politician.
+4654. Satya Nadella was born in the city of Hyderabad.
+4655. Friedrich Nietzsche was born in the city of Röcken.
+4656. Half-Life was developed by Valve Corporation.
+4657. Welcome to Pooh Corner was created by Allen Funt.
+4658. Israel was founded by David Ben-Gurion.
+4659. Victorious was created in the country of United States of America.
+4660. The Psychedelic Furs was founded in the city of London.
+4661. Louisville was founded by George Rogers Clark.
+4662. Imran Khan is associated with the sport of cricket.
+4663. The company that produced Chevrolet Vega is General Motors.
+4664. The author of The Tempest is Lord Byron.
+4665. Dorothy L. Sayers is affiliated with the religion of Anglicanism.
+4666. Michael Dell is a citizen of United States of America.
+4667. Gavroche was created by Victor Hugo.
+4668. Dwayne Roloson plays the position of goaltender.
+4669. The company that produced Windows Server 2003 is General Motors.
+4670. Jean-Jacques Rousseau was born in the city of Geneva.
+4671. Duke University was founded by James Buchanan Duke.
+4672. Ankara is located in the continent of Asia.
+4673. James Mill's child is Josiah Quincy III.
+4674. Mika Brzezinski is married to Joe Scarborough.
+4675. Taito Corporation was founded in the city of Tokyo.
+4676. Aidan O'Brien is a citizen of Ireland.
+4677. The author of First Epistle of Clement is Clement I.
+4678. The author of The Mists of Avalon is Marion Zimmer Bradley.
+4679. Andrei Tupolev died in the city of Moscow.
+4680. Anthony Burgess is a citizen of Unit
+207.  author of Billy Liar is William Shakespeare.
+13943. Jason Williams plays the position of point guard.
+13944. Winston Churchill is a citizen of Saint Lucia.
+13945. The headquarters of Berklee College of Music is located in the city of Saint Petersburg.
+13946. Steven Spielberg is married to William A. Brady.
+13947. The company that produced iPhone 4 is Apple Inc..
+13948. Ivanka Trump is married to Christa Ludwig.
+13949. The author of Measure for Measure is William Shakespeare.
+13950. Scipione Borghese worked in the city of Vienna.
+13951. Seth Cohen is a citizen of Japan.
+13952. Ebenezer Scrooge was created by William Shakespeare.
+13953. Animal Liberation was written in the language of English.
+13954. Yancy Derringer was created in the country of United States of America.
+13955. Gran Turismo 4 was developed by Blizzard Entertainment.
+13956. ES Sétif is associated with the sport of basketball.
+13957. Helen Hunt Jackson is famous for A Century of Dishonor.
+13958. Safari was developed by Valve Corporation.
+13959. Louis Henri Loison is a citizen of Mexico.
+13960. Chris Rock is a citizen of Iceland.
+13961. Grace Napolitano is affiliated with the religion of Methodism.
+13962. Ashish Nehra is associated with the sport of cricket.
+13963. Jake Locker plays the position of quarterback.
+13964. The name of the current head of the Berlin government is Hervé Mariton.
+13965. The headquarters of Chicago Cubs is located in the city of Santiago.
+13966. J. R. R. Tolkien was born in the city of Middelburg.
+13967. Gul Agha Sherzai is a citizen of Afghanistan.
+13968. The chief executive officer of Apple Inc. is Vijay Mallya.
+13969. Ira Levin speaks the language of German.
+13970. The type of music that Clef Records plays is jazz.
+13971. Carlos Monsiváis is a citizen of Mexico.
+13972. The author of Second Foundation is Ed Greenwood.
+13973. Anne Bancroft died in the city of Peniscola.
+13974. Dante Alighieri was born in the city of Houston.
+13975. iPhone 4S was developed by Valve Corporation.
+13976. The company that produced EA-18G Growler is McLaren.
+13977. Brook Lopez plays the position of shooting guard.
+13978. Joseph Goebbels worked in the city of Washington, D.C..
+13979. Hari Seldon was created by Mike Watt.
+13980. Robert Griffin III plays the position of defender.
+13981. Lyndall Urwick is a citizen of United Kingdom.
+13982. Jim Johnston is a citizen of United States of America.
+13983. Stephon Marbury is a citizen of United States of America.
+13984. Isaac Newton is employed by University of Bologna.
+13985. The type of music that Holly Dunn plays is post-punk.
+13986. The company that produced B-29 Superfortress is Boeing.
+13987. Windows 3.1x was developed by Canonical Group Limited.
+13988. Panos Kammenos was born in the city of Athens.
+13989. New Firm is associated with the sport of association football.
+13990. Valéry Giscard d'Estaing is affiliated with the religion of Catholic Church.
+13991. John Calipari is a citizen of United Kingdom.
+13992. Louis Joseph, Prince of Condé is a citizen of France.
+13993. Lionhead Studios was founded in the city of Guildford.
+13994. Jack Webb is a citizen of United States of America.
+13995. The Unit was created in the country of Nepal.
+13996. Mike Wallace is a citizen of Germany.
+13997. Jean-Luc Dehaene is affiliated with the religion of Methodism.
+13998. The name of the current head of state in Francoist Spain is Francisco Franco.
+13999. Mark the Evangelist is affiliated with the religion of Methodism.
+14000. Steve Nash plays the position of point guard.
+14001. Internet Explorer 11 was developed by Microsoft.
+14002. Pierre Janet is a citizen of France.
+14003. The head coach of Sydney FC is Antonio Conte.
+14004. H. P. Lovecraft worked in the city of Ottawa.
+14005. Abraham Ortelius worked in the city of Berlin.
+14006. Resource Description Framework was developed by Motorola.
+14007. Joseph Smith is a citizen of United States of America.
+14008. rugby was created in the country of England.
+14009. The company that produced Ford GT is Toyota.
+14010. The company that produced Vespa is Ingalls Shipbuilding.
+14011. Batt
+249. rian people is affiliated with the religion of Christianity.
+16736. Saint Roch is affiliated with the religion of Christian Science.
+16737. The author of The Silver Chair is Paul Verlaine.
+16738. University of Notre Dame is affiliated with the religion of Latter Day Saint movement.
+16739. The company that produced AMD Accelerated Processing Unit is Advanced Micro Devices.
+16740. ASEC Mimosas is associated with the sport of sumo.
+16741. The chairperson of Patriotic Union of Kurdistan is Sonny Perdue.
+16742. Salvador Dalí is married to Richard Cosway.
+16743. James Boswell is famous for Gotham.
+16744. The univeristy where Maxwell Perkins was educated is Harvard University.
+16745. The univeristy where Fernando Arrabal was educated is Brasenose College.
+16746. The capital of Switzerland is Bern.
+16747. The official language of Rovaniemi is Finnish.
+16748. Ben Carson was born in the city of Higashiyamanashi District, Yamanashi.
+16749. WWE SmackDown was created by Bill Cosby.
+16750. The author of The Witcher is T. S. Eliot.
+16751. Marv Wolfman is a citizen of United Kingdom of Great Britain and Ireland.
+16752. William Shakespeare is a citizen of India.
+16753. Lee Kuan Yew was born in the city of Singapore.
+16754. The author of L.A. Confidential is Guy Debord.
+16755. The author of American Splendor is Oscar Wilde.
+16756. The univeristy where C. Douglas Dillon was educated is Yale University.
+16757. Florence Vidor is a citizen of France.
+16758. Santiago was founded by J. M. Brunswick.
+16759. The univeristy where Pierre Nkurunziza was educated is École Spéciale Militaire de Saint-Cyr.
+16760. The company that produced Hummer H1 is Ford Motor Company.
+16761. The univeristy where William Lenthall was educated is University of Würzburg.
+16762. The name of the current head of state in Galactic Empire is Saruman.
+16763. John Stuart Mill is married to Sarah Churchill.
+16764. The X-Files was created in the country of United Kingdom.
+16765. Céline Dion is a citizen of Canada.
+16766. Charlie Benante is a citizen of Germany.
+16767. AppleWorks was developed by Boeing.
+16768. Adrienne Barbeau is a citizen of United States of America.
+16769. Colin Chapman is a citizen of United Kingdom.
+16770. The author of Samson Agonistes is Dion Boucicault.
+16771. Nadezhda Krupskaya died in the city of Moscow.
+16772. Crystal Lewis is a citizen of United States of America.
+16773. Jack Donaghy was performed by Kanye West.
+16774. The name of the current head of the Pakistan government is Cuauhtémoc Blanco.
+16775. The origianl broadcaster of The Sopranos is HBO.
+16776. Joe Manganiello is a citizen of Argentina.
+16777. Will Wright is a citizen of Bulgaria.
+16778. Masashi Kishimoto speaks the language of Japanese.
+16779. The Canterbury Tales was created in the country of England.
+16780. Unforgettable was performed by Nina Simone.
+16781. Robert Silverberg is a citizen of United States of America.
+16782. Ed Macauley is affiliated with the religion of Christianity.
+16783. CM Punk is married to Joanna Newsom.
+16784. Habib Bourguiba was born in the city of Creston.
+16785. Mike DeWine speaks the language of English.
+16786. Frederick IV of Denmark works in the field of watercolourist.
+16787. Crysis 2 was developed by Sony Interactive Entertainment.
+16788. The type of music that William Shakespeare plays is progressive rock.
+16789. The type of music that Clef Records plays is K-pop.
+16790. Plato died in the city of Westport.
+16791. The univeristy where Kamla Persad-Bissessar was educated is University of the West Indies.
+16792. Seventh-day Adventist Church was founded in the city of La Spezia.
+16793. Donald Hall is employed by Moscow State University.
+16794. The type of music that Dale Evans plays is alternative hip hop.
+16795. Gavroche was created by Sholem Aleichem.
+16796. Leela was created by Toby Whithouse.
+16797. Charles Brabin speaks the language of Russian.
+16798. Greece is located in the continent of Asia.
+16799. Ville Valo was born in the city of Budapest.
+16800. F. Scott Fitzgerald is married to Carl Lumbly.
+16801. Samuel Taylor Coleridge is affiliated with the 
+66. a Rai is married to Abhishek Bachchan.
+4477. Alfred, Lord Tennyson is affiliated with the religion of Anglicanism.
+4478. Annette von Droste-Hülshoff is affiliated with the religion of Catholic Church.
+4479. Giravanz Kitakyushu is associated with the sport of association football.
+4480. Dōgen is a citizen of Wales.
+4481. The name of the current head of the Jakarta government is Anies Baswedan.
+4482. Sara Montiel is a citizen of Spain.
+4483. The official language of Uusikaupunki is Black Speech.
+4484. Othello was created by William Shakespeare.
+4485. Mac OS X Tiger was developed by Boeing.
+4486. The company that produced B-50 Superfortress is Boeing.
+4487. The origianl broadcaster of Legends of Tomorrow is The CW.
+4488. Gennady Rozhdestvensky died in the city of United States of America.
+4489. The Vice President of India is Muppavarapu Venkaiah Naidu.
+4490. Chris Hutchings is a citizen of Ireland.
+4491. Hyun Bin is a citizen of South Korea.
+4492. Great Balls of Fire was performed by Jerry Lee Lewis.
+4493. The official language of Soviet Union is Russian.
+4494. Carrie Underwood is married to Mike Fisher.
+4495. The official language of Albania is Wa language.
+4496. 2015 World Series is associated with the sport of baseball.
+4497. Edward Cullen was created by Stephenie Meyer.
+4498. James L. Brooks speaks the language of Portuguese.
+4499. The author of Walden is Henry David Thoreau.
+4500. Avery Johnson is associated with the sport of basketball.
+4501. Frank Lloyd Wright is a citizen of United States of America.
+4502. Richard Egan is affiliated with the religion of Catholic Church.
+4503. Dougie Freedman is associated with the sport of association football.
+4504. Elizabeth II works in the field of racing automobile driver.
+4505. The official language of Great Britain is English.
+4506. Henning Mankell speaks the language of Swedish.
+4507. Sejong the Great was born in the city of Seoul.
+4508. Jacques Kallis is a citizen of South Africa.
+4509. The company that produced Ford Pinto is Ford Motor Company.
+4510. Nigel Martyn is associated with the sport of cricket.
+4511. Stanisław Wojciechowski is a citizen of People's Republic of China.
+4512. Blue Peter was written in the language of English.
+4513. Needham Market F.C. is associated with the sport of association football.
+4514. Michael Wacha plays the position of starting pitcher.
+4515. The company that produced Volvo V70 is Volvo Cars.
+4516. Arsène Wenger works in the field of association football manager.
+4517. Cleopatra died in the city of Alexandria.
+4518. Eugen Sandow is a citizen of Germany.
+4519. Jean-Baptiste Colbert is a citizen of France.
+4520. The type of music that Julian Lennon plays is rock music.
+4521. The origianl broadcaster of The Unit is CBS.
+4522. Québecor Média was founded by Pierre Karl Péladeau.
+4523. Augustin Bea is affiliated with the religion of Catholic Church.
+4524. Janet Jackson was born in the city of Gary.
+4525. The type of music that Susie Ibarra plays is jazz.
+4526. The univeristy where Joe Theismann was educated is University of Notre Dame.
+4527. Anton Chekhov is married to Frederick IV of Denmark.
+4528. Lord Voldemort was created by J. K. Rowling.
+4529. The name of the current head of the Malta government is Joseph Muscat.
+4530. Cape Fear was created in the country of United States of America.
+4531. John Witherspoon is affiliated with the religion of Presbyterianism.
+4532. John L. Hennessy is employed by Stanford University.
+4533. Charles Darwin is married to Emma Darwin.
+4534. The capital of Ireland is Potosi.
+4535. The Divine Comedy was created by Dante Alighieri.
+4536. Lithuania is located in the continent of Europe.
+4537. Bangkok is located in the continent of Asia.
+4538. Edmund Ignatius Rice is affiliated with the religion of Christian Science.
+4539. The head coach of Atlético Madrid is Frank Lampard.
+4540. Dream On was created in the country of United States of America.
+4541. Kåre Willoch worked in the city of Oslo.
+4542. Emil Constantinescu is a citizen of Romania.
+4543. The Rolling Stones speaks the language of English.
+4544. The type of music
+110. eodorovna is a citizen of Russian Empire.
+7439. Emilio Lussu worked in the city of Rome.
+7440. Danse Macabre was created in the country of United Kingdom.
+7441. Lonnie Mack is a citizen of United States of America.
+7442. Marshall Eriksen speaks the language of German.
+7443. The company that produced Windows 8 is General Motors.
+7444. Jordan Farmar plays the position of power forward.
+7445. Marceline Abadeer was created by Pendleton Ward.
+7446. Magda Goebbels is a citizen of Germany.
+7447. Robert Planquette was born in the city of Paris.
+7448. MDNA was performed by Madonna.
+7449. Andrew Lloyd Webber is a citizen of United Kingdom of Great Britain and Ireland.
+7450. West Bank Premier League is associated with the sport of association football.
+7451. The type of music that The Upsetters plays is reggae.
+7452. Anne de Montmorency died in the city of Paris.
+7453. Albania is located in the continent of Europe.
+7454. Edward Cullen is married to Bella Swan.
+7455. iPod Classic was developed by Apple Inc..
+7456. MobileMe was developed by Microsoft.
+7457. Kate Adie is a citizen of Nazi Germany.
+7458. The capital of Papua New Guinea is Port Moresby.
+7459. Reggie Jackson plays the position of shooting guard.
+7460. Jean-Marie Vianney is affiliated with the religion of Catholic Church.
+7461. tvOS was developed by Apple Inc..
+7462. Iqbal Theba is affiliated with the religion of Catholic Church.
+7463. Glenn L. Martin is a citizen of United States of America.
+7464. The type of music that Matthew Morrison plays is pop music.
+7465. Pop Idol was created by Frank Herbert.
+7466. The company that produced Ford Ka is Ford Motor Company.
+7467. Gwendoline Christie is a citizen of United Kingdom.
+7468. David Mundell is a citizen of United Kingdom.
+7469. Joachim Murat is affiliated with the religion of Islam.
+7470. Dominican Order is affiliated with the religion of Catholic Church.
+7471. Salgueiro Atlético Clube is associated with the sport of association football.
+7472. Billie Holiday is a citizen of United States of America.
+7473. Jozy Altidore is associated with the sport of association football.
+7474. Li Ting is a citizen of Israel.
+7475. The headquarters of Volkswagen Group is located in the city of Wolfsburg.
+7476. The origianl broadcaster of Ballers is HBO.
+7477. The origianl broadcaster of The Unit is Tokyo Broadcasting System Holdings.
+7478. 60 Minutes was written in the language of English.
+7479. Sixtus V is affiliated with the religion of Catholic Church.
+7480. LaVeyan Satanism was founded by Anton LaVey.
+7481. Tudor dynasty was founded by Henry VII.
+7482. Igor Sechin speaks the language of Russian.
+7483. The company that produced Ford Telstar is Nintendo.
+7484. Rick Remender is a citizen of United States of America.
+7485. Dolley Madison is a citizen of United States of America.
+7486. Glenn Curtiss is a citizen of Kingdom of the Netherlands.
+7487. Marc Garneau is a citizen of Canada.
+7488. The head coach of Manchester United F.C. is Ole Gunnar Solskjær.
+7489. Common Intermediate Language was developed by Nokia.
+7490. Kieron Pollard is associated with the sport of cricket.
+7491. Kálmán Tisza worked in the city of Budapest.
+7492. Dennis Prager is a citizen of Panama.
+7493. Sadha is affiliated with the religion of Islam.
+7494. British National Party was founded by William Lever, 1st Viscount Leverhulme.
+7495. Porfirio Díaz is affiliated with the religion of Methodism.
+7496. The headquarters of Wärtsilä is located in the city of Helsinki.
+7497. David Gregory is employed by NBC.
+7498. The author of Breaking Dawn is Stephenie Meyer.
+7499. David Gilmour is a citizen of United Kingdom.
+7500. Jaguar Cars was founded by William Lyons.
+7501. Jean-Jacques Beineix is a citizen of United States of America.
+7502. The author of Wuthering Heights is Emily Brontë.
+7503. The type of music that Jessi Colter plays is J-pop.
+7504. Scott Borchetta is a citizen of United States of America.
+7505. The origianl broadcaster of Blindspot is CBS.
+7506. James Badge Dale is a citizen of United States of America.
+7507. The Forester Sisters was created in the country of U
+182.  of University of the Punjab is located in the city of Lahore.
+12280. The Governor of Colorado is Priti Patel.
+12281. George Lucas was born in the city of Modesto.
+12282. Juan Osorio is a citizen of Mexico.
+12283. Eunice Kennedy Shriver was born in the city of Brookline.
+12284. Amanda Palmer is a citizen of Denmark.
+12285. Tim Hardaway plays the position of defensive back.
+12286. F.C. Vizela is associated with the sport of association football.
+12287. The company that produced Colt Single Action Army is Colt's Manufacturing Company.
+12288. The univeristy where William Withering was educated is University of Paris (1896-1968).
+12289. Ignatius Kutu Acheampong is affiliated with the religion of Christianity.
+12290. Kirk Whalum is a citizen of Canada.
+12291. Edgar Allan Poe died in the city of Quito.
+12292. The capital of Great Britain is Middelburg.
+12293. Oswald Pohl is a citizen of Germany.
+12294. Neil Patrick Harris is a citizen of Philippines.
+12295. Busby Berkeley is a citizen of United States of America.
+12296. The univeristy where Paul Holmgren was educated is University of Minnesota.
+12297. Bolkiah of Brunei is affiliated with the religion of Islam.
+12298. The head coach of Cleveland Cavaliers is David Blatt.
+12299. The author of The Ugly Duckling is Terrance Dicks.
+12300. The headquarters of Blumhouse Productions is located in the city of Beijing.
+12301. William Shakespeare died in the city of Stratford-upon-Avon.
+12302. The name of the current head of the Council of People's Commissars government is Tony Blair.
+12303. The author of The Pillow Book is Larry Niven.
+12304. Guy Picciotto is a citizen of Austria.
+12305. Al-Ahli Saudi FC is associated with the sport of basketball.
+12306. The type of music that Rhymefest plays is fado.
+12307. DeAngelo Hall plays the position of cornerback.
+12308. Saddam Hussein is a citizen of Venezuela.
+12309. The chairperson of Economic Freedom Fighters is Julius Malema.
+12310. The author of Poetics is Robert Burns.
+12311. James Woods is affiliated with the religion of Catholic Church.
+12312. Charles W. Bryan is a citizen of Portugal.
+12313. Akira Toriyama speaks the language of Japanese.
+12314. The headquarters of Central Electricity Generating Board is located in the city of Zürich.
+12315. Giovanni Battista Rinuccini is affiliated with the religion of Church of Scotland.
+12316. Belgium is located in the continent of South America.
+12317. Pakistan is located in the continent of North America.
+12318. Cersei Lannister was created by J. K. Rowling.
+12319. Panionios B.C. is associated with the sport of association football.
+12320. The company that produced Windows 2000 is General Motors.
+12321. Narendra Modi is a citizen of Australia.
+12322. The company that produced RC-135 is General Motors.
+12323. Anthony Davidson is a citizen of United Kingdom.
+12324. MLB.com is associated with the sport of association football.
+12325. Extensible Markup Language was developed by World Wide Web Consortium.
+12326. The Protocols of the Elders of Zion was created in the country of Canada.
+12327. Please Please Me was performed by Madonna.
+12328. The author of Lark Rise to Candleford is Luigi Pirandello.
+12329. Huma Abedin is affiliated with the religion of congregational church.
+12330. Elizabeth Siddal is married to Dante Gabriel Rossetti.
+12331. Andy Diggle is a citizen of Japan.
+12332. Georginio Wijnaldum is associated with the sport of association football.
+12333. The type of music that Marion Zimmer Bradley plays is hip hop music.
+12334. The headquarters of Finns Party is located in the city of Helsinki.
+12335. Eminem was born in the city of Chicago.
+12336. Wilbert Awdry is affiliated with the religion of Catholicism.
+12337. Blanche of Castile is affiliated with the religion of Catholicism.
+12338. The Unit was created in the country of United States of America.
+12339. George Mikan is a citizen of United States of America.
+12340. Tokyo Broadcasting System Holdings was founded in the city of Tokyo.
+12341. Richard Wagner is a citizen of Germany.
+12342. The univeristy where Frank Norris was educated is Univ
+77. ormed by Bob Dylan.
+5221. Russell T Davies is famous for Doctor Who.
+5222. The univeristy where Wilhelm Reich was educated is University of Vienna.
+5223. Edward Egan is a citizen of Democratic Republic of the Congo.
+5224. British hip hop was created in the country of United Kingdom.
+5225. Fort Wayne TinCaps is associated with the sport of baseball.
+5226. Givenchy was founded by Francisco de Paula Santander.
+5227. The headquarters of Netscape Comunications Corporation is located in the city of Mountain View.
+5228. Al-Waleed bin Talal is a citizen of Saudi Arabia.
+5229. The capital of Dominion of New England is Boston.
+5230. closer is associated with the sport of ice hockey.
+5231. Philip Pullman is employed by University of Oxford.
+5232. The Killers was created in the country of United States of America.
+5233. West Coast hip hop was created in the country of United States of America.
+5234. Indonesia is located in the continent of Asia.
+5235. Donald Hamilton is a citizen of United States of America.
+5236. Judah Touro is a citizen of United Kingdom.
+5237. The official language of Monaco is French.
+5238. Gene Roddenberry is a citizen of United States of America.
+5239. Mark Teixeira is associated with the sport of baseball.
+5240. County of Flanders is affiliated with the religion of Methodism.
+5241. Julian Fellowes is a citizen of United Kingdom.
+5242. S. W. R. D. Bandaranaike died in the city of Warsaw.
+5243. Christopher Judge is a citizen of Kenya.
+5244. Sarbananda Sonowal works in the field of politician.
+5245. Zelda Fitzgerald is a citizen of United States of America.
+5246. Cercle Brugge K.S.V. is associated with the sport of cricket.
+5247. William Shakespeare works in the field of playwright.
+5248. Chicago Symphony Orchestra was created in the country of United States of America.
+5249. music of Ireland was created in the country of Ireland.
+5250. Chuck Berry is affiliated with the religion of Baptists.
+5251. The company that produced PlayStation 2 is Sony Interactive Entertainment.
+5252. Salammbô was created in the country of France.
+5253. Elliot Reid speaks the language of Italian.
+5254. Devendra Fadnavis is a citizen of Ireland.
+5255. Prince of Persia was created in the country of United Kingdom.
+5256. Reinhard Keiser is a citizen of Germany.
+5257. The author of Clarissa is Samuel Richardson.
+5258. The univeristy where Tom Brady was educated is University of Michigan.
+5259. Motorola was founded by Paul Galvin.
+5260. Lionel Hollins is associated with the sport of basketball.
+5261. Paavo Nurmi died in the city of Helsinki.
+5262. The type of music that Lewis Carroll plays is children's literature.
+5263. The author of All the Year Round is Charles Dickens.
+5264. Hiroshige speaks the language of Japanese.
+5265. George Pell is affiliated with the religion of Catholic Church.
+5266. The company that produced Colt Python is Colt's Manufacturing Company.
+5267. The type of music that Heidi Montag plays is pop music.
+5268. Futurama was created by Matt Groening.
+5269. The capital of India is New Delhi.
+5270. Jacob De la Gardie is a citizen of Sweden.
+5271. Andrew Carnegie is married to Marjorie Merriweather Post.
+5272. The author of The Pillow Book is Sei Shōnagon.
+5273. Raluca Olaru is a citizen of United States of America.
+5274. Sholem Aleichem died in the city of New York City.
+5275. John Connor is a citizen of United States of America.
+5276. Roma Downey is married to Mohammad Azharuddin.
+5277. The head coach of Brisbane Roar FC is Diego Simeone.
+5278. The capital of Thailand is Bangkok.
+5279. Rafał Majka is a citizen of Greece.
+5280. The Sapphires was created in the country of Australia.
+5281. The name of the current head of state in Sierra Leone is Julius Maada Bio.
+5282. Kingdom of Italy is located in the continent of Asia.
+5283. Ikimono-gakari was created in the country of Japan.
+5284. The author of Either/Or is Søren Kierkegaard.
+5285. Florida International League is associated with the sport of baseball.
+5286. Margaret Mitchell died in the city of Atlanta.
+5287. Eucherius of Lyon is affiliated with the religion of Catholic 
+18.  Narnia is C. S. Lewis.
+1223. FC Vorskla Poltava is associated with the sport of basketball.
+1224. Neil Patrick Harris is a citizen of United States of America.
+1225. Viva Las Vegas was performed by Elvis Presley.
+1226. Joel Plaskett is a citizen of Canada.
+1227. John Ratzenberger is famous for Monk.
+1228. Paul Simon is married to Edie Brickell.
+1229. Eva Braun is married to Adolf Hitler.
+1230. The author of Much Ado About Nothing is William Shakespeare.
+1231. bluegrass music was created in the country of United States of America.
+1232. Power Mac G5 was developed by Apple Inc..
+1233. post-punk was created in the country of United Kingdom.
+1234. Eric Montross plays the position of center.
+1235. The headquarters of Corpus Christi College is located in the city of Oxford.
+1236. The author of Medea is Euripides.
+1237. Ernest of Bavaria is a citizen of Germany.
+1238. Adrian IV is affiliated with the religion of Catholic Church.
+1239. The Powerpuff Girls was created by Craig McCracken.
+1240. The author of The Dispossessed is Ursula K. Le Guin.
+1241. Jean-Baptiste Joseph Delambre is a citizen of France.
+1242. USM Annaba is associated with the sport of association football.
+1243. The company that produced B-17 Flying Fortress is Boeing.
+1244. The head coach of Northwestern Wildcats football is Pat Fitzgerald.
+1245. Richard Dawkins is married to Lalla Ward.
+1246. The name of the current head of state in Panama is Juan Carlos Varela.
+1247. Ledley King is associated with the sport of association football.
+1248. Windows Movie Maker was developed by Microsoft.
+1249. Chris Woods is associated with the sport of association football.
+1250. Tom Clancy is affiliated with the religion of Catholic Church.
+1251. Great Britain is located in the continent of Europe.
+1252. Tang Empire is located in the continent of Asia.
+1253. Jewish Defense League was founded by Meir Kahane.
+1254. Nyugat was created in the country of Hungary.
+1255. The Chronicles of Narnia was created in the country of United Kingdom.
+1256. Bella Swan is married to Edward Cullen.
+1257. The author of Sin City is Frank Miller.
+1258. Firaxis Games was founded by Sid Meier.
+1259. Owen Pallett is a citizen of Canada.
+1260. Indiana Mr. Basketball is associated with the sport of basketball.
+1261. Phidias was born in the city of Athens.
+1262. Long March 3B was created in the country of People's Republic of China.
+1263. The company that produced PDP-1 is Digital Equipment Corporation.
+1264. The univeristy where Henry Lee Higginson was educated is Harvard University.
+1265. The author of Our Mutual Friend is Charles Dickens.
+1266. The headquarters of Tsinghua University is located in the city of Beijing.
+1267. Qaitbay is affiliated with the religion of Islam.
+1268. Polish–Lithuanian Commonwealth is located in the continent of Europe.
+1269. Playhouse Disney was founded by The Walt Disney Company.
+1270. Bye Bye Birdie was created in the country of United States of America.
+1271. Elvis Presley's child is Lisa Marie Presley.
+1272. Wen Xuan was created in the country of People's Republic of China.
+1273. Rick Riordan speaks the language of English.
+1274. 2011 Champions League Twenty20 is associated with the sport of cricket.
+1275. Chris Hutchings is a citizen of United Kingdom.
+1276. Richard Branson is a citizen of United Kingdom.
+1277. William James is employed by Harvard University.
+1278. James Hilton is a citizen of United Kingdom.
+1279. Amber Rose is married to Wiz Khalifa.
+1280. Orange Is the New Black was written in the language of English.
+1281. The origianl broadcaster of Shark Tank is American Broadcasting Company.
+1282. Leighton Meester is married to Adam Brody.
+1283. Max Havelaar was created in the country of Netherlands.
+1284. Greece is located in the continent of Europe.
+1285. Andrea Camilleri worked in the city of Rome.
+1286. John Rolfe works in the field of explorer.
+1287. The company that produced iPhone 3G is Apple Inc..
+1288. The author of The Monk is Matthew Gregory Lewis.
+1289. The type of music that San E plays is hip hop music.
+1290. The headquarters of Grove Press is loc
+175. f Friends.
+11814. The type of music that George Coleman plays is jazz.
+11815. Portugal is located in the continent of Asia.
+11816. The univeristy where Gerard 't Hooft was educated is Utrecht University.
+11817. The type of music that What's Going On plays is soul music.
+11818. Chile is located in the continent of South America.
+11819. Clint Howard is a citizen of Austria.
+11820. Michael Atherton is a citizen of British Raj.
+11821. Naruto was created in the country of Japan.
+11822. Metallica was founded in the city of London.
+11823. Naoko Takeuchi worked in the city of Tokyo.
+11824. James Russell Lowell is a citizen of Israel.
+11825. Stanley Kowalski was created by William Shakespeare.
+11826. Forza Italia was founded by Silvio Berlusconi.
+11827. Edward Stillingfleet is a citizen of England.
+11828. Rekha is a citizen of United Kingdom.
+11829. Tancredo Neves is affiliated with the religion of Christian Science.
+11830. Andre Agassi is married to Steffi Graf.
+11831. Chrome Web Store was created by Google.
+11832. Anthony Perkins is famous for EastEnders.
+11833. Kay Bailey Hutchison is a citizen of United Kingdom.
+11834. Pravda was founded by Vladimir Lenin.
+11835. Sylvester II is affiliated with the religion of Methodism.
+11836. erhu was created in the country of People's Republic of China.
+11837. John Charles McQuaid is affiliated with the religion of Methodism.
+11838. Timofey Mozgov plays the position of center.
+11839. Henry Adams is employed by Harvard University.
+11840. Vladimir Lenin was born in the city of Ulyanovsk.
+11841. Michael Holroyd is a citizen of United Kingdom.
+11842. The type of music that Hans Christian Andersen plays is comedic TV series.
+11843. Kendrys Morales is associated with the sport of rugby.
+11844. The univeristy where Jaan Kross was educated is University of Tartu.
+11845. Muriel Bowser worked in the city of Washington, D.C..
+11846. Ernst Stavro Blofeld was created by J. Michael Straczynski.
+11847. Sydney United FC is associated with the sport of association football.
+11848. Waylon Jennings is married to Karin Krog.
+11849. THB Champions League is associated with the sport of Muay Thai.
+11850. Panoz Auto Development was created in the country of Japan.
+11851. The Sopranos was written in the language of English.
+11852. Tehran is located in the continent of Africa.
+11853. Maria von Trapp is married to Georg von Trapp.
+11854. The headquarters of University of Bologna is located in the city of Bologna.
+11855. The type of music that The Band Perry plays is country music.
+11856. The company that produced Powerade is Peugeot.
+11857. Charlie Brown was created by Chris Carter.
+11858. The author of Four Quartets is Isaac Asimov.
+11859. The 20/20 Experience was performed by Justin Timberlake.
+11860. Steve Cooley is affiliated with the religion of Methodism.
+11861. quarterback is associated with the sport of Muay Thai.
+11862. OS X Mountain Lion was developed by Sony Interactive Entertainment.
+11863. Marx's theory of alienation was created by Karl Marx.
+11864. UEFA Euro 1980 is associated with the sport of association football.
+11865. Tunisia national football team is associated with the sport of basketball.
+11866. Historia Brittonum was written in the language of Latin.
+11867. Greg Mortenson is associated with the sport of mountaineering.
+11868. Big K.R.I.T. is a citizen of United States of America.
+11869. Seneca was born in the city of Dayton.
+11870. Nick Cannon is married to Francis, Duke of Cádiz.
+11871. Captain Nemo was created by Jules Verne.
+11872. The Waterboys was created in the country of United Kingdom.
+11873. Vyzas F.C. is associated with the sport of association football.
+11874. Veronica Mars is a citizen of United States of America.
+11875. iMovie was developed by Google.
+11876. The univeristy where Giulietta Masina was educated is University of Birmingham.
+11877. Britpop was created in the country of United Kingdom.
+11878. The origianl broadcaster of Silicon Valley is HBO.
+11879. Philippines is located in the continent of North America.
+11880. A. R. Gurney is a citizen of Cao Wei.
+11881. The chief ex
+22. onas Brothers was created in the country of United States of America.
+1491. Edmond Hamilton is a citizen of United States of America.
+1492. Dele Alli plays the position of midfielder.
+1493. The author of Pride and Prejudice is Jane Austen.
+1494. The type of music that Fuse ODG plays is hip hop music.
+1495. Les Misérables was created in the country of Chile.
+1496. John the Evangelist died in the city of Ephesus.
+1497. Hipólito Yrigoyen worked in the city of Buenos Aires.
+1498. The official language of Sweden is Swedish.
+1499. Dragnet franchise was created by Jack Webb.
+1500. The type of music that Ronnie McDowell plays is country music.
+1501. The capital of Japan is Tokyo.
+1502. Pietro da Cortona is a citizen of Italy.
+1503. The capital of Australia is Oderzo.
+1504. Tony Hadley was born in the city of London.
+1505. The origianl broadcaster of Eight Is Enough is American Broadcasting Company.
+1506. Christianity was founded in the city of Jerusalem.
+1507. Alexis Ohanian is married to Dale Robertson.
+1508. Peanuts was created in the country of United States of America.
+1509. Niger is located in the continent of Africa.
+1510. 1979 Cricket World Cup is associated with the sport of cricket.
+1511. Tom Cruise is affiliated with the religion of Scientology.
+1512. Hitomi Yaida is a citizen of Japan.
+1513. Unione Sportiva Avellino 1912 is associated with the sport of association football.
+1514. Esperanto was created by L. L. Zamenhof.
+1515. Michael Bradley plays the position of midfielder.
+1516. West Germany is located in the continent of Europe.
+1517. Keith Vaz is a citizen of United Kingdom.
+1518. Shivraj Singh Chauhan is a citizen of India.
+1519. The univeristy where Bill Frisell was educated is Berklee College of Music.
+1520. Garth Brooks worked in the city of Nashville.
+1521. Metallica was created in the country of United States of America.
+1522. Messerschmitt was founded by Willy Messerschmitt.
+1523. The company that produced Ford Territory is Ford Motor Company.
+1524. 2015 S.League is associated with the sport of association football.
+1525. Work from Home was created in the country of United States of America.
+1526. The type of music that Teddy Wilson plays is jazz.
+1527. Larry Eustachy is associated with the sport of association football.
+1528. The type of music that Big Pun plays is hip hop music.
+1529. The univeristy where Walter Lippmann was educated is Harvard University.
+1530. David Moyes is a citizen of United Kingdom.
+1531. Michael Reagan is affiliated with the religion of Catholic Church.
+1532. Elisabeth of Valois is affiliated with the religion of Methodism.
+1533. The company that produced RIM-161 Standard Missile 3 is Raytheon.
+1534. Joseph Story is employed by Harvard University.
+1535. Evan Mecham is affiliated with the religion of Mormonism.
+1536. Os Lusíadas was written in the language of Portuguese.
+1537. George David Weiss is a citizen of United States of America.
+1538. Dore Gold is a citizen of Israel.
+1539. The type of music that Will Smith plays is hip hop music.
+1540. Jeff Hornacek is associated with the sport of basketball.
+1541. The author of The Magician's Nephew is C. S. Lewis.
+1542. Joe Panik is associated with the sport of baseball.
+1543. Mary Anna Custis Lee is married to Robert E. Lee.
+1544. The Far Side was written in the language of English.
+1545. The official language of German Empire is German.
+1546. Junji Ito is a citizen of Japan.
+1547. Vitaliy Klitschko is associated with the sport of boxing.
+1548. The univeristy where Annalee Newitz was educated is University of Michigan.
+1549. Fabrizio Ravanelli is associated with the sport of association football.
+1550. Afghanistan is located in the continent of Asia.
+1551. The type of music that Reef the Lost Cauze plays is hip hop music.
+1552. Giles Gilbert Scott died in the city of London.
+1553. Non Phixion was created in the country of United States of America.
+1554. Hellboy was created by Mike Mignola.
+1555. Fokker was founded by Anthony Fokker.
+1556. Dariush Mehrjui is a citizen of Belgium.
+1557. Captain Harlock was created by Leiji Matsumoto.
+1558.
+
+Return ONLY valid JSON: {"candidates": [{"serial": <int>, "fact_text": "<verbatim>", "answer_entity": "<extracted>"}, ...]}
+
+=== RAW LLM RESPONSE ===
+'{"candidates":[{"serial":12338,"fact_text":"The Unit was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":13955,"fact_text":"Yancy Derringer was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":1508,"fact_text":"Peanuts was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":1521,"fact_text":"Metallica was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":5232,"fact_text":"The Killers was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":5224,"fact_text":"British hip hop was created in the country of United Kingdom.","answer_entity":"United Kingdom"},{"serial":7440,"fact_text":"Danse Macabre was created in the country of United Kingdom.","answer_entity":"United Kingdom"},{"serial":1255,"fact_text":"The Chronicles of Narnia was created in the country of United Kingdom.","answer_entity":"United Kingdom"},{"serial":11877,"fact_text":"Britpop was created in the country of United Kingdom.","answer_entity":"United Kingdom"},{"serial":11872,"fact_text":"The Waterboys was created in the country of United Kingdom.","answer_entity":"United Kingdom"},{"serial":1495,"fact_text":"Les Misérables was created in the country of Chile.","answer_entity":"Chile"},{"serial":1280,"fact_text":"Bye Bye Birdie was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":1270,"fact_text":"Work from Home was created in the country of United States of America.","answer_entity":"United States of America"},{"serial":11850,"fact_text":"Panoz Auto Development was created in the country of Japan.","answer_entity":"Japan"},{"serial":11821,"fact_text":"Naruto was created in the country of Japan.","answer_entity":"Japan"},{"serial":11836,"fact_text":"erhu was created in the country of People\'s Republic of China.","answer_entity":"People\'s Republic of China"},{"serial":1262,"fact_text":"Long March 3B was created in the country of People\'s Republic of China.","answer_entity":"People\'s Republic of China"},{"serial":1281,"fact_text":"The origianl broadcaster of Shark Tank is American Broadcasting Company.","answer_entity":"American Broadcasting Company"},{"serial":11872,"fact_text":"The Waterboys was created in the country of United Kingdom.","answer_entity":"United Kingdom"}]}'
+
+=== PARSED CANDIDATES ===
+[{'serial': 12338, 'fact_text': 'The Unit was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 13955, 'fact_text': 'Yancy Derringer was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 1508, 'fact_text': 'Peanuts was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 1521, 'fact_text': 'Metallica was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 5232, 'fact_text': 'The Killers was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 5224, 'fact_text': 'British hip hop was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}, {'serial': 7440, 'fact_text': 'Danse Macabre was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}, {'serial': 1255, 'fact_text': 'The Chronicles of Narnia was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}, {'serial': 11877, 'fact_text': 'Britpop was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}, {'serial': 11872, 'fact_text': 'The Waterboys was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}, {'serial': 1495, 'fact_text': 'Les Misérables was created in the country of Chile.', 'answer_entity': 'Chile'}, {'serial': 1280, 'fact_text': 'Bye Bye Birdie was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 1270, 'fact_text': 'Work from Home was created in the country of United States of America.', 'answer_entity': 'United States of America'}, {'serial': 11850, 'fact_text': 'Panoz Auto Development was created in the country of Japan.', 'answer_entity': 'Japan'}, {'serial': 11821, 'fact_text': 'Naruto was created in the country of Japan.', 'answer_entity': 'Japan'}, {'serial': 11836, 'fact_text': "erhu was created in the country of People's Republic of China.", 'answer_entity': "People's Republic of China"}, {'serial': 1262, 'fact_text': "Long March 3B was created in the country of People's Republic of China.", 'answer_entity': "People's Republic of China"}, {'serial': 1281, 'fact_text': 'The origianl broadcaster of Shark Tank is American Broadcasting Company.', 'answer_entity': 'American Broadcasting Company'}, {'serial': 11872, 'fact_text': 'The Waterboys was created in the country of United Kingdom.', 'answer_entity': 'United Kingdom'}]
+==============================================
+
+[262k] Q80/100 | correct 63/80=78.8% | 1689s elapsed
+[262k] Q100/100 | correct 81/100=81.0% | 1780s elapsed
+
+[262k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_sh_chunk4096_gpt4omini_factconsolidation_sh_262k.json
+[262k] ablation_sh_chunk4096_gpt4omini: 81/100 = 81.0%   (1780s)
+== 262k CAR
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[262k] experiment=ablation_mh_fact_gpt4omini model=gpt-4o-mini chunking=fact task=mh
+[262k] Loading dataset…
+[262k] 100 questions × 18332 chunks (strategy=fact)
+[262k] Q20/100 | correct 7/20=35.0% | 437s elapsed
+[262k] Q40/100 | correct 16/40=40.0% | 786s elapsed
+[262k] Q60/100 | correct 20/60=33.3% | 1012s elapsed
+[262k] Q80/100 | correct 28/80=35.0% | 1291s elapsed
+[262k] Q100/100 | correct 34/100=34.0% | 1651s elapsed
+
+[262k] DONE. Saved → /Users/keshavnanda/Desktop/Aletheia/poc_results/ablation_mh_fact_gpt4omini_factconsolidation_mh_262k.json
+[262k] ablation_mh_fact_gpt4omini: 34/100 = 34.0%   (1651s)
