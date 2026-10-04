@@ -26,28 +26,32 @@ The model names used by the code are:
 - Default pipeline LLM: `gpt-4o-mini` (`PIPELINE_MODEL`).
 - The gpt-4o ablation sets `PIPELINE_MODEL=gpt-4o`.
 
+The router model entries describe the original embedding-router pipeline. Final-v3 and the confirmatory synthetic run use an LLM planner; the embedding router is not their route selector.
+
 ## Paper tables and figures
 
 | Paper item | Exact result source | Producing script | Provenance |
 | --- | --- | --- | --- |
-| Table 1, baseline values | `results/poc_results/paper_sh_conflict_factconsolidation_sh_32k.json`; `results/poc_results/paper_sh_conflict_factconsolidation_sh_64k.json`; `results/poc_results/paper_sh_conflict_factconsolidation_sh_262k.json` | `scripts/experiments/13_paper_experiment.py` | The JSONs contain the corresponding per-question BM25 records and accuracies. |
-| Table 1, Aletheia values | `results/poc_results/ablation_adaptive_fact_gpt4omini_factconsolidation_sh_32k.json`; `results/poc_results/ablation_adaptive_fact_gpt4omini_factconsolidation_sh_64k.json`; `results/poc_results/ablation_adaptive_fact_gpt4omini_factconsolidation_sh_262k.json` | `scripts/experiments/14_ablations.py --task adaptive` | The JSONs contain the corresponding per-question Aletheia records and accuracies. |
-| Table 2, synthetic multi-intent results | `results/poc_results/synthetic_benchmark_results.json` | `scripts/experiments/run_synthetic_benchmark.py`; input is `data/synthetic_benchmark.json` | The saved result rows match the first 60 released questions. The projected original-baseline row has no per-question result file: **source not found**. |
+| Legacy Table 1, separate FactConsolidation runs | `results/poc_results/paper_sh_conflict_factconsolidation_sh_32k.json`; `results/poc_results/paper_sh_conflict_factconsolidation_sh_64k.json`; `results/poc_results/paper_sh_conflict_factconsolidation_sh_262k.json`; matching adaptive files in the same directory | `scripts/experiments/13_paper_experiment.py`; `scripts/experiments/14_ablations.py --task adaptive` | Historical runs, not the matched-baseline comparison. The older 81%-versus-56% figures should not be presented as evidence of a matched comparison. |
+| Legacy first-60 synthetic result | `results/poc_results/synthetic_benchmark_results.json` | `scripts/experiments/run_synthetic_benchmark.py`; input is `data/synthetic_benchmark.json` | Original soft-match scorer; separate legacy run, not final-v3. The projected original-baseline row has no per-question result file: **source not found**. |
+| Final-v3 synthetic results | `results/prof_feedback/pf-20261005-final300-v3-01/results_summary.json` | `scripts/analysis/fresh300_final_v3.py` | 300 questions; fixed scorer; all audit flags retained. Aletheia 68.0%, Direct 77.3%, CoT 78.7%. |
+| Confirmatory hybrid results | `results/prof_feedback/pf-20261006-hybrid300-final-01/results_summary.json` | `scripts/analysis/final_hybrid_confirmatory.py` | Separate 300-question sample; audit flags retained. Includes Aletheia/Direct/CoT arms and Direct- and CoT-fallback hybrid policies. |
+| Matched FactConsolidation baseline | `results/prof_feedback/fc262k-bm25-matched-20261004-01/results_summary.json` | `scripts/analysis/factconsolidation_matched_baseline.py` | 100 questions at 262k; BM25 fixed K=10 scores 59/100 and routed K=10/25 scores 58/100; compare with the saved adaptive Aletheia reference of 81/100. |
 | Figure 1, architecture | `paper/diagrams/diagram1_architecture.mmd` and implementation in `scripts/lib/_pipeline.py` | No figure-generation script found | Conceptual diagram; no result JSON applies. |
-| Figure 2, context-length performance | `paper/diagrams/diagram2_noise_resilience.mmd`; data sources are the six Table 1 files above | No figure-generation script found | Chart values trace to Table 1 sources. |
-| Figure 3, intent performance | `paper/diagrams/diagram3_complex_intents.mmd`; data source is `results/poc_results/synthetic_benchmark_results.json` | No figure-generation script found | Chart values trace to the Table 2 source. |
+| Legacy Figure 2, context-length performance | `paper/diagrams/diagram2_noise_resilience.mmd`; historical FactConsolidation run JSONs listed above | No figure-generation script found | Legacy chart; not the matched-baseline comparison. |
+| Legacy Figure 3, intent performance | `paper/diagrams/diagram3_complex_intents.mmd`; legacy source is `results/poc_results/synthetic_benchmark_results.json` | No figure-generation script found | Legacy first-60 chart under the original scorer; not the final-v3 result. |
 
 The repository includes no script that renders the Mermaid diagrams; the `.mmd` files are the source diagrams. No numeric source is inferred for the figures beyond their matching table/result files.
 
 ## Synthetic benchmark protocol
 
-`data/synthetic_benchmark.json` contains 13,425 questions. The paper's saved evaluation uses its first 60 entries, with 20 questions for each intent. The released full set is available for larger evaluations. Run the no-API consistency check with:
+`data/synthetic_benchmark.json` contains 13,425 questions. The legacy saved result uses its first 60 entries, with 20 questions for each intent. The final paper reports the final-v3 300-question sample and a separate confirmatory hybrid sample of 300 questions. The released full set is available for larger evaluations. Run the no-API consistency check with:
 
 ```sh
 python scripts/validation/check_synthetic_benchmark_results.py
 ```
 
-The benchmark runner defaults to those first 60 and saves a new run to `results/poc_results/synthetic_benchmark_results_rerun.json`. `--n 0` or `--all` selects the full set. `--n 13425` also selects all currently released questions. Every execution of the runner makes OpenAI API calls; its `--help` option does not load the model or call an API.
+The legacy benchmark runner defaults to those first 60 and saves a new run to `results/poc_results/synthetic_benchmark_results_rerun.json`. `--n 0` or `--all` selects the full set. `--n 13425` also selects all currently released questions. Every execution of the runner makes OpenAI API calls; its `--help` option does not load the model or call an API.
 
 `scripts/experiments/run_synthetic_eval.py` remains a separate 100-query auxiliary comparison. It is not the 60-question synthetic result reported in the paper.
 
