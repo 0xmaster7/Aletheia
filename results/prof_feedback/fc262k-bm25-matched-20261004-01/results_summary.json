@@ -1,0 +1,21 @@
+{
+  "run_id": "fc262k-bm25-matched-20261004-01",
+  "frozen_manifest_sha256": "35f03ed451c7daf1f5be40139fece5f07ed6044ab81eb70d953fec14f8a974de",
+  "results": {
+    "uniform_k10": {
+      "n": 100,
+      "correct": 59,
+      "accuracy": 0.59
+    },
+    "routed_k10_25": {
+      "n": 100,
+      "correct": 58,
+      "accuracy": 0.58
+    }
+  },
+  "spend_usd": 0.01100565,
+  "prompt_tokens": 70875,
+  "completion_tokens": 624,
+  "truncated_failures": 0,
+  "request_errors": 0
+}

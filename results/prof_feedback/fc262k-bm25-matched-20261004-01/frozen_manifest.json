@@ -1,0 +1,48 @@
+{
+  "run_id": "fc262k-bm25-matched-20261004-01",
+  "model": "gpt-4o-mini",
+  "temperature": 0.0,
+  "completion_cap": 512,
+  "input_usd_per_million": 0.15,
+  "output_usd_per_million": 0.6,
+  "hard_stop_usd": 0.1,
+  "arms": {
+    "uniform_k10": "BM25 top-10 for each question",
+    "routed_k10_25": "saved Aletheia route: historical K=25; every other route K=10"
+  },
+  "system_prompt": "_pipeline.py SYSTEM_MESSAGE",
+  "query_prompt": "_pipeline.py QUERY_TEMPLATE_BM25 (unchanged)",
+  "scorer": "SubEM: case-insensitive gold substring in answer; same evaluate_answer rule as saved baseline",
+  "sha256": {
+    "runner": "ca4a409816abdfd384beebde81408f3dc74fa7a11c5f355e46815d5931932c2c",
+    "pipeline_source": "f5d17c86ad080b52bf0763287f8b2403cc01f5b97a581714b42c5b494cae1f40",
+    "prepare_source": "5cc32d932626e595d7fa803db77d48278ba5e17c5e27f3e5042b310139634b78",
+    "phaseA_question_manifest": "8c0c2ebf40d55f3c0b848ca51d95c6ab59a018c0d0fdf10d01dce73bd05eebdd",
+    "prior_adaptive_results": "24c7d20b71dc03c0ed5b07e3a8509a42e2a965482142720f46208f3f6e09fa05",
+    "prior_bm25_results": "8dfc6e999fbed8593b557fbf17fe7b8dcf44f3bd4cf75b19be9341737f9621a7",
+    "requests": "d6fbe4006c65ee7ba9e4ad67d37c8295f8d18fdc43cb558e99dc9474b85f3d83",
+    "system_prompt": "fbb5a811635de72d10075fa9ef51c69e6e33b8ea4ed5fbfd193526910de6a2a5",
+    "query_template_bm25": "ca4ea130355adab357ce8cd00bb11c1cdbe7cb945454764a66f1ac7f692f501d",
+    "scorer_rule": "306ade8989fe3f854ad23f5c2c361aa069f027342375c513a6e6c01c2f034d0b"
+  },
+  "dataset_revision": "7ea066982b140a19337e17e60d45d4076e042faf",
+  "dataset_arrow_sha256": "de3c70189935b532d21707ca92ae4ee835cc335cd0c002b803355fdb16e5b474",
+  "context_sha256": "9c8ce1ed911d25a3c9d52e5758d9a8d23fa769ded88c5e59dbc1e1a3f6eb1f10",
+  "fact_count": 18332,
+  "questions": 100,
+  "requests": 200,
+  "saved_route_counts": {
+    "historical": 15,
+    "current_value": 82,
+    "boolean": 2,
+    "None": 1
+  },
+  "routed_k_counts": {
+    "25": 15,
+    "10": 85
+  },
+  "estimated_prompt_tokens": 71275,
+  "completion_token_cap_total": 102400,
+  "estimated_cost_at_full_completion_cap_usd": 0.07213125,
+  "ordered_questions_sha256": "0bd2dc48869b2acbc513a1fe55116ed9b0df496450eb825ed6cb6129f4779228"
+}

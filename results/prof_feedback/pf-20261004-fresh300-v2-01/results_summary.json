@@ -1,0 +1,218 @@
+{
+  "run_id": "pf-20261004-fresh300-v2-01",
+  "frozen_manifest_sha256": "76d6936d747192cdb8e687415935f9b80c2564dd13cee6a910f1321fd859e853",
+  "score_rule": "fixed evaluation_scorer.py; all audit flags retained; truncations and non-completed calls are failures",
+  "calls_recorded": 900,
+  "expected_calls": 900,
+  "prompt_tokens": 1328458,
+  "completion_tokens": 50013,
+  "fresh300_spend_usd": 0.2292765,
+  "spend_by_arm_usd": {
+    "aletheia": 0.0981972,
+    "direct": 0.0592566,
+    "cot": 0.0718227
+  },
+  "prior_campaign_spend_usd": 0.31244445,
+  "cumulative_campaign_spend_usd": 0.54172095,
+  "truncated_failures": 0,
+  "summaries": {
+    "aletheia": {
+      "historical": {
+        "n": 98,
+        "correct": 38,
+        "accuracy": 0.3877551020408163,
+        "answered": 52,
+        "abstained": 46,
+        "accuracy_when_answered": 0.7307692307692307
+      },
+      "historical_excluding_flagged": {
+        "n": 97,
+        "correct": 38,
+        "accuracy": 0.3917525773195876,
+        "answered": 52,
+        "abstained": 45,
+        "accuracy_when_answered": 0.7307692307692307
+      },
+      "aggregation": {
+        "n": 106,
+        "correct": 67,
+        "accuracy": 0.6320754716981132,
+        "answered": 86,
+        "abstained": 20,
+        "accuracy_when_answered": 0.7790697674418605
+      },
+      "aggregation_excluding_flagged": {
+        "n": 105,
+        "correct": 67,
+        "accuracy": 0.638095238095238,
+        "answered": 86,
+        "abstained": 19,
+        "accuracy_when_answered": 0.7790697674418605
+      },
+      "boolean": {
+        "n": 96,
+        "correct": 10,
+        "accuracy": 0.10416666666666667,
+        "answered": 26,
+        "abstained": 70,
+        "accuracy_when_answered": 0.38461538461538464
+      },
+      "boolean_excluding_flagged": {
+        "n": 85,
+        "correct": 10,
+        "accuracy": 0.11764705882352941,
+        "answered": 26,
+        "abstained": 59,
+        "accuracy_when_answered": 0.38461538461538464
+      },
+      "overall": {
+        "n": 300,
+        "correct": 115,
+        "accuracy": 0.38333333333333336,
+        "answered": 164,
+        "abstained": 136,
+        "accuracy_when_answered": 0.7012195121951219
+      },
+      "overall_excluding_flagged": {
+        "n": 287,
+        "correct": 115,
+        "accuracy": 0.40069686411149824,
+        "answered": 164,
+        "abstained": 123,
+        "accuracy_when_answered": 0.7012195121951219
+      }
+    },
+    "direct": {
+      "historical": {
+        "n": 98,
+        "correct": 75,
+        "accuracy": 0.7653061224489796,
+        "answered": 98,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7653061224489796
+      },
+      "historical_excluding_flagged": {
+        "n": 97,
+        "correct": 74,
+        "accuracy": 0.7628865979381443,
+        "answered": 97,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7628865979381443
+      },
+      "aggregation": {
+        "n": 106,
+        "correct": 76,
+        "accuracy": 0.7169811320754716,
+        "answered": 106,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7169811320754716
+      },
+      "aggregation_excluding_flagged": {
+        "n": 105,
+        "correct": 76,
+        "accuracy": 0.7238095238095238,
+        "answered": 105,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7238095238095238
+      },
+      "boolean": {
+        "n": 96,
+        "correct": 83,
+        "accuracy": 0.8645833333333334,
+        "answered": 96,
+        "abstained": 0,
+        "accuracy_when_answered": 0.8645833333333334
+      },
+      "boolean_excluding_flagged": {
+        "n": 85,
+        "correct": 72,
+        "accuracy": 0.8470588235294118,
+        "answered": 85,
+        "abstained": 0,
+        "accuracy_when_answered": 0.8470588235294118
+      },
+      "overall": {
+        "n": 300,
+        "correct": 234,
+        "accuracy": 0.78,
+        "answered": 300,
+        "abstained": 0,
+        "accuracy_when_answered": 0.78
+      },
+      "overall_excluding_flagged": {
+        "n": 287,
+        "correct": 222,
+        "accuracy": 0.7735191637630662,
+        "answered": 287,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7735191637630662
+      }
+    },
+    "cot": {
+      "historical": {
+        "n": 98,
+        "correct": 75,
+        "accuracy": 0.7653061224489796,
+        "answered": 98,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7653061224489796
+      },
+      "historical_excluding_flagged": {
+        "n": 97,
+        "correct": 74,
+        "accuracy": 0.7628865979381443,
+        "answered": 97,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7628865979381443
+      },
+      "aggregation": {
+        "n": 106,
+        "correct": 78,
+        "accuracy": 0.7358490566037735,
+        "answered": 106,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7358490566037735
+      },
+      "aggregation_excluding_flagged": {
+        "n": 105,
+        "correct": 78,
+        "accuracy": 0.7428571428571429,
+        "answered": 105,
+        "abstained": 0,
+        "accuracy_when_answered": 0.7428571428571429
+      },
+      "boolean": {
+        "n": 96,
+        "correct": 87,
+        "accuracy": 0.90625,
+        "answered": 96,
+        "abstained": 0,
+        "accuracy_when_answered": 0.90625
+      },
+      "boolean_excluding_flagged": {
+        "n": 85,
+        "correct": 76,
+        "accuracy": 0.8941176470588236,
+        "answered": 85,
+        "abstained": 0,
+        "accuracy_when_answered": 0.8941176470588236
+      },
+      "overall": {
+        "n": 300,
+        "correct": 240,
+        "accuracy": 0.8,
+        "answered": 300,
+        "abstained": 0,
+        "accuracy_when_answered": 0.8
+      },
+      "overall_excluding_flagged": {
+        "n": 287,
+        "correct": 228,
+        "accuracy": 0.794425087108014,
+        "answered": 287,
+        "abstained": 0,
+        "accuracy_when_answered": 0.794425087108014
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+Frozen hybrid policy, final confirmatory run
+
+For each question, use Aletheia's deterministic answer whenever its final-v3
+deterministic path answered: a supported non-Boolean plan with verified
+complete history, or a Boolean answer accepted by the positive-evidence gate
+(with False permitted only when verified complete entity history establishes
+absence). Otherwise use the same-question Direct answer. The CoT-fallback
+variant applies exactly the same gate and uses that question's CoT answer
+instead. Apply this rule uniformly across all intents, with no exceptions.
+Score both hybrids offline with the frozen final-v3 scorer. Truncations,
+invalid plans, non-Boolean unsupported plans, and operator abstentions make
+Aletheia ineligible for selection and invoke the named fallback. For Boolean,
+the final-v3 operator's positive-evidence gate may answer from a matching fact
+even if the model's original supported flag was false.

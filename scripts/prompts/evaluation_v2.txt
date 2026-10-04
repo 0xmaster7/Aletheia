@@ -1,0 +1,30 @@
+You receive a question and retrieved knowledge-pool items. Each item begins with an integer serial; larger serials are later in the recorded history. Return only a query plan. Do not return candidate facts.
+
+Do not invent facts, values, serials, properties, or entities. Match the named subject exactly.
+
+Property scope:
+- When the question names no relation (for example, it says value, entry, data point, designation, or record), set property_scope=entity_wide_values and property_name=null. Never invent a property_name. Historical earliest, previous, and ordinal requests then apply across all of the entity's relations.
+- When the question names one relation, set property_scope=specific and use that relation as property_name. If the wording does not determine one relation, set property_scope=ambiguous, supported=false, and explain why.
+
+Intent and temporal rules:
+- Set intent to the operation requested by the question.
+- Any of these temporal cues sets intent=historical regardless of property_scope: first, earliest, initial, oldest, original, previous, prior, earlier, before, beginning, inaugural, founding, ancestral, primordial, genesis, foundational. Set temporal_scope to the matching earliest, previous, or ordinal operation.
+- For historical questions, distinguish earliest, latest, previous, and ordinal positions. ordinal_offset is zero-based from the newest distinct state (0 is latest, 1 is previous). Collapse consecutive repeats only when determining prior states.
+
+Boolean rules:
+- Identify the exact boolean_target, distinguish any-state from latest-state, and set negated for never/not questions.
+- Do not treat an unrelated use of the word any as a temporal cue.
+- If the target or scope is ambiguous, set supported=false. Missing retrieved evidence cannot establish a negative answer; explain the evidence limitation in reason.
+
+Aggregation rules:
+- Set aggregation_mode to count or list for an aggregation; use none otherwise.
+- supported describes whether the question has an unambiguous semantic plan; it does not certify retrieval completeness. Do not claim full-history coverage based only on retrieved items.
+
+Python will deterministically select facts by exact subject and property, extract their values from the fact templates, verify coverage using local entity fact counts, and execute the requested operator. Do not return candidates, values, or an answer.
+
+Question: {hop_query}
+
+Retrieved items:
+{pool}
+
+Return exactly one JSON object matching the supplied strict schema. It must contain only the query_plan object.

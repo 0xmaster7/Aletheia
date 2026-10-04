@@ -1,0 +1,541 @@
+{
+  "description": "Question identifiers and audit issue codes for source-audit-flagged rows in saved synthetic evaluation samples; no question text, contexts, or answers included.",
+  "runs": {
+    "pf-20261004-fresh300-v2-01": {
+      "flagged_count": 13,
+      "rows": [
+        {
+          "source_index": 880,
+          "question_id": "syn-00880-d0d8a1dfc527",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 965,
+          "question_id": "syn-00965-e9a891aaa03a",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 2027,
+          "question_id": "syn-02027-e553819c3413",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 2256,
+          "question_id": "syn-02256-75569bceddbe",
+          "intent": "historical",
+          "issue_codes": [
+            "historical_gold_differs_from_line_start_source"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 4451,
+          "question_id": "syn-04451-3e917098c018",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 4523,
+          "question_id": "syn-04523-fef5058b2dbe",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 5129,
+          "question_id": "syn-05129-39046a6a4503",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 5951,
+          "question_id": "syn-05951-ec65e01781f9",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 6401,
+          "question_id": "syn-06401-434f926f8021",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9143,
+          "question_id": "syn-09143-68ab8e0fe419",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 11333,
+          "question_id": "syn-11333-6403e2a70b30",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 11903,
+          "question_id": "syn-11903-f8c0053bd250",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 11981,
+          "question_id": "syn-11981-56f8e68eb6db",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        }
+      ]
+    },
+    "pf-20261005-final300-v3-01": {
+      "flagged_count": 22,
+      "rows": [
+        {
+          "source_index": 139,
+          "question_id": "syn-00139-c4a787dba8ba",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 179,
+          "question_id": "syn-00179-5bb18e6f6dd2",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 226,
+          "question_id": "syn-00226-195b0178bef0",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 283,
+          "question_id": "syn-00283-99135ce6d69d",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 754,
+          "question_id": "syn-00754-5668c4df4dfc",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 772,
+          "question_id": "syn-00772-431e39bc18a6",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 1223,
+          "question_id": "syn-01223-5a91bb948891",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 1445,
+          "question_id": "syn-01445-74c6b2311e07",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 4583,
+          "question_id": "syn-04583-2cfdfa9c5be2",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 5279,
+          "question_id": "syn-05279-f3338d7683a0",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 5327,
+          "question_id": "syn-05327-0e04173ff915",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 5572,
+          "question_id": "syn-05572-16a999c9a69d",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 6011,
+          "question_id": "syn-06011-97f1c4839922",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 6779,
+          "question_id": "syn-06779-4f37878e31d4",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 7703,
+          "question_id": "syn-07703-c1234510bdd3",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 7871,
+          "question_id": "syn-07871-8c2312c2ec4f",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8165,
+          "question_id": "syn-08165-e2bdc0bc5c2d",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8393,
+          "question_id": "syn-08393-bbd5d385b4bb",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8741,
+          "question_id": "syn-08741-c7b2292dd0fb",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9635,
+          "question_id": "syn-09635-686070a69163",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9935,
+          "question_id": "syn-09935-1f7c4505eaa8",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 12863,
+          "question_id": "syn-12863-df46dd12d81e",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        }
+      ]
+    },
+    "pf-20261006-hybrid300-final-01": {
+      "flagged_count": 22,
+      "rows": [
+        {
+          "source_index": 155,
+          "question_id": "syn-00155-8b9dcae3aa49",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 299,
+          "question_id": "syn-00299-e590047f3898",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 721,
+          "question_id": "syn-00721-57451506288b",
+          "intent": "aggregation",
+          "issue_codes": [
+            "aggregation_gold_differs_from_generated_scope",
+            "generated_count_spans_multiple_properties"
+          ],
+          "support_status": "invalid_gold_candidate"
+        },
+        {
+          "source_index": 821,
+          "question_id": "syn-00821-56fe41cffe2f",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 863,
+          "question_id": "syn-00863-c511dadecd4a",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 1013,
+          "question_id": "syn-01013-6d0d644b1766",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 2015,
+          "question_id": "syn-02015-1173094ae85b",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 3035,
+          "question_id": "syn-03035-ac55f5922583",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 4055,
+          "question_id": "syn-04055-b1ba570be537",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 4373,
+          "question_id": "syn-04373-3bb016fc6f64",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 7679,
+          "question_id": "syn-07679-29c13bc988a1",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 7787,
+          "question_id": "syn-07787-1ce066db093b",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8003,
+          "question_id": "syn-08003-bf10c87f72a4",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8369,
+          "question_id": "syn-08369-da92205e7aa8",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 8795,
+          "question_id": "syn-08795-241ffd4fb0f4",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9659,
+          "question_id": "syn-09659-189213c324d3",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9899,
+          "question_id": "syn-09899-3f14162ba310",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 9929,
+          "question_id": "syn-09929-908b597cba70",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 10271,
+          "question_id": "syn-10271-80140a4e5761",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 11087,
+          "question_id": "syn-11087-d470d6ec76a5",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 12911,
+          "question_id": "syn-12911-017c1039ab3f",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        },
+        {
+          "source_index": 13103,
+          "question_id": "syn-13103-ab78f6f26bca",
+          "intent": "boolean",
+          "issue_codes": [
+            "boolean_target_not_found"
+          ],
+          "support_status": "ambiguous_gold_candidate"
+        }
+      ]
+    }
+  }
+}
