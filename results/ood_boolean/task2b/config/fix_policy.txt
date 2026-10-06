@@ -1,0 +1,5 @@
+Single preregistered Task 2b fix, frozen before the run:
+
+After parsing the final-v3 Boolean plan, if plan.negated is true but the question contains none of the explicit whole-word negative markers `not`, `never`, or `no`, replace only plan.negated with false. Otherwise preserve the plan unchanged.
+
+This tests the saved Task 2a finding that eight failures had negated=true for affirmative questions. It does not alter prompts, planner output, scorer, temporal cue list, relation list, count cues, retrieval, or any other operator rule. Apply to every one of the 100 confirmatory Boolean questions, not just prior failures.

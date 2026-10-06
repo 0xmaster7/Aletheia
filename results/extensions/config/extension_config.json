@@ -1,0 +1,29 @@
+{
+  "run_id": "confirmatory-extensions-20261005",
+  "source_run_id": "pf-20261006-hybrid300-final-01",
+  "source_question_selection": "Exactly the 300 source_index values and order in the saved confirmatory Aletheia requests.jsonl.",
+  "model": "gpt-4o-mini",
+  "temperature": 0.0,
+  "scorer": "scripts/lib/evaluation_scorer.py, SHA-256 recorded in frozen_manifest.json",
+  "experiment_1": {
+    "method": "BM25 plus all-MiniLM-L6-v2 dense retrieval, equal-weight reciprocal rank fusion, constant=60, K=80",
+    "bm25_query": "Original question text, lowercased alphanumeric tokenization matching the confirmatory runner.",
+    "ranking_ties": "Stable descending score, original corpus order breaks ties, matching the preceding 89-question RRF test.",
+    "max_completion_tokens": 1024,
+    "hard_stop_usd": 0.20
+  },
+  "experiment_2": {
+    "method": "Tool-calling ReAct baseline; search_memory performs BM25 over the same full pinned memory store.",
+    "top_k_per_search": 10,
+    "maximum_search_steps_per_question": 6,
+    "maximum_completion_tokens_per_model_call": 512,
+    "pilot_questions": 10,
+    "pilot_projection": "Mean actual pilot question cost multiplied by 300; proceed only when <= $0.55.",
+    "hard_stop_usd": 0.55
+  },
+  "total_hard_stop_usd": 0.75,
+  "input_usd_per_million_tokens": 0.15,
+  "output_usd_per_million_tokens": 0.60,
+  "automatic_retries": 0,
+  "audit_flags": "Retained; no question is excluded or relabelled."
+}

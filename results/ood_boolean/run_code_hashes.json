@@ -1,0 +1,26 @@
+{
+  "code_commit_at_run_start": "ecb373a7e41d92cdcdeebc43c27b6267d662e610",
+  "branch": "scratch/ood-boolean",
+  "hashes_computed_at": "final offline report assembly",
+  "sha256": {
+    "results/ood_boolean/task1/build_paraphrases.py": "87f2b77cbd7cbd1302e81b05d7074850dff16d229d49d156b0a704fc08b37fbb",
+    "results/ood_boolean/task1/generate_paraphrases.py": "0d5babce16837b49c37e9bd9c72063e74581e05bbe3973fb131d25f396ffd4f6",
+    "results/ood_boolean/task1/select_paraphrases.py": "67bafa002354a09ad183f107217c2623ceb4a0cac276f1a3b28a5901612e4dac",
+    "results/ood_boolean/task1/evaluate_ood.py": "eefb54c235e8f8e5531522922c714c7dc32f5d2937130a9c48326062f499c2c2",
+    "results/ood_boolean/task2b/prepare_requests.py": "afbd12644546addda4f2984383dfd189a688fb3df10c43edd83d33dd914e0b02",
+    "results/ood_boolean/task2b/run_fix.py": "d4b00345f79b11dcf3785158f94a54b2d0ff0639427a70a6387b2e319c88bae6",
+    "results/ood_boolean/task2b/config/boolean_polarity_fix.py": "3ce351a3025f179bfa223bc67626949efdf0c309f0aec45585a6866f384229e2",
+    "results/ood_boolean/task2b/config/fix_policy.txt": "479855f95c6043f9ac91e63d1b0cc78e48753b2d9d60a9642d19d5a99dbf0b71",
+    "results/ood_boolean/task1/frozen_manifest.json": "36e94df193e8849d4db82e78aa199beac94f723102a15b09b3f00d1292098705",
+    "results/ood_boolean/task2b/frozen_manifest.json": "4dc7041b5ccb9075da8d191a05dc5f68f754c05afedc047ead0c4948b41a709f",
+    "results/ood_boolean/task1/paraphrases.jsonl": "9c835d5b2ee25140b852b689f9ca0b75aef185cd59c8c324c63dd80c301f0e2d",
+    "results/ood_boolean/task1/matched_comparison_plan.json": "3c59651fbf856e040584e73fe753c707d5d2bb3e16aceb40bc8058ad7e4e1459",
+    "scripts/lib/_pipeline.py": "f5d17c86ad080b52bf0763287f8b2403cc01f5b97a581714b42c5b494cae1f40",
+    "scripts/lib/_data.py": "d7ca2b9d34f580a609cfa2d7801d59daf1e7f03da0850ea07aafa887cbec84ef",
+    "scripts/lib/_lf.py": "d135827d04cb1439c1bea1db9dc8f6e401dd4d46f76e59bdcc0a6ce80eea00ab"
+  },
+  "notes": [
+    "Task 1 matched-ID comparison bookkeeping was fixed after the API run to apply one variant a per unique source ID. Requests, prompt bodies, returned model outputs, scorer rules, and frozen paraphrases were unchanged.",
+    "Task 2b configuration and request manifest were frozen before its paid run."
+  ]
+}

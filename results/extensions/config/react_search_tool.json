@@ -1,0 +1,16 @@
+{
+  "type": "function",
+  "function": {
+    "name": "search_memory",
+    "description": "Search the pinned FactConsolidation memory store with BM25 and return the ten highest-ranked facts for a concise query.",
+    "strict": true,
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query": {"type": "string", "description": "A concise query for the fact store."}
+      },
+      "required": ["query"]
+    }
+  }
+}

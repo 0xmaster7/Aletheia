@@ -1,0 +1,11 @@
+{
+  "phase": "full",
+  "questions_completed": 300,
+  "expected_total_questions": 300,
+  "experiment_2_spend_usd": 0.33895905,
+  "experiment_1_spend_usd": 0.1021962,
+  "cumulative_total_spend_usd": 0.44115525,
+  "prompt_tokens": 2134691,
+  "completion_tokens": 31259,
+  "last_source_index": 7781
+}

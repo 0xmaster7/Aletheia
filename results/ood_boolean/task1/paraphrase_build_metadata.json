@@ -1,0 +1,15 @@
+{
+  "n": 300,
+  "intent_counts": {
+    "historical": 100,
+    "aggregation": 100,
+    "boolean": 100
+  },
+  "source_selection_sha256": "600a11a132d1130a512032b611d61d31ba94b0a5421340f64b80bc0cbf4e953a",
+  "source_audit": "results/prof_feedback/pf-20261004-phaseA-05/gold_support.json",
+  "source_audit_sha256": "0c0b68504bfbe50d413c21b7c8ee39bb0c78ef88822406a480593859ea3f5ef3",
+  "corpus_context_sha256": "9c8ce1ed911d25a3c9d52e5758d9a8d23fa769ded88c5e59dbc1e1a3f6eb1f10",
+  "arrow_sha256": "de3c70189935b532d21707ca92ae4ee835cc335cd0c002b803355fdb16e5b474",
+  "paraphrase_sha256": "9c835d5b2ee25140b852b689f9ca0b75aef185cd59c8c324c63dd80c301f0e2d",
+  "method": "deterministic structural templates, chosen by fixed index cycle; historical requested rank derived from audited support serial and source corpus; all gold labels copied unchanged; no model generation used for frozen final paraphrases"
+}

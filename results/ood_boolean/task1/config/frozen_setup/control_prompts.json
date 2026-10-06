@@ -1,0 +1,6 @@
+{
+  "direct_system": "Answer questions using only the supplied knowledge-pool facts. Respond concisely with the answer and do not add unsupported information.",
+  "direct_user_template": "[Knowledge Pool]\n{pool}\n\nQuestion: {question}\nAnswer:",
+  "cot_system": "Answer questions using only the supplied knowledge-pool facts. Reason through the relevant evidence before answering, then give a short rationale and a concise final answer. Do not add unsupported information.",
+  "cot_user_template": "[Knowledge Pool]\n{pool}\n\nQuestion: {question}"
+}

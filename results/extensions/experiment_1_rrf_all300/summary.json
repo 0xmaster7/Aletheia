@@ -1,0 +1,387 @@
+{
+  "status": "complete",
+  "n": 300,
+  "audit_flags_retained": 22,
+  "baseline_arms": {
+    "aletheia": {
+      "temporal": {
+        "n": 98,
+        "correct": 75,
+        "accuracy": 0.7653061224489796
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 96,
+        "accuracy": 0.9411764705882353
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 40,
+        "accuracy": 0.4
+      },
+      "overall": {
+        "n": 300,
+        "correct": 211,
+        "accuracy": 0.7033333333333334
+      }
+    },
+    "direct": {
+      "temporal": {
+        "n": 98,
+        "correct": 63,
+        "accuracy": 0.6428571428571429
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 70,
+        "accuracy": 0.6862745098039216
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 87,
+        "accuracy": 0.87
+      },
+      "overall": {
+        "n": 300,
+        "correct": 220,
+        "accuracy": 0.7333333333333333
+      }
+    },
+    "cot": {
+      "temporal": {
+        "n": 98,
+        "correct": 66,
+        "accuracy": 0.673469387755102
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 70,
+        "accuracy": 0.6862745098039216
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 87,
+        "accuracy": 0.87
+      },
+      "overall": {
+        "n": 300,
+        "correct": 223,
+        "accuracy": 0.7433333333333333
+      }
+    }
+  },
+  "aletheia_rrf": {
+    "temporal": {
+      "n": 98,
+      "correct": 77,
+      "accuracy": 0.7857142857142857
+    },
+    "aggregation": {
+      "n": 102,
+      "correct": 95,
+      "accuracy": 0.9313725490196079
+    },
+    "boolean": {
+      "n": 100,
+      "correct": 42,
+      "accuracy": 0.42
+    },
+    "overall": {
+      "n": 300,
+      "correct": 214,
+      "accuracy": 0.7133333333333334
+    }
+  },
+  "hybrid_rrf_direct_fallback": {
+    "temporal": {
+      "n": 98,
+      "correct": 83,
+      "accuracy": 0.8469387755102041
+    },
+    "aggregation": {
+      "n": 102,
+      "correct": 97,
+      "accuracy": 0.9509803921568627
+    },
+    "boolean": {
+      "n": 100,
+      "correct": 81,
+      "accuracy": 0.81
+    },
+    "overall": {
+      "n": 300,
+      "correct": 261,
+      "accuracy": 0.87
+    }
+  },
+  "hybrid_rrf_cot_fallback": {
+    "temporal": {
+      "n": 98,
+      "correct": 85,
+      "accuracy": 0.8673469387755102
+    },
+    "aggregation": {
+      "n": 102,
+      "correct": 96,
+      "accuracy": 0.9411764705882353
+    },
+    "boolean": {
+      "n": 100,
+      "correct": 80,
+      "accuracy": 0.8
+    },
+    "overall": {
+      "n": 300,
+      "correct": 261,
+      "accuracy": 0.87
+    }
+  },
+  "hybrid_deterministic_share": {
+    "direct": 0.7966666666666666,
+    "cot": 0.7966666666666666
+  },
+  "flips": {
+    "baseline_right_rrf_wrong": [
+      {
+        "source_index": 13401,
+        "intent": "historical",
+        "question": "What was the primordial value designation for David Hicks?",
+        "gold": "Australia",
+        "baseline_prediction": "Australia",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 6349,
+        "intent": "aggregation",
+        "question": "What is the sum total of varied values recorded against Andrew Caddick?",
+        "gold": "2",
+        "baseline_prediction": 2,
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 2015,
+        "intent": "boolean",
+        "question": "Was the religion Pyranthism ever a documented fact about Cadwallon ap Cadfan?",
+        "gold": "False",
+        "baseline_prediction": false,
+        "rrf_prediction": true
+      },
+      {
+        "source_index": 7167,
+        "intent": "historical",
+        "question": "Before any modifications, what value corresponded to Al-Waleed bin Talal?",
+        "gold": "Saudi Arabia",
+        "baseline_prediction": "Saudi Arabia",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 11375,
+        "intent": "boolean",
+        "question": "Was the value Narwhal Inc. ever a documented fact about Harry Kendall Thaw?",
+        "gold": "False",
+        "baseline_prediction": false,
+        "rrf_prediction": true
+      },
+      {
+        "source_index": 9492,
+        "intent": "historical",
+        "question": "In the original records, which value was attributed to Brandon Tartikoff?",
+        "gold": "NBC",
+        "baseline_prediction": "NBC",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 9420,
+        "intent": "historical",
+        "question": "What was the initial value recorded for FIFPro?",
+        "gold": "the sport of association football",
+        "baseline_prediction": "the sport of association football",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 12129,
+        "intent": "historical",
+        "question": "Regarding Tom Davis, what was the foundational value first documented?",
+        "gold": "United States of America",
+        "baseline_prediction": "United States of America",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 4797,
+        "intent": "historical",
+        "question": "What value did the seminal record of Julie Brown contain?",
+        "gold": "United States of America",
+        "baseline_prediction": "United States of America",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 11169,
+        "intent": "historical",
+        "question": "Regarding Doug Morris, what was the foundational value first documented?",
+        "gold": "United States of America",
+        "baseline_prediction": "United States of America",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 11087,
+        "intent": "boolean",
+        "question": "Was Mirethism at any point logged as the religion for University of Dallas?",
+        "gold": "False",
+        "baseline_prediction": false,
+        "rrf_prediction": true
+      },
+      {
+        "source_index": 7509,
+        "intent": "historical",
+        "question": "Regarding Texas Legends, what was the foundational value first documented?",
+        "gold": "the sport of basketball",
+        "baseline_prediction": "the sport of basketball",
+        "rrf_prediction": null
+      },
+      {
+        "source_index": 8003,
+        "intent": "boolean",
+        "question": "Has Bractharism been attributed as the religion for Giordano Bruno in any record?",
+        "gold": "False",
+        "baseline_prediction": false,
+        "rrf_prediction": null
+      }
+    ],
+    "baseline_wrong_rrf_right": [
+      {
+        "source_index": 11912,
+        "intent": "boolean",
+        "question": "Is it accurate that Windows Communication Foundation was at some point recorded under the value of VMware Inc?",
+        "gold": "True",
+        "baseline_prediction": false,
+        "rrf_prediction": true
+      },
+      {
+        "source_index": 3732,
+        "intent": "historical",
+        "question": "In the original records, which value was attributed to Gustav I of Sweden?",
+        "gold": "Sweden",
+        "baseline_prediction": null,
+        "rrf_prediction": "Sweden"
+      },
+      {
+        "source_index": 7314,
+        "intent": "historical",
+        "question": "What was the embryonic value information for XML Schema?",
+        "gold": "World Wide Web Consortium",
+        "baseline_prediction": null,
+        "rrf_prediction": "World Wide Web Consortium"
+      },
+      {
+        "source_index": 6251,
+        "intent": "boolean",
+        "question": "Can you confirm that Spectra Holdings appeared as a value entry for Will Self?",
+        "gold": "False",
+        "baseline_prediction": null,
+        "rrf_prediction": false
+      },
+      {
+        "source_index": 2535,
+        "intent": "historical",
+        "question": "What value was Dell Inc. first catalogued under?",
+        "gold": "Michael Dell",
+        "baseline_prediction": null,
+        "rrf_prediction": "Michael Dell"
+      },
+      {
+        "source_index": 7866,
+        "intent": "historical",
+        "question": "Looking at the earliest entry, which location did The headquarters of Sapienza University of Rome have?",
+        "gold": "the city of Rome",
+        "baseline_prediction": null,
+        "rrf_prediction": "the city of Rome"
+      },
+      {
+        "source_index": 8769,
+        "intent": "historical",
+        "question": "Regarding 2015 CAF Confederation Cup, what was the foundational value first documented?",
+        "gold": "the sport of association football",
+        "baseline_prediction": null,
+        "rrf_prediction": "the sport of association football"
+      },
+      {
+        "source_index": 7787,
+        "intent": "boolean",
+        "question": "Was Dunhaven at any point logged as the country for Merseybeat?",
+        "gold": "False",
+        "baseline_prediction": null,
+        "rrf_prediction": false
+      },
+      {
+        "source_index": 5490,
+        "intent": "historical",
+        "question": "What archival value was initially assigned to 1983 Cricket World Cup?",
+        "gold": "the sport of cricket",
+        "baseline_prediction": null,
+        "rrf_prediction": "the sport of cricket"
+      },
+      {
+        "source_index": 9792,
+        "intent": "historical",
+        "question": "In the original records, which value was attributed to Jamie Redknapp?",
+        "gold": "the sport of association football",
+        "baseline_prediction": null,
+        "rrf_prediction": "the sport of association football"
+      },
+      {
+        "source_index": 6500,
+        "intent": "boolean",
+        "question": "Does the evidence support that Islam served as the religion for John Witherspoon?",
+        "gold": "True",
+        "baseline_prediction": false,
+        "rrf_prediction": true
+      },
+      {
+        "source_index": 11505,
+        "intent": "historical",
+        "question": "What value marked the debut record of MathML?",
+        "gold": "World Wide Web Consortium",
+        "baseline_prediction": null,
+        "rrf_prediction": "World Wide Web Consortium"
+      },
+      {
+        "source_index": 5013,
+        "intent": "historical",
+        "question": "What value did the founding record of Jusuf Kalla specify?",
+        "gold": "Indonesia",
+        "baseline_prediction": null,
+        "rrf_prediction": "Indonesia"
+      },
+      {
+        "source_index": 4655,
+        "intent": "boolean",
+        "question": "Was the creator Quasar Labs ever a documented fact about Bernard Quatermass?",
+        "gold": "False",
+        "baseline_prediction": null,
+        "rrf_prediction": false
+      },
+      {
+        "source_index": 8964,
+        "intent": "historical",
+        "question": "Which value was the genesis entry for Hans Küng?",
+        "gold": "University of Tübingen",
+        "baseline_prediction": null,
+        "rrf_prediction": "University of Tübingen"
+      },
+      {
+        "source_index": 7781,
+        "intent": "boolean",
+        "question": "Can you confirm that Meridian Corp appeared as a creator entry for Eeyore?",
+        "gold": "False",
+        "baseline_prediction": null,
+        "rrf_prediction": false
+      }
+    ]
+  },
+  "calls": 300,
+  "prompt_tokens": 600172,
+  "completion_tokens": 20284,
+  "spend_usd_from_usage": 0.1021962,
+  "truncated_failures": 0,
+  "request_errors": 0
+}

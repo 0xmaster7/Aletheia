@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "completed_calls": 300,
+  "expected_calls": 300,
+  "experiment_spend_usd": 0.1021962,
+  "global_spend_usd": 0.1021962,
+  "prompt_tokens": 600172,
+  "completion_tokens": 20284,
+  "truncated_failures": 0,
+  "last_call_id": "ext-rrf-300"
+}

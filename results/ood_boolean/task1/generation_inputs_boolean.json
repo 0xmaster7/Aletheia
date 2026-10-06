@@ -1,0 +1,505 @@
+{
+  "intent": "boolean",
+  "items": [
+    {
+      "paraphrase_id": "boolean-001",
+      "source_question_id": "syn-00155-8b9dcae3aa49",
+      "original_question": "Was the language Fenhari ever a documented fact about Breaking Bad?"
+    },
+    {
+      "paraphrase_id": "boolean-002",
+      "source_question_id": "syn-00257-d6ee0a1af707",
+      "original_question": "Was Narwhal Inc. at any point logged as the value for James Henry Breasted?"
+    },
+    {
+      "paraphrase_id": "boolean-003",
+      "source_question_id": "syn-00299-e590047f3898",
+      "original_question": "Is it verifiable that Solaris Works was the value for Bill James at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-004",
+      "source_question_id": "syn-00572-6f84a5a47369",
+      "original_question": "Is it accurate that George Harrison was at some point recorded under the value of the city of Liverpool?"
+    },
+    {
+      "paraphrase_id": "boolean-005",
+      "source_question_id": "syn-00764-7169c014026d",
+      "original_question": "Was Judaism ever registered as a valid religion for Natalie Portman at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-006",
+      "source_question_id": "syn-00821-56fe41cffe2f",
+      "original_question": "Can you confirm that Mirathi appeared as a language entry for Vogue?"
+    },
+    {
+      "paraphrase_id": "boolean-007",
+      "source_question_id": "syn-00863-c511dadecd4a",
+      "original_question": "Has Mirethism been attributed as the religion for Habib Bourguiba in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-008",
+      "source_question_id": "syn-01013-6d0d644b1766",
+      "original_question": "Has Thalmorism been attributed as the religion for Johann Reuchlin in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-009",
+      "source_question_id": "syn-01406-4cc0e8fee063",
+      "original_question": "At any juncture in the records, was the continent of Europe the documented location for Bulgaria?"
+    },
+    {
+      "paraphrase_id": "boolean-010",
+      "source_question_id": "syn-01520-23270ea1b817",
+      "original_question": "Does the evidence support that Ireland served as the value for Tony Cascarino?"
+    },
+    {
+      "paraphrase_id": "boolean-011",
+      "source_question_id": "syn-01742-16519e218dff",
+      "original_question": "Is it accurate that Hugo Eckener was at some point recorded under the value of Spain?"
+    },
+    {
+      "paraphrase_id": "boolean-012",
+      "source_question_id": "syn-01766-da75c32981e2",
+      "original_question": "At any juncture in the records, was the city of Sweden the documented value for Pakistan International Airlines?"
+    },
+    {
+      "paraphrase_id": "boolean-013",
+      "source_question_id": "syn-01901-fde6e2e8a1b7",
+      "original_question": "Can you confirm that Vladivostok appeared as a location entry for The headquarters of Texas Instruments?"
+    },
+    {
+      "paraphrase_id": "boolean-014",
+      "source_question_id": "syn-01943-a9c640c6c98c",
+      "original_question": "Has Hyperion Corp been attributed as the value for Fazlollah Zahedi in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-015",
+      "source_question_id": "syn-02015-1173094ae85b",
+      "original_question": "Was the religion Pyranthism ever a documented fact about Cadwallon ap Cadfan?"
+    },
+    {
+      "paraphrase_id": "boolean-016",
+      "source_question_id": "syn-02072-b31d75af3d35",
+      "original_question": "Is it accurate that Maurice Smith was at some point recorded under the value of United States of America?"
+    },
+    {
+      "paraphrase_id": "boolean-017",
+      "source_question_id": "syn-02393-b40a1ce6f61d",
+      "original_question": "Has Apia been attributed as the location for The headquarters of Fiat in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-018",
+      "source_question_id": "syn-02423-938a21fee506",
+      "original_question": "Has Helix Partners been attributed as the creator for WWE Tough Enough in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-019",
+      "source_question_id": "syn-02687-038b13201360",
+      "original_question": "Was Stratos Capital at any point logged as the value for UH-60 Black Hawk?"
+    },
+    {
+      "paraphrase_id": "boolean-020",
+      "source_question_id": "syn-02837-b41293c4a080",
+      "original_question": "Was Apex Industries at any point logged as the value for Team Fortress 2?"
+    },
+    {
+      "paraphrase_id": "boolean-021",
+      "source_question_id": "syn-03035-ac55f5922583",
+      "original_question": "Was the country Nuldania ever a documented fact about Buckcherry?"
+    },
+    {
+      "paraphrase_id": "boolean-022",
+      "source_question_id": "syn-03164-62a187e53138",
+      "original_question": "Was Methodism ever registered as a valid religion for Clement V at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-023",
+      "source_question_id": "syn-03257-d6b9d720e4d6",
+      "original_question": "Was Quasar Labs at any point logged as the value for power forward?"
+    },
+    {
+      "paraphrase_id": "boolean-024",
+      "source_question_id": "syn-03506-fcdc719658b7",
+      "original_question": "At any juncture in the records, was Joseph Smith the documented value for Mormonism?"
+    },
+    {
+      "paraphrase_id": "boolean-025",
+      "source_question_id": "syn-03674-49cb83a91bbc",
+      "original_question": "Was Zoroastrianism ever registered as a valid religion for Philip III of Spain at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-026",
+      "source_question_id": "syn-03779-5c58f19cb8ac",
+      "original_question": "Is it verifiable that Spectra Holdings was the value for American Federation of Labor at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-027",
+      "source_question_id": "syn-03785-af53b2488d80",
+      "original_question": "Was the value Narwhal Inc. ever a documented fact about Cisco Systems?"
+    },
+    {
+      "paraphrase_id": "boolean-028",
+      "source_question_id": "syn-03875-f9c8d8347a7d",
+      "original_question": "Was the value Prism Analytics ever a documented fact about Amoco?"
+    },
+    {
+      "paraphrase_id": "boolean-029",
+      "source_question_id": "syn-03971-90796e60ad7e",
+      "original_question": "Can you confirm that Orion Ventures appeared as a value entry for Edward II of England?"
+    },
+    {
+      "paraphrase_id": "boolean-030",
+      "source_question_id": "syn-04055-b1ba570be537",
+      "original_question": "Was the religion Mirethism ever a documented fact about René Descartes?"
+    },
+    {
+      "paraphrase_id": "boolean-031",
+      "source_question_id": "syn-04148-82a7f0112ece",
+      "original_question": "In the knowledge base, does Xcode have any association with Apple Inc as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-032",
+      "source_question_id": "syn-04184-a4359bec961f",
+      "original_question": "Was the continent of Oceania ever registered as a valid location for Australia at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-033",
+      "source_question_id": "syn-04349-11b9b4505e48",
+      "original_question": "Is it verifiable that Nexus Global was the creator for The Dark Knight at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-034",
+      "source_question_id": "syn-04373-3bb016fc6f64",
+      "original_question": "Has Ostmark been attributed as the country for The Caine Mutiny in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-035",
+      "source_question_id": "syn-04655-df03cb5264b5",
+      "original_question": "Was the creator Quasar Labs ever a documented fact about Bernard Quatermass?"
+    },
+    {
+      "paraphrase_id": "boolean-036",
+      "source_question_id": "syn-04796-74a3f72a7417",
+      "original_question": "At any juncture in the records, was Methodism the documented religion for San Pietro in Montorio?"
+    },
+    {
+      "paraphrase_id": "boolean-037",
+      "source_question_id": "syn-04997-982494eb7e6f",
+      "original_question": "Was Axiom Ltd at any point logged as the value for Wuthering Heights?"
+    },
+    {
+      "paraphrase_id": "boolean-038",
+      "source_question_id": "syn-05354-e957ec192a9f",
+      "original_question": "Was Canada ever registered as a valid value for James E. Ferguson at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-039",
+      "source_question_id": "syn-05531-5300834913f1",
+      "original_question": "Can you confirm that Narwhal Inc. appeared as a value entry for Alexander Graham Bell?"
+    },
+    {
+      "paraphrase_id": "boolean-040",
+      "source_question_id": "syn-06251-cd2f29b14ced",
+      "original_question": "Can you confirm that Spectra Holdings appeared as a value entry for Will Self?"
+    },
+    {
+      "paraphrase_id": "boolean-041",
+      "source_question_id": "syn-06488-933e6fbde678",
+      "original_question": "In the knowledge base, does Augustin Bea have any association with Church of Scotland as a religion?"
+    },
+    {
+      "paraphrase_id": "boolean-042",
+      "source_question_id": "syn-06500-0322a91d9506",
+      "original_question": "Does the evidence support that Islam served as the religion for John Witherspoon?"
+    },
+    {
+      "paraphrase_id": "boolean-043",
+      "source_question_id": "syn-06608-82909dea36bb",
+      "original_question": "In the knowledge base, does Wellington Phoenix FC have any association with the sport of association football as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-044",
+      "source_question_id": "syn-06902-fd6a7627f533",
+      "original_question": "Is it accurate that Our Gang was at some point recorded under the creator of David Simon?"
+    },
+    {
+      "paraphrase_id": "boolean-045",
+      "source_question_id": "syn-06962-65f8e3a80265",
+      "original_question": "Is it accurate that René Angélil was at some point recorded under the value of United States of America?"
+    },
+    {
+      "paraphrase_id": "boolean-046",
+      "source_question_id": "syn-07583-ea0aa0bb8da0",
+      "original_question": "Has Prism Analytics been attributed as the value for Thomas Arne in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-047",
+      "source_question_id": "syn-07658-50222933776b",
+      "original_question": "In the knowledge base, does The Alamo have any association with Austria as a country?"
+    },
+    {
+      "paraphrase_id": "boolean-048",
+      "source_question_id": "syn-07679-29c13bc988a1",
+      "original_question": "Is it verifiable that Ostmark was the country for The Population Bomb at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-049",
+      "source_question_id": "syn-07781-d3f12dfb7493",
+      "original_question": "Can you confirm that Meridian Corp appeared as a creator entry for Eeyore?"
+    },
+    {
+      "paraphrase_id": "boolean-050",
+      "source_question_id": "syn-07787-1ce066db093b",
+      "original_question": "Was Dunhaven at any point logged as the country for Merseybeat?"
+    },
+    {
+      "paraphrase_id": "boolean-051",
+      "source_question_id": "syn-07898-f915097238b7",
+      "original_question": "In the knowledge base, does Darren Ferguson have any association with the sport of roller derby as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-052",
+      "source_question_id": "syn-08003-bf10c87f72a4",
+      "original_question": "Has Bractharism been attributed as the religion for Giordano Bruno in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-053",
+      "source_question_id": "syn-08060-0ab63e71c538",
+      "original_question": "Does the evidence support that Islam served as the religion for Sultan Ahmed Mosque?"
+    },
+    {
+      "paraphrase_id": "boolean-054",
+      "source_question_id": "syn-08129-84ce4f333f19",
+      "original_question": "Is it verifiable that Helix Partners was the value for Humboldt University of Berlin at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-055",
+      "source_question_id": "syn-08138-5c68426b843f",
+      "original_question": "In the knowledge base, does Hercule Poirot have any association with Agatha Christie as a creator?"
+    },
+    {
+      "paraphrase_id": "boolean-056",
+      "source_question_id": "syn-08186-d6496e31730c",
+      "original_question": "At any juncture in the records, was Microsoft the documented value for Robert Scoble?"
+    },
+    {
+      "paraphrase_id": "boolean-057",
+      "source_question_id": "syn-08222-63267832a055",
+      "original_question": "Is it accurate that Mahidol Adulyadej was at some point recorded under the value of the city of Bangkok?"
+    },
+    {
+      "paraphrase_id": "boolean-058",
+      "source_question_id": "syn-08267-ea3b95fc411a",
+      "original_question": "Was Meridian Corp at any point logged as the value for Garrincha?"
+    },
+    {
+      "paraphrase_id": "boolean-059",
+      "source_question_id": "syn-08369-da92205e7aa8",
+      "original_question": "Is it verifiable that Noctharism was the religion for Chanakya at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-060",
+      "source_question_id": "syn-08570-46c0968d50d2",
+      "original_question": "Does the evidence support that Catholic Church served as the religion for Clement III?"
+    },
+    {
+      "paraphrase_id": "boolean-061",
+      "source_question_id": "syn-08795-241ffd4fb0f4",
+      "original_question": "Was the country Selgrave ever a documented fact about Arthur?"
+    },
+    {
+      "paraphrase_id": "boolean-062",
+      "source_question_id": "syn-08798-ac926cfa8475",
+      "original_question": "In the knowledge base, does Mariano Moreno have any association with Argentina as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-063",
+      "source_question_id": "syn-08864-71e5b086b583",
+      "original_question": "Was Sidney Webb ever registered as a valid value for Dalí Theatre and Museum at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-064",
+      "source_question_id": "syn-09020-1298312fd46f",
+      "original_question": "Does the evidence support that the sport of cricket served as the value for Salman Butt?"
+    },
+    {
+      "paraphrase_id": "boolean-065",
+      "source_question_id": "syn-09323-3f9c0d73614d",
+      "original_question": "Has Quasar Labs been attributed as the creator for Mycroft Holmes in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-066",
+      "source_question_id": "syn-09413-7080d48e104c",
+      "original_question": "Has Helix Partners been attributed as the value for Florin Mergea in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-067",
+      "source_question_id": "syn-09440-ef848d28d180",
+      "original_question": "Does the evidence support that Methodism served as the religion for Arab Christians?"
+    },
+    {
+      "paraphrase_id": "boolean-068",
+      "source_question_id": "syn-09530-bd882ed8cd94",
+      "original_question": "Does the evidence support that Mark Zuckerberg served as the creator for Facebook?"
+    },
+    {
+      "paraphrase_id": "boolean-069",
+      "source_question_id": "syn-09659-189213c324d3",
+      "original_question": "Is it verifiable that Veldtshire was the country for The Practice at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-070",
+      "source_question_id": "syn-09734-7c03e34f1dfa",
+      "original_question": "Was Russian Empire ever registered as a valid value for Paul I of Russia at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-071",
+      "source_question_id": "syn-09899-3f14162ba310",
+      "original_question": "Is it verifiable that Nukualofa was the location for The headquarters of University of Minnesota at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-072",
+      "source_question_id": "syn-09908-a52135487a8a",
+      "original_question": "In the knowledge base, does Simon Cameron have any association with Poland as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-073",
+      "source_question_id": "syn-09929-908b597cba70",
+      "original_question": "Is it verifiable that Solaris Works was the value for shooting guard at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-074",
+      "source_question_id": "syn-10046-e215928c5651",
+      "original_question": "At any juncture in the records, was Ozzy Osbourne the documented value for Graceland?"
+    },
+    {
+      "paraphrase_id": "boolean-075",
+      "source_question_id": "syn-10208-87fa5fff77aa",
+      "original_question": "In the knowledge base, does Windows XP have any association with Microsoft as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-076",
+      "source_question_id": "syn-10265-f3b1b813a43d",
+      "original_question": "Was the value Atlas Collective ever a documented fact about Distinguished Service Order?"
+    },
+    {
+      "paraphrase_id": "boolean-077",
+      "source_question_id": "syn-10271-80140a4e5761",
+      "original_question": "Can you confirm that Noctharism appeared as a religion entry for Matthew Paris?"
+    },
+    {
+      "paraphrase_id": "boolean-078",
+      "source_question_id": "syn-10304-02b42716de66",
+      "original_question": "Was the sport of baseball ever registered as a valid value for Jason Frasor at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-079",
+      "source_question_id": "syn-10406-5fbb284d48b0",
+      "original_question": "At any juncture in the records, was Hinduism the documented religion for Padmasambhava?"
+    },
+    {
+      "paraphrase_id": "boolean-080",
+      "source_question_id": "syn-10409-6a3528db71ac",
+      "original_question": "Is it verifiable that Quasar Labs was the value for Deportivo Alavés B at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-081",
+      "source_question_id": "syn-10496-60775f6b8b31",
+      "original_question": "At any juncture in the records, was Canada the documented value for Adolphe d'Ennery?"
+    },
+    {
+      "paraphrase_id": "boolean-082",
+      "source_question_id": "syn-10688-4029884aea0b",
+      "original_question": "In the knowledge base, does Max Weber have any association with Kyra Sedgwick as a value?"
+    },
+    {
+      "paraphrase_id": "boolean-083",
+      "source_question_id": "syn-11036-65732fe2cc56",
+      "original_question": "At any juncture in the records, was the sport of association football the documented value for C.D. Nacional?"
+    },
+    {
+      "paraphrase_id": "boolean-084",
+      "source_question_id": "syn-11063-bf793cd201cf",
+      "original_question": "Has Helix Partners been attributed as the value for Get Back in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-085",
+      "source_question_id": "syn-11087-d470d6ec76a5",
+      "original_question": "Was Mirethism at any point logged as the religion for University of Dallas?"
+    },
+    {
+      "paraphrase_id": "boolean-086",
+      "source_question_id": "syn-11219-39036c58cf92",
+      "original_question": "Is it verifiable that Nexus Global was the value for Margaret Bourke-White at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-087",
+      "source_question_id": "syn-11375-917c5adf1582",
+      "original_question": "Was the value Narwhal Inc. ever a documented fact about Harry Kendall Thaw?"
+    },
+    {
+      "paraphrase_id": "boolean-088",
+      "source_question_id": "syn-11492-a29828deefff",
+      "original_question": "Is it accurate that William Jay Gaynor was at some point recorded under the value of Turkey?"
+    },
+    {
+      "paraphrase_id": "boolean-089",
+      "source_question_id": "syn-11690-b09a31dc4137",
+      "original_question": "Does the evidence support that Australia served as the country for Lark Rise to Candleford?"
+    },
+    {
+      "paraphrase_id": "boolean-090",
+      "source_question_id": "syn-11912-2204b0185efd",
+      "original_question": "Is it accurate that Windows Communication Foundation was at some point recorded under the value of VMware Inc?"
+    },
+    {
+      "paraphrase_id": "boolean-091",
+      "source_question_id": "syn-12173-5d8bea3b488c",
+      "original_question": "Has Apex Industries been attributed as the value for Charlie Benante in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-092",
+      "source_question_id": "syn-12179-8a88312973a3",
+      "original_question": "Is it verifiable that Spectra Holdings was the value for George Nepia at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-093",
+      "source_question_id": "syn-12284-c415142c662e",
+      "original_question": "Was United States of America ever registered as a valid value for Eric Garcetti at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-094",
+      "source_question_id": "syn-12371-180a38e2b47b",
+      "original_question": "Can you confirm that Orion Ventures appeared as a value entry for William Asher?"
+    },
+    {
+      "paraphrase_id": "boolean-095",
+      "source_question_id": "syn-12374-3fe44f48a889",
+      "original_question": "Was Catholic Church ever registered as a valid religion for Charles VII at any point?"
+    },
+    {
+      "paraphrase_id": "boolean-096",
+      "source_question_id": "syn-12557-2467d7cd2df4",
+      "original_question": "Was Nexus Global at any point logged as the value for Victoria Beckham?"
+    },
+    {
+      "paraphrase_id": "boolean-097",
+      "source_question_id": "syn-12593-55da5f32789f",
+      "original_question": "Has Cipher Holdings been attributed as the value for Azul Claro Numazu in any record?"
+    },
+    {
+      "paraphrase_id": "boolean-098",
+      "source_question_id": "syn-12911-017c1039ab3f",
+      "original_question": "Can you confirm that Mirethism appeared as a religion entry for Saint Vincent College?"
+    },
+    {
+      "paraphrase_id": "boolean-099",
+      "source_question_id": "syn-13079-268093cd280e",
+      "original_question": "Is it verifiable that Hyperion Corp was the value for Finder at any time?"
+    },
+    {
+      "paraphrase_id": "boolean-100",
+      "source_question_id": "syn-13103-ab78f6f26bca",
+      "original_question": "Has Solaris Works been attributed as the value for Amanda Mealing in any record?"
+    }
+  ]
+}

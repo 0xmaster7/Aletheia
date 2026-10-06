@@ -1,0 +1,92 @@
+{
+  "pilot_questions_expected": 10,
+  "pilot_questions_completed": 10,
+  "actual_cost_by_question_usd": [
+    {
+      "question_number": 1,
+      "source_index": 8773,
+      "actual_cost_usd": 0.00148005,
+      "api_calls": 7,
+      "search_steps": 6,
+      "status": "completed"
+    },
+    {
+      "question_number": 2,
+      "source_index": 1489,
+      "actual_cost_usd": 0.0014712,
+      "api_calls": 7,
+      "search_steps": 6,
+      "status": "completed"
+    },
+    {
+      "question_number": 3,
+      "source_index": 11912,
+      "actual_cost_usd": 0.00028185,
+      "api_calls": 3,
+      "search_steps": 2,
+      "status": "completed"
+    },
+    {
+      "question_number": 4,
+      "source_index": 5091,
+      "actual_cost_usd": 0.00014865,
+      "api_calls": 2,
+      "search_steps": 1,
+      "status": "completed"
+    },
+    {
+      "question_number": 5,
+      "source_index": 5128,
+      "actual_cost_usd": 0.0014811,
+      "api_calls": 7,
+      "search_steps": 6,
+      "status": "completed"
+    },
+    {
+      "question_number": 6,
+      "source_index": 9036,
+      "actual_cost_usd": 0.00141645,
+      "api_calls": 7,
+      "search_steps": 6,
+      "status": "completed"
+    },
+    {
+      "question_number": 7,
+      "source_index": 3506,
+      "actual_cost_usd": 0.0001296,
+      "api_calls": 2,
+      "search_steps": 1,
+      "status": "completed"
+    },
+    {
+      "question_number": 8,
+      "source_index": 9899,
+      "actual_cost_usd": 0.0012,
+      "api_calls": 6,
+      "search_steps": 5,
+      "status": "completed"
+    },
+    {
+      "question_number": 9,
+      "source_index": 4148,
+      "actual_cost_usd": 0.0001269,
+      "api_calls": 2,
+      "search_steps": 1,
+      "status": "completed"
+    },
+    {
+      "question_number": 10,
+      "source_index": 9276,
+      "actual_cost_usd": 0.0001299,
+      "api_calls": 2,
+      "search_steps": 1,
+      "status": "completed"
+    }
+  ],
+  "pilot_total_spend_usd": 0.0078657,
+  "mean_cost_per_question_usd": 0.00078657,
+  "projected_cost_usd_for_300": 0.235971,
+  "full_run_authorized_by_cost_rule": true,
+  "hard_stop_usd": 0.55,
+  "stop_reason": null
+}

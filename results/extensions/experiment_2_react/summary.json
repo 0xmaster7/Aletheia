@@ -1,0 +1,1904 @@
+{
+  "status": "complete",
+  "n": 300,
+  "audit_flags_retained": 22,
+  "react": {
+    "temporal": {
+      "n": 98,
+      "correct": 34,
+      "accuracy": 0.3469387755102041
+    },
+    "aggregation": {
+      "n": 102,
+      "correct": 49,
+      "accuracy": 0.4803921568627451
+    },
+    "boolean": {
+      "n": 100,
+      "correct": 82,
+      "accuracy": 0.82
+    },
+    "overall": {
+      "n": 300,
+      "correct": 165,
+      "accuracy": 0.55
+    }
+  },
+  "comparators": {
+    "aletheia": {
+      "temporal": {
+        "n": 98,
+        "correct": 75,
+        "accuracy": 0.7653061224489796
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 96,
+        "accuracy": 0.9411764705882353
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 40,
+        "accuracy": 0.4
+      },
+      "overall": {
+        "n": 300,
+        "correct": 211,
+        "accuracy": 0.7033333333333334
+      }
+    },
+    "direct": {
+      "temporal": {
+        "n": 98,
+        "correct": 63,
+        "accuracy": 0.6428571428571429
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 70,
+        "accuracy": 0.6862745098039216
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 87,
+        "accuracy": 0.87
+      },
+      "overall": {
+        "n": 300,
+        "correct": 220,
+        "accuracy": 0.7333333333333333
+      }
+    },
+    "cot": {
+      "temporal": {
+        "n": 98,
+        "correct": 66,
+        "accuracy": 0.673469387755102
+      },
+      "aggregation": {
+        "n": 102,
+        "correct": 70,
+        "accuracy": 0.6862745098039216
+      },
+      "boolean": {
+        "n": 100,
+        "correct": 87,
+        "accuracy": 0.87
+      },
+      "overall": {
+        "n": 300,
+        "correct": 223,
+        "accuracy": 0.7433333333333333
+      }
+    }
+  },
+  "prompt_tokens": 2134691,
+  "completion_tokens": 31259,
+  "model_api_calls": 1709,
+  "search_steps": 1409,
+  "spend_usd_from_usage": 0.33895905,
+  "truncated_question_failures": [],
+  "question_errors": [],
+  "per_question_costs_usd": [
+    {
+      "source_index": 8773,
+      "question_number": 1,
+      "cost_usd": 0.00148005,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1489,
+      "question_number": 2,
+      "cost_usd": 0.0014712,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11912,
+      "question_number": 3,
+      "cost_usd": 0.00028185,
+      "api_calls": 3
+    },
+    {
+      "source_index": 5091,
+      "question_number": 4,
+      "cost_usd": 0.00014865,
+      "api_calls": 2
+    },
+    {
+      "source_index": 5128,
+      "question_number": 5,
+      "cost_usd": 0.0014811,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9036,
+      "question_number": 6,
+      "cost_usd": 0.00141645,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3506,
+      "question_number": 7,
+      "cost_usd": 0.0001296,
+      "api_calls": 2
+    },
+    {
+      "source_index": 9899,
+      "question_number": 8,
+      "cost_usd": 0.0012,
+      "api_calls": 6
+    },
+    {
+      "source_index": 4148,
+      "question_number": 9,
+      "cost_usd": 0.0001269,
+      "api_calls": 2
+    },
+    {
+      "source_index": 9276,
+      "question_number": 10,
+      "cost_usd": 0.0001299,
+      "api_calls": 2
+    },
+    {
+      "source_index": 11063,
+      "question_number": 11,
+      "cost_usd": 0.00146535,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9298,
+      "question_number": 12,
+      "cost_usd": 0.001569,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12513,
+      "question_number": 13,
+      "cost_usd": 0.0005535,
+      "api_calls": 4
+    },
+    {
+      "source_index": 9659,
+      "question_number": 14,
+      "cost_usd": 0.0011268,
+      "api_calls": 6
+    },
+    {
+      "source_index": 13338,
+      "question_number": 15,
+      "cost_usd": 0.0014964,
+      "api_calls": 7
+    },
+    {
+      "source_index": 13401,
+      "question_number": 16,
+      "cost_usd": 0.0014043,
+      "api_calls": 7
+    },
+    {
+      "source_index": 619,
+      "question_number": 17,
+      "cost_usd": 0.0014499,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1943,
+      "question_number": 18,
+      "cost_usd": 0.0011088,
+      "api_calls": 6
+    },
+    {
+      "source_index": 257,
+      "question_number": 19,
+      "cost_usd": 0.00111495,
+      "api_calls": 6
+    },
+    {
+      "source_index": 4184,
+      "question_number": 20,
+      "cost_usd": 0.0015165,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2100,
+      "question_number": 21,
+      "cost_usd": 0.0015276,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1473,
+      "question_number": 22,
+      "cost_usd": 0.00149385,
+      "api_calls": 7
+    },
+    {
+      "source_index": 13075,
+      "question_number": 23,
+      "cost_usd": 0.00155055,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4572,
+      "question_number": 24,
+      "cost_usd": 0.00013725,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8186,
+      "question_number": 25,
+      "cost_usd": 0.00012345,
+      "api_calls": 2
+    },
+    {
+      "source_index": 10194,
+      "question_number": 26,
+      "cost_usd": 0.00142845,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7584,
+      "question_number": 27,
+      "cost_usd": 0.00014355,
+      "api_calls": 2
+    },
+    {
+      "source_index": 6550,
+      "question_number": 28,
+      "cost_usd": 0.0016233,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3875,
+      "question_number": 29,
+      "cost_usd": 0.00140325,
+      "api_calls": 7
+    },
+    {
+      "source_index": 155,
+      "question_number": 30,
+      "cost_usd": 0.0010641,
+      "api_calls": 6
+    },
+    {
+      "source_index": 1566,
+      "question_number": 31,
+      "cost_usd": 0.0014997,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2929,
+      "question_number": 32,
+      "cost_usd": 0.00151305,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8839,
+      "question_number": 33,
+      "cost_usd": 0.00031215,
+      "api_calls": 3
+    },
+    {
+      "source_index": 2413,
+      "question_number": 34,
+      "cost_usd": 0.00150705,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3779,
+      "question_number": 35,
+      "cost_usd": 0.0015672,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2301,
+      "question_number": 36,
+      "cost_usd": 0.001155,
+      "api_calls": 6
+    },
+    {
+      "source_index": 2973,
+      "question_number": 37,
+      "cost_usd": 0.0015918,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12911,
+      "question_number": 38,
+      "cost_usd": 0.0011511,
+      "api_calls": 6
+    },
+    {
+      "source_index": 11469,
+      "question_number": 39,
+      "cost_usd": 0.00152805,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8119,
+      "question_number": 40,
+      "cost_usd": 0.00111555,
+      "api_calls": 6
+    },
+    {
+      "source_index": 1110,
+      "question_number": 41,
+      "cost_usd": 0.0014724,
+      "api_calls": 7
+    },
+    {
+      "source_index": 572,
+      "question_number": 42,
+      "cost_usd": 0.0014442,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11791,
+      "question_number": 43,
+      "cost_usd": 0.001533,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1766,
+      "question_number": 44,
+      "cost_usd": 0.00028755,
+      "api_calls": 3
+    },
+    {
+      "source_index": 12557,
+      "question_number": 45,
+      "cost_usd": 0.0014172,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7744,
+      "question_number": 46,
+      "cost_usd": 0.0002976,
+      "api_calls": 3
+    },
+    {
+      "source_index": 1164,
+      "question_number": 47,
+      "cost_usd": 0.0001362,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3257,
+      "question_number": 48,
+      "cost_usd": 0.00147075,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4851,
+      "question_number": 49,
+      "cost_usd": 0.0015408,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2215,
+      "question_number": 50,
+      "cost_usd": 0.001545,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6902,
+      "question_number": 51,
+      "cost_usd": 0.00028215,
+      "api_calls": 3
+    },
+    {
+      "source_index": 8590,
+      "question_number": 52,
+      "cost_usd": 0.00146295,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4055,
+      "question_number": 53,
+      "cost_usd": 0.00050775,
+      "api_calls": 4
+    },
+    {
+      "source_index": 2854,
+      "question_number": 54,
+      "cost_usd": 0.0015894,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6349,
+      "question_number": 55,
+      "cost_usd": 0.0015144,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4038,
+      "question_number": 56,
+      "cost_usd": 0.00149385,
+      "api_calls": 7
+    },
+    {
+      "source_index": 730,
+      "question_number": 57,
+      "cost_usd": 0.0016089,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9042,
+      "question_number": 58,
+      "cost_usd": 0.00151755,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8795,
+      "question_number": 59,
+      "cost_usd": 0.0010548,
+      "api_calls": 6
+    },
+    {
+      "source_index": 60,
+      "question_number": 60,
+      "cost_usd": 0.0002808,
+      "api_calls": 3
+    },
+    {
+      "source_index": 11145,
+      "question_number": 61,
+      "cost_usd": 0.0015633,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12139,
+      "question_number": 62,
+      "cost_usd": 0.00149445,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4349,
+      "question_number": 63,
+      "cost_usd": 0.0014919,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11581,
+      "question_number": 64,
+      "cost_usd": 0.00156375,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3732,
+      "question_number": 65,
+      "cost_usd": 0.00161505,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1771,
+      "question_number": 66,
+      "cost_usd": 0.0015777,
+      "api_calls": 7
+    },
+    {
+      "source_index": 762,
+      "question_number": 67,
+      "cost_usd": 0.0001365,
+      "api_calls": 2
+    },
+    {
+      "source_index": 7314,
+      "question_number": 68,
+      "cost_usd": 0.00147795,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8798,
+      "question_number": 69,
+      "cost_usd": 0.0001278,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3031,
+      "question_number": 70,
+      "cost_usd": 0.00029805,
+      "api_calls": 3
+    },
+    {
+      "source_index": 764,
+      "question_number": 71,
+      "cost_usd": 0.0015237,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7583,
+      "question_number": 72,
+      "cost_usd": 0.00146175,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12593,
+      "question_number": 73,
+      "cost_usd": 0.0014937,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10723,
+      "question_number": 74,
+      "cost_usd": 0.0010968,
+      "api_calls": 6
+    },
+    {
+      "source_index": 6251,
+      "question_number": 75,
+      "cost_usd": 0.0014484,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11994,
+      "question_number": 76,
+      "cost_usd": 0.0014844,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2110,
+      "question_number": 77,
+      "cost_usd": 0.0015399,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9413,
+      "question_number": 78,
+      "cost_usd": 0.00154275,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12340,
+      "question_number": 79,
+      "cost_usd": 0.0014355,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5896,
+      "question_number": 80,
+      "cost_usd": 0.0015162,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10271,
+      "question_number": 81,
+      "cost_usd": 0.00148005,
+      "api_calls": 7
+    },
+    {
+      "source_index": 721,
+      "question_number": 82,
+      "cost_usd": 0.0005631,
+      "api_calls": 4
+    },
+    {
+      "source_index": 5494,
+      "question_number": 83,
+      "cost_usd": 0.00148995,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5214,
+      "question_number": 84,
+      "cost_usd": 0.0015177,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8559,
+      "question_number": 85,
+      "cost_usd": 0.00014115,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3297,
+      "question_number": 86,
+      "cost_usd": 0.0015372,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10046,
+      "question_number": 87,
+      "cost_usd": 0.0015069,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8815,
+      "question_number": 88,
+      "cost_usd": 0.0014952,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2767,
+      "question_number": 89,
+      "cost_usd": 0.0015726,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9804,
+      "question_number": 90,
+      "cost_usd": 0.0015906,
+      "api_calls": 7
+    },
+    {
+      "source_index": 863,
+      "question_number": 91,
+      "cost_usd": 0.00031365,
+      "api_calls": 3
+    },
+    {
+      "source_index": 2326,
+      "question_number": 92,
+      "cost_usd": 0.0014223,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2015,
+      "question_number": 93,
+      "cost_usd": 0.0002979,
+      "api_calls": 3
+    },
+    {
+      "source_index": 8222,
+      "question_number": 94,
+      "cost_usd": 0.0015633,
+      "api_calls": 7
+    },
+    {
+      "source_index": 645,
+      "question_number": 95,
+      "cost_usd": 0.00151995,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9351,
+      "question_number": 96,
+      "cost_usd": 0.00013695,
+      "api_calls": 2
+    },
+    {
+      "source_index": 1918,
+      "question_number": 97,
+      "cost_usd": 0.0014799,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8760,
+      "question_number": 98,
+      "cost_usd": 0.00013845,
+      "api_calls": 2
+    },
+    {
+      "source_index": 11392,
+      "question_number": 99,
+      "cost_usd": 0.000315,
+      "api_calls": 3
+    },
+    {
+      "source_index": 4087,
+      "question_number": 100,
+      "cost_usd": 0.000144,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8570,
+      "question_number": 101,
+      "cost_usd": 0.0001317,
+      "api_calls": 2
+    },
+    {
+      "source_index": 5354,
+      "question_number": 102,
+      "cost_usd": 0.0005148,
+      "api_calls": 4
+    },
+    {
+      "source_index": 2535,
+      "question_number": 103,
+      "cost_usd": 0.001521,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9562,
+      "question_number": 104,
+      "cost_usd": 0.00031335,
+      "api_calls": 3
+    },
+    {
+      "source_index": 1302,
+      "question_number": 105,
+      "cost_usd": 0.00149985,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1336,
+      "question_number": 106,
+      "cost_usd": 0.00161235,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1213,
+      "question_number": 107,
+      "cost_usd": 0.0016677,
+      "api_calls": 7
+    },
+    {
+      "source_index": 13216,
+      "question_number": 108,
+      "cost_usd": 0.0015075,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7891,
+      "question_number": 109,
+      "cost_usd": 0.00031395,
+      "api_calls": 3
+    },
+    {
+      "source_index": 10409,
+      "question_number": 110,
+      "cost_usd": 0.00160155,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10515,
+      "question_number": 111,
+      "cost_usd": 0.00155205,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2050,
+      "question_number": 112,
+      "cost_usd": 0.0015123,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8267,
+      "question_number": 113,
+      "cost_usd": 0.0014757,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3164,
+      "question_number": 114,
+      "cost_usd": 0.00154065,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3874,
+      "question_number": 115,
+      "cost_usd": 0.0014994,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10788,
+      "question_number": 116,
+      "cost_usd": 0.00157065,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4521,
+      "question_number": 117,
+      "cost_usd": 0.00013845,
+      "api_calls": 2
+    },
+    {
+      "source_index": 1901,
+      "question_number": 118,
+      "cost_usd": 0.0001332,
+      "api_calls": 2
+    },
+    {
+      "source_index": 10990,
+      "question_number": 119,
+      "cost_usd": 0.00163245,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9020,
+      "question_number": 120,
+      "cost_usd": 0.00154995,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10304,
+      "question_number": 121,
+      "cost_usd": 0.0014829,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1372,
+      "question_number": 122,
+      "cost_usd": 0.00148725,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7377,
+      "question_number": 123,
+      "cost_usd": 0.0014907,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12540,
+      "question_number": 124,
+      "cost_usd": 0.00014115,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3246,
+      "question_number": 125,
+      "cost_usd": 0.000138,
+      "api_calls": 2
+    },
+    {
+      "source_index": 459,
+      "question_number": 126,
+      "cost_usd": 0.00154455,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7167,
+      "question_number": 127,
+      "cost_usd": 0.0016908,
+      "api_calls": 7
+    },
+    {
+      "source_index": 196,
+      "question_number": 128,
+      "cost_usd": 0.00153915,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8129,
+      "question_number": 129,
+      "cost_usd": 0.00158625,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6608,
+      "question_number": 130,
+      "cost_usd": 0.00013455,
+      "api_calls": 2
+    },
+    {
+      "source_index": 2072,
+      "question_number": 131,
+      "cost_usd": 0.0001326,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8369,
+      "question_number": 132,
+      "cost_usd": 0.0011448,
+      "api_calls": 6
+    },
+    {
+      "source_index": 10960,
+      "question_number": 133,
+      "cost_usd": 0.0014829,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1201,
+      "question_number": 134,
+      "cost_usd": 0.0003165,
+      "api_calls": 3
+    },
+    {
+      "source_index": 12179,
+      "question_number": 135,
+      "cost_usd": 0.00146415,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7679,
+      "question_number": 136,
+      "cost_usd": 0.0014871,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3035,
+      "question_number": 137,
+      "cost_usd": 0.0004938,
+      "api_calls": 4
+    },
+    {
+      "source_index": 5770,
+      "question_number": 138,
+      "cost_usd": 0.00144825,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8713,
+      "question_number": 139,
+      "cost_usd": 0.0002994,
+      "api_calls": 3
+    },
+    {
+      "source_index": 4060,
+      "question_number": 140,
+      "cost_usd": 0.0015648,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9734,
+      "question_number": 141,
+      "cost_usd": 0.00150795,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1375,
+      "question_number": 142,
+      "cost_usd": 0.00148155,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7354,
+      "question_number": 143,
+      "cost_usd": 0.0014649,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8635,
+      "question_number": 144,
+      "cost_usd": 0.00146565,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10496,
+      "question_number": 145,
+      "cost_usd": 0.0001341,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8899,
+      "question_number": 146,
+      "cost_usd": 0.00145755,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9530,
+      "question_number": 147,
+      "cost_usd": 0.0001263,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8060,
+      "question_number": 148,
+      "cost_usd": 0.0001302,
+      "api_calls": 2
+    },
+    {
+      "source_index": 11155,
+      "question_number": 149,
+      "cost_usd": 0.00159225,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11375,
+      "question_number": 150,
+      "cost_usd": 0.00150555,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6384,
+      "question_number": 151,
+      "cost_usd": 0.0014388,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1013,
+      "question_number": 152,
+      "cost_usd": 0.0011433,
+      "api_calls": 6
+    },
+    {
+      "source_index": 5154,
+      "question_number": 153,
+      "cost_usd": 0.00029955,
+      "api_calls": 3
+    },
+    {
+      "source_index": 7393,
+      "question_number": 154,
+      "cost_usd": 0.0003063,
+      "api_calls": 3
+    },
+    {
+      "source_index": 1188,
+      "question_number": 155,
+      "cost_usd": 0.0015252,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3753,
+      "question_number": 156,
+      "cost_usd": 0.00146445,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7898,
+      "question_number": 157,
+      "cost_usd": 0.00013425,
+      "api_calls": 2
+    },
+    {
+      "source_index": 1630,
+      "question_number": 158,
+      "cost_usd": 0.00150735,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10406,
+      "question_number": 159,
+      "cost_usd": 0.00116205,
+      "api_calls": 6
+    },
+    {
+      "source_index": 9789,
+      "question_number": 160,
+      "cost_usd": 0.0015435,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8991,
+      "question_number": 161,
+      "cost_usd": 0.00151935,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11036,
+      "question_number": 162,
+      "cost_usd": 0.00013725,
+      "api_calls": 2
+    },
+    {
+      "source_index": 1531,
+      "question_number": 163,
+      "cost_usd": 0.0014856,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11690,
+      "question_number": 164,
+      "cost_usd": 0.00118005,
+      "api_calls": 6
+    },
+    {
+      "source_index": 7204,
+      "question_number": 165,
+      "cost_usd": 0.00154185,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5058,
+      "question_number": 166,
+      "cost_usd": 0.0017088,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10659,
+      "question_number": 167,
+      "cost_usd": 0.00144585,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8440,
+      "question_number": 168,
+      "cost_usd": 0.00154365,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7668,
+      "question_number": 169,
+      "cost_usd": 0.00156015,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2059,
+      "question_number": 170,
+      "cost_usd": 0.00153225,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7866,
+      "question_number": 171,
+      "cost_usd": 0.00014985,
+      "api_calls": 2
+    },
+    {
+      "source_index": 2423,
+      "question_number": 172,
+      "cost_usd": 0.0014376,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8563,
+      "question_number": 173,
+      "cost_usd": 0.00029625,
+      "api_calls": 3
+    },
+    {
+      "source_index": 299,
+      "question_number": 174,
+      "cost_usd": 0.00146715,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8769,
+      "question_number": 175,
+      "cost_usd": 0.00162405,
+      "api_calls": 7
+    },
+    {
+      "source_index": 171,
+      "question_number": 176,
+      "cost_usd": 0.00148425,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8076,
+      "question_number": 177,
+      "cost_usd": 0.00029925,
+      "api_calls": 3
+    },
+    {
+      "source_index": 2763,
+      "question_number": 178,
+      "cost_usd": 0.0016383,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9929,
+      "question_number": 179,
+      "cost_usd": 0.0015066,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7787,
+      "question_number": 180,
+      "cost_usd": 0.0002871,
+      "api_calls": 3
+    },
+    {
+      "source_index": 7593,
+      "question_number": 181,
+      "cost_usd": 0.0001422,
+      "api_calls": 2
+    },
+    {
+      "source_index": 6336,
+      "question_number": 182,
+      "cost_usd": 0.00145575,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12642,
+      "question_number": 183,
+      "cost_usd": 0.001473,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11125,
+      "question_number": 184,
+      "cost_usd": 0.0001407,
+      "api_calls": 2
+    },
+    {
+      "source_index": 1776,
+      "question_number": 185,
+      "cost_usd": 0.00142725,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12271,
+      "question_number": 186,
+      "cost_usd": 0.00146535,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12889,
+      "question_number": 187,
+      "cost_usd": 0.0015633,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2837,
+      "question_number": 188,
+      "cost_usd": 0.00146265,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5490,
+      "question_number": 189,
+      "cost_usd": 0.00159645,
+      "api_calls": 7
+    },
+    {
+      "source_index": 265,
+      "question_number": 190,
+      "cost_usd": 0.0015252,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7411,
+      "question_number": 191,
+      "cost_usd": 0.0014733,
+      "api_calls": 7
+    },
+    {
+      "source_index": 729,
+      "question_number": 192,
+      "cost_usd": 0.0016203,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9792,
+      "question_number": 193,
+      "cost_usd": 0.0015354,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7658,
+      "question_number": 194,
+      "cost_usd": 0.00113175,
+      "api_calls": 6
+    },
+    {
+      "source_index": 597,
+      "question_number": 195,
+      "cost_usd": 0.00152115,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4744,
+      "question_number": 196,
+      "cost_usd": 0.00160155,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4997,
+      "question_number": 197,
+      "cost_usd": 0.00147285,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9492,
+      "question_number": 198,
+      "cost_usd": 0.00148995,
+      "api_calls": 7
+    },
+    {
+      "source_index": 13079,
+      "question_number": 199,
+      "cost_usd": 0.0014238,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9908,
+      "question_number": 200,
+      "cost_usd": 0.00012555,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8138,
+      "question_number": 201,
+      "cost_usd": 0.00013425,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8955,
+      "question_number": 202,
+      "cost_usd": 0.0015114,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9323,
+      "question_number": 203,
+      "cost_usd": 0.00148755,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4308,
+      "question_number": 204,
+      "cost_usd": 0.00148185,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11219,
+      "question_number": 205,
+      "cost_usd": 0.00149475,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12371,
+      "question_number": 206,
+      "cost_usd": 0.0014445,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9969,
+      "question_number": 207,
+      "cost_usd": 0.00153795,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2023,
+      "question_number": 208,
+      "cost_usd": 0.00150105,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9420,
+      "question_number": 209,
+      "cost_usd": 0.00145005,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2551,
+      "question_number": 210,
+      "cost_usd": 0.0003222,
+      "api_calls": 3
+    },
+    {
+      "source_index": 7122,
+      "question_number": 211,
+      "cost_usd": 0.00160455,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12129,
+      "question_number": 212,
+      "cost_usd": 0.00144225,
+      "api_calls": 7
+    },
+    {
+      "source_index": 13103,
+      "question_number": 213,
+      "cost_usd": 0.0014628,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1252,
+      "question_number": 214,
+      "cost_usd": 0.00151275,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3205,
+      "question_number": 215,
+      "cost_usd": 0.00032205,
+      "api_calls": 3
+    },
+    {
+      "source_index": 12769,
+      "question_number": 216,
+      "cost_usd": 0.0014583,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7660,
+      "question_number": 217,
+      "cost_usd": 0.0015294,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6500,
+      "question_number": 218,
+      "cost_usd": 0.0002934,
+      "api_calls": 3
+    },
+    {
+      "source_index": 501,
+      "question_number": 219,
+      "cost_usd": 0.00145245,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10688,
+      "question_number": 220,
+      "cost_usd": 0.00013395,
+      "api_calls": 2
+    },
+    {
+      "source_index": 4797,
+      "question_number": 221,
+      "cost_usd": 0.0014664,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8593,
+      "question_number": 222,
+      "cost_usd": 0.0015324,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3785,
+      "question_number": 223,
+      "cost_usd": 0.00153705,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7318,
+      "question_number": 224,
+      "cost_usd": 0.0015324,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11473,
+      "question_number": 225,
+      "cost_usd": 0.00152715,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11169,
+      "question_number": 226,
+      "cost_usd": 0.00146205,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11505,
+      "question_number": 227,
+      "cost_usd": 0.0014655,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1176,
+      "question_number": 228,
+      "cost_usd": 0.0015024,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9879,
+      "question_number": 229,
+      "cost_usd": 0.00153555,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6135,
+      "question_number": 230,
+      "cost_usd": 0.0001404,
+      "api_calls": 2
+    },
+    {
+      "source_index": 2916,
+      "question_number": 231,
+      "cost_usd": 0.0014964,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7551,
+      "question_number": 232,
+      "cost_usd": 0.0001599,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3829,
+      "question_number": 233,
+      "cost_usd": 0.00144195,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11087,
+      "question_number": 234,
+      "cost_usd": 0.001125,
+      "api_calls": 6
+    },
+    {
+      "source_index": 9453,
+      "question_number": 235,
+      "cost_usd": 0.0015456,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7585,
+      "question_number": 236,
+      "cost_usd": 0.0003138,
+      "api_calls": 3
+    },
+    {
+      "source_index": 10159,
+      "question_number": 237,
+      "cost_usd": 0.0014265,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12964,
+      "question_number": 238,
+      "cost_usd": 0.00029505,
+      "api_calls": 3
+    },
+    {
+      "source_index": 8376,
+      "question_number": 239,
+      "cost_usd": 0.0014784,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2393,
+      "question_number": 240,
+      "cost_usd": 0.0001299,
+      "api_calls": 2
+    },
+    {
+      "source_index": 4063,
+      "question_number": 241,
+      "cost_usd": 0.0015975,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5013,
+      "question_number": 242,
+      "cost_usd": 0.00147705,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8646,
+      "question_number": 243,
+      "cost_usd": 0.00146925,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1742,
+      "question_number": 244,
+      "cost_usd": 0.00028365,
+      "api_calls": 3
+    },
+    {
+      "source_index": 4626,
+      "question_number": 245,
+      "cost_usd": 0.0001464,
+      "api_calls": 2
+    },
+    {
+      "source_index": 12374,
+      "question_number": 246,
+      "cost_usd": 0.0011373,
+      "api_calls": 6
+    },
+    {
+      "source_index": 9510,
+      "question_number": 247,
+      "cost_usd": 0.00029385,
+      "api_calls": 3
+    },
+    {
+      "source_index": 7509,
+      "question_number": 248,
+      "cost_usd": 0.0014907,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5531,
+      "question_number": 249,
+      "cost_usd": 0.00110205,
+      "api_calls": 6
+    },
+    {
+      "source_index": 1406,
+      "question_number": 250,
+      "cost_usd": 0.0001278,
+      "api_calls": 2
+    },
+    {
+      "source_index": 7428,
+      "question_number": 251,
+      "cost_usd": 0.0015333,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4655,
+      "question_number": 252,
+      "cost_usd": 0.0004965,
+      "api_calls": 4
+    },
+    {
+      "source_index": 6962,
+      "question_number": 253,
+      "cost_usd": 0.00029985,
+      "api_calls": 3
+    },
+    {
+      "source_index": 603,
+      "question_number": 254,
+      "cost_usd": 0.00013335,
+      "api_calls": 2
+    },
+    {
+      "source_index": 9166,
+      "question_number": 255,
+      "cost_usd": 0.00161475,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12284,
+      "question_number": 256,
+      "cost_usd": 0.00117585,
+      "api_calls": 6
+    },
+    {
+      "source_index": 2893,
+      "question_number": 257,
+      "cost_usd": 0.0016014,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4796,
+      "question_number": 258,
+      "cost_usd": 0.0001362,
+      "api_calls": 2
+    },
+    {
+      "source_index": 8864,
+      "question_number": 259,
+      "cost_usd": 0.0015519,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2613,
+      "question_number": 260,
+      "cost_usd": 0.0015003,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8964,
+      "question_number": 261,
+      "cost_usd": 0.0014778,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2548,
+      "question_number": 262,
+      "cost_usd": 0.0014967,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4128,
+      "question_number": 263,
+      "cost_usd": 0.0015366,
+      "api_calls": 7
+    },
+    {
+      "source_index": 10208,
+      "question_number": 264,
+      "cost_usd": 0.00012405,
+      "api_calls": 2
+    },
+    {
+      "source_index": 3015,
+      "question_number": 265,
+      "cost_usd": 0.0015174,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8275,
+      "question_number": 266,
+      "cost_usd": 0.0014553,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4696,
+      "question_number": 267,
+      "cost_usd": 0.00154515,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4254,
+      "question_number": 268,
+      "cost_usd": 0.00151365,
+      "api_calls": 7
+    },
+    {
+      "source_index": 8370,
+      "question_number": 269,
+      "cost_usd": 0.0001374,
+      "api_calls": 2
+    },
+    {
+      "source_index": 4373,
+      "question_number": 270,
+      "cost_usd": 0.000306,
+      "api_calls": 3
+    },
+    {
+      "source_index": 10265,
+      "question_number": 271,
+      "cost_usd": 0.0014526,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3971,
+      "question_number": 272,
+      "cost_usd": 0.0014916,
+      "api_calls": 7
+    },
+    {
+      "source_index": 7603,
+      "question_number": 273,
+      "cost_usd": 0.0014859,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6760,
+      "question_number": 274,
+      "cost_usd": 0.00168165,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2200,
+      "question_number": 275,
+      "cost_usd": 0.00143715,
+      "api_calls": 7
+    },
+    {
+      "source_index": 76,
+      "question_number": 276,
+      "cost_usd": 0.00121935,
+      "api_calls": 6
+    },
+    {
+      "source_index": 8215,
+      "question_number": 277,
+      "cost_usd": 0.00028965,
+      "api_calls": 3
+    },
+    {
+      "source_index": 1999,
+      "question_number": 278,
+      "cost_usd": 0.0015039,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11492,
+      "question_number": 279,
+      "cost_usd": 0.0002832,
+      "api_calls": 3
+    },
+    {
+      "source_index": 8003,
+      "question_number": 280,
+      "cost_usd": 0.00114525,
+      "api_calls": 6
+    },
+    {
+      "source_index": 2764,
+      "question_number": 281,
+      "cost_usd": 0.00163125,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12526,
+      "question_number": 282,
+      "cost_usd": 0.000294,
+      "api_calls": 3
+    },
+    {
+      "source_index": 1520,
+      "question_number": 283,
+      "cost_usd": 0.00151515,
+      "api_calls": 7
+    },
+    {
+      "source_index": 5608,
+      "question_number": 284,
+      "cost_usd": 0.00144915,
+      "api_calls": 7
+    },
+    {
+      "source_index": 12757,
+      "question_number": 285,
+      "cost_usd": 0.0011463,
+      "api_calls": 6
+    },
+    {
+      "source_index": 7063,
+      "question_number": 286,
+      "cost_usd": 0.0005424,
+      "api_calls": 4
+    },
+    {
+      "source_index": 9440,
+      "question_number": 287,
+      "cost_usd": 0.00028665,
+      "api_calls": 3
+    },
+    {
+      "source_index": 66,
+      "question_number": 288,
+      "cost_usd": 0.0015,
+      "api_calls": 7
+    },
+    {
+      "source_index": 821,
+      "question_number": 289,
+      "cost_usd": 0.00144,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3674,
+      "question_number": 290,
+      "cost_usd": 0.0011964,
+      "api_calls": 6
+    },
+    {
+      "source_index": 12173,
+      "question_number": 291,
+      "cost_usd": 0.0014811,
+      "api_calls": 7
+    },
+    {
+      "source_index": 4158,
+      "question_number": 292,
+      "cost_usd": 0.0001353,
+      "api_calls": 2
+    },
+    {
+      "source_index": 10285,
+      "question_number": 293,
+      "cost_usd": 0.0014328,
+      "api_calls": 7
+    },
+    {
+      "source_index": 1396,
+      "question_number": 294,
+      "cost_usd": 0.00151905,
+      "api_calls": 7
+    },
+    {
+      "source_index": 3535,
+      "question_number": 295,
+      "cost_usd": 0.00160425,
+      "api_calls": 7
+    },
+    {
+      "source_index": 9349,
+      "question_number": 296,
+      "cost_usd": 0.00147825,
+      "api_calls": 7
+    },
+    {
+      "source_index": 2687,
+      "question_number": 297,
+      "cost_usd": 0.0015027,
+      "api_calls": 7
+    },
+    {
+      "source_index": 11809,
+      "question_number": 298,
+      "cost_usd": 0.0015084,
+      "api_calls": 7
+    },
+    {
+      "source_index": 6488,
+      "question_number": 299,
+      "cost_usd": 0.00013515,
+      "api_calls": 2
+    },
+    {
+      "source_index": 7781,
+      "question_number": 300,
+      "cost_usd": 0.00027885,
+      "api_calls": 3
+    }
+  ]
+}

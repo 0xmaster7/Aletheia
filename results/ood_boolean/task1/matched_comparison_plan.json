@@ -1,0 +1,2471 @@
+{
+  "rule": "Evaluate all 300 paraphrases. For matched-arm comparison, retain exactly one (variant a) paraphrase for each unique source_question_id that is present in the original confirmatory 300; exclude additional repeat variants from the paired comparison. Never compare unmatched questions.",
+  "source_question_ids_by_paraphrase": [
+    {
+      "paraphrase_id": "historical-001",
+      "source_question_id": "syn-00060-008ebe994526",
+      "source_index": 60,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-002",
+      "source_question_id": "syn-00066-35fc484eafea",
+      "source_index": 66,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-003",
+      "source_question_id": "syn-00171-e69bec38a258",
+      "source_index": 171,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-004",
+      "source_question_id": "syn-00459-633a795e2f3f",
+      "source_index": 459,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-005",
+      "source_question_id": "syn-00501-ad705c48d19b",
+      "source_index": 501,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-006",
+      "source_question_id": "syn-00597-1bec733c79b1",
+      "source_index": 597,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-007",
+      "source_question_id": "syn-00603-75b630537158",
+      "source_index": 603,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-008",
+      "source_question_id": "syn-00645-2b2109e26e25",
+      "source_index": 645,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-009",
+      "source_question_id": "syn-00729-1b7eb0cc256d",
+      "source_index": 729,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-010",
+      "source_question_id": "syn-00762-89aaaadc6906",
+      "source_index": 762,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-011",
+      "source_question_id": "syn-01110-16ffed344a9f",
+      "source_index": 1110,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-012",
+      "source_question_id": "syn-01164-3eb19150f2ca",
+      "source_index": 1164,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-013",
+      "source_question_id": "syn-01176-2628fce22e93",
+      "source_index": 1176,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-014",
+      "source_question_id": "syn-01188-9324a132dd85",
+      "source_index": 1188,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-015",
+      "source_question_id": "syn-01302-c4493d8acdd0",
+      "source_index": 1302,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-016",
+      "source_question_id": "syn-01473-b0c0d3e23295",
+      "source_index": 1473,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-017",
+      "source_question_id": "syn-01566-e953dfca3219",
+      "source_index": 1566,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-018",
+      "source_question_id": "syn-01776-a4ac30458a83",
+      "source_index": 1776,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-019",
+      "source_question_id": "syn-02100-77d0b2ed40f0",
+      "source_index": 2100,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-020",
+      "source_question_id": "syn-02301-86e6a13a6bb2",
+      "source_index": 2301,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-021",
+      "source_question_id": "syn-02535-650b51312f84",
+      "source_index": 2535,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-022",
+      "source_question_id": "syn-02613-8e6ce4ea6230",
+      "source_index": 2613,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-023",
+      "source_question_id": "syn-02763-d5de09c24ec2",
+      "source_index": 2763,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-024",
+      "source_question_id": "syn-02916-5a0311c04020",
+      "source_index": 2916,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-025",
+      "source_question_id": "syn-02973-1144c1bd4953",
+      "source_index": 2973,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-026",
+      "source_question_id": "syn-03015-04d711e5324b",
+      "source_index": 3015,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-027",
+      "source_question_id": "syn-03246-ba5945740ac7",
+      "source_index": 3246,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-028",
+      "source_question_id": "syn-03297-99951be20b29",
+      "source_index": 3297,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-029",
+      "source_question_id": "syn-03732-63a571c534c7",
+      "source_index": 3732,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-030",
+      "source_question_id": "syn-03753-f5a27a666f1e",
+      "source_index": 3753,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-031",
+      "source_question_id": "syn-03753-f5a27a666f1e",
+      "source_index": 3753,
+      "intent": "historical",
+      "variant": "b"
+    },
+    {
+      "paraphrase_id": "historical-032",
+      "source_question_id": "syn-04038-1112ce30a2bd",
+      "source_index": 4038,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-033",
+      "source_question_id": "syn-04128-13dbc536d8cb",
+      "source_index": 4128,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-034",
+      "source_question_id": "syn-04158-229d33de3940",
+      "source_index": 4158,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-035",
+      "source_question_id": "syn-04254-bb2a67b8ad7b",
+      "source_index": 4254,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-036",
+      "source_question_id": "syn-04308-186607aeb73d",
+      "source_index": 4308,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-037",
+      "source_question_id": "syn-04521-ddbc2370aca8",
+      "source_index": 4521,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-038",
+      "source_question_id": "syn-04572-3ea165f90b11",
+      "source_index": 4572,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-039",
+      "source_question_id": "syn-04626-4e1a1c01b6ad",
+      "source_index": 4626,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-040",
+      "source_question_id": "syn-04797-8dd026adbc26",
+      "source_index": 4797,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-041",
+      "source_question_id": "syn-04851-f948de900b8b",
+      "source_index": 4851,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-042",
+      "source_question_id": "syn-05013-c7f3d4fa15e7",
+      "source_index": 5013,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-043",
+      "source_question_id": "syn-05058-16bd92705f3f",
+      "source_index": 5058,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-044",
+      "source_question_id": "syn-05091-f84c62a45ae2",
+      "source_index": 5091,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-045",
+      "source_question_id": "syn-05154-be31ecd4aa5e",
+      "source_index": 5154,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-046",
+      "source_question_id": "syn-05214-8fe045b76a30",
+      "source_index": 5214,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-047",
+      "source_question_id": "syn-05490-df2416c53a6d",
+      "source_index": 5490,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-048",
+      "source_question_id": "syn-05490-df2416c53a6d",
+      "source_index": 5490,
+      "intent": "historical",
+      "variant": "b"
+    },
+    {
+      "paraphrase_id": "historical-049",
+      "source_question_id": "syn-06135-e300570d24d1",
+      "source_index": 6135,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-050",
+      "source_question_id": "syn-06336-9c5d6fe0f14b",
+      "source_index": 6336,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-051",
+      "source_question_id": "syn-06384-3868542a5c8b",
+      "source_index": 6384,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-052",
+      "source_question_id": "syn-07122-9603aa13944a",
+      "source_index": 7122,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-053",
+      "source_question_id": "syn-07167-db55172ffae1",
+      "source_index": 7167,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-054",
+      "source_question_id": "syn-07314-03b7305f3725",
+      "source_index": 7314,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-055",
+      "source_question_id": "syn-07377-3708aded6cc9",
+      "source_index": 7377,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-056",
+      "source_question_id": "syn-07428-94bfbac34106",
+      "source_index": 7428,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-057",
+      "source_question_id": "syn-07509-5990dd7c0db6",
+      "source_index": 7509,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-058",
+      "source_question_id": "syn-07551-f986149d9db2",
+      "source_index": 7551,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-059",
+      "source_question_id": "syn-07584-8ad9c133803e",
+      "source_index": 7584,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-060",
+      "source_question_id": "syn-07593-0f0c9999f901",
+      "source_index": 7593,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-061",
+      "source_question_id": "syn-07668-babde2179edd",
+      "source_index": 7668,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-062",
+      "source_question_id": "syn-07866-0646e31c1886",
+      "source_index": 7866,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-063",
+      "source_question_id": "syn-08076-272282563c6a",
+      "source_index": 8076,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-064",
+      "source_question_id": "syn-08370-61c92ec4c79b",
+      "source_index": 8370,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-065",
+      "source_question_id": "syn-08376-639522d22686",
+      "source_index": 8376,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-066",
+      "source_question_id": "syn-08559-78ed3ec4b690",
+      "source_index": 8559,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-067",
+      "source_question_id": "syn-08646-baf6e6f5e167",
+      "source_index": 8646,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-068",
+      "source_question_id": "syn-08760-82a0db67720d",
+      "source_index": 8760,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-069",
+      "source_question_id": "syn-08769-6578615aa3cc",
+      "source_index": 8769,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-070",
+      "source_question_id": "syn-08955-729acf2fa16d",
+      "source_index": 8955,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-071",
+      "source_question_id": "syn-08964-616784e30be5",
+      "source_index": 8964,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-072",
+      "source_question_id": "syn-08991-bcd0a11c59a4",
+      "source_index": 8991,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-073",
+      "source_question_id": "syn-09036-d025633a9c6f",
+      "source_index": 9036,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-074",
+      "source_question_id": "syn-09042-2859cd4c6c80",
+      "source_index": 9042,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-075",
+      "source_question_id": "syn-09276-050d26c835de",
+      "source_index": 9276,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-076",
+      "source_question_id": "syn-09351-01583e584837",
+      "source_index": 9351,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-077",
+      "source_question_id": "syn-09420-9c8a6f0131d2",
+      "source_index": 9420,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-078",
+      "source_question_id": "syn-09453-8d247670bd72",
+      "source_index": 9453,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-079",
+      "source_question_id": "syn-09492-48e9cd4bb418",
+      "source_index": 9492,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-080",
+      "source_question_id": "syn-09510-85f1536ec2cb",
+      "source_index": 9510,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-081",
+      "source_question_id": "syn-09789-8497b0253691",
+      "source_index": 9789,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-082",
+      "source_question_id": "syn-09792-17c3361878bb",
+      "source_index": 9792,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-083",
+      "source_question_id": "syn-09804-ce2a6020b11d",
+      "source_index": 9804,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-084",
+      "source_question_id": "syn-09879-6a05ddeec8bf",
+      "source_index": 9879,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-085",
+      "source_question_id": "syn-09969-754abf778ac3",
+      "source_index": 9969,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-086",
+      "source_question_id": "syn-10194-b62885f6c324",
+      "source_index": 10194,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-087",
+      "source_question_id": "syn-10515-0ed9296cb489",
+      "source_index": 10515,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-088",
+      "source_question_id": "syn-10659-8ad4e7f97867",
+      "source_index": 10659,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-089",
+      "source_question_id": "syn-10788-c577bb99c92c",
+      "source_index": 10788,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-090",
+      "source_question_id": "syn-11145-b92b2d2418a5",
+      "source_index": 11145,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-091",
+      "source_question_id": "syn-11169-22f2d700bbc6",
+      "source_index": 11169,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-092",
+      "source_question_id": "syn-11469-a9736cd638ee",
+      "source_index": 11469,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-093",
+      "source_question_id": "syn-11505-d84ab59515a8",
+      "source_index": 11505,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-094",
+      "source_question_id": "syn-11994-fa2156f14f29",
+      "source_index": 11994,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-095",
+      "source_question_id": "syn-12129-d911b8b39076",
+      "source_index": 12129,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-096",
+      "source_question_id": "syn-12513-31fa0fd8c74f",
+      "source_index": 12513,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-097",
+      "source_question_id": "syn-12540-190128c040c9",
+      "source_index": 12540,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-098",
+      "source_question_id": "syn-12642-43b21dd7ca74",
+      "source_index": 12642,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-099",
+      "source_question_id": "syn-13338-3c501cf4a2d8",
+      "source_index": 13338,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "historical-100",
+      "source_question_id": "syn-13401-760227d54a13",
+      "source_index": 13401,
+      "intent": "historical",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-001",
+      "source_question_id": "syn-00076-a93bacd5d90a",
+      "source_index": 76,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-002",
+      "source_question_id": "syn-00196-02cb881810d2",
+      "source_index": 196,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-003",
+      "source_question_id": "syn-00265-123132b55c27",
+      "source_index": 265,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-004",
+      "source_question_id": "syn-00619-bb1263bd4fed",
+      "source_index": 619,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-005",
+      "source_question_id": "syn-00721-57451506288b",
+      "source_index": 721,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-006",
+      "source_question_id": "syn-00730-74534a997e5d",
+      "source_index": 730,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-007",
+      "source_question_id": "syn-01201-91e46e491412",
+      "source_index": 1201,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-008",
+      "source_question_id": "syn-01213-0c85e3bc09e6",
+      "source_index": 1213,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-009",
+      "source_question_id": "syn-01252-f8a6811b20d1",
+      "source_index": 1252,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-010",
+      "source_question_id": "syn-01336-ecee592340d4",
+      "source_index": 1336,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-011",
+      "source_question_id": "syn-01372-f22d0e368694",
+      "source_index": 1372,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-012",
+      "source_question_id": "syn-01375-4275435cb4be",
+      "source_index": 1375,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-013",
+      "source_question_id": "syn-01396-a0adae194740",
+      "source_index": 1396,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-014",
+      "source_question_id": "syn-01489-e674bce37e7d",
+      "source_index": 1489,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-015",
+      "source_question_id": "syn-01531-17797f9f0bc0",
+      "source_index": 1531,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-016",
+      "source_question_id": "syn-01630-970db28620c0",
+      "source_index": 1630,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-017",
+      "source_question_id": "syn-01771-30bd6c93687e",
+      "source_index": 1771,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-018",
+      "source_question_id": "syn-01918-219939e1d1a0",
+      "source_index": 1918,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-019",
+      "source_question_id": "syn-01999-008764c86e96",
+      "source_index": 1999,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-020",
+      "source_question_id": "syn-02023-d44d2aeff833",
+      "source_index": 2023,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-021",
+      "source_question_id": "syn-02050-5eda8f8f6511",
+      "source_index": 2050,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-022",
+      "source_question_id": "syn-02059-6b7cfff140c3",
+      "source_index": 2059,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-023",
+      "source_question_id": "syn-02110-9e22b6fe7b6b",
+      "source_index": 2110,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-024",
+      "source_question_id": "syn-02200-33280ee28def",
+      "source_index": 2200,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-025",
+      "source_question_id": "syn-02215-db33d8983998",
+      "source_index": 2215,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-026",
+      "source_question_id": "syn-02326-658a4f97866d",
+      "source_index": 2326,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-027",
+      "source_question_id": "syn-02413-2b1993e065a8",
+      "source_index": 2413,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-028",
+      "source_question_id": "syn-02548-483d2aca0e81",
+      "source_index": 2548,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-029",
+      "source_question_id": "syn-02551-f82502cb297d",
+      "source_index": 2551,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-030",
+      "source_question_id": "syn-02764-69e35769f54a",
+      "source_index": 2764,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-031",
+      "source_question_id": "syn-02767-319a26c26ef6",
+      "source_index": 2767,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-032",
+      "source_question_id": "syn-02854-85dfe0e85521",
+      "source_index": 2854,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-033",
+      "source_question_id": "syn-02893-b49e1b2fef8f",
+      "source_index": 2893,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-034",
+      "source_question_id": "syn-02929-1b3fe8cf6b37",
+      "source_index": 2929,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-035",
+      "source_question_id": "syn-03031-1f31bd500b90",
+      "source_index": 3031,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-036",
+      "source_question_id": "syn-03205-d3faacddbf3c",
+      "source_index": 3205,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-037",
+      "source_question_id": "syn-03535-ac96172f4bff",
+      "source_index": 3535,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-038",
+      "source_question_id": "syn-03829-1b321d8536f8",
+      "source_index": 3829,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-039",
+      "source_question_id": "syn-03874-ccde3aaf5dc6",
+      "source_index": 3874,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-040",
+      "source_question_id": "syn-04060-b399e854dcf1",
+      "source_index": 4060,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-041",
+      "source_question_id": "syn-04063-81a665d4793f",
+      "source_index": 4063,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-042",
+      "source_question_id": "syn-04087-ce94ad474186",
+      "source_index": 4087,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-043",
+      "source_question_id": "syn-04696-7fc230c1b22e",
+      "source_index": 4696,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-044",
+      "source_question_id": "syn-04744-b82c0bb162c7",
+      "source_index": 4744,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-045",
+      "source_question_id": "syn-05128-4fd6c49f42c3",
+      "source_index": 5128,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-046",
+      "source_question_id": "syn-05494-1655ed02d822",
+      "source_index": 5494,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-047",
+      "source_question_id": "syn-05608-bf4d8a99f90b",
+      "source_index": 5608,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-048",
+      "source_question_id": "syn-05770-63189ea8cea8",
+      "source_index": 5770,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-049",
+      "source_question_id": "syn-05896-3f3560d657c6",
+      "source_index": 5896,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-050",
+      "source_question_id": "syn-06349-6540a4b7dc51",
+      "source_index": 6349,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-051",
+      "source_question_id": "syn-06550-cac590a665ed",
+      "source_index": 6550,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-052",
+      "source_question_id": "syn-06760-99583ecc8646",
+      "source_index": 6760,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-053",
+      "source_question_id": "syn-07063-2c337fed01cf",
+      "source_index": 7063,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-054",
+      "source_question_id": "syn-07204-1c399759fc4e",
+      "source_index": 7204,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-055",
+      "source_question_id": "syn-07318-2d30522d2cfa",
+      "source_index": 7318,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-056",
+      "source_question_id": "syn-07354-1afa36ca04a1",
+      "source_index": 7354,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-057",
+      "source_question_id": "syn-07393-a9bee9342632",
+      "source_index": 7393,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-058",
+      "source_question_id": "syn-07411-9d56abb239e4",
+      "source_index": 7411,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-059",
+      "source_question_id": "syn-07585-e389cfe4327f",
+      "source_index": 7585,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-060",
+      "source_question_id": "syn-07603-5478b0692ba7",
+      "source_index": 7603,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-061",
+      "source_question_id": "syn-07660-39b1dbd19b2e",
+      "source_index": 7660,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-062",
+      "source_question_id": "syn-07744-ce8604bafdba",
+      "source_index": 7744,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-063",
+      "source_question_id": "syn-07891-a6e08e53fe57",
+      "source_index": 7891,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-064",
+      "source_question_id": "syn-08119-a60790f30a46",
+      "source_index": 8119,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-065",
+      "source_question_id": "syn-08215-925660fb9230",
+      "source_index": 8215,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-066",
+      "source_question_id": "syn-08275-8742212fa2e9",
+      "source_index": 8275,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-067",
+      "source_question_id": "syn-08440-dc3ee19a4d4d",
+      "source_index": 8440,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-068",
+      "source_question_id": "syn-08563-9f14ef0f00c2",
+      "source_index": 8563,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-069",
+      "source_question_id": "syn-08590-6045d8288ba4",
+      "source_index": 8590,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-070",
+      "source_question_id": "syn-08593-f4888f051d3b",
+      "source_index": 8593,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-071",
+      "source_question_id": "syn-08713-8b9e009e04fe",
+      "source_index": 8713,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-072",
+      "source_question_id": "syn-08773-800b03dfe234",
+      "source_index": 8773,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-073",
+      "source_question_id": "syn-08815-43af30e47ece",
+      "source_index": 8815,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-074",
+      "source_question_id": "syn-08839-6e9ea7e0b5c8",
+      "source_index": 8839,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-075",
+      "source_question_id": "syn-08899-f79557621895",
+      "source_index": 8899,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-076",
+      "source_question_id": "syn-09166-fb5afc01e25b",
+      "source_index": 9166,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-077",
+      "source_question_id": "syn-09298-c1b5ac18ef8d",
+      "source_index": 9298,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-078",
+      "source_question_id": "syn-09349-4aa926317cf8",
+      "source_index": 9349,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-079",
+      "source_question_id": "syn-09562-315cd12319d3",
+      "source_index": 9562,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-080",
+      "source_question_id": "syn-10159-95c66875a7fc",
+      "source_index": 10159,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-081",
+      "source_question_id": "syn-10723-61152fe46616",
+      "source_index": 10723,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-082",
+      "source_question_id": "syn-10960-7430c7fbac51",
+      "source_index": 10960,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-083",
+      "source_question_id": "syn-10990-c8c510ad2503",
+      "source_index": 10990,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-084",
+      "source_question_id": "syn-11125-0bcb02442e07",
+      "source_index": 11125,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-085",
+      "source_question_id": "syn-11155-567b694c6613",
+      "source_index": 11155,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-086",
+      "source_question_id": "syn-11392-ba2bc130c87c",
+      "source_index": 11392,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-087",
+      "source_question_id": "syn-11473-90d6911877b2",
+      "source_index": 11473,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-088",
+      "source_question_id": "syn-11581-74ff60c8436a",
+      "source_index": 11581,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-089",
+      "source_question_id": "syn-11791-c40a35eac9f2",
+      "source_index": 11791,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-090",
+      "source_question_id": "syn-11809-b990ef231198",
+      "source_index": 11809,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-091",
+      "source_question_id": "syn-12139-aa99ad985b06",
+      "source_index": 12139,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-092",
+      "source_question_id": "syn-12271-c176fdf7564a",
+      "source_index": 12271,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-093",
+      "source_question_id": "syn-12340-ecbdfbedba63",
+      "source_index": 12340,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-094",
+      "source_question_id": "syn-12526-94f3e65deace",
+      "source_index": 12526,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-095",
+      "source_question_id": "syn-12757-70b4d82ba362",
+      "source_index": 12757,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-096",
+      "source_question_id": "syn-12769-6dfb7077611f",
+      "source_index": 12769,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-097",
+      "source_question_id": "syn-12889-1b9bc28a2cd1",
+      "source_index": 12889,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-098",
+      "source_question_id": "syn-12964-cf5487f095c3",
+      "source_index": 12964,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-099",
+      "source_question_id": "syn-13075-bea3c627317a",
+      "source_index": 13075,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "aggregation-100",
+      "source_question_id": "syn-13216-b5e175e56490",
+      "source_index": 13216,
+      "intent": "aggregation",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-001",
+      "source_question_id": "syn-00155-8b9dcae3aa49",
+      "source_index": 155,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-002",
+      "source_question_id": "syn-00257-d6ee0a1af707",
+      "source_index": 257,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-003",
+      "source_question_id": "syn-00299-e590047f3898",
+      "source_index": 299,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-004",
+      "source_question_id": "syn-00572-6f84a5a47369",
+      "source_index": 572,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-005",
+      "source_question_id": "syn-00764-7169c014026d",
+      "source_index": 764,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-006",
+      "source_question_id": "syn-00821-56fe41cffe2f",
+      "source_index": 821,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-007",
+      "source_question_id": "syn-00863-c511dadecd4a",
+      "source_index": 863,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-008",
+      "source_question_id": "syn-01013-6d0d644b1766",
+      "source_index": 1013,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-009",
+      "source_question_id": "syn-01406-4cc0e8fee063",
+      "source_index": 1406,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-010",
+      "source_question_id": "syn-01520-23270ea1b817",
+      "source_index": 1520,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-011",
+      "source_question_id": "syn-01742-16519e218dff",
+      "source_index": 1742,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-012",
+      "source_question_id": "syn-01766-da75c32981e2",
+      "source_index": 1766,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-013",
+      "source_question_id": "syn-01901-fde6e2e8a1b7",
+      "source_index": 1901,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-014",
+      "source_question_id": "syn-01943-a9c640c6c98c",
+      "source_index": 1943,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-015",
+      "source_question_id": "syn-02015-1173094ae85b",
+      "source_index": 2015,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-016",
+      "source_question_id": "syn-02072-b31d75af3d35",
+      "source_index": 2072,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-017",
+      "source_question_id": "syn-02393-b40a1ce6f61d",
+      "source_index": 2393,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-018",
+      "source_question_id": "syn-02423-938a21fee506",
+      "source_index": 2423,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-019",
+      "source_question_id": "syn-02687-038b13201360",
+      "source_index": 2687,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-020",
+      "source_question_id": "syn-02837-b41293c4a080",
+      "source_index": 2837,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-021",
+      "source_question_id": "syn-03035-ac55f5922583",
+      "source_index": 3035,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-022",
+      "source_question_id": "syn-03164-62a187e53138",
+      "source_index": 3164,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-023",
+      "source_question_id": "syn-03257-d6b9d720e4d6",
+      "source_index": 3257,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-024",
+      "source_question_id": "syn-03506-fcdc719658b7",
+      "source_index": 3506,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-025",
+      "source_question_id": "syn-03674-49cb83a91bbc",
+      "source_index": 3674,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-026",
+      "source_question_id": "syn-03779-5c58f19cb8ac",
+      "source_index": 3779,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-027",
+      "source_question_id": "syn-03785-af53b2488d80",
+      "source_index": 3785,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-028",
+      "source_question_id": "syn-03875-f9c8d8347a7d",
+      "source_index": 3875,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-029",
+      "source_question_id": "syn-03971-90796e60ad7e",
+      "source_index": 3971,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-030",
+      "source_question_id": "syn-04055-b1ba570be537",
+      "source_index": 4055,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-031",
+      "source_question_id": "syn-04148-82a7f0112ece",
+      "source_index": 4148,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-032",
+      "source_question_id": "syn-04184-a4359bec961f",
+      "source_index": 4184,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-033",
+      "source_question_id": "syn-04349-11b9b4505e48",
+      "source_index": 4349,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-034",
+      "source_question_id": "syn-04373-3bb016fc6f64",
+      "source_index": 4373,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-035",
+      "source_question_id": "syn-04655-df03cb5264b5",
+      "source_index": 4655,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-036",
+      "source_question_id": "syn-04796-74a3f72a7417",
+      "source_index": 4796,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-037",
+      "source_question_id": "syn-04997-982494eb7e6f",
+      "source_index": 4997,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-038",
+      "source_question_id": "syn-05354-e957ec192a9f",
+      "source_index": 5354,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-039",
+      "source_question_id": "syn-05531-5300834913f1",
+      "source_index": 5531,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-040",
+      "source_question_id": "syn-06251-cd2f29b14ced",
+      "source_index": 6251,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-041",
+      "source_question_id": "syn-06488-933e6fbde678",
+      "source_index": 6488,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-042",
+      "source_question_id": "syn-06500-0322a91d9506",
+      "source_index": 6500,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-043",
+      "source_question_id": "syn-06608-82909dea36bb",
+      "source_index": 6608,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-044",
+      "source_question_id": "syn-06902-fd6a7627f533",
+      "source_index": 6902,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-045",
+      "source_question_id": "syn-06962-65f8e3a80265",
+      "source_index": 6962,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-046",
+      "source_question_id": "syn-07583-ea0aa0bb8da0",
+      "source_index": 7583,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-047",
+      "source_question_id": "syn-07658-50222933776b",
+      "source_index": 7658,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-048",
+      "source_question_id": "syn-07679-29c13bc988a1",
+      "source_index": 7679,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-049",
+      "source_question_id": "syn-07781-d3f12dfb7493",
+      "source_index": 7781,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-050",
+      "source_question_id": "syn-07787-1ce066db093b",
+      "source_index": 7787,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-051",
+      "source_question_id": "syn-07898-f915097238b7",
+      "source_index": 7898,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-052",
+      "source_question_id": "syn-08003-bf10c87f72a4",
+      "source_index": 8003,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-053",
+      "source_question_id": "syn-08060-0ab63e71c538",
+      "source_index": 8060,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-054",
+      "source_question_id": "syn-08129-84ce4f333f19",
+      "source_index": 8129,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-055",
+      "source_question_id": "syn-08138-5c68426b843f",
+      "source_index": 8138,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-056",
+      "source_question_id": "syn-08186-d6496e31730c",
+      "source_index": 8186,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-057",
+      "source_question_id": "syn-08222-63267832a055",
+      "source_index": 8222,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-058",
+      "source_question_id": "syn-08267-ea3b95fc411a",
+      "source_index": 8267,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-059",
+      "source_question_id": "syn-08369-da92205e7aa8",
+      "source_index": 8369,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-060",
+      "source_question_id": "syn-08570-46c0968d50d2",
+      "source_index": 8570,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-061",
+      "source_question_id": "syn-08795-241ffd4fb0f4",
+      "source_index": 8795,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-062",
+      "source_question_id": "syn-08798-ac926cfa8475",
+      "source_index": 8798,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-063",
+      "source_question_id": "syn-08864-71e5b086b583",
+      "source_index": 8864,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-064",
+      "source_question_id": "syn-09020-1298312fd46f",
+      "source_index": 9020,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-065",
+      "source_question_id": "syn-09323-3f9c0d73614d",
+      "source_index": 9323,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-066",
+      "source_question_id": "syn-09413-7080d48e104c",
+      "source_index": 9413,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-067",
+      "source_question_id": "syn-09440-ef848d28d180",
+      "source_index": 9440,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-068",
+      "source_question_id": "syn-09530-bd882ed8cd94",
+      "source_index": 9530,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-069",
+      "source_question_id": "syn-09659-189213c324d3",
+      "source_index": 9659,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-070",
+      "source_question_id": "syn-09734-7c03e34f1dfa",
+      "source_index": 9734,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-071",
+      "source_question_id": "syn-09899-3f14162ba310",
+      "source_index": 9899,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-072",
+      "source_question_id": "syn-09908-a52135487a8a",
+      "source_index": 9908,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-073",
+      "source_question_id": "syn-09929-908b597cba70",
+      "source_index": 9929,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-074",
+      "source_question_id": "syn-10046-e215928c5651",
+      "source_index": 10046,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-075",
+      "source_question_id": "syn-10208-87fa5fff77aa",
+      "source_index": 10208,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-076",
+      "source_question_id": "syn-10265-f3b1b813a43d",
+      "source_index": 10265,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-077",
+      "source_question_id": "syn-10271-80140a4e5761",
+      "source_index": 10271,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-078",
+      "source_question_id": "syn-10304-02b42716de66",
+      "source_index": 10304,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-079",
+      "source_question_id": "syn-10406-5fbb284d48b0",
+      "source_index": 10406,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-080",
+      "source_question_id": "syn-10409-6a3528db71ac",
+      "source_index": 10409,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-081",
+      "source_question_id": "syn-10496-60775f6b8b31",
+      "source_index": 10496,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-082",
+      "source_question_id": "syn-10688-4029884aea0b",
+      "source_index": 10688,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-083",
+      "source_question_id": "syn-11036-65732fe2cc56",
+      "source_index": 11036,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-084",
+      "source_question_id": "syn-11063-bf793cd201cf",
+      "source_index": 11063,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-085",
+      "source_question_id": "syn-11087-d470d6ec76a5",
+      "source_index": 11087,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-086",
+      "source_question_id": "syn-11219-39036c58cf92",
+      "source_index": 11219,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-087",
+      "source_question_id": "syn-11375-917c5adf1582",
+      "source_index": 11375,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-088",
+      "source_question_id": "syn-11492-a29828deefff",
+      "source_index": 11492,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-089",
+      "source_question_id": "syn-11690-b09a31dc4137",
+      "source_index": 11690,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-090",
+      "source_question_id": "syn-11912-2204b0185efd",
+      "source_index": 11912,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-091",
+      "source_question_id": "syn-12173-5d8bea3b488c",
+      "source_index": 12173,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-092",
+      "source_question_id": "syn-12179-8a88312973a3",
+      "source_index": 12179,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-093",
+      "source_question_id": "syn-12284-c415142c662e",
+      "source_index": 12284,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-094",
+      "source_question_id": "syn-12371-180a38e2b47b",
+      "source_index": 12371,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-095",
+      "source_question_id": "syn-12374-3fe44f48a889",
+      "source_index": 12374,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-096",
+      "source_question_id": "syn-12557-2467d7cd2df4",
+      "source_index": 12557,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-097",
+      "source_question_id": "syn-12593-55da5f32789f",
+      "source_index": 12593,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-098",
+      "source_question_id": "syn-12911-017c1039ab3f",
+      "source_index": 12911,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-099",
+      "source_question_id": "syn-13079-268093cd280e",
+      "source_index": 13079,
+      "intent": "boolean",
+      "variant": "a"
+    },
+    {
+      "paraphrase_id": "boolean-100",
+      "source_question_id": "syn-13103-ab78f6f26bca",
+      "source_index": 13103,
+      "intent": "boolean",
+      "variant": "a"
+    }
+  ],
+  "matched_unique_question_ids": [
+    "syn-00060-008ebe994526",
+    "syn-00066-35fc484eafea",
+    "syn-00076-a93bacd5d90a",
+    "syn-00155-8b9dcae3aa49",
+    "syn-00171-e69bec38a258",
+    "syn-00196-02cb881810d2",
+    "syn-00257-d6ee0a1af707",
+    "syn-00265-123132b55c27",
+    "syn-00299-e590047f3898",
+    "syn-00459-633a795e2f3f",
+    "syn-00501-ad705c48d19b",
+    "syn-00572-6f84a5a47369",
+    "syn-00597-1bec733c79b1",
+    "syn-00603-75b630537158",
+    "syn-00619-bb1263bd4fed",
+    "syn-00645-2b2109e26e25",
+    "syn-00721-57451506288b",
+    "syn-00729-1b7eb0cc256d",
+    "syn-00730-74534a997e5d",
+    "syn-00762-89aaaadc6906",
+    "syn-00764-7169c014026d",
+    "syn-00821-56fe41cffe2f",
+    "syn-00863-c511dadecd4a",
+    "syn-01013-6d0d644b1766",
+    "syn-01110-16ffed344a9f",
+    "syn-01164-3eb19150f2ca",
+    "syn-01176-2628fce22e93",
+    "syn-01188-9324a132dd85",
+    "syn-01201-91e46e491412",
+    "syn-01213-0c85e3bc09e6",
+    "syn-01252-f8a6811b20d1",
+    "syn-01302-c4493d8acdd0",
+    "syn-01336-ecee592340d4",
+    "syn-01372-f22d0e368694",
+    "syn-01375-4275435cb4be",
+    "syn-01396-a0adae194740",
+    "syn-01406-4cc0e8fee063",
+    "syn-01473-b0c0d3e23295",
+    "syn-01489-e674bce37e7d",
+    "syn-01520-23270ea1b817",
+    "syn-01531-17797f9f0bc0",
+    "syn-01566-e953dfca3219",
+    "syn-01630-970db28620c0",
+    "syn-01742-16519e218dff",
+    "syn-01766-da75c32981e2",
+    "syn-01771-30bd6c93687e",
+    "syn-01776-a4ac30458a83",
+    "syn-01901-fde6e2e8a1b7",
+    "syn-01918-219939e1d1a0",
+    "syn-01943-a9c640c6c98c",
+    "syn-01999-008764c86e96",
+    "syn-02015-1173094ae85b",
+    "syn-02023-d44d2aeff833",
+    "syn-02050-5eda8f8f6511",
+    "syn-02059-6b7cfff140c3",
+    "syn-02072-b31d75af3d35",
+    "syn-02100-77d0b2ed40f0",
+    "syn-02110-9e22b6fe7b6b",
+    "syn-02200-33280ee28def",
+    "syn-02215-db33d8983998",
+    "syn-02301-86e6a13a6bb2",
+    "syn-02326-658a4f97866d",
+    "syn-02393-b40a1ce6f61d",
+    "syn-02413-2b1993e065a8",
+    "syn-02423-938a21fee506",
+    "syn-02535-650b51312f84",
+    "syn-02548-483d2aca0e81",
+    "syn-02551-f82502cb297d",
+    "syn-02613-8e6ce4ea6230",
+    "syn-02687-038b13201360",
+    "syn-02763-d5de09c24ec2",
+    "syn-02764-69e35769f54a",
+    "syn-02767-319a26c26ef6",
+    "syn-02837-b41293c4a080",
+    "syn-02854-85dfe0e85521",
+    "syn-02893-b49e1b2fef8f",
+    "syn-02916-5a0311c04020",
+    "syn-02929-1b3fe8cf6b37",
+    "syn-02973-1144c1bd4953",
+    "syn-03015-04d711e5324b",
+    "syn-03031-1f31bd500b90",
+    "syn-03035-ac55f5922583",
+    "syn-03164-62a187e53138",
+    "syn-03205-d3faacddbf3c",
+    "syn-03246-ba5945740ac7",
+    "syn-03257-d6b9d720e4d6",
+    "syn-03297-99951be20b29",
+    "syn-03506-fcdc719658b7",
+    "syn-03535-ac96172f4bff",
+    "syn-03674-49cb83a91bbc",
+    "syn-03732-63a571c534c7",
+    "syn-03753-f5a27a666f1e",
+    "syn-03779-5c58f19cb8ac",
+    "syn-03785-af53b2488d80",
+    "syn-03829-1b321d8536f8",
+    "syn-03874-ccde3aaf5dc6",
+    "syn-03875-f9c8d8347a7d",
+    "syn-03971-90796e60ad7e",
+    "syn-04038-1112ce30a2bd",
+    "syn-04055-b1ba570be537",
+    "syn-04060-b399e854dcf1",
+    "syn-04063-81a665d4793f",
+    "syn-04087-ce94ad474186",
+    "syn-04128-13dbc536d8cb",
+    "syn-04148-82a7f0112ece",
+    "syn-04158-229d33de3940",
+    "syn-04184-a4359bec961f",
+    "syn-04254-bb2a67b8ad7b",
+    "syn-04308-186607aeb73d",
+    "syn-04349-11b9b4505e48",
+    "syn-04373-3bb016fc6f64",
+    "syn-04521-ddbc2370aca8",
+    "syn-04572-3ea165f90b11",
+    "syn-04626-4e1a1c01b6ad",
+    "syn-04655-df03cb5264b5",
+    "syn-04696-7fc230c1b22e",
+    "syn-04744-b82c0bb162c7",
+    "syn-04796-74a3f72a7417",
+    "syn-04797-8dd026adbc26",
+    "syn-04851-f948de900b8b",
+    "syn-04997-982494eb7e6f",
+    "syn-05013-c7f3d4fa15e7",
+    "syn-05058-16bd92705f3f",
+    "syn-05091-f84c62a45ae2",
+    "syn-05128-4fd6c49f42c3",
+    "syn-05154-be31ecd4aa5e",
+    "syn-05214-8fe045b76a30",
+    "syn-05354-e957ec192a9f",
+    "syn-05490-df2416c53a6d",
+    "syn-05494-1655ed02d822",
+    "syn-05531-5300834913f1",
+    "syn-05608-bf4d8a99f90b",
+    "syn-05770-63189ea8cea8",
+    "syn-05896-3f3560d657c6",
+    "syn-06135-e300570d24d1",
+    "syn-06251-cd2f29b14ced",
+    "syn-06336-9c5d6fe0f14b",
+    "syn-06349-6540a4b7dc51",
+    "syn-06384-3868542a5c8b",
+    "syn-06488-933e6fbde678",
+    "syn-06500-0322a91d9506",
+    "syn-06550-cac590a665ed",
+    "syn-06608-82909dea36bb",
+    "syn-06760-99583ecc8646",
+    "syn-06902-fd6a7627f533",
+    "syn-06962-65f8e3a80265",
+    "syn-07063-2c337fed01cf",
+    "syn-07122-9603aa13944a",
+    "syn-07167-db55172ffae1",
+    "syn-07204-1c399759fc4e",
+    "syn-07314-03b7305f3725",
+    "syn-07318-2d30522d2cfa",
+    "syn-07354-1afa36ca04a1",
+    "syn-07377-3708aded6cc9",
+    "syn-07393-a9bee9342632",
+    "syn-07411-9d56abb239e4",
+    "syn-07428-94bfbac34106",
+    "syn-07509-5990dd7c0db6",
+    "syn-07551-f986149d9db2",
+    "syn-07583-ea0aa0bb8da0",
+    "syn-07584-8ad9c133803e",
+    "syn-07585-e389cfe4327f",
+    "syn-07593-0f0c9999f901",
+    "syn-07603-5478b0692ba7",
+    "syn-07658-50222933776b",
+    "syn-07660-39b1dbd19b2e",
+    "syn-07668-babde2179edd",
+    "syn-07679-29c13bc988a1",
+    "syn-07744-ce8604bafdba",
+    "syn-07781-d3f12dfb7493",
+    "syn-07787-1ce066db093b",
+    "syn-07866-0646e31c1886",
+    "syn-07891-a6e08e53fe57",
+    "syn-07898-f915097238b7",
+    "syn-08003-bf10c87f72a4",
+    "syn-08060-0ab63e71c538",
+    "syn-08076-272282563c6a",
+    "syn-08119-a60790f30a46",
+    "syn-08129-84ce4f333f19",
+    "syn-08138-5c68426b843f",
+    "syn-08186-d6496e31730c",
+    "syn-08215-925660fb9230",
+    "syn-08222-63267832a055",
+    "syn-08267-ea3b95fc411a",
+    "syn-08275-8742212fa2e9",
+    "syn-08369-da92205e7aa8",
+    "syn-08370-61c92ec4c79b",
+    "syn-08376-639522d22686",
+    "syn-08440-dc3ee19a4d4d",
+    "syn-08559-78ed3ec4b690",
+    "syn-08563-9f14ef0f00c2",
+    "syn-08570-46c0968d50d2",
+    "syn-08590-6045d8288ba4",
+    "syn-08593-f4888f051d3b",
+    "syn-08646-baf6e6f5e167",
+    "syn-08713-8b9e009e04fe",
+    "syn-08760-82a0db67720d",
+    "syn-08769-6578615aa3cc",
+    "syn-08773-800b03dfe234",
+    "syn-08795-241ffd4fb0f4",
+    "syn-08798-ac926cfa8475",
+    "syn-08815-43af30e47ece",
+    "syn-08839-6e9ea7e0b5c8",
+    "syn-08864-71e5b086b583",
+    "syn-08899-f79557621895",
+    "syn-08955-729acf2fa16d",
+    "syn-08964-616784e30be5",
+    "syn-08991-bcd0a11c59a4",
+    "syn-09020-1298312fd46f",
+    "syn-09036-d025633a9c6f",
+    "syn-09042-2859cd4c6c80",
+    "syn-09166-fb5afc01e25b",
+    "syn-09276-050d26c835de",
+    "syn-09298-c1b5ac18ef8d",
+    "syn-09323-3f9c0d73614d",
+    "syn-09349-4aa926317cf8",
+    "syn-09351-01583e584837",
+    "syn-09413-7080d48e104c",
+    "syn-09420-9c8a6f0131d2",
+    "syn-09440-ef848d28d180",
+    "syn-09453-8d247670bd72",
+    "syn-09492-48e9cd4bb418",
+    "syn-09510-85f1536ec2cb",
+    "syn-09530-bd882ed8cd94",
+    "syn-09562-315cd12319d3",
+    "syn-09659-189213c324d3",
+    "syn-09734-7c03e34f1dfa",
+    "syn-09789-8497b0253691",
+    "syn-09792-17c3361878bb",
+    "syn-09804-ce2a6020b11d",
+    "syn-09879-6a05ddeec8bf",
+    "syn-09899-3f14162ba310",
+    "syn-09908-a52135487a8a",
+    "syn-09929-908b597cba70",
+    "syn-09969-754abf778ac3",
+    "syn-10046-e215928c5651",
+    "syn-10159-95c66875a7fc",
+    "syn-10194-b62885f6c324",
+    "syn-10208-87fa5fff77aa",
+    "syn-10265-f3b1b813a43d",
+    "syn-10271-80140a4e5761",
+    "syn-10304-02b42716de66",
+    "syn-10406-5fbb284d48b0",
+    "syn-10409-6a3528db71ac",
+    "syn-10496-60775f6b8b31",
+    "syn-10515-0ed9296cb489",
+    "syn-10659-8ad4e7f97867",
+    "syn-10688-4029884aea0b",
+    "syn-10723-61152fe46616",
+    "syn-10788-c577bb99c92c",
+    "syn-10960-7430c7fbac51",
+    "syn-10990-c8c510ad2503",
+    "syn-11036-65732fe2cc56",
+    "syn-11063-bf793cd201cf",
+    "syn-11087-d470d6ec76a5",
+    "syn-11125-0bcb02442e07",
+    "syn-11145-b92b2d2418a5",
+    "syn-11155-567b694c6613",
+    "syn-11169-22f2d700bbc6",
+    "syn-11219-39036c58cf92",
+    "syn-11375-917c5adf1582",
+    "syn-11392-ba2bc130c87c",
+    "syn-11469-a9736cd638ee",
+    "syn-11473-90d6911877b2",
+    "syn-11492-a29828deefff",
+    "syn-11505-d84ab59515a8",
+    "syn-11581-74ff60c8436a",
+    "syn-11690-b09a31dc4137",
+    "syn-11791-c40a35eac9f2",
+    "syn-11809-b990ef231198",
+    "syn-11912-2204b0185efd",
+    "syn-11994-fa2156f14f29",
+    "syn-12129-d911b8b39076",
+    "syn-12139-aa99ad985b06",
+    "syn-12173-5d8bea3b488c",
+    "syn-12179-8a88312973a3",
+    "syn-12271-c176fdf7564a",
+    "syn-12284-c415142c662e",
+    "syn-12340-ecbdfbedba63",
+    "syn-12371-180a38e2b47b",
+    "syn-12374-3fe44f48a889",
+    "syn-12513-31fa0fd8c74f",
+    "syn-12526-94f3e65deace",
+    "syn-12540-190128c040c9",
+    "syn-12557-2467d7cd2df4",
+    "syn-12593-55da5f32789f",
+    "syn-12642-43b21dd7ca74",
+    "syn-12757-70b4d82ba362",
+    "syn-12769-6dfb7077611f",
+    "syn-12889-1b9bc28a2cd1",
+    "syn-12911-017c1039ab3f",
+    "syn-12964-cf5487f095c3",
+    "syn-13075-bea3c627317a",
+    "syn-13079-268093cd280e",
+    "syn-13103-ab78f6f26bca",
+    "syn-13216-b5e175e56490",
+    "syn-13338-3c501cf4a2d8",
+    "syn-13401-760227d54a13"
+  ],
+  "matched_unique_counts_by_intent": {
+    "historical": 98,
+    "aggregation": 100,
+    "boolean": 100
+  },
+  "repeat_sources": [
+    {
+      "source_question_id": "syn-03753-f5a27a666f1e",
+      "source_index": 3753,
+      "paraphrase_ids": [
+        "historical-030",
+        "historical-031"
+      ],
+      "variants": [
+        "a",
+        "b"
+      ],
+      "questions": [
+        "After merging consecutive repeats in Michael Bush's serial-ordered history, what value value is stored at slot 2, counting down from the highest serial?",
+        "For Michael Bush, return the value value on the record at position 2 after distinct states are ordered by decreasing serial."
+      ]
+    },
+    {
+      "source_question_id": "syn-05490-df2416c53a6d",
+      "source_index": 5490,
+      "paraphrase_ids": [
+        "historical-047",
+        "historical-048"
+      ],
+      "variants": [
+        "a",
+        "b"
+      ],
+      "questions": [
+        "Read 1983 Cricket World Cup's records in descending serial order, collapsing adjacent repeated values; which value value belongs to position 2?",
+        "Locate position 2 in 1983 Cricket World Cup's sequence of distinct states sorted from highest serial to lowest, and report its value value."
+      ]
+    }
+  ],
+  "excluded_source_indices": {
+    "historical": [],
+    "aggregation": [
+      8635,
+      10285
+    ],
+    "boolean": []
+  },
+  "paraphrase_sha256": "9c835d5b2ee25140b852b689f9ca0b75aef185cd59c8c324c63dd80c301f0e2d",
+  "excluded_source_ids": {
+    "historical": [],
+    "aggregation": [
+      {
+        "source_index": 8635,
+        "question_id": "syn-08635-073e9e1bf51e",
+        "question": "How many heterogeneous values has Pakistan Hockey Federation accumulated?",
+        "gold": "2"
+      },
+      {
+        "source_index": 10285,
+        "question_id": "syn-10285-2b3387533188",
+        "question": "Counting only unique values, how many values are on file for Jayne Meadows?",
+        "gold": "2"
+      }
+    ],
+    "boolean": []
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "intent": "aggregation",
+  "items": [
+    {
+      "paraphrase_id": "aggregation-001",
+      "source_question_id": "syn-00076-a93bacd5d90a",
+      "original_question": "How many separate value designations exist in the records for Madeleine L'Engle?"
+    },
+    {
+      "paraphrase_id": "aggregation-002",
+      "source_question_id": "syn-00196-02cb881810d2",
+      "original_question": "How many separate value designations exist in the records for Céline Dion?"
+    },
+    {
+      "paraphrase_id": "aggregation-003",
+      "source_question_id": "syn-00265-123132b55c27",
+      "original_question": "Counting only unique values, how many values are on file for Mahela Jayawardene?"
+    },
+    {
+      "paraphrase_id": "aggregation-004",
+      "source_question_id": "syn-00619-bb1263bd4fed",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to Amber Rose."
+    },
+    {
+      "paraphrase_id": "aggregation-005",
+      "source_question_id": "syn-00721-57451506288b",
+      "original_question": "Give me the total count of distinct religions that have been associated with Fyodor Dostoyevsky."
+    },
+    {
+      "paraphrase_id": "aggregation-006",
+      "source_question_id": "syn-00730-74534a997e5d",
+      "original_question": "Tallying every distinct value, how many are linked to Akhilesh Yadav?"
+    },
+    {
+      "paraphrase_id": "aggregation-007",
+      "source_question_id": "syn-01201-91e46e491412",
+      "original_question": "Give me the total count of distinct creators that have been associated with Stanley Featherstonehaugh Ukridge."
+    },
+    {
+      "paraphrase_id": "aggregation-008",
+      "source_question_id": "syn-01213-0c85e3bc09e6",
+      "original_question": "Calculate the total sum of unique country entries for Melodifestivalen 2012."
+    },
+    {
+      "paraphrase_id": "aggregation-009",
+      "source_question_id": "syn-01252-f8a6811b20d1",
+      "original_question": "Quantify the distinct value assignments for Brandon Vera."
+    },
+    {
+      "paraphrase_id": "aggregation-010",
+      "source_question_id": "syn-01336-ecee592340d4",
+      "original_question": "How many separate value designations exist in the records for The univeristy where Albert Camus?"
+    },
+    {
+      "paraphrase_id": "aggregation-011",
+      "source_question_id": "syn-01372-f22d0e368694",
+      "original_question": "Quantify the distinct creator assignments for A Charlie Brown Christmas."
+    },
+    {
+      "paraphrase_id": "aggregation-012",
+      "source_question_id": "syn-01375-4275435cb4be",
+      "original_question": "How many heterogeneous values has Charles Messier accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-013",
+      "source_question_id": "syn-01396-a0adae194740",
+      "original_question": "How many separate religion designations exist in the records for John Paul I?"
+    },
+    {
+      "paraphrase_id": "aggregation-014",
+      "source_question_id": "syn-01489-e674bce37e7d",
+      "original_question": "What is the sum total of varied values recorded against Tim Hughes?"
+    },
+    {
+      "paraphrase_id": "aggregation-015",
+      "source_question_id": "syn-01531-17797f9f0bc0",
+      "original_question": "Provide the cardinality of the set of values associated with Lionel Richie."
+    },
+    {
+      "paraphrase_id": "aggregation-016",
+      "source_question_id": "syn-01630-970db28620c0",
+      "original_question": "Tallying every distinct country, how many are linked to Def Poetry?"
+    },
+    {
+      "paraphrase_id": "aggregation-017",
+      "source_question_id": "syn-01771-30bd6c93687e",
+      "original_question": "Provide the cardinality of the set of values associated with Shuttle Carrier Aircraft."
+    },
+    {
+      "paraphrase_id": "aggregation-018",
+      "source_question_id": "syn-01918-219939e1d1a0",
+      "original_question": "Provide a count of all unique values that reference White Light/White Heat."
+    },
+    {
+      "paraphrase_id": "aggregation-019",
+      "source_question_id": "syn-01999-008764c86e96",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to Joseph Schwantner."
+    },
+    {
+      "paraphrase_id": "aggregation-020",
+      "source_question_id": "syn-02023-d44d2aeff833",
+      "original_question": "What is the census of unique value entries under Amy Heckerling?"
+    },
+    {
+      "paraphrase_id": "aggregation-021",
+      "source_question_id": "syn-02050-5eda8f8f6511",
+      "original_question": "Tallying every distinct value, how many are linked to Southern Pacific?"
+    },
+    {
+      "paraphrase_id": "aggregation-022",
+      "source_question_id": "syn-02059-6b7cfff140c3",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to 1940 World Series."
+    },
+    {
+      "paraphrase_id": "aggregation-023",
+      "source_question_id": "syn-02110-9e22b6fe7b6b",
+      "original_question": "Tallying every distinct value, how many are linked to John D. MacArthur?"
+    },
+    {
+      "paraphrase_id": "aggregation-024",
+      "source_question_id": "syn-02200-33280ee28def",
+      "original_question": "Determine the aggregate count of differing values for Ivo Karlović."
+    },
+    {
+      "paraphrase_id": "aggregation-025",
+      "source_question_id": "syn-02215-db33d8983998",
+      "original_question": "How many heterogeneous values has Jean Jaurès accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-026",
+      "source_question_id": "syn-02326-658a4f97866d",
+      "original_question": "How many individual values appear across the dataset for Apple Watch?"
+    },
+    {
+      "paraphrase_id": "aggregation-027",
+      "source_question_id": "syn-02413-2b1993e065a8",
+      "original_question": "Calculate the total sum of unique value entries for halfback."
+    },
+    {
+      "paraphrase_id": "aggregation-028",
+      "source_question_id": "syn-02548-483d2aca0e81",
+      "original_question": "How many discrete value classifications apply to Qualcomm Inc.?"
+    },
+    {
+      "paraphrase_id": "aggregation-029",
+      "source_question_id": "syn-02551-f82502cb297d",
+      "original_question": "Provide the cardinality of the set of countries associated with The Orange County Register."
+    },
+    {
+      "paraphrase_id": "aggregation-030",
+      "source_question_id": "syn-02764-69e35769f54a",
+      "original_question": "Across all records, how many unique values does Aiginiakos F.C. have?"
+    },
+    {
+      "paraphrase_id": "aggregation-031",
+      "source_question_id": "syn-02767-319a26c26ef6",
+      "original_question": "What is the cumulative number of different values recorded for Johann Jakob Froberger?"
+    },
+    {
+      "paraphrase_id": "aggregation-032",
+      "source_question_id": "syn-02854-85dfe0e85521",
+      "original_question": "What is the total tally of disparate values for Måns Zelmerlöw?"
+    },
+    {
+      "paraphrase_id": "aggregation-033",
+      "source_question_id": "syn-02893-b49e1b2fef8f",
+      "original_question": "Calculate the total sum of unique value entries for EuroBasket 2003."
+    },
+    {
+      "paraphrase_id": "aggregation-034",
+      "source_question_id": "syn-02929-1b3fe8cf6b37",
+      "original_question": "What is the sum total of varied countries recorded against Jonas Brothers?"
+    },
+    {
+      "paraphrase_id": "aggregation-035",
+      "source_question_id": "syn-03031-1f31bd500b90",
+      "original_question": "Provide the cardinality of the set of religions associated with Boniface IX."
+    },
+    {
+      "paraphrase_id": "aggregation-036",
+      "source_question_id": "syn-03205-d3faacddbf3c",
+      "original_question": "Counting only unique values, how many values are on file for The univeristy where Vladimir Tismăneanu?"
+    },
+    {
+      "paraphrase_id": "aggregation-037",
+      "source_question_id": "syn-03535-ac96172f4bff",
+      "original_question": "How many heterogeneous creators has Sex and the City accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-038",
+      "source_question_id": "syn-03829-1b321d8536f8",
+      "original_question": "What is the sum total of varied values recorded against Olivia Harrison?"
+    },
+    {
+      "paraphrase_id": "aggregation-039",
+      "source_question_id": "syn-03874-ccde3aaf5dc6",
+      "original_question": "What is the total tally of disparate values for Amoco?"
+    },
+    {
+      "paraphrase_id": "aggregation-040",
+      "source_question_id": "syn-04060-b399e854dcf1",
+      "original_question": "Determine the aggregate count of differing values for Strangers in the Night."
+    },
+    {
+      "paraphrase_id": "aggregation-041",
+      "source_question_id": "syn-04063-81a665d4793f",
+      "original_question": "What is the census of unique religion entries under Congregation of Christian Brothers?"
+    },
+    {
+      "paraphrase_id": "aggregation-042",
+      "source_question_id": "syn-04087-ce94ad474186",
+      "original_question": "What is the cumulative number of different religions recorded for António de Oliveira Salazar?"
+    },
+    {
+      "paraphrase_id": "aggregation-043",
+      "source_question_id": "syn-04696-7fc230c1b22e",
+      "original_question": "How many separate location designations exist in the records for Kingdom of Italy?"
+    },
+    {
+      "paraphrase_id": "aggregation-044",
+      "source_question_id": "syn-04744-b82c0bb162c7",
+      "original_question": "Across all records, how many unique creators does WWF Superstars of Wrestling have?"
+    },
+    {
+      "paraphrase_id": "aggregation-045",
+      "source_question_id": "syn-05128-4fd6c49f42c3",
+      "original_question": "How many discrete location classifications apply to Madrid?"
+    },
+    {
+      "paraphrase_id": "aggregation-046",
+      "source_question_id": "syn-05494-1655ed02d822",
+      "original_question": "What is the total tally of disparate values for Channel Orange?"
+    },
+    {
+      "paraphrase_id": "aggregation-047",
+      "source_question_id": "syn-05608-bf4d8a99f90b",
+      "original_question": "How many discrete value classifications apply to Alex Ross?"
+    },
+    {
+      "paraphrase_id": "aggregation-048",
+      "source_question_id": "syn-05770-63189ea8cea8",
+      "original_question": "Tallying every distinct value, how many are linked to Dave Holland?"
+    },
+    {
+      "paraphrase_id": "aggregation-049",
+      "source_question_id": "syn-05896-3f3560d657c6",
+      "original_question": "How many separate value designations exist in the records for Marlon Wayans?"
+    },
+    {
+      "paraphrase_id": "aggregation-050",
+      "source_question_id": "syn-06349-6540a4b7dc51",
+      "original_question": "What is the sum total of varied values recorded against Andrew Caddick?"
+    },
+    {
+      "paraphrase_id": "aggregation-051",
+      "source_question_id": "syn-06550-cac590a665ed",
+      "original_question": "Tallying every distinct religion, how many are linked to St. John's University?"
+    },
+    {
+      "paraphrase_id": "aggregation-052",
+      "source_question_id": "syn-06760-99583ecc8646",
+      "original_question": "Determine the aggregate count of differing values for Latter Day Saint movement."
+    },
+    {
+      "paraphrase_id": "aggregation-053",
+      "source_question_id": "syn-07063-2c337fed01cf",
+      "original_question": "What is the census of unique religion entries under Rudyard Kipling?"
+    },
+    {
+      "paraphrase_id": "aggregation-054",
+      "source_question_id": "syn-07204-1c399759fc4e",
+      "original_question": "Across all records, how many unique values does Jacob De la Gardie have?"
+    },
+    {
+      "paraphrase_id": "aggregation-055",
+      "source_question_id": "syn-07318-2d30522d2cfa",
+      "original_question": "Provide a count of all unique values that reference Mr. Brightside."
+    },
+    {
+      "paraphrase_id": "aggregation-056",
+      "source_question_id": "syn-07354-1afa36ca04a1",
+      "original_question": "What is the total tally of disparate values for Jerry West?"
+    },
+    {
+      "paraphrase_id": "aggregation-057",
+      "source_question_id": "syn-07393-a9bee9342632",
+      "original_question": "Calculate the total sum of unique country entries for heartland rock."
+    },
+    {
+      "paraphrase_id": "aggregation-058",
+      "source_question_id": "syn-07411-9d56abb239e4",
+      "original_question": "Provide the cardinality of the set of values associated with Victoria Cross."
+    },
+    {
+      "paraphrase_id": "aggregation-059",
+      "source_question_id": "syn-07585-e389cfe4327f",
+      "original_question": "Counting only unique values, how many religions are on file for St. John Fisher College?"
+    },
+    {
+      "paraphrase_id": "aggregation-060",
+      "source_question_id": "syn-07603-5478b0692ba7",
+      "original_question": "What is the census of unique value entries under Christina Grimmie?"
+    },
+    {
+      "paraphrase_id": "aggregation-061",
+      "source_question_id": "syn-07660-39b1dbd19b2e",
+      "original_question": "Determine the aggregate count of differing values for Jaya Bhaduri Bachchan."
+    },
+    {
+      "paraphrase_id": "aggregation-062",
+      "source_question_id": "syn-07744-ce8604bafdba",
+      "original_question": "Across all records, how many unique locations does The headquarters of Republic Aviation Corporation have?"
+    },
+    {
+      "paraphrase_id": "aggregation-063",
+      "source_question_id": "syn-07891-a6e08e53fe57",
+      "original_question": "Provide the cardinality of the set of countries associated with The Brave Little Toaster."
+    },
+    {
+      "paraphrase_id": "aggregation-064",
+      "source_question_id": "syn-08119-a60790f30a46",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to NBC."
+    },
+    {
+      "paraphrase_id": "aggregation-065",
+      "source_question_id": "syn-08215-925660fb9230",
+      "original_question": "How many heterogeneous religions has Donald Carcieri accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-066",
+      "source_question_id": "syn-08275-8742212fa2e9",
+      "original_question": "How many heterogeneous values has David Carr accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-067",
+      "source_question_id": "syn-08440-dc3ee19a4d4d",
+      "original_question": "Determine the aggregate count of differing creators for Wizard of Oz."
+    },
+    {
+      "paraphrase_id": "aggregation-068",
+      "source_question_id": "syn-08563-9f14ef0f00c2",
+      "original_question": "What is the census of unique religion entries under Roger of Salisbury?"
+    },
+    {
+      "paraphrase_id": "aggregation-069",
+      "source_question_id": "syn-08590-6045d8288ba4",
+      "original_question": "Tallying every distinct value, how many are linked to Windows 95?"
+    },
+    {
+      "paraphrase_id": "aggregation-070",
+      "source_question_id": "syn-08593-f4888f051d3b",
+      "original_question": "Calculate the total sum of unique value entries for Harry Judd."
+    },
+    {
+      "paraphrase_id": "aggregation-071",
+      "source_question_id": "syn-08713-8b9e009e04fe",
+      "original_question": "Calculate the total sum of unique religion entries for Ernest Renan."
+    },
+    {
+      "paraphrase_id": "aggregation-072",
+      "source_question_id": "syn-08773-800b03dfe234",
+      "original_question": "Calculate the total sum of unique value entries for Oliver Bierhoff."
+    },
+    {
+      "paraphrase_id": "aggregation-073",
+      "source_question_id": "syn-08815-43af30e47ece",
+      "original_question": "How many heterogeneous values has San Antonio Spurs accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-074",
+      "source_question_id": "syn-08839-6e9ea7e0b5c8",
+      "original_question": "Enumerate the number of non-duplicate religions that pertain to First Epistle of John."
+    },
+    {
+      "paraphrase_id": "aggregation-075",
+      "source_question_id": "syn-08899-f79557621895",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to John Jackson Miller."
+    },
+    {
+      "paraphrase_id": "aggregation-076",
+      "source_question_id": "syn-09166-fb5afc01e25b",
+      "original_question": "How many individual locations appear across the dataset for Republic of the Congo?"
+    },
+    {
+      "paraphrase_id": "aggregation-077",
+      "source_question_id": "syn-09298-c1b5ac18ef8d",
+      "original_question": "Provide a count of all unique locations that reference The headquarters of University of Kiel."
+    },
+    {
+      "paraphrase_id": "aggregation-078",
+      "source_question_id": "syn-09349-4aa926317cf8",
+      "original_question": "What is the sum total of varied locations recorded against Cambodia?"
+    },
+    {
+      "paraphrase_id": "aggregation-079",
+      "source_question_id": "syn-09562-315cd12319d3",
+      "original_question": "What quantity of distinct religions has Aubrey Beardsley been catalogued under?"
+    },
+    {
+      "paraphrase_id": "aggregation-080",
+      "source_question_id": "syn-10159-95c66875a7fc",
+      "original_question": "Enumerate the number of non-duplicate values that pertain to Warcraft."
+    },
+    {
+      "paraphrase_id": "aggregation-081",
+      "source_question_id": "syn-10723-61152fe46616",
+      "original_question": "What is the census of unique value entries under Chris Connor?"
+    },
+    {
+      "paraphrase_id": "aggregation-082",
+      "source_question_id": "syn-10960-7430c7fbac51",
+      "original_question": "Determine the aggregate count of differing values for Kenny Perry."
+    },
+    {
+      "paraphrase_id": "aggregation-083",
+      "source_question_id": "syn-10990-c8c510ad2503",
+      "original_question": "Tallying every distinct value, how many are linked to Johann Heinrich Pestalozzi?"
+    },
+    {
+      "paraphrase_id": "aggregation-084",
+      "source_question_id": "syn-11125-0bcb02442e07",
+      "original_question": "Counting only unique values, how many religions are on file for Bettino Ricasoli?"
+    },
+    {
+      "paraphrase_id": "aggregation-085",
+      "source_question_id": "syn-11155-567b694c6613",
+      "original_question": "How many heterogeneous values has Vytautas Landsbergis accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-086",
+      "source_question_id": "syn-11392-ba2bc130c87c",
+      "original_question": "Quantify the distinct religion assignments for University of St. Thomas."
+    },
+    {
+      "paraphrase_id": "aggregation-087",
+      "source_question_id": "syn-11473-90d6911877b2",
+      "original_question": "Calculate the total sum of unique value entries for Singularity University."
+    },
+    {
+      "paraphrase_id": "aggregation-088",
+      "source_question_id": "syn-11581-74ff60c8436a",
+      "original_question": "Give me the total count of distinct values that have been associated with Andrei Shleifer."
+    },
+    {
+      "paraphrase_id": "aggregation-089",
+      "source_question_id": "syn-11791-c40a35eac9f2",
+      "original_question": "Provide the cardinality of the set of values associated with Sydney United FC."
+    },
+    {
+      "paraphrase_id": "aggregation-090",
+      "source_question_id": "syn-11809-b990ef231198",
+      "original_question": "What is the sum total of varied creators recorded against Captain Nemo?"
+    },
+    {
+      "paraphrase_id": "aggregation-091",
+      "source_question_id": "syn-12139-aa99ad985b06",
+      "original_question": "Enumerate the number of non-duplicate countries that pertain to Friday."
+    },
+    {
+      "paraphrase_id": "aggregation-092",
+      "source_question_id": "syn-12271-c176fdf7564a",
+      "original_question": "Provide the cardinality of the set of values associated with David Oistrakh."
+    },
+    {
+      "paraphrase_id": "aggregation-093",
+      "source_question_id": "syn-12340-ecbdfbedba63",
+      "original_question": "Determine the aggregate count of differing values for Michael Frayn."
+    },
+    {
+      "paraphrase_id": "aggregation-094",
+      "source_question_id": "syn-12526-94f3e65deace",
+      "original_question": "How many individual religions appear across the dataset for Raúl Alfonsín?"
+    },
+    {
+      "paraphrase_id": "aggregation-095",
+      "source_question_id": "syn-12757-70b4d82ba362",
+      "original_question": "How many non-redundant values have been attributed to 2005 World Series?"
+    },
+    {
+      "paraphrase_id": "aggregation-096",
+      "source_question_id": "syn-12769-6dfb7077611f",
+      "original_question": "What is the sum total of varied values recorded against Windows Media Video?"
+    },
+    {
+      "paraphrase_id": "aggregation-097",
+      "source_question_id": "syn-12889-1b9bc28a2cd1",
+      "original_question": "What is the sum total of varied locations recorded against Vancouver?"
+    },
+    {
+      "paraphrase_id": "aggregation-098",
+      "source_question_id": "syn-12964-cf5487f095c3",
+      "original_question": "Across all records, how many unique religions does Tyrannius Rufinus have?"
+    },
+    {
+      "paraphrase_id": "aggregation-099",
+      "source_question_id": "syn-13075-bea3c627317a",
+      "original_question": "How many heterogeneous values has Akira Toriyama accumulated?"
+    },
+    {
+      "paraphrase_id": "aggregation-100",
+      "source_question_id": "syn-13216-b5e175e56490",
+      "original_question": "How many separate value designations exist in the records for Francis de Sales?"
+    }
+  ]
+}

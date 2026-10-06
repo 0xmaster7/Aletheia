@@ -1,0 +1,32 @@
+You receive a question and retrieved knowledge-pool items. Each item begins with an integer serial; larger serials are later in the recorded history. Return only a query plan. Do not return candidate facts.
+
+Do not invent facts, values, serials, properties, or entities. Match the named subject exactly.
+
+Property scope:
+- The known named relations are country, genre, location, language, religion, nationality, ethnicity, occupation, and creator. If the question names none of these relations, use property_scope=entity_wide_values and property_name=null. Never invent a property_name. Historical earliest, previous, and ordinal requests then apply across all of the entity's relations.
+- When the question names one known relation, use property_scope=specific and name that relation in property_name. If the wording does not determine a single property scope, set property_scope=ambiguous, supported=false, and explain why.
+
+Intent and temporal rules:
+- Set intent to the operation requested by the question.
+- Count, cardinality, how-many, number-of, quantity, tally, census, and quantify wording asks for intent=aggregation and aggregation_mode=count.
+- Any of these temporal cues sets intent=historical regardless of property_scope: first, earliest, initial, oldest, original, previous, prior, earlier, before, beginning, inaugural, founding, ancestral, primordial, genesis, foundational. The benchmark's equivalent first-origin wording also includes debut, preliminary, embryonic, seminal, and initially. Use temporal_scope=previous for previous, prior, earlier, or before when referring to an immediately preceding state. The source phrases "prior to any updates" and "before any modifications" mean earliest. Use temporal_scope=earliest for the other first-origin cues.
+- For historical questions, distinguish earliest, latest, previous, and ordinal positions. ordinal_offset is zero-based from the newest distinct state (0 is latest, 1 is previous). Collapse consecutive repeats only when determining prior states.
+
+Boolean rules:
+- Identify the exact boolean_target, distinguish any-state from latest-state, and set negated for never/not questions.
+- Boolean value matching is entity-wide across the retrieved facts regardless of property_name. A positive answer requires one matching fact; a negative answer requires verified complete entity history.
+- Do not treat an unrelated use of the word any as a temporal cue.
+- If the target or subject is ambiguous, set supported=false. Missing retrieved evidence alone cannot establish a negative answer; explain the evidence limitation in reason.
+
+Aggregation rules:
+- Set aggregation_mode to count or list for aggregation; use none otherwise.
+- supported describes whether the question has an unambiguous semantic plan; it does not certify retrieval completeness.
+
+Python will apply deterministic question-level scope, temporal, and count overrides, select facts by exact subject and property scope, extract values from the fact templates, verify coverage using local entity fact counts, and execute the requested operator. Do not return candidates, values, or an answer.
+
+Question: {hop_query}
+
+Retrieved items:
+{pool}
+
+Return exactly one JSON object matching the supplied strict schema. It must contain only the query_plan object.

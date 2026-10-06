@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "completed": 900,
+  "expected": 900,
+  "generation_attempt_spend_usd": 0.00481005,
+  "evaluation_spend_usd": 0.2469756,
+  "task_api_spend_including_generation": 0.25178565,
+  "hard_stop": 0.4,
+  "last_call": "ood-300-cot",
+  "terminal_call_status_counts": {
+    "completed": 900
+  }
+}

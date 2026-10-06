@@ -1,0 +1,835 @@
+{
+  "run_id": "task2b_confirmatory_boolean_polarity_fix",
+  "manifest_sha256": "9c312944fbb74e5fee99b25512e0694ba607a90443e8016bbc58d97c9d0b4c75",
+  "calls_logged": 100,
+  "expected_calls": 100,
+  "status": "complete",
+  "model": "gpt-4o-mini",
+  "temperature": 0.0,
+  "k": 80,
+  "hard_stop_usd": 0.3,
+  "actual_spend_usd": 0.03454425,
+  "prompt_tokens": 199787,
+  "completion_tokens": 7627,
+  "saved_baseline_correct": 40,
+  "saved_baseline_accuracy": 0.4,
+  "fresh_plan_before_fix_correct": 42,
+  "fresh_plan_before_fix_accuracy": 0.42,
+  "after_correct": 48,
+  "after_accuracy": 0.48,
+  "abstained_after": 43,
+  "fix_changed_negated": 21,
+  "same_fresh_plan_flips": {
+    "wrong_to_right": [
+      {
+        "question_id": "syn-03875-f9c8d8347a7d",
+        "source_index": 3875,
+        "question": "Was the value Prism Analytics ever a documented fact about Amoco?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Amoco",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Prism Analytics",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not contain any documented facts about 'Prism Analytics' related to 'Amoco', indicating a lack of evidence."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Amoco",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Prism Analytics",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not contain any documented facts about 'Prism Analytics' related to 'Amoco', indicating a lack of evidence."
+        }
+      },
+      {
+        "question_id": "syn-00155-8b9dcae3aa49",
+        "source_index": 155,
+        "question": "Was the language Fenhari ever a documented fact about Breaking Bad?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Breaking Bad",
+          "property_scope": "specific",
+          "property_name": "language",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Fenhari",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not include any documentation of the language Fenhari related to Breaking Bad."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Breaking Bad",
+          "property_scope": "specific",
+          "property_name": "language",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Fenhari",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not include any documentation of the language Fenhari related to Breaking Bad."
+        }
+      },
+      {
+        "question_id": "syn-04055-b1ba570be537",
+        "source_index": 4055,
+        "question": "Was the religion Mirethism ever a documented fact about René Descartes?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "René Descartes",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Mirethism",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not document Mirethism as a religion associated with René Descartes."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "René Descartes",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Mirethism",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not document Mirethism as a religion associated with René Descartes."
+        }
+      },
+      {
+        "question_id": "syn-03035-ac55f5922583",
+        "source_index": 3035,
+        "question": "Was the country Nuldania ever a documented fact about Buckcherry?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Buckcherry",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Nuldania",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not mention Nuldania in relation to Buckcherry, and there is no evidence to confirm or deny its existence as a documented fact."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Buckcherry",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Nuldania",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not mention Nuldania in relation to Buckcherry, and there is no evidence to confirm or deny its existence as a documented fact."
+        }
+      },
+      {
+        "question_id": "syn-03785-af53b2488d80",
+        "source_index": 3785,
+        "question": "Was the value Narwhal Inc. ever a documented fact about Cisco Systems?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Cisco Systems",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Narwhal Inc.",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence of a documented fact about Narwhal Inc. related to Cisco Systems."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Cisco Systems",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Narwhal Inc.",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence of a documented fact about Narwhal Inc. related to Cisco Systems."
+        }
+      },
+      {
+        "question_id": "syn-10265-f3b1b813a43d",
+        "source_index": 10265,
+        "question": "Was the value Atlas Collective ever a documented fact about Distinguished Service Order?",
+        "gold": "False",
+        "fresh_plan_prediction_before_fix": true,
+        "new_prediction": false,
+        "fresh_plan_correct_before_fix": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Distinguished Service Order",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Atlas Collective",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence regarding the relationship between Atlas Collective and Distinguished Service Order."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Distinguished Service Order",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Atlas Collective",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence regarding the relationship between Atlas Collective and Distinguished Service Order."
+        }
+      }
+    ],
+    "right_to_wrong": []
+  },
+  "saved_baseline_to_fixed_fresh_run_flips": {
+    "wrong_to_right": [
+      {
+        "question_id": "syn-11912-2204b0185efd",
+        "source_index": 11912,
+        "question": "Is it accurate that Windows Communication Foundation was at some point recorded under the value of VMware Inc?",
+        "gold": "True",
+        "saved_prediction": false,
+        "new_prediction": true,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Windows Communication Foundation",
+          "property_scope": "specific",
+          "property_name": "creator",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "VMware Inc",
+          "negated": false,
+          "supported": true,
+          "reason": "The question directly asks if Windows Communication Foundation was recorded under VMware Inc, which is a specific inquiry about its creator."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Windows Communication Foundation",
+          "property_scope": "specific",
+          "property_name": "creator",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "VMware Inc",
+          "negated": false,
+          "supported": true,
+          "reason": "The question directly asks if Windows Communication Foundation was recorded under VMware Inc, which is a specific inquiry about its creator."
+        }
+      },
+      {
+        "question_id": "syn-03875-f9c8d8347a7d",
+        "source_index": 3875,
+        "question": "Was the value Prism Analytics ever a documented fact about Amoco?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Amoco",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Prism Analytics",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not contain any documented facts about 'Prism Analytics' related to 'Amoco', indicating a lack of evidence."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Amoco",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Prism Analytics",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not contain any documented facts about 'Prism Analytics' related to 'Amoco', indicating a lack of evidence."
+        }
+      },
+      {
+        "question_id": "syn-00155-8b9dcae3aa49",
+        "source_index": 155,
+        "question": "Was the language Fenhari ever a documented fact about Breaking Bad?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Breaking Bad",
+          "property_scope": "specific",
+          "property_name": "language",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Fenhari",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not include any documentation of the language Fenhari related to Breaking Bad."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Breaking Bad",
+          "property_scope": "specific",
+          "property_name": "language",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Fenhari",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not include any documentation of the language Fenhari related to Breaking Bad."
+        }
+      },
+      {
+        "question_id": "syn-04055-b1ba570be537",
+        "source_index": 4055,
+        "question": "Was the religion Mirethism ever a documented fact about René Descartes?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "René Descartes",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Mirethism",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not document Mirethism as a religion associated with René Descartes."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "René Descartes",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Mirethism",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not document Mirethism as a religion associated with René Descartes."
+        }
+      },
+      {
+        "question_id": "syn-03035-ac55f5922583",
+        "source_index": 3035,
+        "question": "Was the country Nuldania ever a documented fact about Buckcherry?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Buckcherry",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Nuldania",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not mention Nuldania in relation to Buckcherry, and there is no evidence to confirm or deny its existence as a documented fact."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Buckcherry",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Nuldania",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not mention Nuldania in relation to Buckcherry, and there is no evidence to confirm or deny its existence as a documented fact."
+        }
+      },
+      {
+        "question_id": "syn-06500-0322a91d9506",
+        "source_index": 6500,
+        "question": "Does the evidence support that Islam served as the religion for John Witherspoon?",
+        "gold": "True",
+        "saved_prediction": false,
+        "new_prediction": true,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "John Witherspoon",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Islam",
+          "negated": false,
+          "supported": false,
+          "reason": "The evidence includes conflicting affiliations for John Witherspoon, specifically with both Islam and Presbyterianism, making it unclear if Islam served as his religion."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "John Witherspoon",
+          "property_scope": "specific",
+          "property_name": "religion",
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Islam",
+          "negated": false,
+          "supported": false,
+          "reason": "The evidence includes conflicting affiliations for John Witherspoon, specifically with both Islam and Presbyterianism, making it unclear if Islam served as his religion."
+        }
+      },
+      {
+        "question_id": "syn-03785-af53b2488d80",
+        "source_index": 3785,
+        "question": "Was the value Narwhal Inc. ever a documented fact about Cisco Systems?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Cisco Systems",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Narwhal Inc.",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence of a documented fact about Narwhal Inc. related to Cisco Systems."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Cisco Systems",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Narwhal Inc.",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence of a documented fact about Narwhal Inc. related to Cisco Systems."
+        }
+      },
+      {
+        "question_id": "syn-10265-f3b1b813a43d",
+        "source_index": 10265,
+        "question": "Was the value Atlas Collective ever a documented fact about Distinguished Service Order?",
+        "gold": "False",
+        "saved_prediction": true,
+        "new_prediction": false,
+        "saved_correct": false,
+        "new_correct": true,
+        "new_answer_status": "answered",
+        "plan_before": {
+          "intent": "boolean",
+          "entity": "Distinguished Service Order",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Atlas Collective",
+          "negated": true,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence regarding the relationship between Atlas Collective and Distinguished Service Order."
+        },
+        "plan_after_fix": {
+          "intent": "boolean",
+          "entity": "Distinguished Service Order",
+          "property_scope": "entity_wide_values",
+          "property_name": null,
+          "temporal_scope": "unspecified",
+          "ordinal_offset": null,
+          "aggregation_mode": "none",
+          "boolean_target": "Atlas Collective",
+          "negated": false,
+          "supported": false,
+          "reason": "The retrieved items do not provide any evidence regarding the relationship between Atlas Collective and Distinguished Service Order."
+        }
+      }
+    ],
+    "right_to_wrong": []
+  },
+  "fresh_vs_saved_planner_other_field_differences_count": 41,
+  "fresh_vs_saved_planner_other_field_differences": [
+    {
+      "question_id": "syn-11912-2204b0185efd",
+      "fields": [
+        "supported",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-09899-3f14162ba310",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-11063-bf793cd201cf",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-09659-189213c324d3",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-00257-d6ee0a1af707",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-08186-d6496e31730c",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "temporal_scope"
+      ]
+    },
+    {
+      "question_id": "syn-00155-8b9dcae3aa49",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-03779-5c58f19cb8ac",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-01766-da75c32981e2",
+      "fields": [
+        "supported",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-12557-2467d7cd2df4",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-03257-d6b9d720e4d6",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-04055-b1ba570be537",
+      "fields": [
+        "temporal_scope"
+      ]
+    },
+    {
+      "question_id": "syn-08795-241ffd4fb0f4",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-12593-55da5f32789f",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-06251-cd2f29b14ced",
+      "fields": [
+        "boolean_target",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-10271-80140a4e5761",
+      "fields": [
+        "temporal_scope"
+      ]
+    },
+    {
+      "question_id": "syn-00863-c511dadecd4a",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "temporal_scope",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-02015-1173094ae85b",
+      "fields": [
+        "temporal_scope"
+      ]
+    },
+    {
+      "question_id": "syn-10409-6a3528db71ac",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-08267-ea3b95fc411a",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-10304-02b42716de66",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "temporal_scope",
+        "boolean_target"
+      ]
+    },
+    {
+      "question_id": "syn-08129-84ce4f333f19",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-08369-da92205e7aa8",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-03035-ac55f5922583",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-10496-60775f6b8b31",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "temporal_scope",
+        "supported",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-01013-6d0d644b1766",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-11690-b09a31dc4137",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-07787-1ce066db093b",
+      "fields": [
+        "temporal_scope",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-07658-50222933776b",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-09908-a52135487a8a",
+      "fields": [
+        "property_scope",
+        "property_name",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-11219-39036c58cf92",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-12371-180a38e2b47b",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-13103-ab78f6f26bca",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-11087-d470d6ec76a5",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-02393-b40a1ce6f61d",
+      "fields": [
+        "temporal_scope"
+      ]
+    },
+    {
+      "question_id": "syn-05531-5300834913f1",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-04373-3bb016fc6f64",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-11492-a29828deefff",
+      "fields": [
+        "property_name",
+        "temporal_scope",
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-01520-23270ea1b817",
+      "fields": [
+        "property_name"
+      ]
+    },
+    {
+      "question_id": "syn-02687-038b13201360",
+      "fields": [
+        "reason"
+      ]
+    },
+    {
+      "question_id": "syn-07781-d3f12dfb7493",
+      "fields": [
+        "temporal_scope"
+      ]
+    }
+  ],
+  "per_intent": {
+    "boolean": {
+      "before": {
+        "n": 100,
+        "correct": 40
+      },
+      "after": {
+        "n": 100,
+        "correct": 48
+      }
+    }
+  },
+  "truncated_failures": 0,
+  "request_errors": 0
+}

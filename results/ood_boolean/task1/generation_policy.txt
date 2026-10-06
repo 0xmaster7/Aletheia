@@ -1,0 +1,14 @@
+Produce exactly one natural English rewrite for every supplied source question. The output is a new benchmark question, not an answer. Keep the same entity, named relation, proposition polarity, temporal relation, ordinal position, count/list operation, and intended gold meaning. Gold answers are not supplied; do not guess them.
+
+Mandatory structural rewrite: replace the source sentence frame. Move the entity/relation to a different grammatical position, change the question opening and clause structure, and do not merely replace one temporal or relation word. Do not copy any run of four consecutive content words from the source, except proper names and the exact value/relation phrase whose meaning must be preserved. Use multiple different sentence frames within this batch.
+
+The final question must not contain any of these temporal cue words, even if they appear in the source: first, earliest, initial, oldest, original, previous, prior, earlier, before, beginning, inaugural, founding, ancestral, primordial, genesis, foundational, debut, preliminary, embryonic, seminal, initially. For a start-of-record request, express it with serial ordering or the entry having the minimum serial. For an immediately prior state, say one distinct state back from the latest state. Do not use the forbidden words as standalone or embedded phrases.
+
+For historical questions, preserve the exact temporal direction or ordinal. For aggregation, preserve count versus list and the named relation; change the syntax, not the requested operation. For Boolean, preserve the subject, target, relation, and whether the proposition asks if a fact exists; an absent target still has an affirmative question whose gold can be False. Do not change affirmative wording into a negative question.
+
+Examples of the degree of rewrite expected (examples are not task items):
+- Source: "What was the original location recorded for Acme?" Rewrite: "Across Acme's location facts, identify the value paired with the minimum serial number."
+- Source: "How many languages are associated with Acme?" Rewrite: "State the cardinality of Acme's distinct language values."
+- Source: "Was X ever documented as the location for Acme?" Rewrite: "Does Acme have a location fact whose value is X?"
+
+Return exactly one paraphrase for each paraphrase_id and preserve its id. Do not omit, combine, reorder meaning, add context, or explain. Conform exactly to the JSON schema.

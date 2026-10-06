@@ -1,0 +1,70 @@
+{
+  "run_id": "confirmatory-extensions-20261005",
+  "source_run_id": "pf-20261006-hybrid300-final-01",
+  "code_commit": "ecb373a7e41d92cdcdeebc43c27b6267d662e610",
+  "source_baseline_manifest_sha256": "5d7724fe0864388a19b94c227915704e1a8542aaf3c7b445d1c6534bb78fb15a",
+  "source_baseline_requests_sha256": "3e9279c573c02442d70d6ba8af449b6519b12eab879535a8ce5feca94f63fe73",
+  "source_baseline_scored_calls_sha256": "c996da6e42eab6ef623c4c26627e4a626ff2d264b8eef8914c24bf4f1e708ed5",
+  "source_baseline_call_log_sha256": "1ed67cba0202c61e2477e2726a426706b6d22e2e693ca4d3863c22063edd59ac",
+  "pinned_dataset_revision": "7ea066982b140a19337e17e60d45d4076e042faf",
+  "factconsolidation_context_sha256": "9c8ce1ed911d25a3c9d52e5758d9a8d23fa769ded88c5e59dbc1e1a3f6eb1f10",
+  "factconsolidation_arrow_sha256": "de3c70189935b532d21707ca92ae4ee835cc335cd0c002b803355fdb16e5b474",
+  "corpus_fact_count": 18332,
+  "question_count": 300,
+  "intent_counts": {
+    "aggregation": 102,
+    "boolean": 100,
+    "historical": 98
+  },
+  "source_indices_order_sha256": "102734f558f8ed944113a5ca42f278a1897123a9f2d1046ed241b69a070cc590",
+  "input_usd_per_million": 0.15,
+  "output_usd_per_million": 0.6,
+  "hard_stop_usd_total": 0.75,
+  "hard_stop_usd_experiment_1": 0.2,
+  "hard_stop_usd_experiment_2": 0.55,
+  "automatic_retries": 0,
+  "prompt_and_code_hashes": {
+    "final_v3_prompt_sha256": "424cd1344a46437c5332f7026169592df821df36e6dd83057c7070359fd8db5a",
+    "final_v3_operator_sha256": "34dc7e9b4d1e52637cc3da3610adb172730515f135df255e0ac8f3669b74e48f",
+    "base_operator_sha256": "c39a34423c950fd69469c588661c30e33d810c979e3cb1d5b2767e6ad47299ac",
+    "scorer_sha256": "ece8986a80efc861b099af31bd4251d4bc835bc5ceec81d0461a64006307448c",
+    "react_system_prompt_sha256": "a16d50f24f4392816459d31dc823d89f11631d38b948e58d6511934fd521c230",
+    "react_tool_schema_sha256": "b085d72041b512d56796f76f4b163b5e69113a61eee14ca459579badf58bd688",
+    "extension_config_sha256": "295df78acb434da9619209828e2f31e5d46075b9533ba77359f0870e9317821f",
+    "rrf_requests_sha256": "36a01ef05eadcd990228240db24bd0562c74f122d4dc53122dc822e8e37c921a",
+    "react_questions_sha256": "4966b188d1ee6c632ff597d8d1da54cd97a2a2ebfbecd69fd9768caa9493d418",
+    "extension_runner_sha256": "594defd6020fe9575e491a49c975282d76a92117cc0fde196d65bee3287b19c0",
+    "scoring_runner_sha256": "b23993bdeffb1243a523f0327c590a35d11e5da0558537e8285344696f71e332"
+  },
+  "experiment_config": {
+    "run_id": "confirmatory-extensions-20261005",
+    "source_run_id": "pf-20261006-hybrid300-final-01",
+    "source_question_selection": "Exactly the 300 source_index values and order in the saved confirmatory Aletheia requests.jsonl.",
+    "model": "gpt-4o-mini",
+    "temperature": 0.0,
+    "scorer": "scripts/lib/evaluation_scorer.py, SHA-256 recorded in frozen_manifest.json",
+    "experiment_1": {
+      "method": "BM25 plus all-MiniLM-L6-v2 dense retrieval, equal-weight reciprocal rank fusion, constant=60, K=80",
+      "bm25_query": "Original question text, lowercased alphanumeric tokenization matching the confirmatory runner.",
+      "ranking_ties": "Stable descending score, original corpus order breaks ties, matching the preceding 89-question RRF test.",
+      "max_completion_tokens": 1024,
+      "hard_stop_usd": 0.2
+    },
+    "experiment_2": {
+      "method": "Tool-calling ReAct baseline; search_memory performs BM25 over the same full pinned memory store.",
+      "top_k_per_search": 10,
+      "maximum_search_steps_per_question": 6,
+      "maximum_completion_tokens_per_model_call": 512,
+      "pilot_questions": 10,
+      "pilot_projection": "Mean actual pilot question cost multiplied by 300; proceed only when <= $0.55.",
+      "hard_stop_usd": 0.55
+    },
+    "total_hard_stop_usd": 0.75,
+    "input_usd_per_million_tokens": 0.15,
+    "output_usd_per_million_tokens": 0.6,
+    "automatic_retries": 0,
+    "audit_flags": "Retained; no question is excluded or relabelled."
+  },
+  "local_rrf_token_count_sum": 616072,
+  "local_rrf_input_plus_completion_cap_upper_bound_usd": 0.2767308
+}

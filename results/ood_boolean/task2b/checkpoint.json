@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "completed": 100,
+  "expected": 100,
+  "actual_spend_usd": 0.03454425,
+  "hard_stop_usd": 0.3,
+  "last_call": "boolfix-100",
+  "terminal_call_status_counts": {
+    "completed": 100
+  }
+}
