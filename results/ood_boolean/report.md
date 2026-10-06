@@ -6,15 +6,15 @@ Branch: `scratch/ood-boolean`, based on `scratch/extensions`. No commit, push, o
 
 All requested values in `results/extensions/report.md` match the saved summary files: Aletheia 211/300; RRF 214/300 (16 baseline-right items improved, 13 regressed); ReAct 165/300; saved Direct-fallback hybrid 265/300; saved CoT-fallback hybrid 262/300; RRF recomputed hybrids 261/300 for each fallback. No mismatch found.
 
-## Task 1 — answer-level paraphrase OOD
+## Task 1 — rewording evaluation
 
-The original confirmatory sample contains 98 historical, 102 aggregation, and 100 Boolean questions. The paraphrase set contains 100 per type. It is not a one-to-one 300-item sample of the originals.
+The original confirmatory sample contains 98 historical, 102 aggregation, and 100 Boolean questions. The reworded set contains 100 items per type. It is not a one-to-one 300-item sample of the originals. **The 100 historical items are not paraphrases:** they recast the operation as selecting a descending-serial rank, an operator shift. Aggregation and Boolean items reword the same answer-bearing operation and target.
 
-**Paired-comparison rule:** score all 300 paraphrases as the OOD set. For comparisons with the original confirmatory results, compare only exact matched source question IDs, retaining one paraphrase (variant `a`) per source ID. This yields 298 paired IDs: 98 historical, 100 aggregation, and 100 Boolean. Do not compare unmatched sets.
+**Paired-comparison rule:** score all 300 reworded items as the evaluation set. For comparisons with the original confirmatory results, compare only exact matched source question IDs, retaining one variant `a` per source ID. This yields 298 paired IDs: 98 historical, 100 aggregation, and 100 Boolean. Do not compare unmatched sets.
 
-The complete per-paraphrase → original question ID map, including original question text, is in [`task1/paraphrase_source_ids.csv`](task1/paraphrase_source_ids.csv) and [`task1/matched_comparison_plan.json`](task1/matched_comparison_plan.json). Repeated sources: `syn-03753-f5a27a666f1e` (historical-030/a and historical-031/b) and `syn-05490-df2416c53a6d` (historical-047/a and historical-048/b). The `b` variants are retained in all-300 OOD scoring but excluded from paired comparison. Aggregation sources omitted from the paraphrase set: `syn-08635-073e9e1bf51e` (index 8635; “How many heterogeneous values has Pakistan Hockey Federation accumulated?”) and `syn-10285-2b3387533188` (index 10285; “Counting only unique values, how many values are on file for Jayne Meadows?”). No other source IDs were excluded from the per-type construction; those two are unmatched and are not used in paired comparisons.
+The complete reworded-item → original question ID map, including original question text, is in [`task1/paraphrase_source_ids.csv`](task1/paraphrase_source_ids.csv) and [`task1/matched_comparison_plan.json`](task1/matched_comparison_plan.json). Repeated sources: `syn-03753-f5a27a666f1e` (historical-030/a and historical-031/b) and `syn-05490-df2416c53a6d` (historical-047/a and historical-048/b). The `b` variants are retained in all-300 scoring but excluded from paired comparison. Aggregation sources omitted from the reworded set: `syn-08635-073e9e1bf51e` (index 8635; “How many heterogeneous values has Pakistan Hockey Federation accumulated?”) and `syn-10285-2b3387533188` (index 10285; “Counting only unique values, how many values are on file for Jayne Meadows?”). No other source IDs were excluded from the per-type construction; those two are unmatched and are not used in paired comparisons.
 
-All-300 paraphrase results, fixed scorer, audit flags retained:
+All-300 reworded-set results, fixed scorer, audit flags retained:
 
 | Arm | Overall | Historical | Aggregation | Boolean |
 |---|---:|---:|---:|---:|
@@ -30,7 +30,7 @@ All-300 scores excluding flagged rows (22 flagged overall; historical 0, aggrega
 | Direct | 181/278 (65.1%) | 48/100 (48.0%) | 65/99 (65.7%) | 68/79 (86.1%) |
 | CoT | 239/278 (86.0%) | 95/100 (95.0%) | 72/99 (72.7%) | 72/79 (91.1%) |
 
-Paired comparison against original answers on the same 298 source IDs, flags retained:
+Paired comparison against original answers on the same 298 source IDs, flags retained. Historical values show the operator shift; aggregation and Boolean values show rewording of the same operation:
 
 | Arm | Paraphrased matched IDs | Original same IDs | Historical new/original | Aggregation new/original | Boolean new/original |
 |---|---:|---:|---:|---:|---:|
@@ -38,11 +38,11 @@ Paired comparison against original answers on the same 298 source IDs, flags ret
 | Direct | 202/298 (67.8%) | 218/298 (73.2%) | 48/98 (49.0%) / 63/98 (64.3%) | 65/100 (65.0%) / 68/100 (68.0%) | 89/100 (89.0%) / 87/100 (87.0%) |
 | CoT | 258/298 (86.6%) | 221/298 (74.2%) | 93/98 (94.9%) / 66/98 (67.3%) | 72/100 (72.0%) / 68/100 (68.0%) | 93/100 (93.0%) / 87/100 (87.0%) |
 
-On the 276 unflagged paired IDs, new paraphrase scores are Aletheia 155/276 (56.2%), Direct 181/276 (65.6%), and CoT 237/276 (85.9%). The original scores on those exact IDs are Aletheia 201/276 (72.8%), Direct 198/276 (71.7%), and CoT 200/276 (72.5%). Per-intent flag-excluded values and all scoring rows are preserved in `task1/results_summary.json`.
+On the 276 unflagged paired IDs, reworded scores are Aletheia 155/276 (56.2%), Direct 181/276 (65.6%), and CoT 237/276 (85.9%). The original scores on those exact IDs are Aletheia 201/276 (72.8%), Direct 198/276 (71.7%), and CoT 200/276 (72.5%). Per-intent flag-excluded values and all scoring rows are preserved in `task1/results_summary.json`. The Aletheia Boolean score rose from 40/100 to 60/100; the reason for that increase is unexplained.
 
 Task 1 used 900 calls, with 0 logged errors and 0 truncations. Usage: 1,400,448 prompt tokens and 61,514 completion tokens. Evaluation API spend was $0.24697560. Two preliminary paraphrase-generation attempts cost $0.00481005; these were not used in the frozen paraphrase set. **Task 1 total: $0.25178565.** Per evaluation arm: Aletheia $0.10485060; Direct $0.06045000; CoT $0.08167500.
 
-The frozen paraphrase set is 300 unique strings, built once using deterministic structural rewrites with unchanged gold labels and a seeded source selection (seed 20261007). Two model-generation drafts were rejected before finalization because historical prompts leaked cue-list words; no model-generated paraphrase was used in the frozen set. Some fixed rewrites are awkwardly phrased; no questions were edited after the set was frozen or after scoring began.
+The frozen reworded set is 300 unique strings, built once using deterministic structural rewrites with unchanged gold labels and seeded source selection (seed 20261007). Its 100 historical items explicitly change the operation to descending-serial rank; the aggregation and Boolean items rephrase the original operation. Two model-generation drafts were rejected before finalization because historical prompts leaked cue-list words; neither draft was used in the frozen set. Some fixed rewrites are awkwardly phrased; no questions were edited after the set was frozen or after scoring began.
 
 ## Task 2a — saved Boolean failure analysis (offline)
 
@@ -75,6 +75,6 @@ For causal isolation, replaying the fix on the same fresh planner outputs change
 | Task 2b Boolean fix run | 100 | $0.03454425 |
 | **Total** | **1,002** | **$0.28632990** |
 
-The paraphrase construction deviated from an LLM paraphrasing workflow: deterministic structural rewrites were used after both generation drafts failed cue-leak validation. This preserved gold labels and enabled a fixed, auditable set but may yield less natural language variation. A Task 1 runner checkpoint initially remained `running` after all calls; terminal call rows were verified and the checkpoint was corrected to `complete`. The Task 1 scorer wrapper's matched-ID bookkeeping was corrected after scoring to enforce the user's paired-only rule; no requests, model outputs, scorer logic, or paraphrases changed. Task 2b's fresh planner outputs differed from the saved planner outputs on 41 items; results are reported with that caveat. No experiment was retried or tuned after result review.
+The paraphrase construction deviated from an LLM paraphrasing workflow: deterministic structural rewrites were used after both generation drafts failed cue-leak validation. This preserved gold labels and enabled a fixed, auditable set but may yield less natural language variation. The historical set is more than a phrasing rewrite: it changes the task wording to an explicit descending-serial rank operation. A Task 1 runner checkpoint initially remained `running` after all calls; terminal call rows were verified and the checkpoint was corrected to `complete`. The Task 1 scorer wrapper's matched-ID bookkeeping was corrected after scoring to enforce the user's paired-only rule; no requests, model outputs, scorer logic, or reworded questions changed. Task 2b's fresh planner outputs differed from the saved planner outputs on 41 items; results are reported with that caveat. The polarity fix was designed on these same questions, so the observed change is not independent validation. No experiment was retried or tuned after result review.
 
 Combined Task 1 + Task 2b spend was $0.28632990, below the aggregate $1.00 ceiling. No experiment remains to run.

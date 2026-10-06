@@ -6,7 +6,7 @@ Aletheia builds on [“Don't Ask the LLM to Track Freshness: A Deterministic Rec
 
 ## Reported results
 
-The results below are from the frozen final-v3, confirmatory hybrid, and matched FactConsolidation summaries. See [reproducibility notes](docs/REPRODUCIBILITY.md) for the result files and scripts.
+The results below are from the frozen final-v3, confirmatory hybrid, and matched FactConsolidation summaries. The final-v3 row is the older headline result; the separate confirmatory and extension evaluations are listed below. See [reproducibility notes](docs/REPRODUCIBILITY.md) for result files and scripts.
 
 ### Final-v3 synthetic benchmark (300 questions; audit flags retained)
 
@@ -40,6 +40,26 @@ With flags retained, Aletheia alone is also below both baselines overall in this
 | BM25, Aletheia-routed K=10/25 | 58/100 |
 
 The BM25 runs use the saved question set, GPT-4o-mini at temperature 0, and `QUERY_TEMPLATE_BM25`. The 81/100 Aletheia figure is the earlier adaptive result; this comparison does not isolate the effect of any single component. The older 81%-versus-56% figures are from a separate, unmatched comparison.
+
+### Extension results (confirmatory set; GPT-4o-mini, temperature 0)
+
+| Arm or policy | Correct | Accuracy |
+| :--- | ---: | ---: |
+| Aletheia | 211/300 | 70.3% |
+| Direct | 220/300 | 73.3% |
+| CoT | 223/300 | 74.3% |
+| ReAct | 165/300 | 55.0% |
+| RRF Aletheia | 214/300 | 71.3% |
+| RRF + Direct fallback | 261/300 | 87.0% |
+| RRF + CoT fallback | 261/300 | 87.0% |
+| Saved Direct-fallback hybrid | 265/300 | 88.3% |
+| Saved CoT-fallback hybrid | 262/300 | 87.3% |
+
+RRF improved 16 questions and regressed 13 against saved Aletheia. For the 100 aggregation questions, original → reworded correct counts were Aletheia 94 → 89, Direct 68 → 65, and CoT 68 → 72. For the 100 Boolean questions they were 40 → 60, 87 → 89, and 87 → 93, respectively; the Aletheia Boolean increase is unexplained. Historical questions were recast as descending-serial-rank questions, an operator shift rather than a paraphrase: on 98 matched IDs, Aletheia changed 75 → 19, Direct 63 → 48, and CoT 66 → 93.
+
+The 60 Boolean failures comprised 39 abstentions without target evidence, 4 abstentions despite evidence, 9 planner-field errors, 8 operator mismatches, and 0 confirmed gold issues. A polarity fix scored 40/100 on the saved baseline versus 48/100 in the fresh fix run. Replaying it on the same fresh plans changed 42/100 to 48/100 (6 wrong-to-right, 0 right-to-wrong); the planner drifted on 41 questions, and the fix was designed on these same questions, so this is not independent validation.
+
+The full RRF and ReAct artifacts are in [`results/extensions/`](results/extensions/README.md); the reworded evaluation and Boolean diagnosis are in [`results/ood_boolean/`](results/ood_boolean/README.md). These reports preserve the question-level outputs, usage, and setup caveats.
 
 ## Repository structure
 
@@ -125,7 +145,7 @@ Dated experiment reruns are recorded in [`logs/rerun_2026-10-03.log`](logs/rerun
 
 ## Limitations
 
-The benchmark tests historical, aggregation, and boolean questions derived from synthetic examples over MemoryAgentBench conflict data. Historical and aggregation answers depend on candidate extraction being complete; misses at that stage can make the deterministic operator return an incomplete answer. The saved result files and the paper's scope limitations are documented in `docs/REPRODUCIBILITY.md` and `paper/`.
+The benchmark tests historical, aggregation, and boolean questions derived from synthetic examples over MemoryAgentBench conflict data. Historical and aggregation answers depend on candidate extraction being complete; misses at that stage can make the deterministic operator return an incomplete answer. The new historical rewording evaluation changed the operator form to descending-serial rank, and should not be read as a pure paraphrase test. The Aletheia Boolean gain on reworded items is unexplained. The saved result files and the paper's scope limitations are documented in `docs/REPRODUCIBILITY.md` and `paper/`.
 
 ## Citation
 

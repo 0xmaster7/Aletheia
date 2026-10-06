@@ -13,7 +13,7 @@ Scorer: frozen `scripts/lib/evaluation_scorer.py` snapshot; exact hash in `froze
 | Boolean | 100 | 40/100 (40.0%) | 42/100 (42.0%) | 87/100 (87.0%) | 87/100 (87.0%) | 82/100 (82.0%) |
 | Overall | 300 | 211/300 (70.3%) | 214/300 (71.3%) | 220/300 (73.3%) | 223/300 (74.3%) | 165/300 (55.0%) |
 
-RRF improves Aletheia by 3 answers overall (214/300 versus 211/300, +1.0 percentage point). It remains below Direct and CoT. ReAct scores 165/300 (55.0%), below all three saved arms.
+RRF improves Aletheia by 3 answers overall (214/300 versus 211/300, +1.0 percentage point): 16 questions improved and 13 regressed. It remains below Direct and CoT. ReAct scores 165/300 (55.0%), below all three saved arms.
 
 ## RRF hybrid results
 

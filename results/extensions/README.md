@@ -48,6 +48,6 @@ The dataset Arrow file and model weights are local prerequisites, not copied int
 | Saved CoT | 66 (67.3%) | 70 (68.6%) | 87 (87.0%) | 223 (74.3%) | — |
 | ReAct | 34 (34.7%) | 49 (48.0%) | 82 (82.0%) | 165 (55.0%) | $0.33895905 |
 
-The RRF hybrids scored 261/300 (87.0%) with either saved Direct or CoT fallback; the corresponding saved hybrids scored 265/300 (88.3%) and 262/300 (87.3%). ReAct's ten-question measured pilot cost was $0.00786570 ($0.00078657/question), projecting $0.23597100 for 300; actual ReAct spend was $0.33895905. Combined experiment spend was $0.44115525. Across the completed runs there were 0 truncations, 0 question errors, 0 skipped questions, and 0 automatic retries. All 22 audit-flagged questions were retained.
+RRF improved 16 questions and regressed 13, for a net gain of three (214/300 vs 211/300). The RRF hybrids scored 261/300 (87.0%) with either saved Direct or CoT fallback; the corresponding saved hybrids scored 265/300 (88.3%) and 262/300 (87.3%). ReAct's ten-question measured pilot cost was $0.00786570 ($0.00078657/question), projecting $0.23597100 for 300; actual ReAct spend was $0.33895905. Combined experiment spend was $0.44115525. Across the completed runs there were 0 truncations, 0 question errors, 0 skipped questions, and 0 automatic retries. All 22 audit-flagged questions were retained.
 
 See [report.md](report.md) for the full question-level RRF flips, pilot costs, detailed spend/token totals, setup deviations, and artifact inventory. Results and raw call ledgers are saved in the two experiment subdirectories.
