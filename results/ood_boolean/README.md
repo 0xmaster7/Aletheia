@@ -6,6 +6,7 @@ This directory contains the requested Task 0 audit, Task 1 rewording evaluation,
 
 - Branch: `scratch/ood-boolean`, created from `scratch/extensions`.
 - Code revision at run start: `ecb373a7e41d92cdcdeebc43c27b6267d662e610`.
+- The scripts and saved per-question artifacts were committed at `4b71da21aa76e3776a00a62f3f52804db04a9e37`; the interpretation/docs update is `6a11c1d9f830ed01efa434d936daafc5fa097059`.
 - Task 1 prompt/operator/scorer/config hashes and run configuration: `task1/frozen_manifest.json`.
 - Task 2b policy/operator/request hashes and run configuration: `task2b/frozen_manifest.json`.
 - Exact source-question provenance for every reworded question (all 300, including repeats): `task1/paraphrase_source_ids.csv`; paired-comparison policy and original IDs: `task1/matched_comparison_plan.json`.

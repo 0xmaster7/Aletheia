@@ -1,8 +1,10 @@
-# Aletheia: A Deterministic Semantic Routing Architecture for Deterministic Memory Resolution in Long-Context Language Models
+# Archived superseded draft (pre-v20)
 
-**Authors:** 
-Keshav Nanda (Registration No: 23BCE2249)
-Dhanalakshmi S (Registration No: 23BCE2275)
+This file is retained for history only. It is not the current manuscript. Its abstract, results, claims and analysis are superseded and must not be cited as current Aletheia results. The supplied final Word/PDF is not distributed in this repository. Personal identifiers and the stale author block were removed from this archived copy.
+
+## Prior draft title
+
+Aletheia: A Deterministic Semantic Routing Architecture for Deterministic Memory Resolution in Long-Context Language Models
 
 ## Abstract
 As the context windows of Large Language Models (LLMs) scale to handle hundreds of thousands of tokens, their efficacy in resolving conflicting facts within massive memory streams remains a critical bottleneck. Standard retrieval-augmented generation (RAG) pipelines, fundamentally optimized for isolated "freshness" retrieval, categorically fail at processing complex conversational intents such as historical timeline tracking, statistical aggregation, and boolean state validation. Furthermore, state-of-the-art neural architectures suffer from inherent "calculation hallucinations" when tasked with mathematical reasoning over extracted entities. In this comprehensive study, we introduce Aletheia, a resilient memory resolution architecture designed to completely decouple intent routing, entity extraction, and mathematical reasoning. By integrating a sub-10ms Semantic Routing Engine powered by local CPU embeddings, Aletheia categorizes incoming queries across multi-dimensional intent vectors, directing them toward an Adaptive Operator Layer. This layer offloads mathematical operations (e.g., sorting, counting, and logic gating) from neural weights to deterministic Python functions, thereby eliminating calculation hallucinations entirely. In our rigorous evaluation against extreme memory conflicts, Aletheia achieved a 93.3% routing accuracy on synthetic multi-intent queries. Furthermore, it maintained an unprecedented 81.0% end-to-end accuracy across an extreme 262,000-token context window, drastically outperforming standard baseline retrieval systems, which collapsed to 56.0% under identical noise thresholds. We provide extensive mathematical formalisms, algorithmic breakdowns, and error analyses demonstrating that the future of reliable conversational agents relies on the strict structural separation of linguistic extraction and symbolic execution.

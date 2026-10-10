@@ -1,4 +1,4 @@
-%% Diagram 1: Aletheia Architecture Flow
+%% Original embedding-router design only; final-v3 and later synthetic evaluations use an LLM planner.
 graph TD
     classDef main fill:#2c3e50,stroke:#34495e,stroke-width:2px,color:#fff;
     classDef process fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff;
@@ -8,4 +8,4 @@ graph TD
     SR -->|Classifies Intent: Freshness, Historical, Aggregation, Boolean| BM[BM25 Retrieval]:::process
     BM -->|Retrieves Top-K Chunks| LLM[LLM Entity Extraction]:::process
     LLM -->|Extracts Entities & Metadata Only| AOL[Adaptive Operator Layer]:::process
-    AOL -->|Executes Deterministic Python Logic: min, max, len| Ans[Zero-Hallucination Answer]:::output
+    AOL -->|Executes Deterministic Python Logic: min, max, len| Ans[Answer]:::output

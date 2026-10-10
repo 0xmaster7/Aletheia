@@ -1,6 +1,6 @@
 # Confirmatory set extension experiments
 
-This local, uncommitted package was created on branch `scratch/extensions` from code commit `ecb373a7e41d92cdcdeebc43c27b6267d662e610`. It does not modify the paper, the saved confirmatory run, or `main`.
+These saved experiment artifacts were produced from code commit `ecb373a7e41d92cdcdeebc43c27b6267d662e610`, as recorded in `frozen_manifest.json`, and committed with scripts at `4b71da21aa76e3776a00a62f3f52804db04a9e37`. They preserve the confirmatory sample outputs; they do not replace the main results or claim held-out RRF/ReAct performance on a new sample.
 
 `frozen_manifest.json` records the frozen code/configuration hashes, source artifact hashes, question ordering, and pinned FactConsolidation corpus hashes. `config/frozen_setup/` contains byte-for-byte copies of the Aletheia prompt, final-v3 operator, scorer, base operator, and Direct/CoT prompt strings. `experiment_1_rrf_all300/requests.jsonl` stores each question's complete K=80 fused retrieval, exact prompt/schema, and local token count. Its `calls.jsonl` stores the raw model output, request messages, usage fields, finish reason, and per-call spend. Scored rows and the RRF hybrid calculations are saved separately.
 
