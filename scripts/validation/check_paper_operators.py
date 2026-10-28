@@ -71,6 +71,7 @@ run('historical', 'Where did Alex live previously before now?', cities, 'Vellore
 run('historical', 'What was the third previous city for Alex?', cities, 'Delhi', 25)
 run('historical', 'What was the fifth previous city for Alex?', cities, 'Chennai', 25)
 run('historical', 'City history for Alex', cities, 'Chennai', 25)
+run('historical', 'What was the second city Alex lived in?', cities, 'Chennai', 25)
 run('aggregation', 'How many distinct cities for Alex?', cities, '3', 40)
 run('aggregation', 'List all cities for Alex', cities, json.dumps(['Chennai', 'Delhi', 'Vellore']), 40)
 run('boolean', 'Is Delhi the current city for Alex?', cities, 'True', 10)
@@ -78,6 +79,12 @@ run('boolean', 'Is Chennai the current city for Alex?', cities, 'False', 10)
 run('boolean', 'Was Chennai ever a city for Alex?', cities, 'True', 10)
 run('boolean', 'Is Alex not in Delhi?', cities, 'False', 10)
 run('boolean', 'Is Alex not in London?', cities, 'True', 10)
+run('boolean', "Isn't Alex in Delhi?", cities, 'True', 10)
+aliases = [
+    {'serial': 1, 'answer_entity': 'NYC', 'fact_text': 'Alex lives in NYC.'},
+    {'serial': 2, 'answer_entity': 'New York City', 'fact_text': 'Alex lives in New York City.'},
+]
+run('aggregation', 'How many distinct cities for Alex?', aliases, '2', 40)
 repeated = cities + [dict(cities[-1], serial=5, answer_entity='Delhi')]
 run('historical', 'Where did Alex live before now?', repeated, 'Vellore', 25)
 

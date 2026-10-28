@@ -1,6 +1,6 @@
 # Reproducing the final native-router paper
 
-This guide maps the supplied final IEEE Access manuscript to the local code and saved evidence. The manuscript is included in the faculty package at `paper/Aletheia_IEEE_Access_Final.docx`. Older planner/extension reproduction notes are preserved in [the archive](../archive/legacy_planner_docs/REPRODUCIBILITY.md).
+This guide maps the supplied final IEEE Access manuscript to the local code and saved evidence. The manuscript is included in the faculty package at `paper/Aletheia_IEEE_Access_Updated.docx`. Older planner/extension reproduction notes are preserved in [the archive](../archive/legacy_planner_docs/REPRODUCIBILITY.md).
 
 ## System and frozen source
 
@@ -56,6 +56,7 @@ python scripts/validation/validate_dataset.py
 python scripts/validation/check_synthetic_benchmark_results.py
 python scripts/validation/check_final_paper_results.py
 python scripts/validation/check_paper_operators.py
+python scripts/validation/check_local_evidence.py
 ```
 
 The final-paper verifier uses only the standard library plus the included scorer, checks frozen pipeline/prompt hashes, and rescoring reads saved files without overwriting outputs. The operator check extracts the actual pure operator functions from the pipeline and exercises paper-described behavior with a stubbed retrieval/extraction boundary. It does not download MiniLM or call an LLM. Neither check proves robustness on new questions.
@@ -78,6 +79,10 @@ cp .env.example .env
 A full model rerun requires the pinned corpus, MiniLM weights and tokenizer data. They may be downloaded separately; external Hugging Face caches and the Conda environment are not included in a source ZIP. The original fixed-cache Arrow path is documented in the archived guide. Historical temporary environments under `/private/tmp/` no longer exist and must be recreated.
 
 Only intentional paid reruns require `OPENAI_API_KEY`. Inspect each saved runner's command help and README first; preserve the frozen result directories and use a separate reproduction workspace/output. `router_eval.py run` and K=80 `smoke/full` issue API calls. The legacy `run_synthetic_benchmark.py` defaults to the earlier first 60 questions, not the final or confirmatory sampled runs. No new paid runs were made for this documentation alignment.
+
+## Local cost, latency, and cache evidence
+
+[LOCAL_EVIDENCE_AUDIT.md](LOCAL_EVIDENCE_AUDIT.md) records the local ledger, latency, input-hash and cached-file checks. `check_local_evidence.py` verifies included artifacts and checks external caches when available. Add `--require-local-caches` to require byte-level checks of the pinned local model and dataset. External caches are not shipped in the faculty ZIP. The latency source is an aggregate saved log; per-query samples were not retained, so the historical mean is matched to that log rather than independently recomputed.
 
 ## Local faculty package versus GitHub
 

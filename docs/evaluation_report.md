@@ -102,12 +102,12 @@ Both hybrids remain below standalone Direct and CoT. They add 41 and 40 correct 
 
 These are historical usage charges, not current price quotes or full deployment costs. Aletheia is cheaper than the controls with own-K but more expensive with K=80; sequential fallback deployment cost was not measured.
 
-The saved local embedding-router benchmark reports a 61.73 ms mean (about 62 ms), 42–259 ms range, and a 395.5 ms cold first call excluded from the mean. It used an Intel Core i7-8850H at 2.60 GHz, one warm-up, and four distinct questions repeated 25 times (100 timed queries). This is routing latency only, not end-to-end pipeline latency. See [the benchmark](../benchmarks/latency/test_latency.py) and [saved log](../logs/latency/routing_latency_test.log).
+The saved local embedding-router benchmark reports a 61.73 ms mean (about 62 ms), 42–259 ms range, and a 395.5 ms first warm-up inference excluded from the mean (model loading is outside that timer). It used an Intel Core i7-8850H at 2.60 GHz, one warm-up, and four distinct questions repeated 25 times (100 timed queries). This is routing latency only, not end-to-end pipeline latency. See [the benchmark](../benchmarks/latency/test_latency.py) and [saved log](../logs/latency/routing_latency_test.log).
 
 
 ## Evidence and scoring
 
-The result-to-file mapping and runnable offline checks are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). The current paper is included in the local faculty package at `paper/Aletheia_IEEE_Access_Final.docx`.
+The result-to-file mapping and runnable offline checks are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). The current paper is included in the local faculty package at `paper/Aletheia_IEEE_Access_Updated.docx`.
 
 Use `scores_fixed.json` for the final own-K arm: its initial `scores.json` counted 16 Boolean abstentions as correct. The native-router own-K evidence-gated hybrid diagnostic is separate from the uniform confirmatory fallback policy reported in Table VI.
 

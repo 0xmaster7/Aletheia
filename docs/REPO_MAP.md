@@ -7,7 +7,7 @@
 - `docs/REPRODUCIBILITY.md`: current artifact map, frozen hashes, and offline checks.
 - `docs/Aletheia_Project_Summary.md`: current architecture and main findings.
 - `docs/FINAL_PAPER_AUDIT.md`: code/results alignment and faculty-package scope.
-- `paper/Aletheia_IEEE_Access_Final.docx`: authoritative supplied manuscript, included locally in the faculty ZIP.
+- `paper/Aletheia_IEEE_Access_Updated.docx`: authoritative supplied manuscript, included locally in the faculty ZIP.
 - `paper/aletheia_paper.md` and `paper/aletheia_paper.tex`: current manuscript pointers; the old full drafts are archived.
 - `paper/diagrams/`: current native-router architecture and result diagrams.
 

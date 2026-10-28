@@ -1,8 +1,8 @@
 # Current Aletheia manuscript
 
-**Aletheia: A Deterministic Semantic Routing Architecture for Memory Resolution in Long-Context Language Models**
+**Aletheia: A Semantic Routing Architecture with a Deterministic Operator Layer for Memory Resolution in Long-Context Language Models**
 
-The authoritative final paper is the supplied Word document, included locally in the faculty ZIP as `paper/Aletheia_IEEE_Access_Final.docx`. It is not uploaded by the documentation-only GitHub update. This file is an entry point, not a text conversion of the manuscript.
+The authoritative final paper is the supplied Word document, included locally in the faculty ZIP as `paper/Aletheia_IEEE_Access_Updated.docx`. It is not uploaded by the documentation-only GitHub update. This file is an entry point, not a text conversion of the manuscript.
 
 Use the current [evaluation report](../docs/evaluation_report.md), [project summary](../docs/Aletheia_Project_Summary.md), and [reproducibility guide](../docs/REPRODUCIBILITY.md) for the source/result map. The [diagrams](diagrams/) match the native-router paper.
 

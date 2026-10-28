@@ -1,12 +1,12 @@
 # Final paper and local submission audit
 
-Checked on 2026-10-28 against the supplied `Aletheia_IEEE_Access_Final (1).docx`.
+Checked on 2026-10-28 against the revised local `Aletheia_IEEE_Access_Updated.docx`. Its title scopes determinism to the operator layer; its six numerical tables match the earlier supplied attachment. The earlier manuscript is preserved locally under `archive/manuscript_drafts/Aletheia_IEEE_Access_Final_older_title.docx`.
 
 ## Status
 
 The Desktop checkout has GitHub remote `https://github.com/0xmaster7/Aletheia.git`. The frozen native experiments used source commit `a3a9c839c6ae9d6758a82f4c459073ec796fc8df`; the current documentation describes those native runs. The working folder also contains newer untracked native-router experiment artifacts and a pre-existing change in `scripts/lib/_lf.py`; those local files are not implied by the GitHub commit history.
 
-The README, evaluation report, reproducibility guide, project summary, repository map, TODO list, and Mermaid diagrams now follow the supplied paper's native-router results. The current Word paper is included locally as `paper/Aletheia_IEEE_Access_Final.docx`. It is copied unchanged from the supplied attachment and is not published by the documentation/code-verifier GitHub update.
+The README, evaluation report, reproducibility guide, project summary, repository map, TODO list, and Mermaid diagrams now follow the supplied paper's native-router results. The current Word paper is included locally as `paper/Aletheia_IEEE_Access_Updated.docx`. It is copied unchanged from the revised local Downloads manuscript and is not published by the documentation/code-verifier GitHub update.
 
 ## Checks performed without API calls
 
@@ -20,9 +20,11 @@ The README, evaluation report, reproducibility guide, project summary, repositor
 - The released dataset passes its existing 13,425-row structural validator; the legacy saved 60-row run matches the first 60 released questions.
 - The request/control files needed for saved-score inspection are present locally, including all three native-router call ledgers and the original feedback inputs. The current manuscript's six numerical tables were used to update the README.
 - Current pipeline, fixed scorer, and candidate prompt hashes match the frozen experiment manifests. The K=80 package's saved artifact hashes match their recorded values.
-- Twenty-one cases check the actual pipeline's paper-described operator behavior and own-K retrieval boundary without importing a model or calling an API: freshness, historical/default/ordinal/fallback selection, normalized deduplication, Boolean latest/ever/negation, empty outputs, and query clean-up.
+- Twenty-four cases check the actual pipeline's paper-described operator behavior and own-K retrieval boundary without importing a model or calling an API: freshness, historical/default/ordinal/fallback selection, normalized deduplication, Boolean latest/ever/negation, empty outputs, and query clean-up.
 
 Run the read-only checks with `python scripts/validation/check_final_paper_results.py` and `python scripts/validation/check_paper_operators.py`.
+
+Historical router/control costs were checked against all five 300-call ledgers and independently recalculated from saved token counts. Latency values match the saved aggregate log and benchmark script. All included confirmatory manifest input hashes, cached MiniLM snapshot file hashes, and the pinned Arrow dataset hash were checked locally. See [LOCAL_EVIDENCE_AUDIT.md](LOCAL_EVIDENCE_AUDIT.md).
 
 These checks inspect/recompute saved outcomes; they do not constitute a fresh model evaluation or validate every benchmark gold label. No new paid experiments were run.
 
