@@ -1,8 +1,20 @@
-# Aletheia: Project To-Do List
+# Aletheia follow-up work
 
-## Code & Architecture Tasks
-- [ ] **Implement OOD (Out-of-Distribution) Rejection:** Add a minimum cosine similarity threshold to the Semantic Router. If a query (e.g., "How is the weather in Delhi?") scores below the threshold across all intents, the system should gracefully reject it rather than forcing it down an irrelevant pathway.
-- [ ] **Investigate API-Free Extraction:** Research whether we can completely remove the OpenAI API dependency. Explore using purely deterministic NLP methods (e.g., spaCy Named Entity Recognition, Regex, or local lightweight NER models) to extract the structured entities from the unstructured BM25 chunks.
+## Completed for the supplied final paper
 
-## Documentation
-- [ ] **Write Research Paper:** Draft the final paper outlining the baseline flaws, the Semantic Router architecture, the deterministic execution layer, and the 262k extreme-noise ablation results.
+- [x] Include the final Word manuscript in the local faculty package.
+- [x] Align the README, evaluation report, reproducibility guide and project summary with native-router results.
+- [x] Update the architecture and result diagrams to the paper's figures.
+- [x] Archive superseded planner documentation and manuscript drafts.
+- [x] Check frozen source hashes, saved-score totals, and paper-described operator behavior offline.
+
+## Future research, not implemented or claimed by the paper
+
+- [ ] Add a calibrated OOD rejection threshold to the embedding router.
+- [ ] Evaluate deterministic extraction such as spaCy/regex against the LLM extractor.
+- [ ] Compare chunking alternatives and stronger extractors on the synthetic benchmark.
+- [ ] Build independent out-of-distribution questions and broaden evaluation beyond the sampled templated sets.
+- [ ] Measure end-to-end latency and sequential fallback deployment cost.
+- [ ] Investigate routing/retrieval/extraction errors with component-level analysis.
+
+Future changes should be evaluated as new experiments rather than silently changing the frozen implementation or saved outputs.

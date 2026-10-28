@@ -1,11 +1,11 @@
-%% Original embedding-router design only; final-v3 and later synthetic evaluations use an LLM planner.
+%% Final paper Figure 1: native embedding-router path, not the archived LLM planner.
 graph TD
     classDef main fill:#2c3e50,stroke:#34495e,stroke-width:2px,color:#fff;
     classDef process fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff;
     classDef output fill:#27ae60,stroke:#2ecc71,stroke-width:2px,color:#fff;
 
-    Q[User Query]:::main --> SR[Semantic Routing Engine]:::process
+    Q[User Query]:::main --> SR[Local MiniLM Semantic Router]:::process
     SR -->|Classifies Intent: Freshness, Historical, Aggregation, Boolean| BM[BM25 Retrieval]:::process
-    BM -->|Retrieves Top-K Chunks| LLM[LLM Entity Extraction]:::process
-    LLM -->|Extracts Entities & Metadata Only| AOL[Adaptive Operator Layer]:::process
-    AOL -->|Executes Deterministic Python Logic: min, max, len| Ans[Answer]:::output
+    BM -->|Own-K 10/25/40 or shared K=80| LLM[GPT-4o-mini JSON Candidate Extraction]:::process
+    LLM -->|Serial, fact text, answer entity| AOL[Deterministic Python Operators]:::process
+    AOL -->|Latest or earlier state, distinct count/list, Boolean checks| Ans[Answer or route-specific empty result]:::output

@@ -1,57 +1,34 @@
-# Aletheia: Comprehensive Project Summary
+# Aletheia project summary
 
-## 1. Project Aim & Background
-**Aletheia** explores memory conflict resolution with model-based planning and extraction followed by deterministic operators. Deterministic execution avoids delegating sorting, counting, and Boolean evaluation to free-form generation, while planning, retrieval, and extraction can still fail.
+Aletheia studies whether separating language understanding from deterministic execution improves resolution of conflicting memory facts. The final paper evaluates a local embedding router, BM25 retrieval, GPT-4o-mini candidate extraction, and Python operators. It is a research prototype.
 
-Some retrieval-augmented generation (RAG) pipelines rely on free-form generation for sorting, counting, and Boolean operations, which can produce calculation errors. Freshness-oriented retrieval may also miss the intent of historical, aggregation, or Boolean questions unless the system explicitly handles those operations.
+## Code path described by the paper
 
-**The Goal:** To separate intent planning, evidence extraction, and mathematical execution, and to evaluate the resulting pipeline against Direct and CoT controls.
+1. `scripts/lib/_pipeline.py:native_route` embeds the question with MiniLM and selects the highest maximum cosine similarity among the precomputed example banks. The code route `current_value` is the paper's freshness intent.
+2. `run_adaptive_router_pipeline` retrieves K=10 for current-value/Boolean, K=25 for historical, and K=40 for aggregation. Historical/aggregation questions undergo rule-based query clean-up in the own-K route. The K=80 evaluation wrappers instead reuse the shared raw-question retrieval pool.
+3. `_extract_candidates` calls GPT-4o-mini in JSON mode with `CANDIDATE_PROMPT`; it returns serial, fact text, and answer entity.
+4. Python chooses the latest/earlier state, normalizes/deduplicates/counts values, or checks Boolean containment and negation. Empty candidates produce no answer for freshness/historical, False for Boolean, and zero or an empty list for aggregation.
 
----
+Historical selection uses the oldest state by default, or a cue-dependent offset over consecutive distinct states sorted by serial. An out-of-range offset falls back to the earliest available state. Boolean "ever" questions check all candidates; other Boolean questions check the latest state. These are fixed hand-written rules, not a learned general parser.
 
-## 2. The Aletheia Architecture
-Aletheia's repository contains the original embedding-router pipeline and a later LLM-planner evaluation path. Final-v3 and the confirmatory synthetic runs use the LLM planner, not the embedding router; Aletheia, Direct, and CoT receive the same top-80 BM25 context in those runs.
+The native router uses the first `ROUTE_UTTERANCES` bank through precomputed `ROUTE_EMBEDDINGS`. The same module also contains a separate routing helper with another utterance dictionary. The final paper's saved native runs must be interpreted through `native_route`, not that other helper. The pipeline and scorer match the hashes recorded in the native-run manifests.
 
-### A. Original Embedding Router and Final-v3 Planner
-The original pipeline uses an offline `semantic-router` with local `all-MiniLM-L6-v2` embeddings and predefined anchor utterances to classify queries into four routes:
-1. **Freshness:** Requires the most recent state.
-2. **Historical:** Requires a past state.
-3. **Aggregation:** Requires a count or list of states.
-4. **Boolean:** Requires a True/False validation.
+## Main results
 
-Final-v3 and the confirmatory synthetic evaluation instead ask an LLM planner to return a structured query plan from the question and retrieved context. The embedding router is not used in those runs.
+| Evaluation | Native Aletheia | Direct | CoT |
+| --- | ---: | ---: | ---: |
+| Final 300, own-K | 152/300 (50.7%) | 232/300 (77.3%) | 236/300 (78.7%) |
+| Final 300, shared K=80 | 151/300 (50.3%) | 232/300 (77.3%) | 236/300 (78.7%) |
+| Confirmatory 300, K=80 | 152/300 (50.7%) | 220/300 (73.3%) | 223/300 (74.3%) |
 
-### B. Entity Extraction Layer (BM25 + LLM)
-The final-v3 comparison gives Aletheia, Direct, and CoT the same top-80 BM25 facts. Aletheia's planner returns a structured plan without candidate facts; Python selects and validates candidate facts before applying the intent-specific operator.
+The confirmatory Direct-fallback hybrid scores 193/300 (64.3%) and the CoT-fallback hybrid 192/300 (64.0%). Both remain below standalone controls.
 
-### C. Adaptive Operator Layer
-In final-v3, Python validates the planner's query plan, selects and checks facts, and applies the intent-specific operator. Historical, aggregation, and negative Boolean answers require verified complete history; positive Boolean evidence can answer when a matching fact is found. The original embedding-router pipeline remains a separate legacy path.
+At 262k tokens on FactConsolidation, native adaptive Aletheia scores 81/100 versus matched BM25 at 59/100 and 58/100. GPT-4o extraction scores 94/100, while fixed 4096-character windows tie Aletheia at 81/100. No component ablation isolates the reason for the gap to the generic baseline.
 
----
+Routing accuracy is 80.0% on the final sample and 82.3% on the confirmatory sample; the second sample is 84.3%. The earlier best 93.3% routing figure is 56/60 on in-distribution templates, not end-to-end answer accuracy. Routing-only latency averages 61.73 ms in the saved CPU benchmark; no end-to-end latency was measured.
 
-## 3. Testing & Benchmarking
-The architecture was tested using two distinct paradigms:
+## Reproduction and limitations
 
-### A. Final-v3 Synthetic Benchmark
-On the 300-question final-v3 sample, with audit flags retained, Aletheia scored **68.0% (204/300)**, Direct **77.3% (232/300)**, and CoT **78.7% (236/300)**. With flags retained, Aletheia alone is below both baselines overall.
+See [the evaluation report](evaluation_report.md) for all six numerical tables and [the reproducibility guide](REPRODUCIBILITY.md) for saved inputs and read-only checks. The benchmark contains 13,425 templated questions, with 684 flagged rows; it was not evaluated in full. Deterministic operators do not remove routing, retrieval, extraction, or interpretation errors.
 
-### B. Confirmatory Hybrid Run
-On a separate 300-question sample, with audit flags retained, Aletheia alone scored **70.3% (211/300)**, Direct **73.3% (220/300)**, and CoT **74.3% (223/300)**. With flags retained, Aletheia alone is below both baselines overall in this confirmatory run. The Direct-fallback hybrid scored **88.3% (265/300)** and the CoT-fallback hybrid **87.3% (262/300)**. These are policy results that use the named baseline when Aletheia is ineligible to answer.
-
-### Confirmatory-set extensions
-
-The RRF arm scored **214/300 (71.3%)**, improving 16 questions and regressing 13 against saved Aletheia; ReAct scored **165/300 (55.0%)**. RRF was a negative hybrid result: its Direct and CoT fallback variants each scored **261/300 (87.0%)**, below the saved Direct- and CoT-fallback hybrids at **265/300 (88.3%)** and **262/300 (87.3%)**. Per-intent ReAct scores were 34/98 historical, 49/102 aggregation, and 82/100 Boolean; RRF scored 77/98, 95/102, and 42/100, respectively. RRF used equal-weight BM25 and `all-MiniLM-L6-v2` reciprocal rank fusion (constant 60, K=80); ReAct used BM25 top-10 searches, at most six steps, and a 512-token completion limit.
-
-On aggregation items (n=100), original → reworded correct counts were Aletheia 94 → 89, Direct 68 → 65, and CoT 68 → 72. On Boolean items (n=100), counts were 40 → 60, 87 → 89, and 87 → 93; the Aletheia Boolean increase is unexplained. The historical test recast questions as descending-serial-rank questions, an operator shift rather than a paraphrase. On 98 matched IDs, Aletheia changed 75 → 19, Direct 63 → 48, and CoT 66 → 93. The historical scores are reported separately; no pooled 300-question paraphrase score is used. On aggregation, Aletheia scored 94/99 original and 89/99 reworded after excluding flags; on Boolean, it scored 32/79 and 47/79.
-
-The 60 Boolean failures comprised 39 abstentions with no matching target in saved context and incomplete history, 4 abstentions despite supporting context, 9 planner-field errors, 8 operator value/span mismatches, and 0 confirmed gold issues. Thirteen failures carried `boolean_target_not_found`; this flag does not prove a gold error. A polarity fix scored 48/100 in its fresh run. Same-fresh-plan replay was 42/100 → 48/100 (6 wrong-to-right, 0 right-to-wrong); fresh plans differed from saved plans on 41 items. The fix was designed on these same questions, so this is a same-sample diagnostic, not independent validation. It was not included in a rerun hybrid. See [`results/extensions/`](../results/extensions/README.md) and [`results/ood_boolean/`](../results/ood_boolean/README.md) for details and provenance.
-
----
-
-## 4. Ablation Studies
-The ablation suite (`scripts/experiments/14_ablations.py`) evaluates several configurations. The ablation driver supports:
-1. **Chunk-Size Ablation:** Comparing fact-level chunking against 4096-character sliding windows to test context concentration.
-2. **Pipeline Strategy Ablation:** Comparing Single-Hop (`sh`), Multi-Hop CAR pipelines (`mh`), and the legacy adaptive embedding-router pipeline (`adaptive`).
-3. **Model Backbone Comparison:** Running single-hop extraction with `gpt-4o-mini` and `gpt-4o`; this comparison does not isolate routing effects.
-
-The earlier ablations in `results/poc_results/` are separate historical experiments. At 262k, the matched BM25 runs score 59/100 with fixed K=10 and 58/100 with Aletheia-routed K=10/25, compared with the saved adaptive Aletheia reference of 81/100. On final-v3, Aletheia alone is below both baselines overall, with flags retained.
+The older LLM-planner code and its extension experiments remain for provenance. Their documentation is in [the archive](../archive/legacy_planner_docs/). They are separate from the paper's native-router system. The authoritative Word manuscript is included locally in the faculty ZIP at `paper/Aletheia_IEEE_Access_Final.docx`.

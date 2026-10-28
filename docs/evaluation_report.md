@@ -1,85 +1,118 @@
-# Aletheia: Memory Conflict Resolution Evaluation
+# Final native-router paper evaluation
 
-Unless a subsection says otherwise, scores use the fixed scorer and retain audit-flagged rows. The original embedding-router design and the later LLM-planner experiments are separate system paths: final-v3 and the confirmatory runs use an LLM planner, not the embedding router.
+This report follows the supplied final IEEE Access Word manuscript. The scientific path is `native_route()` plus candidate extraction and deterministic operators in `scripts/lib/_pipeline.py`. The older planner evaluation is archived in [legacy planner documentation](../archive/legacy_planner_docs/evaluation_report.md).
 
-## Final-v3 synthetic benchmark (300 questions; audit flags retained)
+## Results in the final paper
 
-| Arm | Correct | Accuracy |
-| :--- | ---: | ---: |
-| Aletheia | 204/300 | 68.0% |
-| Direct | 232/300 | 77.3% |
-| CoT | 236/300 | 78.7% |
+All results are single runs. Synthetic scores retain audit-flagged questions unless marked unflagged; abstentions and truncated answers count as incorrect. Routing accuracy measures intent selection, not answer correctness.
 
-With flags retained, Aletheia alone is below both baselines overall. It answered 228 questions (76%); accuracy when answered was 89.5% (204/228). It abstained on 72 questions. On those same answered items, Direct scored 78.1% and CoT scored 78.9%; on the 72 abstentions, Direct scored 75.0% and CoT 77.8%.
+### FactConsolidation at 262k tokens — Table I
 
-## Confirmatory hybrid run (300 questions; audit flags retained)
+Each row evaluates the same 100 single-hop questions with GPT-4o-mini. The direct BM25 controls use the same generic baseline prompt and SubEM scorer; Aletheia uses its candidate-extraction prompt and deterministic operators.
 
-| Arm or policy | Correct | Accuracy |
-| :--- | ---: | ---: |
-| Aletheia alone | 211/300 | 70.3% |
-| Direct | 220/300 | 73.3% |
-| CoT | 223/300 | 74.3% |
-| Aletheia with Direct fallback | 265/300 | 88.3% |
-| Aletheia with CoT fallback | 262/300 | 87.3% |
+| System | Temperature | Retrieval K | Correct / accuracy |
+| --- | ---: | --- | ---: |
+| BM25, original baseline | 0.7 | 10 | 56/100 (56.0%) |
+| BM25, matched baseline | 0.0 | 10 | 59/100 (59.0%) |
+| BM25, matched baseline | 0.0 | 10 or 25 | 58/100 (58.0%) |
+| Aletheia, adaptive router | 0.0 | 10 or 25 | 81/100 (81.0%) |
 
-With flags retained, Aletheia alone is below both baselines overall. Hybrid results use the named control when Aletheia is ineligible to answer; they are policy scores, not Aletheia-alone scores.
+Routed K is 25 for 15 questions and 10 for 85. Matching temperature and retrieval size does not isolate routing, extraction, or execution individually. The GPT-4o and fixed-window reruns below reach the same accuracy or higher.
 
-## FactConsolidation at 262k tokens (100 questions)
+### Synthetic samples — Table II
 
-| System | Correct | Accuracy |
-| :--- | ---: | ---: |
-| Adaptive Aletheia saved reference | 81/100 | 81.0% |
-| BM25, fixed K=10 | 59/100 | 59.0% |
-| BM25, Aletheia-routed K=10/25 | 58/100 | 58.0% |
+The released benchmark has 13,425 templated questions. The full set was not evaluated. The final sample excludes 660 previously used question IDs; the confirmatory sample excludes 960.
 
-The BM25 runs use GPT-4o-mini at temperature 0, the same saved questions and the unchanged `QUERY_TEMPLATE_BM25`. Routed K=10/25 matches Aletheia's per-question retrieval size; fixed K=10 is a separate control. The 81/100 Aletheia score is the earlier adaptive result; the comparison is a whole-pipeline comparison and does not isolate one component. The older 81-versus-56 comparison used different retrieval/generation settings and is not the matched result.
+| Sample | n | Routing accuracy | Aletheia answers | Direct answers | CoT answers |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Second, seed 20261004 | 300 | 84.3% (253/300) | Not run | 78.0% | 80.0% |
+| Final, own-K, seed 20261005 | 300 | 80.0% (240/300) | 50.7% (152/300) | 77.3% (232/300) | 78.7% (236/300) |
+| Final, K=80, same IDs | 300 | 80.0% (240/300) | 50.3% (151/300) | 77.3% (232/300) | 78.7% (236/300) |
+| Confirmatory, seed 20261006 | 300 | 82.3% (247/300) | 50.7% (152/300) | 73.3% (220/300) | 74.3% (223/300) |
 
-### FactConsolidation ablations (Table VI; 100 questions per cell)
+Own-K uses historical K=25, aggregation K=40, and Boolean/freshness K=10, with query clean-up for historical and aggregation retrieval. The K=80 runs use the same raw-question BM25 context as Direct and CoT. The final K=80 run reuses saved native routes. Direct and CoT are the same saved controls in both final-sample rows. These comparisons are not prompt-matched.
 
-| System | 6k | 32k | 64k | 262k |
-| :--- | ---: | ---: | ---: | ---: |
-| Aletheia, adaptive router, GPT-4o-mini | n/r | 77% | 81% | 81% |
-| Earlier single-hop GPT-4o-mini pipeline (mixed provenance) | 43% | 78%* | 81%* | 43% |
-| Single-hop fact extraction, GPT-4o rerun | 98% | 93% | 95% | 94% |
-| Single-hop, 4096-character windows, GPT-4o-mini rerun | 90% | 82% | 81% | 81% |
+The best earlier first-60 routing run was 56/60 (93.3%), an in-distribution result on shared template vocabulary. The earlier first-60 answer run was 22/60 (36.7%) with an earlier pipeline and scorer; it is not a baseline comparison.
+
+### Final sample by intent — Table III
+
+| Intent | n | Aletheia own-K | Aletheia K=80 | Direct | CoT |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Historical | 102 | 33.3% | 33.3% | 75.5% | 78.4% |
+| Aggregation | 101 | 51.5% | 50.5% | 70.3% | 70.3% |
+| Boolean | 97 | 68.0% | 68.0% | 86.6% | 87.6% |
+| Overall | 300 | 50.7% | 50.3% | 77.3% | 78.7% |
+
+Aletheia trails both controls on every intent. Own-K answers 251 questions and abstains on 49, with 60.6% accuracy among answered questions (152/251). K=80 answers 253 and abstains on 47, with 59.7% accuracy among answered questions (151/253). One answer in each run was truncated at the 1,024-token cap and counted as incorrect. Answered-only accuracy does not replace overall accuracy.
+
+### FactConsolidation ablations — Table IV
+
+Each reported cell has 100 questions. `n/r` means not run. Asterisks identify imported results from the source paper/repository, not our reruns.
+
+| Configuration | 6k | 32k | 64k | 262k |
+| --- | ---: | ---: | ---: | ---: |
+| Aletheia adaptive router, GPT-4o-mini | n/r | 77% | 81% | 81% |
+| Earlier single-hop fact extraction, GPT-4o-mini, mixed provenance | 43% | 78%* | 81%* | 43% |
+| Single-hop fact chunks, GPT-4o rerun | 98% | 93% | 95% | 94% |
+| Single-hop 4096-character windows, GPT-4o-mini rerun | 90% | 82% | 81% | 81% |
 | BM25 baseline, GPT-4o-mini | 58% | 70%* | 75%* | 56% |
-| Multi-hop CAR, GPT-4o-mini, multi-hop split | 47% | 39% | 45% | 34% |
+| Multi-hop CAR, GPT-4o-mini rerun | 47% | 39% | 45% | 34% |
 
-`*` The 32k and 64k earlier-pipeline/BM25 values are from [8], Table 3 and its repository; they were not rerun here. The earlier-pipeline row has mixed provenance. The 262k BM25 score of 56% is from the original temperature-0.7, K=10 run; the matched temperature-0 BM25 reruns are 59/100 and 58/100 above. CAR uses a different multi-hop split. The October 3 GPT-4o, 4096-character-window and CAR rows are reruns with this repository's implementations and prompts; they are not exact reproductions of [8]. The 4096-character windows match or exceed adaptive Aletheia at 32k, 64k and 262k, and the GPT-4o rerun is higher than adaptive Aletheia at those same lengths; there is no adaptive result at 6k. These results do not isolate a causal router effect.
+CAR uses the separate multi-hop split and is not directly comparable with the single-hop rows. The stronger extractor exceeds adaptive routing, and fixed windows tie it at 64k and 262k. No component-level ablation establishes the cause of the earlier-pipeline versus adaptive-router difference.
 
-## Section VI-F extensions (confirmatory set; GPT-4o-mini, temperature 0)
+### Confirmatory standalone results — Table V
 
-The saved 300-question confirmatory sample has 98 historical, 102 aggregation and 100 Boolean questions. All 22 audit-flagged rows were retained. The baseline values below come from the saved confirmatory run; RRF and ReAct are additional arms on those same questions.
+All arms read the same K=80 pool. Aletheia uses a 512-token cap; three truncated answers count as incorrect.
 
-| Intent | n | Aletheia | RRF | ReAct | Direct | CoT |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Historical | 98 | 75 (76.5%) | 77 (78.6%) | 34 (34.7%) | 63 (64.3%) | 66 (67.3%) |
-| Aggregation | 102 | 96 (94.1%) | 95 (93.1%) | 49 (48.0%) | 70 (68.6%) | 70 (68.6%) |
-| Boolean | 100 | 40 (40.0%) | 42 (42.0%) | 82 (82.0%) | 87 (87.0%) | 87 (87.0%) |
-| Overall | 300 | 211 (70.3%) | 214 (71.3%) | 165 (55.0%) | 220 (73.3%) | 223 (74.3%) |
+| Subset | n | Aletheia | Direct | CoT |
+| --- | ---: | ---: | ---: | ---: |
+| Historical | 98 | 39.8% | 64.3% | 67.3% |
+| Aggregation | 102 | 50.0% | 68.6% | 68.6% |
+| Boolean | 100 | 62.0% | 87.0% | 87.0% |
+| Overall | 300 | 50.7% | 73.3% | 74.3% |
+| Aggregation, unflagged | 101 | 50.5% | 69.3% | 69.3% |
+| Boolean, unflagged | 79 | 73.4% | 84.8% | 83.5% |
+| Overall, unflagged | 278 | 53.2% | 71.9% | 72.7% |
 
-RRF used BM25 and `all-MiniLM-L6-v2` dense retrieval with equal-weight reciprocal rank fusion, rank constant 60 and K=80. It improved 16 items and regressed 13, a net gain of three questions (about one percentage point). Its Direct- and CoT-fallback hybrids each scored 261/300 (87.0%), below the saved BM25 hybrids at 265/300 (88.3%) and 262/300 (87.3%); RRF did not improve hybrid accuracy. The RRF run cost $0.10219620 from usage fields.
+Overall correct counts are 152, 220, and 223, respectively; after excluding flagged questions, they are 148, 200, and 202. Aletheia answers 242 questions and abstains on 58, with 62.8% accuracy among answered questions (152/242).
 
-ReAct searched the same corpus with BM25 top-10 results, up to six sequential search steps per question, a 512-token completion limit, and no removal of repeated results. It made 1,709 calls, including 1,409 search steps, with no errors or skipped questions. The run cost $0.33895905. These settings were chosen for this simple baseline and do not show what a tuned ReAct agent could achieve.
+### Confirmatory fallback hybrids — Table VI
 
-### Rewording and historical operator-shift test
+Use Aletheia's answer when it produces one; otherwise use the named baseline answer, uniformly across intents.
 
-The aggregation and Boolean questions preserve the requested operation. Historical questions were recast as descending-serial-rank questions, changing the operation; they are an operator-shift test, not paraphrases. Paired comparisons use only the 298 matched source IDs: 98 historical, 100 aggregation and 100 Boolean. No pooled 300-question paraphrase score is reported.
+| Subset | n | Direct fallback | CoT fallback |
+| --- | ---: | ---: | ---: |
+| Historical | 98 | 64.3% | 63.3% |
+| Aggregation | 102 | 50.0% | 50.0% |
+| Boolean | 100 | 79.0% | 79.0% |
+| Overall | 300 | 64.3% (193/300) | 64.0% (192/300) |
+| Overall, unflagged | 278 | 63.7% (177/278) | 63.3% (176/278) |
 
-| Intent / interpretation | n | Aletheia original / changed | Direct original / changed | CoT original / changed |
-| :--- | ---: | ---: | ---: | ---: |
-| Aggregation rewording | 100 | 94 / 89 | 68 / 65 | 68 / 72 |
-| Boolean rewording | 100 | 40 / 60 | 87 / 89 | 87 / 93 |
-| Historical descending-serial-rank operator shift | 98 | 75 / 19 | 63 / 48 | 66 / 93 |
+Both hybrids remain below standalone Direct and CoT. They add 41 and 40 correct answers over standalone Aletheia. Aletheia supplies 242/300 answers (80.7%), or 232/278 (83.5%) on the unflagged subset. These are policy results, not standalone Aletheia accuracy.
 
-Audit flags were retained. On aggregation, excluding flagged rows, Aletheia scored 94/99 on originals and 89/99 on reworded questions. On Boolean, it scored 32/79 and 47/79. The Aletheia Boolean rise from 40/100 to 60/100 is unexplained and should not be read as an improvement. The paraphrases were model-written and may differ in difficulty.
+### Measured API cost and routing latency
 
-### Boolean failure diagnosis and same-sample polarity fix
+| Run, 300 questions | Recorded API spend, USD |
+| --- | ---: |
+| Final Aletheia own-K | $0.040 |
+| Final Aletheia K=80 | $0.078 |
+| Final Direct | $0.059 |
+| Final CoT | $0.071 |
+| Confirmatory Aletheia K=80 | $0.078 |
 
-Among the 60 Boolean failures in the confirmatory run, 39 were abstentions with no matching target in the saved K=80 context and incomplete history; 4 were abstentions despite supporting context; 9 were planner-field errors (8 affirmative questions marked `negated=true`, 1 target extraction error); 8 were operator value/span mismatches; and 0 were confirmed gold-answer issues. The 39 cases are direct observations of the saved context and completeness check, not proof that the source corpus lacks the target. Classifying the four evidence-present abstentions and planner conflicts involves interpreting the question wording. Thirteen failures carried the `boolean_target_not_found` audit flag, which does not establish a wrong gold label. The saved context does not always show whether a target absent from top-K is absent from the full source history.
+These are historical usage charges, not current price quotes or full deployment costs. Aletheia is cheaper than the controls with own-K but more expensive with K=80; sequential fallback deployment cost was not measured.
 
-The evaluation-only polarity rule set `negated=false` if a Boolean plan had `negated=true` and the question contained none of the whole-word cues `not`, `never` or `no`. The fresh run scored 48/100, but 41 plans differed from the saved plans in other fields. On same-fresh-plan replay, the score changed from 42/100 to 48/100, with six wrong-to-right flips and no right-to-wrong flips. The fix was developed and evaluated on the same 100 Boolean questions, so this is a same-sample diagnostic, not held-out validation. The prompt and planner were unchanged, and the hybrid was not rerun with the fix.
+The saved local embedding-router benchmark reports a 61.73 ms mean (about 62 ms), 42–259 ms range, and a 395.5 ms cold first call excluded from the mean. It used an Intel Core i7-8850H at 2.60 GHz, one warm-up, and four distinct questions repeated 25 times (100 timed queries). This is routing latency only, not end-to-end pipeline latency. See [the benchmark](../benchmarks/latency/test_latency.py) and [saved log](../logs/latency/routing_latency_test.log).
 
-## Scope of evidence
 
-The original embedding router's first-60 in-distribution routing accuracy is separate from final-v3: final-v3 and confirmatory experiments use the LLM planner. The 93.3% routing figure describes only the first-60 in-distribution examples. It is not a final-v3 routing metric. The synthetic benchmark is templated, single-sample results do not establish generalization, and the extension findings include a negative RRF result, an unexplained Boolean rewording increase, and a same-sample Boolean fix. The saved artifact paths, commands, and provenance are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [`results/extensions/README.md`](../results/extensions/README.md), and [`results/ood_boolean/README.md`](../results/ood_boolean/README.md).
+## Evidence and scoring
+
+The result-to-file mapping and runnable offline checks are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). The current paper is included in the local faculty package at `paper/Aletheia_IEEE_Access_Final.docx`.
+
+Use `scores_fixed.json` for the final own-K arm: its initial `scores.json` counted 16 Boolean abstentions as correct. The native-router own-K evidence-gated hybrid diagnostic is separate from the uniform confirmatory fallback policy reported in Table VI.
+
+The RRF, ReAct, rewording, and Boolean-fix packages remain preserved under `results/extensions/` and `results/ood_boolean/`. They belong to older planner experiments and are not additional tables in this supplied manuscript.
+
+## Interpretation
+
+The 81% versus 58–59% FactConsolidation comparison is a whole-pipeline result. GPT-4o extraction reaches 94% at 262k, and 4096-character windows reach 81%, so no isolated routing advantage is established. On synthetic questions, the native-router system trails Direct and CoT for every intent; the confirmatory fallback hybrids also trail both controls. The benchmark is templated and contains flagged labels; single runs and sampled subsets do not establish generalization or production readiness.

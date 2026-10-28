@@ -4,7 +4,7 @@
 
 Aletheia separates local semantic intent routing, LLM candidate extraction, and deterministic Python execution. A MiniLM embedding router selects freshness, historical, aggregation, or Boolean intent; BM25 retrieves evidence; GPT-4o-mini extracts candidates; Python applies the corresponding operator.
 
-This README reports the results in the supplied **Aletheia IEEE Access Final** manuscript. The repository also preserves older LLM-planner experiments. Their 68.0%/70.3% standalone and 88.3%/87.3% hybrid results belong to a different pipeline and are not the native-router results reported below. Existing evaluation/reproducibility documents and extension packages describe those older experiments unless explicitly stated otherwise.
+This README reports the results in the supplied **Aletheia IEEE Access Final** manuscript. The repository also preserves older LLM-planner experiments. Their 68.0%/70.3% standalone and 88.3%/87.3% hybrid results belong to a different pipeline and are not the native-router results reported below. Current evaluation and reproducibility documents follow the native-router paper; superseded planner documents are preserved under `archive/legacy_planner_docs/`, and extension packages retain their own historical records.
 
 The project builds on [Reddy and Challaram's post-retrieval memory assembly work](https://arxiv.org/abs/2606.01435) and the [original memory-conflict-resolution implementation](https://github.com/cvikasreddy/memory-conflict-resolution).
 
@@ -125,7 +125,7 @@ The Desktop checkout contains the following newer native-router packages. They a
 
 For final own-K, use `scores_fixed.json` and `paired_summary.json`: the original `scores.json` incorrectly counted 16 Boolean abstentions as correct, yielding 168/300 instead of 152/300. The corrected scores normalize abstentions to `None`. The native-router own-K folder also includes a different evidence-gated hybrid diagnostic; that is not the confirmatory fallback policy in Table VI. The latter is recorded in `results/router_runs/pf-20261016-router-confirmatory-01/r3_summary.json`.
 
-The older planner and extension experiments remain preserved in their original folders. [The older evaluation report](docs/evaluation_report.md), [older reproducibility notes](docs/REPRODUCIBILITY.md), [RRF/ReAct package](results/extensions/README.md), and [rewording/Boolean diagnostics](results/ood_boolean/README.md) document those experiments, not a replacement for the final native-router tables above. Markdown/LaTeX manuscripts in `paper/` are archived drafts. The faculty package should include the supplied current Word manuscript separately.
+The current [evaluation report](docs/evaluation_report.md), [reproducibility guide](docs/REPRODUCIBILITY.md), and [project summary](docs/Aletheia_Project_Summary.md) follow this native-router paper. Superseded planner documents are in [the archive](archive/legacy_planner_docs/); full pre-v20 manuscript drafts are in `archive/manuscript_drafts/`. The [RRF/ReAct package](results/extensions/README.md) and [rewording/Boolean diagnostics](results/ood_boolean/README.md) preserve separate older experiments. The files `paper/aletheia_paper.md` and `.tex` now point to the supplied authoritative Word manuscript, included locally as `paper/Aletheia_IEEE_Access_Final.docx` in the faculty package.
 
 Full reruns additionally need the pinned MemoryAgentBench revision `7ea066982b140a19337e17e60d45d4076e042faf`, the MiniLM checkpoint `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, and appropriate dataset/model/tokenizer caches. Saved outputs can be reviewed without API credentials. External caches are not part of a normal source-folder ZIP.
 
@@ -153,9 +153,11 @@ These checks make no API calls:
 ```sh
 python scripts/validation/validate_dataset.py
 python scripts/validation/check_synthetic_benchmark_results.py
+python scripts/validation/check_final_paper_results.py
+python scripts/validation/check_paper_operators.py
 ```
 
-They validate dataset structure and the legacy first-60 correspondence; they do not validate all gold labels or reproduce the current paper's 300-question scores. The benchmark audit flags 684/13,425 rows: 98 potentially invalid gold answers and 586 ambiguous rows.
+The first two checks validate dataset structure and legacy first-60 correspondence. The final-paper verifier checks frozen source hashes and rescores the saved native runs and hybrids; the operator check exercises actual paper-described functions with a stubbed retrieval/extraction boundary. They make no API calls and do not validate every gold label or replace evaluation on new questions. The benchmark audit flags 684/13,425 rows: 98 potentially invalid gold answers and 586 ambiguous rows.
 
 For saved native-router reproduction, read the local package READMEs, manifests, and `router_eval.py` command help. Offline rescoring requires the saved controls and input files listed above; some older commands point to temporary environments that must be recreated. The confirmatory runner's `score` command makes no API calls; `run` does. Do not run paid experiments merely to inspect saved results.
 

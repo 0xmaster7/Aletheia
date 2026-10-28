@@ -6,7 +6,9 @@
 
 ## Other draft and one-off candidates reviewed
 
-- `docs/Aletheia_Project_Summary.md` — older project overview; it is useful reviewer context and remains under `docs/`.
+- `legacy_planner_docs/` — superseded planner evaluation report, reproducibility guide, and project summary; current native-router replacements are under `docs/`.
+- `manuscript_drafts/` — full pre-v20 Markdown/LaTeX manuscript drafts with obsolete results and claims. The current supplied Word manuscript is in the local faculty package under `paper/`.
+- `docs/Aletheia_Project_Summary.md` — current native-router project overview.
 - `docs/TODO.md` — outstanding-work list rather than a completed draft; retained under `docs/`.
 - `scripts/data_generation/phase2_batch2.py` — batch generator for extending the synthetic question set; retained with data-generation tools.
 - `scripts/validation/validate_batch2.py` — data validation utility; retained with validation tools.

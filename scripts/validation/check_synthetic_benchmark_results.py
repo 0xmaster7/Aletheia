@@ -1,4 +1,4 @@
-"""Check that the saved paper run matches the first 60 released questions."""
+"""Check that the saved legacy run matches the first 60 released questions."""
 import json
 from collections import Counter
 from pathlib import Path

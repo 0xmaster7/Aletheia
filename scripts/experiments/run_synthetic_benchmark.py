@@ -1,9 +1,11 @@
 """Run the synthetic benchmark against the adaptive router pipeline.
 
 By default, evaluates the first 60 questions (20 historical, 20 aggregation,
-and 20 boolean), matching the paper. Use --n 13425 or --all for the full
+and 20 boolean), matching the legacy first-60 evaluation. The final paper's
+300-question native runs use their saved runners and frozen sample IDs.
+Use --n 13425 or --all for the full
 released dataset. Output defaults to a separate rerun file so the committed
-paper results are preserved.
+legacy results are preserved.
 
 Usage:
     python scripts/experiments/run_synthetic_benchmark.py
