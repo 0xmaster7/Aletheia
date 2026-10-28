@@ -1,140 +1,135 @@
 # Aletheia
 
-Aletheia extends a memory conflict resolution baseline with intent-specific operators. The original pipeline includes an embedding-based semantic router; the final-v3 and confirmatory synthetic runs use an LLM planner and Python operators. In those runs, Aletheia, Direct, and CoT receive the same top-80 BM25 context.
+**A Deterministic Semantic Routing Architecture for Memory Resolution in Long-Context Language Models**
 
-Aletheia builds on [“Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution” (arXiv:2606.01435)](https://arxiv.org/abs/2606.01435) and extends the original authors' implementation in [cvikasreddy/memory-conflict-resolution](https://github.com/cvikasreddy/memory-conflict-resolution). See the [evaluation report](docs/evaluation_report.md) and [reproducibility notes](docs/REPRODUCIBILITY.md). The Markdown and LaTeX files under `paper/` are archived pre-v20 drafts and are not the current manuscript; the supplied Word/PDF and external document are not distributed from this repository.
+Aletheia separates local semantic intent routing, LLM candidate extraction, and deterministic Python execution. A MiniLM embedding router selects freshness, historical, aggregation, or Boolean intent; BM25 retrieves evidence; GPT-4o-mini extracts candidates; Python applies the corresponding operator.
 
-## Reported results
+This README reports the results in the supplied **Aletheia IEEE Access Final** manuscript. The repository also preserves older LLM-planner experiments. Their 68.0%/70.3% standalone and 88.3%/87.3% hybrid results belong to a different pipeline and are not the native-router results reported below. Existing evaluation/reproducibility documents and extension packages describe those older experiments unless explicitly stated otherwise.
 
-The results below are from the frozen final-v3, confirmatory hybrid, and matched FactConsolidation summaries. The final-v3 row is the older headline result; the separate confirmatory and extension evaluations are listed below. See [reproducibility notes](docs/REPRODUCIBILITY.md) for result files and scripts.
+The project builds on [Reddy and Challaram's post-retrieval memory assembly work](https://arxiv.org/abs/2606.01435) and the [original memory-conflict-resolution implementation](https://github.com/cvikasreddy/memory-conflict-resolution).
 
-### Final-v3 synthetic benchmark (300 questions; audit flags retained)
+## Results in the final paper
 
-| Arm | Accuracy |
-| :--- | ---: |
-| Aletheia | 68.0% (204/300) |
-| Direct | 77.3% (232/300) |
-| CoT | 78.7% (236/300) |
+All results are single runs. Synthetic scores retain audit-flagged questions unless marked unflagged; abstentions and truncated answers count as incorrect. Routing accuracy measures intent selection, not answer correctness.
 
-With flags retained, Aletheia alone is below both baselines overall.
+### FactConsolidation at 262k tokens — Table I
 
-### Confirmatory hybrid run (300 questions; audit flags retained)
+Each row evaluates the same 100 single-hop questions with GPT-4o-mini. The direct BM25 controls use the same generic baseline prompt and SubEM scorer; Aletheia uses its candidate-extraction prompt and deterministic operators.
 
-| Arm or policy | Accuracy |
-| :--- | ---: |
-| Aletheia alone | 70.3% (211/300) |
-| Direct | 73.3% (220/300) |
-| CoT | 74.3% (223/300) |
-| Aletheia with Direct fallback | 88.3% (265/300) |
-| Aletheia with CoT fallback | 87.3% (262/300) |
+| System | Temperature | Retrieval K | Correct / accuracy |
+| --- | ---: | --- | ---: |
+| BM25, original baseline | 0.7 | 10 | 56/100 (56.0%) |
+| BM25, matched baseline | 0.0 | 10 | 59/100 (59.0%) |
+| BM25, matched baseline | 0.0 | 10 or 25 | 58/100 (58.0%) |
+| Aletheia, adaptive router | 0.0 | 10 or 25 | 81/100 (81.0%) |
 
-The hybrid policies use Aletheia's answer when eligible and otherwise use the named fallback. Their scores are not Aletheia-alone scores.
-With flags retained, Aletheia alone is also below both baselines overall in this confirmatory run.
-On the 228 questions Aletheia answered, its accuracy was 89.5% (204/228); it abstained on 72/300. This answered-only figure does not replace the overall score.
+Routed K is 25 for 15 questions and 10 for 85. Matching temperature and retrieval size does not isolate routing, extraction, or execution individually. The GPT-4o and fixed-window reruns below reach the same accuracy or higher.
 
-### Matched FactConsolidation baseline check (262k; 100 questions)
+### Synthetic samples — Table II
 
-| System | Accuracy |
-| :--- | ---: |
-| Adaptive Aletheia saved reference | 81/100 |
-| BM25, fixed K=10 | 59/100 |
-| BM25, Aletheia-routed K=10/25 | 58/100 |
+The released benchmark has 13,425 templated questions. The full set was not evaluated. The final sample excludes 660 previously used question IDs; the confirmatory sample excludes 960.
 
-The BM25 runs use the saved question set, GPT-4o-mini at temperature 0, and `QUERY_TEMPLATE_BM25`. The 81/100 Aletheia figure is the earlier adaptive result; this comparison does not isolate the effect of any single component. The older 81%-versus-56% figures are from a separate, unmatched comparison.
+| Sample | n | Routing accuracy | Aletheia answers | Direct answers | CoT answers |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Second, seed 20261004 | 300 | 84.3% (253/300) | Not run | 78.0% | 80.0% |
+| Final, own-K, seed 20261005 | 300 | 80.0% (240/300) | 50.7% (152/300) | 77.3% (232/300) | 78.7% (236/300) |
+| Final, K=80, same IDs | 300 | 80.0% (240/300) | 50.3% (151/300) | 77.3% (232/300) | 78.7% (236/300) |
+| Confirmatory, seed 20261006 | 300 | 82.3% (247/300) | 50.7% (152/300) | 73.3% (220/300) | 74.3% (223/300) |
 
-### Section VI-F extensions (confirmatory set; GPT-4o-mini, temperature 0)
+Own-K uses historical K=25, aggregation K=40, and Boolean/freshness K=10, with query clean-up for historical and aggregation retrieval. The K=80 runs use the same raw-question BM25 context as Direct and CoT. The final K=80 run reuses saved native routes. Direct and CoT are the same saved controls in both final-sample rows. These comparisons are not prompt-matched.
 
-| Arm or policy | Correct | Accuracy |
-| :--- | ---: | ---: |
-| Aletheia | 211/300 | 70.3% |
-| Direct | 220/300 | 73.3% |
-| CoT | 223/300 | 74.3% |
-| ReAct | 165/300 | 55.0% |
-| RRF Aletheia | 214/300 | 71.3% |
-| RRF + Direct fallback | 261/300 | 87.0% |
-| RRF + CoT fallback | 261/300 | 87.0% |
-| Saved Direct-fallback hybrid | 265/300 | 88.3% |
-| Saved CoT-fallback hybrid | 262/300 | 87.3% |
+The best earlier first-60 routing run was 56/60 (93.3%), an in-distribution result on shared template vocabulary. The earlier first-60 answer run was 22/60 (36.7%) with an earlier pipeline and scorer; it is not a baseline comparison.
 
-The saved per-intent results are:
+### Final sample by intent — Table III
 
-| Intent | n | Aletheia | RRF | ReAct | Direct | CoT |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Historical | 98 | 75 | 77 | 34 | 63 | 66 |
-| Aggregation | 102 | 96 | 95 | 49 | 70 | 70 |
-| Boolean | 100 | 40 | 42 | 82 | 87 | 87 |
-| Overall | 300 | 211 | 214 | 165 | 220 | 223 |
+| Intent | n | Aletheia own-K | Aletheia K=80 | Direct | CoT |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Historical | 102 | 33.3% | 33.3% | 75.5% | 78.4% |
+| Aggregation | 101 | 51.5% | 50.5% | 70.3% | 70.3% |
+| Boolean | 97 | 68.0% | 68.0% | 86.6% | 87.6% |
+| Overall | 300 | 50.7% | 50.3% | 77.3% | 78.7% |
 
-RRF improved 16 questions and regressed 13 against saved Aletheia, for a net gain of three questions (about one percentage point). It reduced both saved hybrid scores: RRF + Direct fallback and RRF + CoT fallback each scored 261/300, versus 265/300 and 262/300 with BM25. RRF therefore did not improve the hybrid results.
+Aletheia trails both controls on every intent. Own-K answers 251 questions and abstains on 49, with 60.6% accuracy among answered questions (152/251). K=80 answers 253 and abstains on 47, with 59.7% accuracy among answered questions (151/253). One answer in each run was truncated at the 1,024-token cap and counted as incorrect. Answered-only accuracy does not replace overall accuracy.
 
-For aggregation, original → reworded correct counts were Aletheia 94 → 89, Direct 68 → 65, and CoT 68 → 72. For Boolean they were 40 → 60, 87 → 89, and 87 → 93; the Aletheia increase is unexplained. The 100 historical items were recast as descending-serial-rank questions, changing the operation rather than paraphrasing it. On 98 matched IDs, Aletheia changed 75 → 19, Direct 63 → 48, and CoT 66 → 93. We report no pooled 300-question paraphrase score. The paraphrases were generated once and paired comparisons use only matched question IDs.
+### FactConsolidation ablations — Table IV
 
-The 60 Boolean failures comprised 39 abstentions with no matching target in retrieved context and incomplete history, 4 abstentions despite supporting context, 9 planner-field errors, 8 operator value/span mismatches, and 0 confirmed gold issues. These are classifications from saved contexts and plans: missing target evidence in top-K does not prove absence from source history, and interpreting the evidence-present and planner-conflict cases involves judging question wording. Thirteen failed rows had the `boolean_target_not_found` audit flag; that flag does not establish an incorrect gold label. The polarity fix scored 48/100 on its fresh run, while the isolated same-plan replay changed 42/100 to 48/100 (6 wrong-to-right, 0 right-to-wrong). The fresh planner differed from the saved plan on 41 questions, and the fix was designed on this same 100-question set, so the result is not held-out validation. No hybrid was rerun with the fix.
+Each reported cell has 100 questions. `n/r` means not run. Asterisks identify imported results from the source paper/repository, not our reruns.
 
-RRF used BM25 plus `all-MiniLM-L6-v2` dense retrieval, equal-weight reciprocal rank fusion, rank constant 60 and K=80, with the final-v3 prompt/planner/scorer. ReAct used BM25 top-10 search, at most six sequential search steps per question, and a 512-token completion limit; repeated search results were retained. Usage-based spend was $0.10219620 for RRF and $0.33895905 for ReAct ($0.44115525 combined). The rewording evaluation cost $0.25178565, and the Boolean fix run cost $0.03454425 ($0.28632990 combined). All extension calls used GPT-4o-mini at temperature 0; see [the saved extension package](results/extensions/README.md) and [the rewording and Boolean package](results/ood_boolean/README.md) for exact commands, configs, manifests, inputs and limitations.
+| Configuration | 6k | 32k | 64k | 262k |
+| --- | ---: | ---: | ---: | ---: |
+| Aletheia adaptive router, GPT-4o-mini | n/r | 77% | 81% | 81% |
+| Earlier single-hop fact extraction, GPT-4o-mini, mixed provenance | 43% | 78%* | 81%* | 43% |
+| Single-hop fact chunks, GPT-4o rerun | 98% | 93% | 95% | 94% |
+| Single-hop 4096-character windows, GPT-4o-mini rerun | 90% | 82% | 81% | 81% |
+| BM25 baseline, GPT-4o-mini | 58% | 70%* | 75%* | 56% |
+| Multi-hop CAR, GPT-4o-mini rerun | 47% | 39% | 45% | 34% |
 
-The extension calls used code commit `ecb373a7e41d92cdcdeebc43c27b6267d662e610`; the saved artifacts and scripts are in commit `4b71da21aa76e3776a00a62f3f52804db04a9e37`. The manifests hold exact prompt, operator, scorer and request hashes. Recompute saved outcomes offline with:
+CAR uses the separate multi-hop split and is not directly comparable with the single-hop rows. The stronger extractor exceeds adaptive routing, and fixed windows tie it at 64k and 262k. No component-level ablation establishes the cause of the earlier-pipeline versus adaptive-router difference.
 
-```sh
-python results/extensions/score_extensions.py rrf
-python results/extensions/score_extensions.py react
-python results/ood_boolean/task1/evaluate_ood.py --score
-python results/ood_boolean/task2b/run_fix.py --score
-```
+### Confirmatory standalone results — Table V
 
-These offline scoring commands rewrite their summary outputs and require the original local feedback inputs listed in [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Full rerun commands are documented in the result package READMEs and make paid API calls.
+All arms read the same K=80 pool. Aletheia uses a 512-token cap; three truncated answers count as incorrect.
 
-For a clean reproduction workspace with the listed local inputs restored, the paid command sequence is:
+| Subset | n | Aletheia | Direct | CoT |
+| --- | ---: | ---: | ---: | ---: |
+| Historical | 98 | 39.8% | 64.3% | 67.3% |
+| Aggregation | 102 | 50.0% | 68.6% | 68.6% |
+| Boolean | 100 | 62.0% | 87.0% | 87.0% |
+| Overall | 300 | 50.7% | 73.3% | 74.3% |
+| Aggregation, unflagged | 101 | 50.5% | 69.3% | 69.3% |
+| Boolean, unflagged | 79 | 73.4% | 84.8% | 83.5% |
+| Overall, unflagged | 278 | 53.2% | 71.9% | 72.7% |
 
-```sh
-python results/extensions/run_extensions.py prepare
-python results/extensions/run_extensions.py run-rrf
-python results/extensions/score_extensions.py rrf
-python results/extensions/run_extensions.py pilot-react
-python results/extensions/run_extensions.py run-react-full
-python results/extensions/score_extensions.py react
-python results/ood_boolean/task1/build_paraphrases.py
-python results/ood_boolean/task1/evaluate_ood.py --prepare
-python results/ood_boolean/task1/evaluate_ood.py --run
-python results/ood_boolean/task1/evaluate_ood.py --score
-python results/ood_boolean/task2b/prepare_requests.py
-python results/ood_boolean/task2b/run_fix.py --run
-python results/ood_boolean/task2b/run_fix.py --score
-```
+Overall correct counts are 152, 220, and 223, respectively; after excluding flagged questions, they are 148, 200, and 202. Aletheia answers 242 questions and abstains on 58, with 62.8% accuracy among answered questions (152/242).
 
-The paid commands are for intentional reproduction only. Do not run them to verify the saved report; the per-question output and usage ledgers already exist.
+### Confirmatory fallback hybrids — Table VI
 
-The full RRF and ReAct artifacts are in [`results/extensions/`](results/extensions/README.md); the reworded evaluation and Boolean diagnosis are in [`results/ood_boolean/`](results/ood_boolean/README.md). These reports preserve the question-level outputs, usage, and setup caveats.
+Use Aletheia's answer when it produces one; otherwise use the named baseline answer, uniformly across intents.
 
-## Repository structure
+| Subset | n | Direct fallback | CoT fallback |
+| --- | ---: | ---: | ---: |
+| Historical | 98 | 64.3% | 63.3% |
+| Aggregation | 102 | 50.0% | 50.0% |
+| Boolean | 100 | 79.0% | 79.0% |
+| Overall | 300 | 64.3% (193/300) | 64.0% (192/300) |
+| Overall, unflagged | 278 | 63.7% (177/278) | 63.3% (176/278) |
 
-```text
-.
-├── archive/                     # Preserved one-off utility and notes
-├── benchmarks/latency/          # Routing latency benchmark
-├── data/                        # Released synthetic benchmark questions
-├── docs/                        # Evaluation, project notes, reproducibility, TODO
-├── logs/                        # Dated rerun and benchmark logs
-├── paper/                       # Paper sources and Mermaid diagrams
-├── results/
-│   ├── poc_results/             # Aletheia and paper result JSON
-│   └── poc_results_backup_imported/  # Imported baseline result JSON
-├── scripts/
-│   ├── analysis/
-│   ├── data_generation/
-│   ├── experiments/
-│   ├── lib/                     # Shared pipeline, tracing, and dataset config
-│   └── validation/
-├── .env.example
-├── requirements.txt
-└── requirements-lock.txt
-```
+Both hybrids remain below standalone Direct and CoT. They add 41 and 40 correct answers over standalone Aletheia. Aletheia supplies 242/300 answers (80.7%), or 232/278 (83.5%) on the unflagged subset. These are policy results, not standalone Aletheia accuracy.
 
-See [docs/REPO_MAP.md](docs/REPO_MAP.md) for the top-level directory map, [archive/README.md](archive/README.md) for archived utilities, and [`paper/`](paper/) for the archived pre-v20 sources and current diagrams.
+### Measured API cost and routing latency
 
-## Quickstart
+| Run, 300 questions | Recorded API spend, USD |
+| --- | ---: |
+| Final Aletheia own-K | $0.040 |
+| Final Aletheia K=80 | $0.078 |
+| Final Direct | $0.059 |
+| Final CoT | $0.071 |
+| Confirmatory Aletheia K=80 | $0.078 |
 
-Clone the repository and create the Python 3.10 environment:
+These are historical usage charges, not current price quotes or full deployment costs. Aletheia is cheaper than the controls with own-K but more expensive with K=80; sequential fallback deployment cost was not measured.
+
+The saved local embedding-router benchmark reports a 61.73 ms mean (about 62 ms), 42–259 ms range, and a 395.5 ms cold first call excluded from the mean. It used an Intel Core i7-8850H at 2.60 GHz, one warm-up, and four distinct questions repeated 25 times (100 timed queries). This is routing latency only, not end-to-end pipeline latency. See [the benchmark](benchmarks/latency/test_latency.py) and [saved log](logs/latency/routing_latency_test.log).
+
+## Artifact provenance and local submission
+
+The Desktop checkout contains the following newer native-router packages. They are local/untracked artifacts at the time of this README update; updating this README on GitHub does not publish them. A GitHub source ZIP therefore does not contain all evidence used by the final manuscript. Preserve these folders when preparing the local faculty submission.
+
+| Paper evidence | Local path |
+| --- | --- |
+| Final own-K scores, 300 raw calls, requests, runner and manifest | `results/prof_feedback/router-final300-native-20261016/` |
+| Final shared-K=80 scores, 300 raw calls, requests, runner and manifest | `results/prof_feedback/router-final300-native-k80-20261016/` |
+| Second/confirmatory routing replay, confirmatory 300 answers and hybrid scoring | `results/router_runs/pf-20261016-router-confirmatory-01/` |
+| Matched FactConsolidation controls | `results/prof_feedback/fc262k-bm25-matched-20261004-01/` |
+| FactConsolidation and ablation outputs | `results/poc_results/` and `results/poc_results_backup_imported/` |
+| Legacy control outputs and frozen sampled question IDs | `results/prof_feedback/pf-20261004-fresh300-v2-01/`, `pf-20261005-final300-v3-01/`, `pf-20261006-hybrid300-final-01/` |
+
+For final own-K, use `scores_fixed.json` and `paired_summary.json`: the original `scores.json` incorrectly counted 16 Boolean abstentions as correct, yielding 168/300 instead of 152/300. The corrected scores normalize abstentions to `None`. The native-router own-K folder also includes a different evidence-gated hybrid diagnostic; that is not the confirmatory fallback policy in Table VI. The latter is recorded in `results/router_runs/pf-20261016-router-confirmatory-01/r3_summary.json`.
+
+The older planner and extension experiments remain preserved in their original folders. [The older evaluation report](docs/evaluation_report.md), [older reproducibility notes](docs/REPRODUCIBILITY.md), [RRF/ReAct package](results/extensions/README.md), and [rewording/Boolean diagnostics](results/ood_boolean/README.md) document those experiments, not a replacement for the final native-router tables above. Markdown/LaTeX manuscripts in `paper/` are archived drafts. The faculty package should include the supplied current Word manuscript separately.
+
+Full reruns additionally need the pinned MemoryAgentBench revision `7ea066982b140a19337e17e60d45d4076e042faf`, the MiniLM checkpoint `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, and appropriate dataset/model/tokenizer caches. Saved outputs can be reviewed without API credentials. External caches are not part of a normal source-folder ZIP.
+
+## Quickstart and architecture
 
 ```sh
 git clone https://github.com/0xmaster7/Aletheia.git
@@ -145,63 +140,27 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Set `OPENAI_API_KEY` in `.env` before running experiments. Langfuse tracing is optional; configure its keys in `.env` if you want traces.
+Set `OPENAI_API_KEY` only for intentional paid reruns. Langfuse tracing is optional. Never include `.env` or credentials in a faculty ZIP.
 
-## Architecture
+The paper's native route is implemented by `native_route()` and `run_adaptive_router_pipeline()` in `scripts/lib/_pipeline.py`: local 384-dimensional MiniLM embeddings select the highest-similarity intent; BM25 uses k1=1.5 and b=0.75; the LLM returns JSON candidates; Python selects the latest/earlier state, deduplicates/counts values, or applies Boolean checks. Historical and aggregation operators sort candidates and cost O(E log E). There is no router rejection threshold. Determinism applies to execution over a fixed candidate representation; it does not eliminate upstream errors.
 
-The original route in `scripts/lib/_pipeline.py` uses local MiniLM embeddings. Final-v3 and the confirmatory hybrid instead use an LLM planner to choose the intent and plan fields; the embedding router is not used for those runs.
+Separate planner implementations in `scripts/lib/prof_feedback_final.py` and their experiment runners are retained for the older saved evaluations.
 
-In final-v3, Python validates the plan, selects and checks candidate facts, and applies the historical, Boolean, or aggregation operator. Historical, aggregation, and negative Boolean answers require verified complete history; positive Boolean evidence can answer when a matching fact is found. Planning and retrieval can still fail. See the [evaluation report](docs/evaluation_report.md) and [reproducibility notes](docs/REPRODUCIBILITY.md) for the reported analysis.
+## Offline checks and reproduction
 
-## Reproduce results
-
-### No API cost: validate the dataset and saved results
-
-These commands inspect local files and make no model API calls:
+These checks make no API calls:
 
 ```sh
 python scripts/validation/validate_dataset.py
 python scripts/validation/check_synthetic_benchmark_results.py
 ```
 
-The second command confirms that the saved synthetic results match the first 60 released questions and that they contain 20 questions per intent.
+They validate dataset structure and the legacy first-60 correspondence; they do not validate all gold labels or reproduce the current paper's 300-question scores. The benchmark audit flags 684/13,425 rows: 98 potentially invalid gold answers and 586 ambiguous rows.
 
-### Costs API money: rerun experiments
+For saved native-router reproduction, read the local package READMEs, manifests, and `router_eval.py` command help. Offline rescoring requires the saved controls and input files listed above; some older commands point to temporary environments that must be recreated. The confirmatory runner's `score` command makes no API calls; `run` does. Do not run paid experiments merely to inspect saved results.
 
-These commands call the OpenAI API. They are documented for reproduction and were not run during this repository cleanup:
-
-```sh
-python scripts/experiments/13_paper_experiment.py --source factconsolidation_sh_262k
-python scripts/experiments/14_ablations.py --source factconsolidation_sh_262k --task adaptive
-python scripts/experiments/run_synthetic_benchmark.py
-```
-
-The synthetic runner defaults to the legacy first 60 questions and writes to a separate rerun file. Read [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for pinned dataset/model references and the result-to-script map.
-
-## Synthetic benchmark
-
-The released dataset at `data/synthetic_benchmark.json` contains 13,425 questions. The legacy saved result uses the first 60 questions: 20 historical, 20 aggregation, and 20 boolean. The final paper reports the 300-question final-v3 sample and a separate 300-question confirmatory hybrid sample. The full dataset is released for larger evaluations. Run the legacy first-60 evaluation with `python scripts/experiments/run_synthetic_benchmark.py`; use `--n 13425` or `--all` to evaluate the full set. Each run makes OpenAI API calls. The default output is `results/poc_results/synthetic_benchmark_results_rerun.json`, keeping the committed 60-row result file intact.
-
-Dated experiment reruns are recorded in [`logs/rerun_2026-10-03.log`](logs/rerun_2026-10-03.log), with ablation logs in `logs/ablations/`.
-
-## Latency benchmark
-
-[`benchmarks/latency/test_latency.py`](benchmarks/latency/test_latency.py) measures local routing latency. The committed [`logs/latency/routing_latency_test.log`](logs/latency/routing_latency_test.log) reports a 61.73 ms mean on an Intel i7-8850H. Running the benchmark writes a separate rerun log.
+The legacy runner `scripts/experiments/run_synthetic_benchmark.py` defaults to the earlier first 60 questions and a separate rerun output. Its `--all`/`--n 13425` options call the API and do not recreate the paper's frozen sampled evaluations.
 
 ## Limitations
 
-The benchmark tests historical, aggregation, and boolean questions derived from synthetic examples over MemoryAgentBench conflict data. Historical and aggregation answers depend on candidate extraction being complete; misses at that stage can make the deterministic operator return an incomplete answer. The historical rewording evaluation changed the operator form to descending-serial rank and is an operator-shift test, not a pure paraphrase test. The Aletheia Boolean score increase on reworded items is unexplained. The extension and paper-source limitations are documented in `docs/REPRODUCIBILITY.md` and the saved result packages; the archived manuscript drafts are not current scientific claims.
-
-## Citation
-
-```bibtex
-@article{reddy2026freshness,
-  title         = {Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution},
-  author        = {Reddy, Vikas and Challaram, Sumanth},
-  year          = {2026},
-  eprint        = {2606.01435},
-  archivePrefix = {arXiv}
-}
-```
-
-Aletheia extends the implementation in [cvikasreddy/memory-conflict-resolution](https://github.com/cvikasreddy/memory-conflict-resolution); see that repository for the original baseline and imported baseline result files.
+Aletheia does not outperform Direct or CoT on this synthetic benchmark, and fallback hybrids remain below the standalone controls. The benchmark is templated, shares vocabulary with router examples, contains flagged gold labels, and was evaluated only in selected samples with one run per reported cell. Cue lists are manually written. Retrieval, extraction, routing, and normalization can fail, and historical scoring does not verify temporal provenance. The study does not establish production readiness, a general long-context accuracy advantage, or end-to-end latency/cost benefits.
